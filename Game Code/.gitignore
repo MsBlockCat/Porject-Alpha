@@ -1,2 +1,5 @@
 # Where Eclipse keeps classes
 /bin/
+
+# Where Eclipse keeps project settings
+*.settings
