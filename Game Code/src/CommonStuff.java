@@ -1,7 +1,10 @@
-import java.lang.*;
+import java.util.Scanner;
 
 public class CommonStuff
 {
+	//Scanners
+	public static Scanner AwesomeScanner = new Scanner(System.in);
+	
 	//Variables
 	public static String GameVersion = "0.0.0a";
 	public static boolean DebugMode = false;
@@ -15,6 +18,24 @@ public class CommonStuff
 		{
 			System.out.println();
 		}
+	}
+	
+	public static void UnoScreenSizeRecommendation()
+	{
+		System.out.println("--------------------------------------------------------------------------------------------------------------");
+		HitEnter(14);
+		System.out.println("Please resize your window so the dashes above are just visible, and there's one extra line below the bottom.");
+		System.out.println("                                                   --------");
+		System.out.println("                                                   |Center|");
+		System.out.println("                                                   --------");
+		System.out.println("Options on the left in () are your options, that you can type and hit enter to choose.");
+		System.out.println("   |");
+		System.out.println("   |");
+		System.out.println("  \\./");
+		System.out.println("(Enter) Go to the main menu of Uno");
+		HitEnter(9);
+		System.out.print("--------------------------------------------------------------------------------------------------------------");
+		AwesomeScanner.nextLine();
 	}
 	
 	public static int StringToInt(String Number)
@@ -66,7 +87,7 @@ public class CommonStuff
 	{
 		for (int Counter = 0; Counter < Phrase.length(); Counter++)
 		{
-			System.out.print(Phrase.charAt(i));
+			System.out.print(Phrase.charAt(Counter));
 			if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
 			{
 			Wait(215);
