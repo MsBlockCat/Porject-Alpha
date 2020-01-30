@@ -4,6 +4,10 @@
 # Compiled class file
 *.class
 
+# Stuff Eclipse makes we don't need
+*.classpath
+*.project
+
 # Log file
 *.log
 
