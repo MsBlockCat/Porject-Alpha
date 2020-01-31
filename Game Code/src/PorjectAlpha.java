@@ -28,12 +28,19 @@ public class PorjectAlpha
 		{
 			Stuff.HitEnter(32);
 			Stuff.TypeLine("(Play) Start a new game!");
-			Stuff.TypeLine("(Load) Load from a save code");
+			Stuff.TypeLine("(Load) Load from a save code!");
+			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
+			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
 			TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (TitleScreenPlayerChoice)
 			{
 				case "play":
+					GoToStartingBranch("Beginning");
+					StayOnTitleScreen = false;
+					break;
+				case "debug":
+					Stuff.DebugMode = true;
 					GoToStartingBranch("Beginning");
 					StayOnTitleScreen = false;
 					break;
