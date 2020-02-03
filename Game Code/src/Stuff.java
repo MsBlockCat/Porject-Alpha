@@ -12,6 +12,7 @@ public class Stuff
 	public static boolean DebugMode = false;
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean FancyTyping = true;
+	public static int FancyTypingSpeed = 2;
 	public static int TurnCount = 0;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
@@ -416,15 +417,15 @@ public class Stuff
 				System.out.print(Phrase.charAt(Counter));
 				if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
 				{
-					Wait(205);
+					Wait(105 + (FancyTypingSpeed * 50));
 				}
 				
 				if (Phrase.charAt(Counter) == ',')
 				{
-					Wait(90);
+					Wait(40 + (FancyTypingSpeed * 25));
 				}
 				
-				Wait(35);
+				Wait(15 + (FancyTypingSpeed * 10));
 			}
 		}
 		else
