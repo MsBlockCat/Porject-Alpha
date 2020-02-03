@@ -99,7 +99,9 @@ public class PorjectAlpha
 				Stuff.TypeLine("After two decades, Doofenshmirtz finally had a breakthrough with the Timeinator.");
 				Stuff.TypeLine("A rat was tested with it and mostly survived.");
 				Stuff.TypeLine("As Dr. Doofenshmirtz's assistant, you get to be the first human to test the time machine.");
-				Stuff.TypeLine("You pick up the surprisingly small device and place it on your left wrist. It is similar in appearance to a smartwatch.");
+				Stuff.TypeLine("You pick up the surprisingly small device. It has \"Porject Alpha\" engraved on one half of the bottom of it, and \"The Timeinator\" on the other half.");
+				Stuff.TypeLine("You're pretty sure Dr. Doofenshmirtz can't spell, but you never dared question his genius.");
+				Stuff.TypeLine("You place the time machine on your left wrist, noting its similarities in appearance to a smartwatch.");
 				Stuff.TypeLine("Would you like to go back to the old times in the year 1253, in rural Australia in the year 1954, or to space in the year 2030?");
 				switch (Stuff.PlayerChoice("1253", "1954", "2030"))
 				{
