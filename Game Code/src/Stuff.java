@@ -80,66 +80,76 @@ public class Stuff
 	
 	public static boolean LoadSaveCode(String SaveCode)
 	{
-		if (StringToInt(SaveCode.charAt(0)) == 0)
+		if (SaveCode.length() == 0)
 		{
-			TypeLine("Sorry, either that's not a save code or it got corrupted!");
+			TypeLine("Sorry, that's not a save code, it's nothing in fact!");
 			return false;
 		}
 		else
 		{
-			if (StringToInt(SaveCode.charAt(0)) > SaveVersion)
+			if (StringToInt(SaveCode.charAt(0)) == 0)
 			{
-				TypeLine("Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+				TypeLine("Sorry, either that's not a save code or it got corrupted!");
 				return false;
 			}
 			else
 			{
-				do
+				if (StringToInt(SaveCode.charAt(0)) > SaveVersion)
+				{
+					TypeLine("Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+					return false;
+				}
+				else
 				{
 					boolean CompatibilityUsed = false;
 					
-					switch (StringToInt(SaveCode.charAt(0)))
+					do
 					{
-						//Should be reverse compatible with older versions of save codes
-						
-						//Version 1: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount
-						case 1:
-							if (SaveCode.length() != 7)
-							{
-								TypeLine("Sorry, either that's not a save code or it got corrupted!");
-								return false;
-							}
-							else
-							{
-								DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
-								FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
-								HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
-								TurnCount = StringToInt(SaveCode.substring(4, 6));
-								CurrentBranchNumber = 1;
-								CurrentLocationNumber = 1;
-								SaveCode = '2' + SaveCode.substring(1);
-								CompatibilityUsed = true;
-							}
-							break;
-						
-						//Version 2: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount; 7 = CurrentBranchNumber; 8-10 = CurrentLocationNumber
-						case 2:
-							if (SaveCode.length() != 11)
-							{
-								TypeLine("Sorry, either that's not a save code or it got corrupted!");
-								return false;
-							}
-							else
-							{
-								DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
-								FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
-								HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
-								TurnCount = StringToInt(SaveCode.substring(4, 6));
-								CurrentBranchNumber = StringToInt(SaveCode.charAt(7));
-								CurrentLocationNumber = StringToInt(SaveCode.substring(8, 10));
-							}
-							break;
+						switch (StringToInt(SaveCode.charAt(0)))
+						{
+							//Should be reverse compatible with older versions of save codes
+							
+							//Version 1: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount
+							case 1:
+								if (SaveCode.length() != 7)
+								{
+									TypeLine("Sorry, either that's not a save code or it got corrupted!");
+									return false;
+								}
+								else
+								{
+									DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
+									FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
+									HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
+									TurnCount = StringToInt(SaveCode.substring(4, 6));
+									CurrentBranchNumber = 1;
+									CurrentLocationNumber = 1;
+									SaveCode = '2' + SaveCode.substring(1);
+									CompatibilityUsed = true;
+								}
+								break;
+							
+							//Version 2: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount; 7 = CurrentBranchNumber; 8-10 = CurrentLocationNumber
+							case 2:
+								if (SaveCode.length() != 11)
+								{
+									TypeLine("Sorry, either that's not a save code or it got corrupted!");
+									return false;
+								}
+								else
+								{
+									DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
+									FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
+									HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
+									TurnCount = StringToInt(SaveCode.substring(4, 6));
+									CurrentBranchNumber = StringToInt(SaveCode.charAt(7));
+									CurrentLocationNumber = StringToInt(SaveCode.substring(8, 10));
+								}
+								break;
+						}
 					}
+					while (StringToInt(SaveCode.charAt(0)) != SaveVersion);
+
 					if (CompatibilityUsed)
 					{
 						TypeLine("Just so you know, your save code was out of date so some data was added or may have been reset.");
@@ -147,7 +157,6 @@ public class Stuff
 					
 					return true;
 				}
-				while (StringToInt(SaveCode.charAt(0)) != SaveVersion);
 			}
 		}
 	}
@@ -177,9 +186,18 @@ public class Stuff
 	
 	public static int StringToInt(String Number)
 	{
+		do
+		{
+			if (Number.charAt(0) == '0' && Number.substring(1, 1) != null)
+			{
+				Number = Number.substring(1);
+			}
+		}
+		while (!(Number.charAt(0) == '0' && Number.substring(1, 1) != null));
+		
 		for (int Cursor = -1000; Cursor <= 1000; Cursor ++)
 		{
-			if ((Cursor + "") == Number)
+			if ((Cursor + "").equals(Number))
 			{
 				return Cursor;
 			}
@@ -289,6 +307,7 @@ public class Stuff
 			}
 			
 			System.out.println(".");
+			TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
 			HitEnter(1);
 			
 			String Choice;
@@ -299,7 +318,7 @@ public class Stuff
 					PotentialDebugMenu();
 					Choice = AwesomeScanner.nextLine().toLowerCase();
 				}
-				while (!Choice.equals(Choice1.toLowerCase()));
+				while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals("menu"));
 			}
 			else
 			{
@@ -310,7 +329,7 @@ public class Stuff
 						PotentialDebugMenu();
 						Choice = AwesomeScanner.nextLine().toLowerCase();
 					}
-					while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()));
+					while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals("menu"));
 				}
 				else
 				{
@@ -321,7 +340,7 @@ public class Stuff
 							PotentialDebugMenu();
 							Choice = AwesomeScanner.nextLine().toLowerCase();
 						}
-						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()));
+						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()) && !Choice.equals("menu"));
 					}
 					else
 					{
@@ -330,22 +349,31 @@ public class Stuff
 							PotentialDebugMenu();
 							Choice = AwesomeScanner.nextLine().toLowerCase();
 						}
-						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()) && !Choice.equals(Choice4.toLowerCase()));
+						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()) && !Choice.equals(Choice4.toLowerCase()) && !Choice.equals("menu"));
 					}
 				}
 			}
-			switch (RandomInt(1, 3))
+			
+			if (!Choice.equals("menu"))
 			{
-				case 1:
-					TypeLine(Choice + " it is.");
-					break;
-				case 2:
-					TypeLine("Very well, " + Choice + " it is.");
-				case 3:
-					TypeLine("You chose " + Choice + ".");
+				PorjectAlpha.TitleScreen();
+				return Choice;
 			}
-			TurnCount ++;
-			return Choice;
+			else
+			{
+				switch (RandomInt(1, 3))
+				{
+					case 1:
+						TypeLine(Choice + " it is.");
+						break;
+					case 2:
+						TypeLine("Very well, " + Choice + " it is.");
+					case 3:
+						TypeLine("You chose " + Choice + ".");
+				}
+				TurnCount ++;
+				return Choice;
+			}
 		}
 	}
 	

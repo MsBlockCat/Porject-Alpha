@@ -26,7 +26,7 @@ public class PorjectAlpha
 		String TitleScreenPlayerChoice = null;
 		do
 		{
-			Stuff.HitEnter(32);
+			Stuff.HitEnter(40);
 			Stuff.TypeLine("(Play) Start a new game!");
 			Stuff.TypeLine("(Save) Makes a save code you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save code!");
@@ -42,26 +42,33 @@ public class PorjectAlpha
 					GoToLabBranch("Beginning");
 					break;
 				case "save":
-					Stuff.TypeLine("Here's your save code: " + Stuff.MakeSaveCode());
+					Stuff.TypeLine("(Enter) Here's your save code, be sure to copy it: " + Stuff.MakeSaveCode());
 					Stuff.AwesomeScanner.nextLine();
 					break;
 				case "load":
 					Stuff.TypeLine("Please enter a save code below (Game save code version " + Stuff.SaveVersion + "):");
 					if (Stuff.LoadSaveCode(Stuff.AwesomeScanner.nextLine()) == true)
 					{
-						StayOnTitleScreen = false;
+						Stuff.TypeLine("(Enter) Successfully loaded!");
+						Stuff.AwesomeScanner.nextLine();
 						switch (Stuff.CurrentBranchNumber)
 						{
+							case 0:
+								break;
 							case 1:
+								StayOnTitleScreen = false;
 								GoToLabBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 2:
+								StayOnTitleScreen = false;
 								SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 3:
+								StayOnTitleScreen = false;
 								MattBranch.GoToMattBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 4:
+								StayOnTitleScreen = false;
 								OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
 								break;
 						}
