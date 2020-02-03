@@ -8,9 +8,14 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.0.0a";
 	public static final int CopyrightYear = 2020;
+	public static final int SaveVersion = 2;
 	public static boolean DebugMode = false;
 	public static boolean HasLuckyGauntlet = false;
+	public static boolean FancyTyping = true;
 	public static int TurnCount = 0;
+	public static int CurrentBranchNumber = 0;
+	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
+	public static int CurrentLocationNumber = 0;
 	
 	//Methods
 	public static void HitEnter(int NumberOfEnters)
@@ -18,6 +23,132 @@ public class Stuff
 		for (int Counter = 0; Counter != NumberOfEnters; Counter++)
 		{
 			System.out.println();
+		}
+	}
+	
+	public static String MakeSaveCode()
+	{
+		String FreshSaveCode = "";
+		/* Character numbers go in these comments below */
+		/* 0 */ FreshSaveCode += SaveVersion;
+		/* 1 */ FreshSaveCode += BooleanToInt(DebugMode);
+		/* 2 */ FreshSaveCode += BooleanToInt(FancyTyping);
+		/* 3 */ FreshSaveCode += BooleanToInt(HasLuckyGauntlet);
+		/* 4-6 */ if (TurnCount > 999)
+		{
+			FreshSaveCode += 999;
+		}
+		else
+		{
+			if (TurnCount < 10)
+			{
+				FreshSaveCode += "00" + TurnCount;
+			}
+			else
+			{
+				if (TurnCount < 100)
+				{
+					FreshSaveCode += "0" + TurnCount;
+				}
+				else
+				FreshSaveCode += TurnCount;
+			}
+		}
+		/* 7 */ FreshSaveCode += CurrentBranchNumber;
+		/* 8-10 */ if (CurrentLocationNumber > 999)
+		{
+			FreshSaveCode += 999;
+		}
+		else
+		{
+			if (CurrentLocationNumber < 10)
+			{
+				FreshSaveCode += "00" + CurrentLocationNumber;
+			}
+			else
+			{
+				if (CurrentLocationNumber < 100)
+				{
+					FreshSaveCode += "0" + CurrentLocationNumber;
+				}
+				else
+				FreshSaveCode += CurrentLocationNumber;
+			}
+		}
+		return FreshSaveCode;
+	}
+	
+	public static boolean LoadSaveCode(String SaveCode)
+	{
+		if (StringToInt(SaveCode.charAt(0)) == 0)
+		{
+			TypeLine("Sorry, either that's not a save code or it got corrupted!");
+			return false;
+		}
+		else
+		{
+			if (StringToInt(SaveCode.charAt(0)) > SaveVersion)
+			{
+				TypeLine("Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+				return false;
+			}
+			else
+			{
+				do
+				{
+					boolean CompatibilityUsed = false;
+					
+					switch (StringToInt(SaveCode.charAt(0)))
+					{
+						//Should be reverse compatible with older versions of save codes
+						
+						//Version 1: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount
+						case 1:
+							if (SaveCode.length() != 7)
+							{
+								TypeLine("Sorry, either that's not a save code or it got corrupted!");
+								return false;
+							}
+							else
+							{
+								DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
+								FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
+								HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
+								TurnCount = StringToInt(SaveCode.substring(4, 6));
+								CurrentBranchNumber = 1;
+								CurrentLocationNumber = 1;
+								SaveCode = '2' + SaveCode.substring(1);
+								CompatibilityUsed = true;
+							}
+							break;
+						
+						//Version 2: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount; 7 = CurrentBranchNumber; 8-10 = CurrentLocationNumber
+						case 2:
+							if (SaveCode.length() != 11)
+							{
+								TypeLine("Sorry, either that's not a save code or it got corrupted!");
+								return false;
+							}
+							else
+							{
+								DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
+								FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
+								HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
+								TurnCount = StringToInt(SaveCode.substring(4, 6));
+								CurrentBranchNumber = StringToInt(SaveCode.charAt(7));
+								CurrentLocationNumber = StringToInt(SaveCode.substring(8, 10));
+							}
+							break;
+					}
+					if (CompatibilityUsed)
+					{
+						TypeLine("Just so you know, your save code was out of date so some data was added or may have been reset.");
+					}
+					
+					return true;
+				}
+				while (StringToInt(SaveCode.charAt(0)) != SaveVersion);
+			}
 		}
 	}
 	
@@ -39,33 +170,45 @@ public class Stuff
 		AwesomeScanner.nextLine();
 	}
 	
+	public static int StringToInt(char Number)
+	{
+		return StringToInt(Number + "");
+	}
+	
 	public static int StringToInt(String Number)
 	{
-		switch (Number)
+		for (int Cursor = -1000; Cursor <= 1000; Cursor ++)
 		{
-			case "0":
-				return 0;
-			case "1":
-				return 1;
-			case "2":
-				return 2;
-			case "3":
-				return 3;
-			case "4":
-				return 4;
-			case "5":
-				return 5;
-			case "6":
-				return 6;
-			case "7":
-				return 7;
-			case "8":
-				return 8;
-			case "9":
-				return 9;
-			default:
-				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are 0-9.");
-				return 0;
+			if ((Cursor + "") == Number)
+			{
+				return Cursor;
+			}
+		}
+		System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are -1000 to 1000.");
+		return 0;
+	}
+	
+	public static int BooleanToInt(Boolean TheBoolean)
+	{
+		if (TheBoolean == true)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	
+	public static boolean IntToBoolean(int TheBoolean)
+	{
+		if (TheBoolean == 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	
@@ -96,7 +239,7 @@ public class Stuff
 		}
 		else
 		{
-			switch (RandomInt(1,4))
+			switch (RandomInt(1, 3))
 			{
 				case 1:
 					Type("You can choose ");
@@ -105,9 +248,6 @@ public class Stuff
 					Type("You can decide between ");
 					break;
 				case 3:
-					Type("You can choose ");
-					break;
-				case 4:
 					Type("Your options seem to be ");
 					break;
 				default:
@@ -152,12 +292,59 @@ public class Stuff
 			HitEnter(1);
 			
 			String Choice;
-			do
+			if (Choice2 == null)
 			{
-				PotentialDebugMenu();
-				Choice = AwesomeScanner.nextLine().toLowerCase();
+				do
+				{
+					PotentialDebugMenu();
+					Choice = AwesomeScanner.nextLine().toLowerCase();
+				}
+				while (!Choice.equals(Choice1.toLowerCase()));
 			}
-			while (Choice != Choice1.toLowerCase() && Choice != Choice2.toLowerCase() && Choice != Choice3.toLowerCase() && Choice != Choice4.toLowerCase());
+			else
+			{
+				if (Choice3 == null)
+				{
+					do
+					{
+						PotentialDebugMenu();
+						Choice = AwesomeScanner.nextLine().toLowerCase();
+					}
+					while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()));
+				}
+				else
+				{
+					if (Choice4 == null)
+					{
+						do
+						{
+							PotentialDebugMenu();
+							Choice = AwesomeScanner.nextLine().toLowerCase();
+						}
+						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()));
+					}
+					else
+					{
+						do
+						{
+							PotentialDebugMenu();
+							Choice = AwesomeScanner.nextLine().toLowerCase();
+						}
+						while (!Choice.equals(Choice1.toLowerCase()) && !Choice.equals(Choice2.toLowerCase()) && !Choice.equals(Choice3.toLowerCase()) && !Choice.equals(Choice4.toLowerCase()));
+					}
+				}
+			}
+			switch (RandomInt(1, 3))
+			{
+				case 1:
+					TypeLine(Choice + " it is.");
+					break;
+				case 2:
+					TypeLine("Very well, " + Choice + " it is.");
+				case 3:
+					TypeLine("You chose " + Choice + ".");
+			}
+			TurnCount ++;
 			return Choice;
 		}
 	}
@@ -175,28 +362,46 @@ public class Stuff
 			HitEnter(5);
 		}
 	}
+	
+	public static void typeln(String Phrase)
+	{
+		TypeLine(Phrase);
+	}
+	
 	public static void TypeLine(String Phrase)
 	{
 	    Type(Phrase);
 	    System.out.println();
 	}
 	
+	public static void type(String Phrase)
+	{
+		Type(Phrase);
+	}
+	
 	public static void Type(String Phrase)
 	{
-		for (int Counter = 0; Counter < Phrase.length(); Counter++)
+		if (FancyTyping == true)
 		{
-			System.out.print(Phrase.charAt(Counter));
-			if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
+			for (int Counter = 0; Counter < Phrase.length(); Counter++)
 			{
-			Wait(215);
+				System.out.print(Phrase.charAt(Counter));
+				if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
+				{
+					Wait(205);
+				}
+				
+				if (Phrase.charAt(Counter) == ',')
+				{
+					Wait(90);
+				}
+				
+				Wait(35);
 			}
-			
-			if (Phrase.charAt(Counter) == ',')
-			{
-				Wait(90);
-			}
-			
-			Wait(35);
+		}
+		else
+		{
+			System.out.print(Phrase);
 		}
 	}
 	

@@ -8,7 +8,7 @@ public class StudioAnimations
 		Stuff.HitEnter(25);
 	}
 	
-	public static void DigoEntertainment()
+	public static void RodrigoStudio()
 	{
 		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
 	}
