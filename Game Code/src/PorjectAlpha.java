@@ -31,6 +31,7 @@ public class PorjectAlpha
 			Stuff.TypeLine("(Save) Makes a save code you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save code!");
 			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
+			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
 			Stuff.TypeLine("(Credits) Shows the credits");
 			TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
