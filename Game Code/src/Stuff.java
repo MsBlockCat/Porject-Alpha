@@ -11,8 +11,8 @@ public class Stuff
 	public static final int SaveVersion = 2;
 	public static boolean DebugMode = false;
 	public static boolean HasLuckyGauntlet = false;
-	public static boolean FancyTyping = false;
-	public static int FancyTypingSpeed = 2;
+	public static boolean FancyTyping = true;
+	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
@@ -123,11 +123,8 @@ public class Stuff
 								}
 								else
 								{
-									DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
-									FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
-									HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
-									TurnCount = StringToInt(SaveCode.substring(4, 6));
-									CurrentBranchNumber = 1;
+									SaveCode += "1";
+									SaveCode += "001";
 									CurrentLocationNumber = 1;
 									SaveCode = '2' + SaveCode.substring(1);
 									CompatibilityUsed = true;
@@ -147,9 +144,9 @@ public class Stuff
 									DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
 									FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
 									HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
-									TurnCount = StringToInt(SaveCode.substring(4, 6));
+									TurnCount = StringToInt(SaveCode.substring(4, 7));
 									CurrentBranchNumber = StringToInt(SaveCode.charAt(7));
-									CurrentLocationNumber = StringToInt(SaveCode.substring(8, 10));
+									CurrentLocationNumber = StringToInt(SaveCode.substring(8, 11));
 								}
 								break;
 						}
@@ -158,7 +155,7 @@ public class Stuff
 
 					if (CompatibilityUsed)
 					{
-						TypeLine("Just so you know, your save code was out of date so some data was added or may have been reset.");
+						TypeLine("Just so you know, your save code was from an older version of the game, so some data was added or may have been reset.");
 					}
 					
 					return true;
@@ -194,7 +191,7 @@ public class Stuff
 	{
 		while (Number.length() != 1)
 		{
-			if ((Number.charAt(1) + "").equals("0"))
+			if (Number.startsWith("0"))
 			{
 				Number = Number.substring(1);
 			}
@@ -312,7 +309,30 @@ public class Stuff
 			}
 			
 			System.out.println(".");
-			TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
+			if (CurrentBranchNumber == 1 && CurrentLocationNumber == 1)
+			{
+				TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
+			}
+			else
+			{
+				Type("(Menu) You may also go to the main menu. ");
+				
+				switch (RandomInt(1,4))
+				{
+					case 1:
+						TypeLine("You can save your progress there.");
+						break;
+					case 2:
+						TypeLine("Legends say it's a good place to save your progress, whatever that means.");
+						break;
+					case 3:
+						TypeLine("That's a good place to save your progress.");
+						break;
+					case 4:
+						TypeLine("You'll find it's a good spot to save your progress.");
+						break;
+				}
+			}
 			HitEnter(1);
 			
 			String Choice;
