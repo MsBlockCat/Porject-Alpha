@@ -11,7 +11,7 @@ public class Stuff
 	public static final int SaveVersion = 2;
 	public static boolean DebugMode = false;
 	public static boolean HasLuckyGauntlet = false;
-	public static boolean FancyTyping = true;
+	public static boolean FancyTyping = false;
 	public static int FancyTypingSpeed = 2;
 	public static int TurnCount = 0;
 	public static int CurrentBranchNumber = 0;
@@ -83,21 +83,24 @@ public class Stuff
 	{
 		if (SaveCode.length() == 0)
 		{
-			TypeLine("Sorry, that's not a save code, it's nothing in fact!");
+			TypeLine("(Enter) Sorry, that's not a save code, it's nothing in fact!");
+			AwesomeScanner.nextLine();
 			return false;
 		}
 		else
 		{
 			if (StringToInt(SaveCode.charAt(0)) == 0)
 			{
-				TypeLine("Sorry, either that's not a save code or it got corrupted!");
+				TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
+				AwesomeScanner.nextLine();
 				return false;
 			}
 			else
 			{
 				if (StringToInt(SaveCode.charAt(0)) > SaveVersion)
 				{
-					TypeLine("Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+					TypeLine("(Enter) Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+					AwesomeScanner.nextLine();
 					return false;
 				}
 				else
@@ -114,7 +117,8 @@ public class Stuff
 							case 1:
 								if (SaveCode.length() != 7)
 								{
-									TypeLine("Sorry, either that's not a save code or it got corrupted!");
+									TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
+									AwesomeScanner.nextLine();
 									return false;
 								}
 								else
@@ -134,7 +138,8 @@ public class Stuff
 							case 2:
 								if (SaveCode.length() != 11)
 								{
-									TypeLine("Sorry, either that's not a save code or it got corrupted!");
+									TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
+									AwesomeScanner.nextLine();
 									return false;
 								}
 								else
@@ -187,14 +192,13 @@ public class Stuff
 	
 	public static int StringToInt(String Number)
 	{
-		do
+		while (Number.length() != 1)
 		{
-			if (Number.charAt(0) == '0' && Number.substring(1, 1) != null)
+			if ((Number.charAt(1) + "").equals("0"))
 			{
 				Number = Number.substring(1);
 			}
 		}
-		while (!(Number.charAt(0) == '0' && Number.substring(1, 1) != null));
 		
 		for (int Cursor = -1000; Cursor <= 1000; Cursor ++)
 		{
@@ -355,7 +359,7 @@ public class Stuff
 				}
 			}
 			
-			if (!Choice.equals("menu"))
+			if (Choice.equals("menu"))
 			{
 				PorjectAlpha.TitleScreen();
 				return Choice;

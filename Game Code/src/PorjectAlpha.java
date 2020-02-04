@@ -39,8 +39,22 @@ public class PorjectAlpha
 			switch (TitleScreenPlayerChoice)
 			{
 				case "play":
-					StayOnTitleScreen = false;
-					GoToLabBranch("Beginning");
+					if (Stuff.CurrentBranchNumber == 0)
+					{
+						StayOnTitleScreen = false;
+						GoToLabBranch("Beginning");
+					}
+					else
+					{
+						Stuff.TypeLine("Are you sure you want to start a new game? All unsaved progress in your current one'll be lost!");
+						Stuff.TypeLine("(Yes) Delete unsaved progress and make a new game");
+						Stuff.TypeLine("(Anything else) Keep your progress, don't make a new game, and go back to the main menu");
+						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
+						{
+							StayOnTitleScreen = false;
+							GoToLabBranch("Beginning");
+						}
+					}
 					break;
 				case "save":
 					Stuff.TypeLine("(Enter) Here's your save code, be sure to copy it: " + Stuff.MakeSaveCode());
@@ -113,6 +127,7 @@ public class PorjectAlpha
 					case "2030":
 						SpaceBranch.GoToSpaceBranch("Launchpad");
 				}
+				break;
 			default:
 				System.out.println("Error 3: The starting area of the story, method GoToStartingBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
 		}
