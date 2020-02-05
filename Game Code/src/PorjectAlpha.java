@@ -2,6 +2,9 @@ public class PorjectAlpha
 {
 	public static void main(String[] args)
 	{
+		//Initial Settings Menu
+		Stuff.SettingsMenu();
+		
 		//Calibration Screen
 		Stuff.ScreenSizeRecommendation();
 		
@@ -100,6 +103,9 @@ public class PorjectAlpha
 					StayOnTitleScreen = false;
 					Lab1();
 					break;
+				case "settings":
+					Stuff.SettingsMenu();
+					break;
 			}
 		}
 		while (StayOnTitleScreen == true);
@@ -116,7 +122,7 @@ public class PorjectAlpha
 				Lab1();
 				break;
 			default:
-				System.out.println("Error 3: The starting area of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
+				System.out.println("Error 3: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
 		}
 	}
 	

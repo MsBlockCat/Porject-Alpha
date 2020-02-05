@@ -28,6 +28,11 @@ public class Stuff
 		}
 	}
 	
+	public static void SettingsMenu()
+	{
+		
+	}
+	
 	public static String MakeSaveCode()
 	{
 		String FreshSaveCode = "";
