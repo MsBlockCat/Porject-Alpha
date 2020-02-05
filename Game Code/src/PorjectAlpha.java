@@ -42,7 +42,7 @@ public class PorjectAlpha
 					if (Stuff.CurrentBranchNumber == 0)
 					{
 						StayOnTitleScreen = false;
-						GoToLabBranch("Beginning");
+						Lab1();
 					}
 					else
 					{
@@ -52,7 +52,7 @@ public class PorjectAlpha
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
 							StayOnTitleScreen = false;
-							GoToLabBranch("Beginning");
+							Lab1();
 						}
 					}
 					break;
@@ -77,7 +77,7 @@ public class PorjectAlpha
 									break;
 								case 1:
 									StayOnTitleScreen = false;
-									GoToLabBranch(Stuff.CurrentLocationNumber + "");
+									GoToModernBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 2:
 									StayOnTitleScreen = false;
@@ -98,32 +98,32 @@ public class PorjectAlpha
 				case "debug":
 					Stuff.DebugMode = true;
 					StayOnTitleScreen = false;
-					GoToLabBranch("Beginning");
+					Lab1();
 					break;
 			}
 		}
 		while (StayOnTitleScreen == true);
 	}
 	
-	public static void GoToLabBranch(String StartingPosition)
+	public static void GoToModernBranch(String StartingPosition)
 	{
 		Stuff.CurrentBranchNumber = 1;
 		String PlayerLocation = StartingPosition;
 		
 		switch (PlayerLocation)
 		{
-			case "Beginning":
 			case "1":
-				Beginning();
+				Lab1();
 				break;
 			default:
-				System.out.println("Error 3: The starting area of the story, method GoToStartingBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
+				System.out.println("Error 3: The starting area of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
 		}
 	}
 	
-	public static void Beginning()
+	public static void Lab1()
 	{
 		Stuff.CurrentLocationNumber = 1;
+		
 		Stuff.TypeLine("The epic quest begins...");
 		Stuff.TypeLine("Yes, it begins under the harsh light of a labratory.");
 		Stuff.TypeLine("You're the assistant to Dr. Heinz Doofenshmirtz, a genius in time travel and teleportation.");
@@ -137,13 +137,13 @@ public class PorjectAlpha
 		switch (Stuff.PlayerChoice("1253", "1954", "2030"))
 		{
 			case "1253":
-				OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
+				OldTimeBranch.OuterVillage1();
 				break;
 			case "1954":
-				MattBranch.GoToMattBranch("RuralAustralia1");
+				MattBranch.RuralAustralia1();
 				break;
 			case "2030":
-				SpaceBranch.GoToSpaceBranch("Launchpad");
+				SpaceBranch.Launchpad();
 				break;
 		}
 	}

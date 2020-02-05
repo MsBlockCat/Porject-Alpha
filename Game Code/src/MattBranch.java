@@ -5,7 +5,6 @@ public class MattBranch
 		Stuff.CurrentBranchNumber = 3;
 		switch (StartingPosition)
 		{
-			case "RuralAustralia1":
 			case "1":
 				RuralAustralia1();
 				break;
@@ -17,7 +16,13 @@ public class MattBranch
 	public static void RuralAustralia1()
 	{
 		Stuff.CurrentLocationNumber = 1;
-		Stuff.TypeLine("You travel back to the year 1954.");
+		
+		if (Stuff.StoryBeginning == true)
+		{
+			Stuff.TypeLine("You travel back to the year 1954.");
+			Stuff.StoryBeginning = false;
+		}
+		
 		switch (Stuff.PlayerChoice("eating the banana", "nuking North Korea", "skiing", "going on the Klondike"))
 		{
 			case "eating the banana":

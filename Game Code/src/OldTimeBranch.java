@@ -5,7 +5,6 @@ public class OldTimeBranch
 		Stuff.CurrentBranchNumber = 4;
 		switch (StartingPosition)
 		{
-			case "OuterVillage1":
 			case "1":
 				OuterVillage1();
 				break;
@@ -17,7 +16,13 @@ public class OldTimeBranch
 	public static void OuterVillage1()
 	{
 		Stuff.CurrentLocationNumber = 1;
-		Stuff.TypeLine("You travel back to the year 1253.");
+		
+		if (Stuff.StoryBeginning == true)
+		{
+			Stuff.TypeLine("You travel back to the year 1253.");
+			Stuff.StoryBeginning = false;
+		}
+		
 		switch (Stuff.PlayerChoice("eating the banana", "nuking North Korea", "skiing", "going on the Klondike"))
 		{
 			case "eating the banana":

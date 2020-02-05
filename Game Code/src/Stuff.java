@@ -14,6 +14,7 @@ public class Stuff
 	public static boolean FancyTyping = true;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
+	public static boolean StoryBeginning = true;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
@@ -393,8 +394,10 @@ public class Stuff
 						break;
 					case 2:
 						TypeLine("Very well, " + Choice + " it is.");
+						break;
 					case 3:
 						TypeLine("You chose " + Choice + ".");
+						break;
 				}
 				TurnCount ++;
 				return Choice;
