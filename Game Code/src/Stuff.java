@@ -203,15 +203,16 @@ public class Stuff
 			}
 		}
 		
-		for (int Cursor = -1000; Cursor <= 1000; Cursor ++)
+		for (int Cursor = 0; Cursor < Number.length(); Cursor ++)
 		{
-			if ((Cursor + "").equals(Number))
+			if (!Character.isDigit(Number.charAt(Cursor)))
 			{
-				return Cursor;
+				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted value is an integer in the String variable type.");
+				return 0;
 			}
 		}
-		System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are -1000 to 1000.");
-		return 0;
+		
+		return Integer.parseInt(Number);
 	}
 	
 	public static int BooleanToInt(Boolean TheBoolean)
