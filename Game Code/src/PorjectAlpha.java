@@ -15,8 +15,6 @@ public class PorjectAlpha
 		Stuff.Wait(1000);
 		StudioAnimations.MattEntertainment();
 		Stuff.Wait(1000);
-		StudioAnimations.JosephEntertainment();
-		Stuff.Wait(1000);
 		
 		//Game Intro Animation
 		GameIntro.DaGameIntro();

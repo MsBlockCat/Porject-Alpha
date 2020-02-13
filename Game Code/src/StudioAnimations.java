@@ -17,9 +17,4 @@ public class StudioAnimations
 	{
 		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
 	}
-	
-	public static void JosephEntertainment()
-	{
-		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
-	}
 }

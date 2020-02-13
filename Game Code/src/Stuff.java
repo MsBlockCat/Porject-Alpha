@@ -6,7 +6,7 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.0.0a";
+	public static final String GameVersion = "0.0.1a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 2;
 	public static boolean DebugMode = false;
