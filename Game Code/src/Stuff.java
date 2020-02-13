@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Stuff
@@ -14,6 +16,7 @@ public class Stuff
 	public static boolean FancyTyping = true;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
+	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
@@ -28,9 +31,46 @@ public class Stuff
 		}
 	}
 	
+	public static void Divider()
+	{
+		System.out.println("--------------------------------------------------------------------------------------------------------------");
+	}
+	
 	public static void SettingsMenu()
 	{
+		TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
+		TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
+		HitEnter(1);
+		Divider();
+		Stuff.TypeLine("(Enter) Leave the settings menu.");
+		AwesomeScanner.nextLine();
+	}
+	
+	public static void Credits()
+	{
+		HitEnter(50);
 		
+		Scanner CreditsScanner = null;
+		
+		try {
+			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
+		} catch (FileNotFoundException NoFileException) {
+			System.out.println("Error 6: Looks like the Credits.txt file isn't in the game code, but it should be!");
+			NoFileException.printStackTrace();
+		}
+		
+		while (CreditsScanner.hasNext())
+		{
+			TypeLine(CreditsScanner.nextLine());
+		}
+		
+		CreditsScanner.close();
+		
+		Wait(2000);
+		HitEnter(1);
+		Divider();
+		Stuff.TypeLine("(Enter) Leave the credits.");
+		AwesomeScanner.nextLine();
 	}
 	
 	public static String MakeSaveCode()
@@ -170,18 +210,26 @@ public class Stuff
 		}
 	}
 	
-	public static void ScreenSizeRecommendation()
+	public static void ScreenSizeRecommendation(boolean FirstTime)
 	{
-		System.out.println("--------------------------------------------------------------------------------------------------------------");
+		HitEnter(50);
+		Divider();
 		HitEnter(14);
-		TypeLine("Please resize your window so the dashes above are just visible, and there's one extra line below the bottom.");
+		TypeLine("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
 		System.out.println("                                                   --------");
 		System.out.println("                                                   |Center|");
 		System.out.println("                                                   --------");
-		TypeLine("When options on the left in () are on screen, you can type them and hit enter to choose them.");
-		System.out.println("   |");
-		System.out.println("   |");
-		System.out.println("  \\./");
+		if (FirstTime == true)
+		{
+			TypeLine("When options on the left in () are on screen, you can type them and hit enter to choose them.");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("  \\./");
+		}
+		else
+		{
+			Stuff.HitEnter(4);
+		}
 		TypeLine("(Enter) Go to the main menu of Porject Alpha");
 		HitEnter(9);
 		System.out.print("--------------------------------------------------------------------------------------------------------------");
@@ -258,7 +306,7 @@ public class Stuff
 	public static String PlayerChoice(String Choice1, String Choice2, String Choice3, String Choice4)
 	{
 		HitEnter(1);
-		System.out.println("--------------------------------------------------------------------------------------------------------------");
+		Divider();
 		if (Choice1 == null)
 		{
 			System.out.println("Error 2: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
@@ -415,7 +463,7 @@ public class Stuff
 	{
 		if (DebugMode == true)
 		{
-			System.out.println("--------------------------------------------------------------------------------------------------------------");
+			Divider();
 			TypeLine("Debug Menu");
 			HitEnter(5);
 			TypeLine("GameVersion: " + GameVersion);

@@ -6,7 +6,7 @@ public class PorjectAlpha
 		Stuff.SettingsMenu();
 		
 		//Calibration Screen
-		Stuff.ScreenSizeRecommendation();
+		Stuff.ScreenSizeRecommendation(true);
 		
 		//Studio Animations
 		StudioAnimations.FalconCoLtd();
@@ -18,6 +18,8 @@ public class PorjectAlpha
 		
 		//Game Intro Animation
 		GameIntro.DaGameIntro();
+		
+		//Yeah that
 		TitleScreen();
 	}
 	
@@ -32,6 +34,7 @@ public class PorjectAlpha
 			Stuff.TypeLine("(Save) Makes a save code you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save code!");
 			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
+			Stuff.TypeLine("(Calibrate) Shows the window calibration screen");
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
 			Stuff.TypeLine("(Credits) Shows the credits");
@@ -101,12 +104,26 @@ public class PorjectAlpha
 					StayOnTitleScreen = false;
 					Lab1();
 					break;
+				case "calibrate":
+					Stuff.ScreenSizeRecommendation(false);
+					break;
 				case "settings":
 					Stuff.SettingsMenu();
+					break;
+				case "changelog":
+					Changelog();
+					break;
+				case "credits":
+					Stuff.Credits();
 					break;
 			}
 		}
 		while (StayOnTitleScreen == true);
+	}
+	
+	public static void Changelog()
+	{
+		
 	}
 	
 	public static void GoToModernBranch(String StartingPosition)
