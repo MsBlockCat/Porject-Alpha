@@ -3,3 +3,6 @@
 
 # Where Eclipse keeps project settings
 *.settings
+
+# The save file
+/Saves/Save.txt

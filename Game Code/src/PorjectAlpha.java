@@ -19,7 +19,8 @@ public class PorjectAlpha
 		//Game Intro Animation
 		GameIntro.DaGameIntro();
 		
-		//Yeah that
+		//Title Screen
+		Stuff.GameBeginning = false;
 		TitleScreen();
 	}
 	
@@ -61,8 +62,7 @@ public class PorjectAlpha
 					}
 					break;
 				case "save":
-					Stuff.TypeLine("(Enter) Here's your save code, be sure to copy it: " + Stuff.MakeSaveCode());
-					Stuff.AwesomeScanner.nextLine();
+					Stuff.MakeSaveCode();
 					break;
 				case "load":
 					Stuff.TypeLine("Are you sure you wanna load a save code? This'll erase any current unsaved progress!");
@@ -70,8 +70,7 @@ public class PorjectAlpha
 					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 					{
-						Stuff.TypeLine("Please enter a save code below (Game save code version " + Stuff.SaveVersion + "):");
-						if (Stuff.LoadSaveCode(Stuff.AwesomeScanner.nextLine()) == true)
+						if (Stuff.LoadSaveCode() == true)
 						{
 							Stuff.TypeLine("(Enter) Successfully loaded!");
 							Stuff.AwesomeScanner.nextLine();
@@ -123,7 +122,11 @@ public class PorjectAlpha
 	
 	public static void Changelog()
 	{
-		
+		Stuff.TypeLine("0.0.2a");
+		Stuff.TypeLine("Working credits and save files!");
+		Stuff.Divider();
+		Stuff.TypeLine("0.0.1a");
+		Stuff.TypeLine("Initial version, with working save codes, a basic storyline, and a mostly functional main menu!");
 	}
 	
 	public static void GoToModernBranch(String StartingPosition)

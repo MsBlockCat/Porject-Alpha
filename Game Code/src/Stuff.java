@@ -1,5 +1,8 @@
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Stuff
@@ -8,12 +11,10 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.0.1a";
+	public static final String GameVersion = "0.0.2a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 2;
+	public static final int SaveVersion = 3;
 	public static boolean DebugMode = false;
-	public static boolean HasLuckyGauntlet = false;
-	public static boolean FancyTyping = true;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
 	public static boolean GameBeginning = true;
@@ -21,6 +22,7 @@ public class Stuff
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
+	public static boolean HasLuckyGauntlet = false;
 	
 	//Methods
 	public static void HitEnter(int NumberOfEnters)
@@ -38,12 +40,38 @@ public class Stuff
 	
 	public static void SettingsMenu()
 	{
-		TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
-		TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
-		HitEnter(1);
-		Divider();
-		Stuff.TypeLine("(Enter) Leave the settings menu.");
-		AwesomeScanner.nextLine();
+		String Input = "";
+		do
+		{
+			HitEnter(50);
+			TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
+			TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
+			Divider();
+			HitEnter(1);
+			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
+			TypeLine(" This is how fast text shows up on screen. 0 makes it instant.");
+			Stuff.TypeLine("(Enter) Leave the settings menu.");
+			
+			Input = AwesomeScanner.nextLine().toLowerCase();
+			
+			//FancyTypingSpeed
+			if (Input.length() == 12 && Input.startsWith("text speed "));
+			{
+				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3'))
+				{
+					TypeLine("(Enter) Text Speed can be set to 0, 1, 2, or 3.");
+					AwesomeScanner.nextLine();
+				}
+				else
+				{
+					Type("(Enter) Your Text Speed went from " + FancyTypingSpeed);
+					FancyTypingSpeed = StringToInt(Input.charAt(11) + "");
+					TypeLine(" to " + FancyTypingSpeed + ".");
+					AwesomeScanner.nextLine();
+				}
+			}
+		}
+		while (Input.length() != 0);
 	}
 	
 	public static void Credits()
@@ -73,140 +101,99 @@ public class Stuff
 		AwesomeScanner.nextLine();
 	}
 	
-	public static String MakeSaveCode()
+	public static void MakeSaveCode()
 	{
-		String FreshSaveCode = "";
-		/* Character numbers go in these comments below */
-		/* 0 */ FreshSaveCode += SaveVersion;
-		/* 1 */ FreshSaveCode += BooleanToInt(DebugMode);
-		/* 2 */ FreshSaveCode += BooleanToInt(FancyTyping);
-		/* 3 */ FreshSaveCode += BooleanToInt(HasLuckyGauntlet);
-		/* 4-6 */ if (TurnCount > 999)
+		File SaveFile = new File("Game Code/Saves/Save.txt");
+		  
+		try
 		{
-			FreshSaveCode += 999;
-		}
-		else
-		{
-			if (TurnCount < 10)
+			//Creates or locks into the save file
+			if (SaveFile.createNewFile())
 			{
-				FreshSaveCode += "00" + TurnCount;
+			    System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
 			}
 			else
 			{
-				if (TurnCount < 100)
-				{
-					FreshSaveCode += "0" + TurnCount;
-				}
-				else
-				FreshSaveCode += TurnCount;
+			    System.out.println("A save file already exists, saving to it...");
 			}
-		}
-		/* 7 */ FreshSaveCode += CurrentBranchNumber;
-		/* 8-10 */ if (CurrentLocationNumber > 999)
-		{
-			FreshSaveCode += 999;
-		}
-		else
-		{
-			if (CurrentLocationNumber < 10)
+			 
+			//Saves to the save file
+			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
+			SaveFileWriter.write(SaveVersion + "\n" + BooleanToInt(DebugMode) + "\n" + FancyTypingSpeed + "\n" + TurnCount + "\n" + BooleanToInt(GameBeginning) + "\n" + BooleanToInt(StoryBeginning) + "\n" + CurrentBranchNumber + "\n" + CurrentLocationNumber + "\n" + BooleanToInt(HasLuckyGauntlet));
+			SaveFileWriter.close();
+			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
+			AwesomeScanner.nextLine();
+			
+			Desktop AwesomeDesktop = Desktop.getDesktop();
+			File FolderToOpen = null;
+			try
 			{
-				FreshSaveCode += "00" + CurrentLocationNumber;
+				FolderToOpen = new File("Game Code/Saves");
+				AwesomeDesktop.open(FolderToOpen);
 			}
-			else
+			catch (IllegalArgumentException IAE)
 			{
-				if (CurrentLocationNumber < 100)
-				{
-					FreshSaveCode += "0" + CurrentLocationNumber;
-				}
-				else
-				FreshSaveCode += CurrentLocationNumber;
+				System.out.println("Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found!");
 			}
 		}
-		return FreshSaveCode;
+		catch (IOException IOException)
+		{
+			System.out.println("Error 7: There was an IOException when saving your game.");
+			IOException.printStackTrace();
+		}
 	}
 	
-	public static boolean LoadSaveCode(String SaveCode)
+	public static boolean LoadSaveCode()
 	{
-		if (SaveCode.length() == 0)
+		File SaveFile = new File("Game Code/Saves/Save.txt");
+		
+		try
 		{
-			TypeLine("(Enter) Sorry, that's not a save code, it's nothing in fact!");
-			AwesomeScanner.nextLine();
-			return false;
-		}
-		else
-		{
-			if (StringToInt(SaveCode.charAt(0)) == 0)
+			Scanner AwesomeFile = new Scanner(SaveFile);
+			
+			int FileSaveVersion = StringToInt(AwesomeFile.nextLine());
+			
+			if (FileSaveVersion < 3)
 			{
 				TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
 				AwesomeScanner.nextLine();
+				AwesomeFile.close();
 				return false;
 			}
 			else
 			{
-				if (StringToInt(SaveCode.charAt(0)) > SaveVersion)
+				if (FileSaveVersion > SaveVersion)
 				{
-					TypeLine("(Enter) Sorry, this load code uses version " + SaveCode.charAt(0) + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+					TypeLine("(Enter) Sorry, this load code uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
 					AwesomeScanner.nextLine();
+					AwesomeFile.close();
 					return false;
 				}
 				else
 				{
-					boolean CompatibilityUsed = false;
+					DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+					FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+					TurnCount = StringToInt(AwesomeFile.nextLine());
+					GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+					StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+					CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+					HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 					
-					do
+					if (SaveVersion > FileSaveVersion)
 					{
-						switch (StringToInt(SaveCode.charAt(0)))
-						{
-							//Should be reverse compatible with older versions of save codes
-							
-							//Version 1: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount
-							case 1:
-								if (SaveCode.length() != 7)
-								{
-									TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
-									AwesomeScanner.nextLine();
-									return false;
-								}
-								else
-								{
-									SaveCode += "1";
-									SaveCode += "001";
-									CurrentLocationNumber = 1;
-									SaveCode = '2' + SaveCode.substring(1);
-									CompatibilityUsed = true;
-								}
-								break;
-							
-							//Version 2: 0 = SaveVersion; 1 = DebugMode; 2 = FancyTyping; 3 = HasLuckyGauntlet; 4-6 = TurnCount; 7 = CurrentBranchNumber; 8-10 = CurrentLocationNumber
-							case 2:
-								if (SaveCode.length() != 11)
-								{
-									TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
-									AwesomeScanner.nextLine();
-									return false;
-								}
-								else
-								{
-									DebugMode = IntToBoolean(StringToInt(SaveCode.charAt(1)));
-									FancyTyping = IntToBoolean(StringToInt(SaveCode.charAt(2)));
-									HasLuckyGauntlet = IntToBoolean(StringToInt(SaveCode.charAt(3)));
-									TurnCount = StringToInt(SaveCode.substring(4, 7));
-									CurrentBranchNumber = StringToInt(SaveCode.charAt(7));
-									CurrentLocationNumber = StringToInt(SaveCode.substring(8, 11));
-								}
-								break;
-						}
+						TypeLine("(Enter) Just so you know, your save code was from an older version of the game, so some stuff was added or may have been reset.");
+						AwesomeScanner.nextLine();
 					}
-					while (StringToInt(SaveCode.charAt(0)) != SaveVersion);
 
-					if (CompatibilityUsed)
-					{
-						TypeLine("Just so you know, your save code was from an older version of the game, so some data was added or may have been reset.");
-					}
-					
+					AwesomeFile.close();
 					return true;
 				}
 			}
+		}
+		catch (FileNotFoundException NoSaveFileException)
+		{
+			TypeLine("You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+			return false;
 		}
 	}
 	
@@ -491,7 +478,7 @@ public class Stuff
 	
 	public static void Type(String Phrase)
 	{
-		if (FancyTyping == true)
+		if (FancyTypingSpeed != 0)
 		{
 			for (int Counter = 0; Counter < Phrase.length(); Counter++)
 			{
