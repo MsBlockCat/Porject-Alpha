@@ -1,13 +1,25 @@
 public class PorjectAlpha
 {
+	public static void Changelog()
+	{
+		Stuff.TypeLine("0.0.3a");
+		Stuff.TypeLine(" Settings menu and the beginnings of ASCII art!");
+		Stuff.Divider();
+		Stuff.TypeLine("0.0.2a");
+		Stuff.TypeLine(" Working credits and save files, and this changelog!");
+		Stuff.Divider();
+		Stuff.TypeLine("0.0.1a");
+		Stuff.TypeLine(" Initial version, with working save codes, a basic storyline, and a mostly functional main menu!");
+	}
+	
 	public static void main(String[] args)
 	{
-		//Initial Settings Menu
-		Stuff.SettingsMenu();
-		
 		//Calibration Screen
 		Stuff.ScreenSizeRecommendation(true);
 		
+		//Initial Settings Menu
+		Stuff.SettingsMenu();
+				
 		//Studio Animations
 		StudioAnimations.FalconCoLtd();
 		Stuff.Wait(1000);
@@ -118,15 +130,6 @@ public class PorjectAlpha
 			}
 		}
 		while (StayOnTitleScreen == true);
-	}
-	
-	public static void Changelog()
-	{
-		Stuff.TypeLine("0.0.2a");
-		Stuff.TypeLine("Working credits and save files!");
-		Stuff.Divider();
-		Stuff.TypeLine("0.0.1a");
-		Stuff.TypeLine("Initial version, with working save codes, a basic storyline, and a mostly functional main menu!");
 	}
 	
 	public static void GoToModernBranch(String StartingPosition)

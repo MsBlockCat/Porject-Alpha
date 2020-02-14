@@ -11,7 +11,7 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.0.2a";
+	public static final String GameVersion = "0.0.3a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 3;
 	public static boolean DebugMode = false;
@@ -35,6 +35,7 @@ public class Stuff
 	
 	public static void Divider()
 	{
+		//That's 110 dashes, so 55 characters gives you the middle
 		System.out.println("--------------------------------------------------------------------------------------------------------------");
 	}
 	
@@ -43,7 +44,28 @@ public class Stuff
 		String Input = "";
 		do
 		{
+			for (int Counter = 1; Counter <= 4;)
+			{
+				HitEnter(50);
+				ASCII.SettingsGear1();
+				HitEnter(27 - (Counter * 5));
+				Wait(250);
+				Counter ++;
+				
+				HitEnter(50);
+				ASCII.SettingsGear2();
+				HitEnter(27 - (Counter * 5));
+				Wait(250);
+				Counter ++;
+			}
+			
 			HitEnter(50);
+			ASCII.SettingsGear1();
+			HitEnter(1);
+			ASCII.SettingsTitle();
+			Stuff.Divider();
+			Wait(250);
+			
 			TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
 			TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
 			Divider();
@@ -55,7 +77,7 @@ public class Stuff
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
 			//FancyTypingSpeed
-			if (Input.length() == 12 && Input.startsWith("text speed "));
+			if (Input.length() == 12 && Input.startsWith("text speed "))
 			{
 				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3'))
 				{
@@ -201,11 +223,14 @@ public class Stuff
 	{
 		HitEnter(50);
 		Divider();
-		HitEnter(14);
+		HitEnter(5);
+		ASCII.CalibrationScreen();
+		HitEnter(3);
 		TypeLine("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
 		System.out.println("                                                   --------");
 		System.out.println("                                                   |Center|");
 		System.out.println("                                                   --------");
+		HitEnter(3);
 		if (FirstTime == true)
 		{
 			TypeLine("When options on the left in () are on screen, you can type them and hit enter to choose them.");
@@ -218,7 +243,7 @@ public class Stuff
 			Stuff.HitEnter(4);
 		}
 		TypeLine("(Enter) Go to the main menu of Porject Alpha");
-		HitEnter(9);
+		HitEnter(6);
 		System.out.print("--------------------------------------------------------------------------------------------------------------");
 		AwesomeScanner.nextLine();
 	}
@@ -518,9 +543,9 @@ public class Stuff
 		{
 			Thread.sleep(Milliseconds);
 		}
-		catch (InterruptedException e)
+		catch (InterruptedException Exception)
 		{
-			e.printStackTrace();
+			Exception.printStackTrace();
 		}
 	}
 }
