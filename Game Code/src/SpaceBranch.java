@@ -20,7 +20,7 @@ public class SpaceBranch
 		if (Stuff.StoryBeginning == true)
 		{
 			Stuff.TypeLine("You travel to the year 2030.");
-			Stuff.TypeLine("You are nearby a massive launchpad with a rocket preparing to launch on it.");
+			Stuff.TypeLine("A massive launchpad is nearby with a rocket preparing to launch on it.");
 			Stuff.TypeLine("You see Elon Musk watching over its feuling.");
 			Stuff.TypeLine("Walking up to him, he greets you first.");
 			Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
@@ -34,10 +34,10 @@ public class SpaceBranch
 					break;
 				case "don't":
 					Stuff.TypeLine("\"Very well then, if that's your choice.\"");
-					Stuff.TypeLine("\"Oh right, I almost forgot: I believe your Timinator broke when you traveled here.\"");
+					Stuff.TypeLine("\"Oh right, I almost forgot: I believe your Timeinator broke when you traveled here.\"");
 					Stuff.TypeLine("\"You can borrow one of my time machines to get back to your lab.\"");
-					Stuff.TypeLine("\"Seeing no other choices, you thank him, take the time machine, and replace it with the broken one on your wrist.\"");
-					Stuff.TypeLine("\"You set it for Dr. Doofenschmirtz's labratory, and head back.\"");
+					Stuff.TypeLine("Seeing no other choices, you thank him, take the time machine, and replace the broken one on your wrist with it.");
+					Stuff.TypeLine("You set it for Dr. Doofenschmirtz's labratory, and head back.");
 					Stuff.StoryBeginning = false;
 					PorjectAlpha.Lab1();
 					break;

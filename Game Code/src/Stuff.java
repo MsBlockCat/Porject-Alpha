@@ -11,7 +11,7 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.0.3a";
+	public static final String GameVersion = "0.0.4a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 3;
 	public static boolean DebugMode = false;
@@ -23,6 +23,9 @@ public class Stuff
 	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
+	
+	//Miscellaneous weirdness
+	Desktop AwesomeDesktop = Desktop.getDesktop();
 	
 	//Methods
 	public static void HitEnter(int NumberOfEnters)
@@ -44,34 +47,38 @@ public class Stuff
 		String Input = "";
 		do
 		{
-			for (int Counter = 1; Counter <= 4;)
-			{
-				HitEnter(50);
-				ASCII.SettingsGear1();
-				HitEnter(27 - (Counter * 5));
-				Wait(250);
-				Counter ++;
-				
-				HitEnter(50);
-				ASCII.SettingsGear2();
-				HitEnter(27 - (Counter * 5));
-				Wait(250);
-				Counter ++;
-			}
+			HitEnter(50);
+			ASCII.SettingsGear2();
+			HitEnter(22);
+			Wait(1000);
 			
 			HitEnter(50);
 			ASCII.SettingsGear1();
+			HitEnter(17);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.SettingsGear2();
+			HitEnter(12);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.SettingsGear1();
+			HitEnter(7);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.SettingsGear2();
 			HitEnter(1);
 			ASCII.SettingsTitle();
-			Stuff.Divider();
-			Wait(250);
+			Divider();
 			
 			TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
 			TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
 			Divider();
 			HitEnter(1);
 			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
-			TypeLine(" This is how fast text shows up on screen. 0 makes it instant.");
+			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 3 is slowest.");
 			Stuff.TypeLine("(Enter) Leave the settings menu.");
 			
 			Input = AwesomeScanner.nextLine().toLowerCase();
@@ -221,19 +228,22 @@ public class Stuff
 	
 	public static void ScreenSizeRecommendation(boolean FirstTime)
 	{
+		//50 enters standard as a buffer
 		HitEnter(50);
+		//40 lines on screen
 		Divider();
-		HitEnter(5);
+		HitEnter(4);
 		ASCII.CalibrationScreen();
-		HitEnter(3);
-		TypeLine("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
+		HitEnter(5);
+		System.out.println("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
 		System.out.println("                                                   --------");
-		System.out.println("                                                   |Center|");
+		System.out.println("                                                   | Cen  |");
+		System.out.println("                                                   |  ter |");
 		System.out.println("                                                   --------");
-		HitEnter(3);
+		HitEnter(6);
 		if (FirstTime == true)
 		{
-			TypeLine("When options on the left in () are on screen, you can type them and hit enter to choose them.");
+			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
 			System.out.println("   |");
 			System.out.println("   |");
 			System.out.println("  \\./");
@@ -510,15 +520,44 @@ public class Stuff
 				System.out.print(Phrase.charAt(Counter));
 				if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
 				{
-					Wait(105 + (FancyTypingSpeed * 50));
+					boolean Gloss = false;
+					
+					if (Phrase.charAt(Counter) == '.' && !(Counter == Phrase.length() - 1))
+					{
+						if (Phrase.charAt(Counter + 1) != ' ')
+						{
+							Gloss = true;
+						}
+						
+						if (!(Counter == 0 || Counter == 1 || Counter == 2))
+						{
+							if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mr")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("ms")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("dr")))
+							{
+								Gloss = true;
+							}
+						}
+						
+						if (!(Counter == 0 || Counter == 1 || Counter == 2 || Counter == 3))
+						{
+							if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mrs")))
+							{
+								Gloss = true;
+							}
+						}
+					}
+					
+					if (!(Gloss))
+					{
+						Wait(95 + (FancyTypingSpeed * 60));
+					}
 				}
 				
 				if (Phrase.charAt(Counter) == ',')
 				{
-					Wait(40 + (FancyTypingSpeed * 25));
+					Wait(30 + (FancyTypingSpeed * 30));
 				}
 				
-				Wait(15 + (FancyTypingSpeed * 10));
+				Wait(5 + (FancyTypingSpeed * 15));
 			}
 		}
 		else

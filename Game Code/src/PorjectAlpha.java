@@ -2,6 +2,35 @@ public class PorjectAlpha
 {
 	public static void Changelog()
 	{
+		Stuff.HitEnter(50);
+		ASCII.ChangelogWindow1();
+		Stuff.HitEnter(22);
+		Stuff.Wait(1000);
+		
+		Stuff.HitEnter(50);
+		ASCII.ChangelogWindow2();
+		Stuff.HitEnter(17);
+		Stuff.Wait(350);
+		
+		Stuff.HitEnter(50);
+		ASCII.ChangelogWindow3();
+		Stuff.HitEnter(12);
+		Stuff.Wait(350);
+		
+		Stuff.HitEnter(50);
+		ASCII.ChangelogWindow4();
+		Stuff.HitEnter(7);
+		Stuff.Wait(350);
+		
+		Stuff.HitEnter(50);
+		ASCII.ChangelogWindow5();
+		Stuff.HitEnter(1);
+		ASCII.ChangelogTitle();
+		Stuff.Divider();
+		
+		Stuff.TypeLine("0.0.4a");
+		Stuff.TypeLine(" Even more advanced text displaying, tpyo fixes, more ASCII art and more!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.0.3a");
 		Stuff.TypeLine(" Settings menu and the beginnings of ASCII art!");
 		Stuff.Divider();
@@ -14,22 +43,34 @@ public class PorjectAlpha
 	
 	public static void main(String[] args)
 	{
-		//Calibration Screen
-		Stuff.ScreenSizeRecommendation(true);
+		//Loads save data
+		Stuff.LoadSaveCode();
 		
-		//Initial Settings Menu
-		Stuff.SettingsMenu();
-				
-		//Studio Animations
-		StudioAnimations.FalconCoLtd();
-		Stuff.Wait(1000);
-		StudioAnimations.RodrigoStudio();
-		Stuff.Wait(1000);
-		StudioAnimations.MattEntertainment();
-		Stuff.Wait(1000);
+		if (Stuff.GameBeginning == true)
+		{
+			//Calibration Screen with first time explanation
+			Stuff.ScreenSizeRecommendation(true);
+			
+			//Initial Settings Menu
+			Stuff.SettingsMenu();
+			
+			//Studio Animations
+			StudioAnimations.FalconCoLtd();
+			Stuff.Wait(1000);
+			StudioAnimations.RodrigoStudio();
+			Stuff.Wait(1000);
+			StudioAnimations.MattEntertainment();
+			Stuff.Wait(1000);
+		}
+		else
+		{
+			//Normal Calibration Screen
+			Stuff.ScreenSizeRecommendation(false);
+		}
 		
 		//Game Intro Animation
 		GameIntro.DaGameIntro();
+		Stuff.Wait(1000);
 		
 		//Title Screen
 		Stuff.GameBeginning = false;
@@ -42,7 +83,11 @@ public class PorjectAlpha
 		String TitleScreenPlayerChoice = null;
 		do
 		{
-			Stuff.HitEnter(40);
+			Stuff.HitEnter(50);
+			ASCII.TitleTimeinator();
+			Stuff.HitEnter(3);
+			ASCII.MainTitle();
+			Stuff.HitEnter(5);
 			Stuff.TypeLine("(Play) Start a new game!");
 			Stuff.TypeLine("(Save) Makes a save code you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save code!");
@@ -123,6 +168,10 @@ public class PorjectAlpha
 					break;
 				case "changelog":
 					Changelog();
+					Stuff.HitEnter(1);
+					Stuff.Divider();
+					Stuff.TypeLine("(Enter) Return to the main menu");
+					Stuff.AwesomeScanner.nextLine();
 					break;
 				case "credits":
 					Stuff.Credits();
