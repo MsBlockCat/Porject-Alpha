@@ -9,7 +9,7 @@ public class SpaceBranch
 				Launchpad();
 				break;
 			default:
-				System.out.println("Error 4: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				Stuff.TypeLine(0, "Error 4: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 		}
 	}
 	
