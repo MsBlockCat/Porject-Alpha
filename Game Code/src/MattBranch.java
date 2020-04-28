@@ -9,7 +9,7 @@ public class MattBranch
 				RuralAustralia1();
 				break;
 			default:
-				Stuff.TypeLine(0, "Error 5: The starting area of the Matt branch of the story, method GoToMattBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("Error 5: The starting area of the Matt branch of the story, method GoToMattBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 		}
 	}
 	

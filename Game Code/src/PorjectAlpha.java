@@ -192,7 +192,7 @@ public class PorjectAlpha
 				Lab1();
 				break;
 			default:
-				Stuff.TypeLine(0, "Error 3: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
+				System.out.println("Error 3: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
 		}
 	}
 	

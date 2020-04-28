@@ -14,8 +14,6 @@ public class Stuff
 	public static final String GameVersion = "0.0.4a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 3;
-	public static int TextXCursor = 0;
-	public static int TextYCursor = 0;
 	public static boolean DebugMode = false;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
@@ -26,32 +24,22 @@ public class Stuff
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
 	
-	//Arrays
-	public static char[][] Display = new char[150][40];
-	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
 	
 	//Methods
 	public static void HitEnter(int NumberOfEnters)
 	{
-		for (int Counter = 0; Counter != NumberOfEnters; Counter ++)
+		for (int Counter = 0; Counter != NumberOfEnters; Counter++)
 		{
-			TextYCursor ++;
-		    TextXCursor = 0;
-		    
-		    if (TextYCursor >= 150)
-		    {
-		    	TextYCursor = 0;
-		    	TypeLine(0, "Error 9: TextYCursor got to 150!");
-		    }
+			System.out.println();
 		}
 	}
 	
 	public static void Divider()
 	{
 		//That's 110 dashes, so 55 characters gives you the middle
-		TypeLine(0, "--------------------------------------------------------------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------------------------------------------------");
 	}
 	
 	public static void SettingsMenu()
@@ -124,7 +112,7 @@ public class Stuff
 		try {
 			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
 		} catch (FileNotFoundException NoFileException) {
-			TypeLine(0, "Error 6: Looks like the Credits.txt file isn't in the game code, but it should be!");
+			System.out.println("Error 6: Looks like the Credits.txt file isn't in the game code, but it should be!");
 			NoFileException.printStackTrace();
 		}
 		
@@ -138,7 +126,7 @@ public class Stuff
 		Wait(2000);
 		HitEnter(1);
 		Divider();
-		TypeLine("(Enter) Leave the credits.");
+		Stuff.TypeLine("(Enter) Leave the credits.");
 		AwesomeScanner.nextLine();
 	}
 	
@@ -151,11 +139,11 @@ public class Stuff
 			//Creates or locks into the save file
 			if (SaveFile.createNewFile())
 			{
-			    TypeLine(0, "A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
+			    System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
 			}
 			else
 			{
-			    TypeLine(0, "A save file already exists, saving to it...");
+			    System.out.println("A save file already exists, saving to it...");
 			}
 			 
 			//Saves to the save file
@@ -174,12 +162,12 @@ public class Stuff
 			}
 			catch (IllegalArgumentException IAE)
 			{
-				TypeLine(0, "Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found!");
+				System.out.println("Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found!");
 			}
 		}
 		catch (IOException IOException)
 		{
-			TypeLine(0, "Error 7: There was an IOException when saving your game.");
+			System.out.println("Error 7: There was an IOException when saving your game.");
 			IOException.printStackTrace();
 		}
 	}
@@ -247,18 +235,18 @@ public class Stuff
 		HitEnter(4);
 		ASCII.CalibrationScreen();
 		HitEnter(5);
-		TypeLine(0, "Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
-		TypeLine(0, "                                                   --------");
-		TypeLine(0, "                                                   | Cen  |");
-		TypeLine(0, "                                                   |  ter |");
-		TypeLine(0, "                                                   --------");
+		System.out.println("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
+		System.out.println("                                                   --------");
+		System.out.println("                                                   | Cen  |");
+		System.out.println("                                                   |  ter |");
+		System.out.println("                                                   --------");
 		HitEnter(6);
 		if (FirstTime == true)
 		{
-			TypeLine(0, "When options on the left in () are on screen, you can type them and hit enter to choose them.");
-			TypeLine(0, "   |");
-			TypeLine(0, "   |");
-			TypeLine(0, "  \\./");
+			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("  \\./");
 		}
 		else
 		{
@@ -266,7 +254,7 @@ public class Stuff
 		}
 		TypeLine("(Enter) Go to the main menu of Porject Alpha");
 		HitEnter(6);
-		Type(0, "--------------------------------------------------------------------------------------------------------------");
+		System.out.print("--------------------------------------------------------------------------------------------------------------");
 		AwesomeScanner.nextLine();
 	}
 	
@@ -289,7 +277,7 @@ public class Stuff
 		{
 			if (!Character.isDigit(Number.charAt(Cursor)))
 			{
-				TypeLine(0, "Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted value is an integer in the String variable type.");
+				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted value is an integer in the String variable type.");
 				return 0;
 			}
 		}
@@ -343,7 +331,7 @@ public class Stuff
 		Divider();
 		if (Choice1 == null)
 		{
-			TypeLine(0, "Error 2: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
+			System.out.println("Error 2: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
 			return null;
 		}
 		else
@@ -397,7 +385,7 @@ public class Stuff
 				Type(", or " + Choice4);
 			}
 			
-			TypeLine(0, ".");
+			System.out.println(".");
 			if (CurrentBranchNumber == 1 && CurrentLocationNumber == 1)
 			{
 				TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
@@ -512,30 +500,10 @@ public class Stuff
 		TypeLine(Phrase);
 	}
 	
-	public static void typeln(int ThisTypingSpeed, String Phrase)
-	{
-		TypeLine(ThisTypingSpeed, Phrase);
-	}
-	
-	public static void typeln(int ThisTypingSpeed, String Phrase, int NewXCursor, int NewYCursor)
-	{
-		TypeLine(ThisTypingSpeed, Phrase, NewXCursor, NewYCursor);
-	}
-	
 	public static void TypeLine(String Phrase)
 	{
-	    TypeLine(FancyTypingSpeed, Phrase);
-	}
-	
-	public static void TypeLine(int ThisTypingSpeed, String Phrase)
-	{
-	    TypeLine(ThisTypingSpeed, Phrase, TextXCursor, TextYCursor);
-	}
-	
-	public static void TypeLine(int ThisTypingSpeed, String Phrase, int NewXCursor, int NewYCursor)
-	{
-	    Type(ThisTypingSpeed, Phrase, NewXCursor, NewYCursor);
-	    HitEnter(1);
+	    Type(Phrase);
+	    System.out.println();
 	}
 	
 	public static void type(String Phrase)
@@ -543,101 +511,58 @@ public class Stuff
 		Type(Phrase);
 	}
 	
-	public static void type(int ThisTypingSpeed, String Phrase)
-	{
-		Type(ThisTypingSpeed, Phrase);
-	}
-	
-	public static void type(int ThisTypingSpeed, String Phrase, int NewXCursor, int NewYCursor)
-	{
-		Type(ThisTypingSpeed, Phrase, NewXCursor, NewYCursor);
-	}
-	
 	public static void Type(String Phrase)
 	{
-		Type(FancyTypingSpeed, Phrase);
-	}
-	
-	public static void Type(int ThisTypingSpeed, String Phrase)
-	{
-		Type(ThisTypingSpeed, Phrase, TextXCursor, TextYCursor);
-	}
-	
-	public static void Type(int ThisTypingSpeed, String Phrase, int NewXCursor, int NewYCursor)
-	{
-		TextXCursor = NewXCursor;
-		TextYCursor = NewYCursor;
-		
-		for (int Counter = 0; Counter < Phrase.length(); Counter++)
+		if (FancyTypingSpeed != 0)
 		{
-			Display[TextXCursor][TextYCursor] = Phrase.charAt(Counter);
-			TextXCursor ++;
-			Render();
-			
-			if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
+			for (int Counter = 0; Counter < Phrase.length(); Counter++)
 			{
-				boolean Gloss = false;
-				
-				if (Phrase.charAt(Counter) == '.' && !(Counter == Phrase.length() - 1))
+				System.out.print(Phrase.charAt(Counter));
+				if (Phrase.charAt(Counter) == '!' || Phrase.charAt(Counter) == '.' || Phrase.charAt(Counter) == '?' || Phrase.charAt(Counter) == ';' || Phrase.charAt(Counter) == ':')
 				{
-					if (Phrase.charAt(Counter + 1) != ' ')
-					{
-						Gloss = true;
-					}
+					boolean Gloss = false;
 					
-					if (!(Counter == 0 || Counter == 1 || Counter == 2))
+					if (Phrase.charAt(Counter) == '.' && !(Counter == Phrase.length() - 1))
 					{
-						if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mr")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("ms")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("dr")))
+						if (Phrase.charAt(Counter + 1) != ' ')
 						{
 							Gloss = true;
 						}
+						
+						if (!(Counter == 0 || Counter == 1 || Counter == 2))
+						{
+							if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mr")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("ms")) || (Phrase.substring(Counter - 2, Counter).toLowerCase().equals("dr")))
+							{
+								Gloss = true;
+							}
+						}
+						
+						if (!(Counter == 0 || Counter == 1 || Counter == 2 || Counter == 3))
+						{
+							if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mrs")))
+							{
+								Gloss = true;
+							}
+						}
 					}
 					
-					if (!(Counter == 0 || Counter == 1 || Counter == 2 || Counter == 3))
+					if (!(Gloss))
 					{
-						if ((Phrase.substring(Counter - 2, Counter).toLowerCase().equals("mrs")))
-						{
-							Gloss = true;
-						}
+						Wait(95 + (FancyTypingSpeed * 60));
 					}
 				}
 				
-				if (!(Gloss) && ThisTypingSpeed != 0)
+				if (Phrase.charAt(Counter) == ',')
 				{
-					Wait(95 + (ThisTypingSpeed * 60));
+					Wait(30 + (FancyTypingSpeed * 30));
 				}
-			}
-			
-			if (Phrase.charAt(Counter) == ',' && ThisTypingSpeed != 0)
-			{
-				Wait(30 + (ThisTypingSpeed * 30));
-			}
-			
-			if (ThisTypingSpeed != 0)
-			{
-				Wait(5 + (ThisTypingSpeed * 15));
+				
+				Wait(5 + (FancyTypingSpeed * 15));
 			}
 		}
-	}
-	
-	public static void Render()
-	{
-		//Clears the console before re-rendering
-		for (int Counter = 1; Counter <= 50; Counter ++)
+		else
 		{
-			System.out.println();
-		}
-		//Test: System.out.flush();
-		
-		//Renders!
-		for (int YCounter = 0; YCounter < 40; YCounter ++)
-		{
-			for (int XCounter = 0; XCounter < 150; XCounter ++)
-			{
-				System.out.print(Display[XCounter][YCounter]);
-			}
-			
-			System.out.println();
+			System.out.print(Phrase);
 		}
 	}
 	
