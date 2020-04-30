@@ -79,7 +79,7 @@ public class Stuff
 			HitEnter(1);
 			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
 			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 3 is slowest.");
-			Stuff.TypeLine("(Enter) Leave the settings menu.");
+			TypeLine("(Enter) Leave the settings menu.");
 			
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
@@ -112,7 +112,7 @@ public class Stuff
 		try {
 			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
 		} catch (FileNotFoundException NoFileException) {
-			System.out.println("Error 6: Looks like the Credits.txt file isn't in the game code, but it should be!");
+			System.out.println("Error 6: Looks like the \"Game Code/Credits.txt\" file isn't in the game code, but it should be!");
 			NoFileException.printStackTrace();
 		}
 		
