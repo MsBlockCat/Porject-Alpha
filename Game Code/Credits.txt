@@ -11,12 +11,17 @@ Old Time Branch Storyteller
 Rodrigo Portal
 
 
-Lead ASCII Artist
+ASCII Artists
 Falcon Yule
+Rodrigo Portal
+Matt Frey
 
 
 Lead Developer
 Ms. LaBrosse
+
+Lead Framework Developer
+Falcon Yule
 
 Code Developers
 Falcon Yule
