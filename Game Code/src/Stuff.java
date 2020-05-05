@@ -130,7 +130,7 @@ public class Stuff
 		AwesomeScanner.nextLine();
 	}
 	
-	public static void MakeSaveCode()
+	public static void SaveGame()
 	{
 		File SaveFile = new File("Game Code/Saves/Save.txt");
 		  
@@ -172,7 +172,7 @@ public class Stuff
 		}
 	}
 	
-	public static boolean LoadSaveCode()
+	public static boolean LoadSaveFile()
 	{
 		File SaveFile = new File("Game Code/Saves/Save.txt");
 		

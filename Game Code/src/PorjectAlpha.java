@@ -44,7 +44,7 @@ public class PorjectAlpha
 	public static void main(String[] args)
 	{
 		//Loads save data
-		Stuff.LoadSaveCode();
+		Stuff.LoadSaveFile();
 		
 		if (Stuff.GameBeginning == true)
 		{
@@ -119,7 +119,7 @@ public class PorjectAlpha
 					}
 					break;
 				case "save":
-					Stuff.MakeSaveCode();
+					Stuff.SaveGame();
 					break;
 				case "load":
 					Stuff.TypeLine("Are you sure you wanna load a save code? This'll erase any current unsaved progress!");
@@ -127,7 +127,7 @@ public class PorjectAlpha
 					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 					{
-						if (Stuff.LoadSaveCode() == true)
+						if (Stuff.LoadSaveFile() == true)
 						{
 							Stuff.TypeLine("(Enter) Successfully loaded!");
 							Stuff.AwesomeScanner.nextLine();
