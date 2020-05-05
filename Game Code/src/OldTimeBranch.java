@@ -23,11 +23,11 @@ public class OldTimeBranch
 			Stuff.StoryBeginning = false;
 		}
 		
-		switch (Stuff.PlayerChoice("eating the banana", "nuking North Korea", "skiing", "going on the Klondike"))
+		switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "skiing", "going on the Klondike"))
 		{
 			case "eating the banana":
 				break;
-			case "nuking north korea":
+			case "Sunday church with Grandma":
 				break;
 			case "skiing":
 				break;
