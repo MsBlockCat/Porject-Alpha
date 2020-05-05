@@ -42,6 +42,20 @@ public class Stuff
 		System.out.println("--------------------------------------------------------------------------------------------------------------");
 	}
 	
+	public static void PotentialDebugMenu()
+	{
+		if (DebugMode == true)
+		{
+			Divider();
+			TypeLine("Debug Menu");
+			HitEnter(5);
+			TypeLine("GameVersion: " + GameVersion);
+			TypeLine("HasGauntlet: " + HasLuckyGauntlet);
+			TypeLine("TurnCount: " + TurnCount);
+			HitEnter(5);
+		}
+	}
+	
 	public static void ScreenSizeRecommendation(boolean FirstTime)
 	{
 		//50 enters standard as a buffer
@@ -478,20 +492,6 @@ public class Stuff
 				TurnCount ++;
 				return Choice;
 			}
-		}
-	}
-	
-	public static void PotentialDebugMenu()
-	{
-		if (DebugMode == true)
-		{
-			Divider();
-			TypeLine("Debug Menu");
-			HitEnter(5);
-			TypeLine("GameVersion: " + GameVersion);
-			TypeLine("HasGauntlet: " + HasLuckyGauntlet);
-			TypeLine("TurnCount: " + TurnCount);
-			HitEnter(5);
 		}
 	}
 	
