@@ -156,7 +156,7 @@ public class Stuff
 		Scanner CreditsScanner = null;
 		
 		try {
-			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
+			CreditsScanner = new Scanner(new File("Credits.txt"));
 		} catch (FileNotFoundException NoFileException) {
 			System.out.println("Error 6: Looks like the \"Game Code/Credits.txt\" file isn't in the game code, but it should be!");
 			NoFileException.printStackTrace();
@@ -178,7 +178,7 @@ public class Stuff
 	
 	public static void SaveGame()
 	{
-		File SaveFile = new File("Game Code/Saves/Save.txt");
+		File SaveFile = new File("Saves/Save.txt");
 		  
 		try
 		{
@@ -203,7 +203,7 @@ public class Stuff
 			File FolderToOpen = null;
 			try
 			{
-				FolderToOpen = new File("Game Code/Saves");
+				FolderToOpen = new File("Saves");
 				AwesomeDesktop.open(FolderToOpen);
 			}
 			catch (IllegalArgumentException IAE)
@@ -220,7 +220,7 @@ public class Stuff
 	
 	public static boolean LoadSaveFile()
 	{
-		File SaveFile = new File("Game Code/Saves/Save.txt");
+		File SaveFile = new File("Saves/Save.txt");
 		
 		try
 		{
