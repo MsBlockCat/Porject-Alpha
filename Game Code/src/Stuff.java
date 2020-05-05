@@ -42,6 +42,38 @@ public class Stuff
 		System.out.println("--------------------------------------------------------------------------------------------------------------");
 	}
 	
+	public static void ScreenSizeRecommendation(boolean FirstTime)
+	{
+		//50 enters standard as a buffer
+		HitEnter(50);
+		//40 lines on screen
+		Divider();
+		HitEnter(4);
+		ASCII.CalibrationScreen();
+		HitEnter(5);
+		System.out.println("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
+		System.out.println("                                                   --------");
+		System.out.println("                                                   | Cen  |");
+		System.out.println("                                                   |  ter |");
+		System.out.println("                                                   --------");
+		HitEnter(6);
+		if (FirstTime == true)
+		{
+			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("  \\./");
+		}
+		else
+		{
+			Stuff.HitEnter(4);
+		}
+		TypeLine("(Enter) Go to the main menu of Porject Alpha");
+		HitEnter(6);
+		System.out.print("--------------------------------------------------------------------------------------------------------------");
+		AwesomeScanner.nextLine();
+	}
+	
 	public static void SettingsMenu()
 	{
 		String Input = "";
@@ -226,38 +258,6 @@ public class Stuff
 		}
 	}
 	
-	public static void ScreenSizeRecommendation(boolean FirstTime)
-	{
-		//50 enters standard as a buffer
-		HitEnter(50);
-		//40 lines on screen
-		Divider();
-		HitEnter(4);
-		ASCII.CalibrationScreen();
-		HitEnter(5);
-		System.out.println("Please resize your window so the dashes below are just visible, and there's one extra line above the top.");
-		System.out.println("                                                   --------");
-		System.out.println("                                                   | Cen  |");
-		System.out.println("                                                   |  ter |");
-		System.out.println("                                                   --------");
-		HitEnter(6);
-		if (FirstTime == true)
-		{
-			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
-			System.out.println("   |");
-			System.out.println("   |");
-			System.out.println("  \\./");
-		}
-		else
-		{
-			Stuff.HitEnter(4);
-		}
-		TypeLine("(Enter) Go to the main menu of Porject Alpha");
-		HitEnter(6);
-		System.out.print("--------------------------------------------------------------------------------------------------------------");
-		AwesomeScanner.nextLine();
-	}
-	
 	public static int StringToInt(char Number)
 	{
 		return StringToInt(Number + "");
@@ -348,7 +348,7 @@ public class Stuff
 					Type("Your options seem to be ");
 					break;
 				default:
-					Type("Your options seem to be ");
+					Type("Your choices seem to be ");
 					break;
 			}
 			
