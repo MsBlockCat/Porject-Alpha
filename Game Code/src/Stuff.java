@@ -20,7 +20,7 @@ public class Stuff
 	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
 	public static int CurrentBranchNumber = 0;
-	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
+	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
 	
