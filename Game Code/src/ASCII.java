@@ -2,6 +2,84 @@ public class ASCII
 {
 	//This is where all of our ASCII should go, just to make the code simpler in other places
 	
+	public static void FalconCoLtd1()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                      *");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+	}
+	
+	public static void FalconCoLtd2()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                     ***");
+		System.out.println("                                                     * *");
+		System.out.println("                                                     ***");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+	}
+	
+	public static void FalconCoLtd3()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                    ******");
+		System.out.println("                                                    *    *");
+		System.out.println("                                                   **    **");
+		System.out.println("                                                    *    *");
+		System.out.println("                                                    ******");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+	}
+	
+	public static void FalconCoLtd4()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                  **********");
+		System.out.println("                                               *  *        *  *");
+		System.out.println("                                                * *        * *");
+		System.out.println("                                               ** *        * **");
+		System.out.println("                                                * *        * *");
+		System.out.println("                                               *  *        *  *");
+		System.out.println("                                                  **********");
+		System.out.println("                                                       ");
+	}
+	
+	public static void FalconCoLtd5()
+	{
+		System.out.println("                                               ****************");
+		System.out.println("                                            *  *              *  *");
+		System.out.println("                                             * *              * *");
+		System.out.println("                                               *              *");
+		System.out.println("                                           *** *              * ***");
+		System.out.println("                                               *              *");
+		System.out.println("                                             * *              * *");
+		System.out.println("                                            *  *              *  *");
+		System.out.println("                                               ****************");
+	}
+	
+	public static void FalconCoLtd6()
+	{
+		System.out.println("                                               ****************");
+		System.out.println("                                          **   *              *   **");
+		System.out.println("                                            ** *              * **");
+		System.out.println("                                               *              *");
+		System.out.println("                                          **** *              * ****");
+		System.out.println("                                               *              *");
+		System.out.println("                                            ** *              * **");
+		System.out.println("                                          **   *              *   **");
+		System.out.println("                                               ****************");
+	}
+	
 	public static void CalibrationScreen()
 	{
 		System.out.println("                                              ------------------");
