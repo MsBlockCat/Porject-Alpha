@@ -33,3 +33,4 @@ hs_err_pid*
 # The save file Porject Alpha saves and uses, we want this to stay at initial values so when we run it it doesn't mess with the end product
 # But still update Saves/Save.txt manually when a new Save Version is released
 Game Code/Saves/Save.txt
+Game Code/Saves/Save.txt
