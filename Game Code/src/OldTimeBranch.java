@@ -6,6 +6,7 @@ public class OldTimeBranch
 		switch (StartingPosition)
 		{
 			case "1":
+			case "OuterVillage1":
 				OuterVillage1();
 				break;
 			default:

@@ -6,6 +6,7 @@ public class MattBranch
 		switch (StartingPosition)
 		{
 			case "1":
+			case "RuralAustralia1":
 				RuralAustralia1();
 				break;
 			default:

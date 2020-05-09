@@ -104,7 +104,7 @@ public class PorjectAlpha
 					if (Stuff.CurrentBranchNumber == 0)
 					{
 						StayOnTitleScreen = false;
-						GoToModernBranch("1");
+						GoToModernBranch("Lab1");
 					}
 					else
 					{
@@ -115,7 +115,7 @@ public class PorjectAlpha
 						{
 							Stuff.ResetSave();
 							StayOnTitleScreen = false;
-							GoToModernBranch("1");
+							GoToModernBranch("Lab1");
 						}
 					}
 					break;
@@ -159,7 +159,7 @@ public class PorjectAlpha
 				case "debug":
 					Stuff.DebugMode = true;
 					StayOnTitleScreen = false;
-					GoToModernBranch("1");
+					GoToModernBranch("Lab1");
 					break;
 				case "calibrate":
 					Stuff.ScreenSizeRecommendation(false);
@@ -190,6 +190,7 @@ public class PorjectAlpha
 		switch (PlayerLocation)
 		{
 			case "1":
+			case "Lab1":
 				Lab1();
 				break;
 			default:
@@ -214,13 +215,13 @@ public class PorjectAlpha
 		switch (Stuff.PlayerChoice("1253", "1954", "2030"))
 		{
 			case "1253":
-				OldTimeBranch.GoToOldTimeBranch("1");
+				OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
 				break;
 			case "1954":
-				MattBranch.GoToMattBranch("1");
+				MattBranch.GoToMattBranch("RuralAustralia1");
 				break;
 			case "2030":
-				SpaceBranch.GoToSpaceBranch("1");
+				SpaceBranch.GoToSpaceBranch("Launchpad");
 				break;
 		}
 	}
