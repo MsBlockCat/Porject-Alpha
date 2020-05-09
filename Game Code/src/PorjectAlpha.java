@@ -43,8 +43,8 @@ public class PorjectAlpha
 	
 	public static void main(String[] args)
 	{
-		//Loads save data
-		Stuff.LoadSaveFile();
+		//Loads save data quietly
+		Stuff.LoadSaveFile(true);
 		
 		if (Stuff.GameBeginning == true)
 		{
@@ -89,8 +89,8 @@ public class PorjectAlpha
 			ASCII.MainTitle();
 			Stuff.HitEnter(5);
 			Stuff.TypeLine("(Play) Start a new game!");
-			Stuff.TypeLine("(Save) Makes a save code you can copy and load later!");
-			Stuff.TypeLine("(Load) Load from a save code!");
+			Stuff.TypeLine("(Save) Makes a save file you can copy and load later!");
+			Stuff.TypeLine("(Load) Load from a save file!");
 			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
 			Stuff.TypeLine("(Calibrate) Shows the window calibration screen");
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
@@ -104,7 +104,7 @@ public class PorjectAlpha
 					if (Stuff.CurrentBranchNumber == 0)
 					{
 						StayOnTitleScreen = false;
-						Lab1();
+						GoToModernBranch("1");
 					}
 					else
 					{
@@ -113,8 +113,9 @@ public class PorjectAlpha
 						Stuff.TypeLine("(Anything else) Keep your progress, don't make a new game, and go back to the main menu");
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
+							Stuff.ResetSave();
 							StayOnTitleScreen = false;
-							Lab1();
+							GoToModernBranch("1");
 						}
 					}
 					break;
@@ -122,7 +123,7 @@ public class PorjectAlpha
 					Stuff.SaveGame();
 					break;
 				case "load":
-					Stuff.TypeLine("Are you sure you wanna load a save code? This'll erase any current unsaved progress!");
+					Stuff.TypeLine("Are you sure you wanna load a save file? This'll erase any current unsaved progress!");
 					Stuff.TypeLine("(Yes) Delete any currently unsaved progress and load a save file");
 					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
@@ -158,7 +159,7 @@ public class PorjectAlpha
 				case "debug":
 					Stuff.DebugMode = true;
 					StayOnTitleScreen = false;
-					Lab1();
+					GoToModernBranch("1");
 					break;
 				case "calibrate":
 					Stuff.ScreenSizeRecommendation(false);
@@ -213,13 +214,13 @@ public class PorjectAlpha
 		switch (Stuff.PlayerChoice("1253", "1954", "2030"))
 		{
 			case "1253":
-				OldTimeBranch.OuterVillage1();
+				OldTimeBranch.GoToOldTimeBranch("1");
 				break;
 			case "1954":
-				MattBranch.RuralAustralia1();
+				MattBranch.GoToMattBranch("1");
 				break;
 			case "2030":
-				SpaceBranch.Launchpad();
+				SpaceBranch.GoToSpaceBranch("1");
 				break;
 		}
 	}
