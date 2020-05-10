@@ -146,7 +146,7 @@ public class PorjectAlpha
 									break;
 								case 3:
 									StayOnTitleScreen = false;
-									MattBranch.GoToMattBranch(Stuff.CurrentLocationNumber + "");
+									GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 4:
 									StayOnTitleScreen = false;
@@ -218,7 +218,7 @@ public class PorjectAlpha
 				OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
 				break;
 			case "1954":
-				MattBranch.GoToMattBranch("RuralAustralia1");
+				GoatBranch.GoToGoatBranch("RuralAustralia1");
 				break;
 			case "2030":
 				SpaceBranch.GoToSpaceBranch("Launchpad");
