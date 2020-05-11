@@ -48,13 +48,12 @@ public class Stuff
 		{
 			Divider();
 			TypeLine("Debug Menu");
-			HitEnter(3);
+			HitEnter(1);
 			TypeLine("GameVersion: " + GameVersion);
 			TypeLine("HasGauntlet: " + HasLuckyGauntlet);
 			TypeLine("TurnCount: " + TurnCount);
 			TypeLine("CurrentBranchNumber: " + CurrentBranchNumber);
 			TypeLine("CurrentLocationNumber: " + CurrentLocationNumber);
-			HitEnter(2);
 		}
 	}
 	
