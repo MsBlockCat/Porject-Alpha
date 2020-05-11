@@ -1,15 +1,16 @@
-public class MattBranch
+public class GoatBranch
 {
-	public static void GoToMattBranch(String StartingPosition)
+	public static void GoToGoatBranch(String StartingPosition)
 	{
 		Stuff.CurrentBranchNumber = 3;
 		switch (StartingPosition)
 		{
 			case "1":
+			case "RuralAustralia1":
 				RuralAustralia1();
 				break;
 			default:
-				System.out.println("Error 5: The starting area of the Matt branch of the story, method GoToMattBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("Error 5: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 		}
 	}
 	

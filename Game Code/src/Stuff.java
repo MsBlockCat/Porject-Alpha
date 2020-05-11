@@ -20,7 +20,7 @@ public class Stuff
 	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
 	public static int CurrentBranchNumber = 0;
-	//The branch is the different classes (ie. SpaceBranch), and the location is the area within the branch (ie. Launchpad)
+	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
 	
@@ -48,11 +48,12 @@ public class Stuff
 		{
 			Divider();
 			TypeLine("Debug Menu");
-			HitEnter(5);
+			HitEnter(1);
 			TypeLine("GameVersion: " + GameVersion);
 			TypeLine("HasGauntlet: " + HasLuckyGauntlet);
 			TypeLine("TurnCount: " + TurnCount);
-			HitEnter(5);
+			TypeLine("CurrentBranchNumber: " + CurrentBranchNumber);
+			TypeLine("CurrentLocationNumber: " + CurrentLocationNumber);
 		}
 	}
 	
@@ -218,7 +219,44 @@ public class Stuff
 		}
 	}
 	
+	public static void ResetSave()
+	{
+		File SaveFile = new File("Saves/Save.txt");
+		File DefaultSaveFile = new File("Default Save.txt");
+		
+		try
+		{
+			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
+			
+			try
+			{
+				Scanner DefaultSaveFileScanner = new Scanner(DefaultSaveFile);
+				while (DefaultSaveFileScanner.hasNextLine())
+				{
+					SaveFileWriter.write(DefaultSaveFileScanner.nextLine() + "\n");
+				}
+				DefaultSaveFileScanner.close();
+			}
+			catch (FileNotFoundException NoDefaultSaveFileException)
+			{
+				TypeLine("Something went wrong: There's no default save file (at \"Game Code/Default Save.txt\") to load!");
+			}
+			
+			SaveFileWriter.close();
+		}
+		catch (IOException NoSaveFileException)
+		{
+			TypeLine("Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset!)");
+		}
+		
+	}
+	
 	public static boolean LoadSaveFile()
+	{
+		return LoadSaveFile(false);
+	}
+	
+	public static boolean LoadSaveFile(boolean BeQuiet)
 	{
 		File SaveFile = new File("Saves/Save.txt");
 		
@@ -230,8 +268,11 @@ public class Stuff
 			
 			if (FileSaveVersion < 3)
 			{
-				TypeLine("(Enter) Sorry, either that's not a save code or it got corrupted!");
-				AwesomeScanner.nextLine();
+				if (BeQuiet == false)
+				{
+					TypeLine("(Enter) Sorry, either that's not a save file or it got corrupted!");
+					AwesomeScanner.nextLine();
+				}
 				AwesomeFile.close();
 				return false;
 			}
@@ -239,8 +280,11 @@ public class Stuff
 			{
 				if (FileSaveVersion > SaveVersion)
 				{
-					TypeLine("(Enter) Sorry, this load code uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
-					AwesomeScanner.nextLine();
+					if (BeQuiet == false)
+					{
+						TypeLine("(Enter) Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+						AwesomeScanner.nextLine();
+					}
 					AwesomeFile.close();
 					return false;
 				}
@@ -254,9 +298,9 @@ public class Stuff
 					CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
 					HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 					
-					if (SaveVersion > FileSaveVersion)
+					if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
 					{
-						TypeLine("(Enter) Just so you know, your save code was from an older version of the game, so some stuff was added or may have been reset.");
+						TypeLine("(Enter) Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
 						AwesomeScanner.nextLine();
 					}
 
@@ -267,7 +311,10 @@ public class Stuff
 		}
 		catch (FileNotFoundException NoSaveFileException)
 		{
-			TypeLine("You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+			if (BeQuiet == false)
+			{
+				TypeLine("You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+			}
 			return false;
 		}
 	}

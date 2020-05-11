@@ -2,10 +2,49 @@ public class StudioAnimations
 {
 	public static void FalconCoLtd()
 	{
-		//Insert Falcon's studio intro animation here
-		Stuff.HitEnter(24);
-		System.out.println("Placeholder Falcon studio animation");
-		Stuff.HitEnter(25);
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd1();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd2();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd3();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd4();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd5();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd6();
+		Stuff.HitEnter(21);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd6();
+		System.out.println("                                                   on Co.     ");
+		Stuff.HitEnter(20);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(20);
+		ASCII.FalconCoLtd6();
+		System.out.println("                                               Falcon Co. Ltd.");
+		Stuff.HitEnter(20);
+		Stuff.Wait(100);
+		
+		Stuff.Wait(1500);
 	}
 	
 	public static void RodrigoStudio()
