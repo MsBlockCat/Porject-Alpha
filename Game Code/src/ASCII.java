@@ -144,4 +144,28 @@ public class ASCII
 		System.out.println("                         C      H   H  A   A  N  NN  G   G  E      L      O   O  G   G");
 		System.out.println("                          CCCC  H   H  A   A  N   N   GGG   EEEEE  LLLLL   OOO    GGG ");
 	}
+	
+	public static void DoofInc()
+	{
+		System.out.println("         _____");
+		System.out.println("        z  |  z");
+		System.out.println("     Z  \\  |  / Z");
+		System.out.println("   /     \\ | /    \\");
+		System.out.println("   |______\\0/______|");
+		System.out.println("   | DOOF EVIL INC.|");
+		System.out.println("   |_________      |");
+		System.out.println("     \\/      |     |_____");
+		System.out.println("     |       |           |");
+		System.out.println("    _|_______|          /");
+		System.out.println("   |                   /");
+		System.out.println("   |             _____/");
+		System.out.println("   |            |");
+		System.out.println("   |            |");
+		System.out.println("   |_______ ____|___");
+		System.out.println(" _(    ___ )(       )___");
+		System.out.println("(___  (___)   ___     __)");
+		System.out.println("    (_________) (_____)");
+		System.out.println("       (__)");
+		System.out.println("");
+	}
 }

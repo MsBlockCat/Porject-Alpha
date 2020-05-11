@@ -201,6 +201,9 @@ public class PorjectAlpha
 		Stuff.CurrentLocationNumber = 1;
 		
 		Stuff.TypeLine("The epic quest begins...");
+		Stuff.Wait(1500);
+		ASCII.DoofInc();
+		Stuff.Wait(1500);
 		Stuff.TypeLine("Yes, it begins under the harsh light of a labratory.");
 		Stuff.TypeLine("You're the assistant to Dr. Heinz Doofenshmirtz, a genius in time travel and teleportation.");
 		Stuff.TypeLine("After two decades, Doofenshmirtz finally had a breakthrough with the Timeinator.");

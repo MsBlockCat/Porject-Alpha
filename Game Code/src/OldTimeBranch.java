@@ -20,16 +20,19 @@ public class OldTimeBranch
 		if (Stuff.StoryBeginning == true)
 		{
 			Stuff.TypeLine("You travel back to the year 1253.");
+			Stuff.TypeLine("It seems you are in the middle of a Bazar. There are women and children begging for food,");
+			Stuff.TypeLine("Others yelling out prices for food and goods (much lower than modern day you notice),");
+			Stuff.TypeLine("And some old man who seems to be dead?");
+			Stuff.Wait(3000);
+			Stuff.TypeLine("Ooap, never mind he just coughed up a small bone, probably his lunch.");
 			Stuff.StoryBeginning = false;
 		}
 		
-		switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "skiing", "going on the Klondike"))
+		switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
 		{
 			case "eating the banana":
 				break;
 			case "Sunday church with Grandma":
-				break;
-			case "skiing":
 				break;
 			case "going on the klondike":
 				break;
