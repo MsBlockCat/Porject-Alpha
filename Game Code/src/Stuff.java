@@ -236,6 +236,7 @@ public class Stuff
 					SaveFileWriter.write(DefaultSaveFileScanner.nextLine() + "\n");
 				}
 				DefaultSaveFileScanner.close();
+				//LoadSaveFile();
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
