@@ -50,7 +50,7 @@ public class SpaceBranch
 					Stuff.TypeLine("Seeing no other choices, you thank him, take the time machine, and replace the broken one on your wrist with it.");
 					Stuff.TypeLine("You set it for Dr. Doofenschmirtz's labratory, and head back.");
 					Stuff.StoryBeginning = false;
-					PorjectAlpha.GoToModernBranch("Lab1");
+					ModernBranch.GoToModernBranch("Lab1");
 					break;
 			}
 		}
@@ -95,7 +95,7 @@ public class SpaceBranch
 				Stuff.Wait(250);
 				Stuff.TypeLine("...It doesn't work.");
 				Stuff.TypeLine("Fortunately, seeing this, Elon lets you borrow one of his, so you use it and are on your way.");
-				PorjectAlpha.GoToModernBranch("Lab1");
+				ModernBranch.GoToModernBranch("Lab1");
 				break;
 		}
 	}
