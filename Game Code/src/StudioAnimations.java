@@ -50,10 +50,22 @@ public class StudioAnimations
 	public static void RodrigoStudio()
 	{
 		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
-		Stuff.HitEnter(24);
+		Stuff.HitEnter(13);
 		ASCII.RodrigoStudio();
-		System.out.println("Digo Son N'Co");
-		Stuff.HitEnter(25);
+		System.out.println("                                                    Digo Son N'Co");
+		Stuff.HitEnter(13);
+		Stuff.Wait(1500);
+		
+		Stuff.HitEnter(13);
+		ASCII.RodrigoStudio2();
+		System.out.println("                                                    Digo Son N'Co");
+		Stuff.HitEnter(13);
+		Stuff.Wait(300);
+		
+		Stuff.HitEnter(13);
+		ASCII.RodrigoStudio();
+		System.out.println("                                                    Digo Son N'Co");
+		Stuff.HitEnter(13);
 		Stuff.Wait(1500);
 	}
 	
