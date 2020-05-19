@@ -21,19 +21,42 @@ public class GoatBranch
 		if (Stuff.StoryBeginning == true)
 		{
 			Stuff.TypeLine("You travel back to the year 1954.");
+			Stuff.typeln ("And also, for some reason, you now embody a goat.");
+			Stuff.typeln ("That is, despite having the same human (presumably) brain you had before, you now are a goat.");
+			Stuff.typeln ("What fun things shall you do first?");
 			Stuff.StoryBeginning = false;
-		}
 		
-		switch (Stuff.PlayerChoice("eating the banana", "nuking North Korea", "skiing", "going on the Klondike"))
-		{
-			case "eating the banana":
+		
+			switch (Stuff.PlayerChoice("climb a mountain", "figure out location", "eat something", "investigate"))
+			{
+			case "climb a mountain":
+				Stuff.typeln ("Fortunately for you, there is a mountain nearby.");
+				Mountain();
 				break;
-			case "nuking north korea":
+			case "figure out location":
+				Stuff.typeln ("You decide to investigate your location...");
+				RuralAustralia1();
 				break;
-			case "skiing":
+			case "eat something":
+				Stuff.typeln ("As one often is after time travel, you are quite hungry. Luckily, as a goat, you can eat things you couldn't as a human.");
+				GroceryStore();
 				break;
-			case "going on the klondike":
+			case "investigate":
+				Stuff.typeln ("Being the inquisitive goat that you are, you decide to investigate just how you came to exist.");
+				GoToGoatBranch("now with knowledge");
 				break;
 		}
+		}
+		else {
+			Stuff.typeln ("Investigation time, I suppose.");
+		}
+	}
+	
+	public static void Mountain() {
+		Stuff.typeln ("\"Welcome to the mountain\" says a nearby tree.");
+	}
+	
+	public static void GroceryStore() {
+		Stuff.typeln ("Welcome to Stop, Shop, and Roll.");
 	}
 }
