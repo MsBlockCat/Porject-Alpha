@@ -193,7 +193,7 @@ public class Stuff
 			    System.out.println("A save file already exists, saving to it...");
 			}
 			 
-			//Saves to the save file
+			//Saves to the save file: Line 1 is the save version, line 2 is if debug mode is on or not, line 3 is the fancy typing speed rate, line 4 is the number of turns the player has made, line 5 is whether or not the game has begun, line 6 is whether or not the story has begun, line 7 is what story branch the player was on, line 8 is what story location the player was on, and line 9 is whether or not the player has the lucky gauntlet
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
 			SaveFileWriter.write(SaveVersion + "\n" + BooleanToInt(DebugMode) + "\n" + FancyTypingSpeed + "\n" + TurnCount + "\n" + BooleanToInt(GameBeginning) + "\n" + BooleanToInt(StoryBeginning) + "\n" + CurrentBranchNumber + "\n" + CurrentLocationNumber + "\n" + BooleanToInt(HasLuckyGauntlet));
 			SaveFileWriter.close();
@@ -265,25 +265,16 @@ public class Stuff
 		{
 			Scanner AwesomeFile = new Scanner(SaveFile);
 			
-			int FileSaveVersion = StringToInt(AwesomeFile.nextLine());
+			//The save file's Line 1 is the save version
 			
-			if (FileSaveVersion < 3)
+			try
 			{
-				if (BeQuiet == false)
-				{
-					TypeLine("(Enter) Sorry, either that's not a save file or it got corrupted!");
-					AwesomeScanner.nextLine();
-				}
-				AwesomeFile.close();
-				return false;
-			}
-			else
-			{
-				if (FileSaveVersion > SaveVersion)
+				int FileSaveVersion = StringToInt(AwesomeFile.nextLine());
+				if (FileSaveVersion < 3)
 				{
 					if (BeQuiet == false)
 					{
-						TypeLine("(Enter) Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+						TypeLine("(Enter) Sorry, either that's not a save file or it got corrupted!");
 						AwesomeScanner.nextLine();
 					}
 					AwesomeFile.close();
@@ -291,23 +282,44 @@ public class Stuff
 				}
 				else
 				{
-					DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-					FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
-					TurnCount = StringToInt(AwesomeFile.nextLine());
-					GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-					StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-					CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
-					HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-					
-					if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
+					if (FileSaveVersion > SaveVersion)
 					{
-						TypeLine("(Enter) Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
-						AwesomeScanner.nextLine();
+						if (BeQuiet == false)
+						{
+							TypeLine("(Enter) Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+							AwesomeScanner.nextLine();
+						}
+						AwesomeFile.close();
+						return false;
 					}
+					else
+					{
+						/* File Line 2 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 3 */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+						/* File Line 4 */ TurnCount = StringToInt(AwesomeFile.nextLine());
+						/* File Line 5 */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 6 */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 7 */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 8 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						
+						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
+						{
+							TypeLine("(Enter) Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
+							AwesomeScanner.nextLine();
+						}
 
-					AwesomeFile.close();
-					return true;
+						AwesomeFile.close();
+						return true;
+					}
 				}
+			}
+			catch (RuntimeException NoSuchElementException)
+			{
+				if (BeQuiet == false)
+				{
+					System.out.println("Woah there! You seem to have a save file at \"Game Code/Saves/Save.txt\", but it has nothing in it!");
+				}
+				return false;
 			}
 		}
 		catch (FileNotFoundException NoSaveFileException)
