@@ -43,7 +43,7 @@ public class GoatBranch
 				break;
 			case "investigate":
 				Stuff.typeln ("Being the inquisitive goat that you are, you decide to investigate just how you came to exist.");
-				GoToGoatBranch("now with knowledge");
+				RockOfSelfReflection();
 				break;
 			}
 		}
@@ -54,9 +54,16 @@ public class GoatBranch
 	
 	public static void Mountain() {
 		Stuff.typeln ("\"Welcome to the mountain\" says a nearby tree.");
+		
 	}
 	
 	public static void GroceryStore() {
 		Stuff.typeln ("Welcome to Stop, Shop, and Roll.");
+		
+	}
+	
+	public static void RockOfSelfReflection() {
+		Stuff.typeln("Lucky for you, there was a sick looking rock nearby that should be good for self-reflection.");
+		
 	}
 }
