@@ -246,4 +246,24 @@ public class ASCII
 		System.out.println("       (__)");
 		System.out.println("");
 	}
+	
+	public static void RodrigoStudio()
+	{
+		System.out.println("        |\\      /\\      /|");
+		System.out.println("        | \\    /  \\    / |");
+		System.out.println("        |  \\  / @  \\  /  |");
+		System.out.println("        | @ \\/  @   \\/ @ |");
+		System.out.println("        |       __   /\\    |");
+		System.out.println("        |______/ /__/  \\___|");
+		System.out.println("       _|__/  ___     __ \\__|_   ");
+		System.out.println("      |      (_@_)   (_@_)       |     ");
+		System.out.println("      \\_          /          _/  ");
+		System.out.println("        |         /__       |      ");
+		System.out.println("        |              __   |     ");
+		System.out.println("        \\   \\________/   /       ");
+		System.out.println("         ()               ()     ");
+		System.out.println("           \\____________/       ");
+		System.out.println("                                ");
+		System.out.println("                              ");
+	}
 }

@@ -51,8 +51,10 @@ public class StudioAnimations
 	{
 		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
 		Stuff.HitEnter(24);
-		System.out.println("Placeholder Digo studio animation");
+		ASCII.RodrigoStudio();
+		System.out.println("Digo Son N'Co");
 		Stuff.HitEnter(25);
+		Stuff.Wait(1500);
 	}
 	
 	public static void MattEntertainment()
