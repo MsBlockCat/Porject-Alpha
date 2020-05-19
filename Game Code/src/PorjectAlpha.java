@@ -88,7 +88,7 @@ public class PorjectAlpha
 			Stuff.HitEnter(3);
 			ASCII.MainTitle();
 			Stuff.HitEnter(5);
-			Stuff.TypeLine("(Play) Start a new game!");
+			Stuff.TypeLine("(New) Start a new game!");
 			Stuff.TypeLine("(Save) Makes a save file you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save file!");
 			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
@@ -100,7 +100,7 @@ public class PorjectAlpha
 			
 			switch (TitleScreenPlayerChoice)
 			{
-				case "play":
+				case "new":
 					if (Stuff.CurrentBranchNumber == 0)
 					{
 						StayOnTitleScreen = false;

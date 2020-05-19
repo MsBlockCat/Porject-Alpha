@@ -104,5 +104,7 @@ public class SpaceBranch
 	{
 		Stuff.CurrentLocationNumber = 2;
 		Stuff.TypeLine("You see the Earth rotating beneath your very eyes.");
+		ASCII.Earth();
+		Stuff.TypeLine("It's very majestic.");
 	}
 }

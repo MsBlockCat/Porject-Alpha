@@ -45,7 +45,7 @@ public class GoatBranch
 				Stuff.typeln ("Being the inquisitive goat that you are, you decide to investigate just how you came to exist.");
 				GoToGoatBranch("now with knowledge");
 				break;
-		}
+			}
 		}
 		else {
 			Stuff.typeln ("Investigation time, I suppose.");

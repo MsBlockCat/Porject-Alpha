@@ -225,25 +225,39 @@ public class ASCII
 	
 	public static void DoofInc()
 	{
-		System.out.println("         _____");
-		System.out.println("        z  |  z");
-		System.out.println("     Z  \\  |  / Z");
-		System.out.println("   /     \\ | /    \\");
-		System.out.println("   |______\\0/______|");
-		System.out.println("   | DOOF EVIL INC.|");
-		System.out.println("   |_________      |");
-		System.out.println("     \\/      |     |_____");
-		System.out.println("     |       |           |");
-		System.out.println("    _|_______|          /");
-		System.out.println("   |                   /");
-		System.out.println("   |             _____/");
-		System.out.println("   |            |");
-		System.out.println("   |            |");
-		System.out.println("   |_______ ____|___");
-		System.out.println(" _(    ___ )(       )___");
-		System.out.println("(___  (___)   ___     __)");
-		System.out.println("    (_________) (_____)");
-		System.out.println("       (__)");
-		System.out.println("");
+		System.out.println("                                                      _____");
+		System.out.println("                                                     z  |  z");
+		System.out.println("                                                  Z  \\  |  / Z");
+		System.out.println("                                                /     \\ | /    \\");
+		System.out.println("                                                |______\\0/______|");
+		System.out.println("                                                | DOOF EVIL INC.|");
+		System.out.println("                                                |_________      |");
+		System.out.println("                                                  \\/      |     |_____");
+		System.out.println("                                                  |       |           |");
+		System.out.println("                                                 _|_______|          /");
+		System.out.println("                                                |                   /");
+		System.out.println("                                                |             _____/");
+		System.out.println("                                                |            |");
+		System.out.println("                                                |            |");
+		System.out.println("                                                |_______ ____|___");
+		System.out.println("                                              _(    ___ )(       )___");
+		System.out.println("                                             (___  (___)   ___     __)");
+		System.out.println("                                                 (_________) (_____)");
+		System.out.println("                                                    (__)");
+		System.out.println("                                                       ");
+	}
+	
+	public static void Earth()
+	{
+		System.out.println("                                                  __------__");
+		System.out.println("                                                _/          \\_");
+		System.out.println("                                               /              \\");
+		System.out.println("                                              /                \\");
+		System.out.println("                                             |                  |");
+		System.out.println("                                             |                  |");
+		System.out.println("                                              \\                /");
+		System.out.println("                                               \\              /");
+		System.out.println("                                                -\\          /-");
+		System.out.println("                                                  --______--");
 	}
 }
