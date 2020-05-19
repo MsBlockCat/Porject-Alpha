@@ -2,8 +2,8 @@ public class GameIntro
 {
 	public static void DaGameIntro()
 	{
-		Stuff.HitEnter(24);
+		Stuff.HitEnter(19);
 		System.out.println("Placeholder game intro");
-		Stuff.HitEnter(25);
+		Stuff.HitEnter(20);
 	}
 }
