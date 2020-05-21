@@ -240,7 +240,7 @@ public class Stuff
 				DefaultSaveFileScanner.close();
 				
 				//Loads the values in Save.txt
-				//LoadSaveFile();
+				LoadSaveFile();
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
