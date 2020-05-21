@@ -159,8 +159,9 @@ public class Stuff
 		try {
 			CreditsScanner = new Scanner(new File("Credits.txt"));
 		} catch (FileNotFoundException NoFileException) {
-			System.out.println("Error 6: Looks like the \"Game Code/Credits.txt\" file isn't in the game code, but it should be!");
+			System.out.println("(Enter) Error 6: Looks like the \"Game Code/Credits.txt\" file isn't in the game code, but it should be!");
 			NoFileException.printStackTrace();
+			AwesomeScanner.nextLine();
 		}
 		
 		while (CreditsScanner.hasNext())
@@ -179,8 +180,11 @@ public class Stuff
 	
 	public static void SaveGame()
 	{
+		File SaveFolder = new File("Saves");
+		SaveFolder.mkdir();
+		
 		File SaveFile = new File("Saves/Save.txt");
-		  
+		
 		try
 		{
 			//Creates or locks into the save file
@@ -210,13 +214,15 @@ public class Stuff
 			}
 			catch (IllegalArgumentException IAE)
 			{
-				System.out.println("Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found!");
+				System.out.println("(Enter) Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found and couldn't be made!");
+				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException IOException)
 		{
-			System.out.println("Error 7: There was an IOException when saving your game.");
+			System.out.println("(Enter) Error 7: There was an IOException when saving your game.");
 			IOException.printStackTrace();
+			AwesomeScanner.nextLine();
 		}
 	}
 	
@@ -240,18 +246,20 @@ public class Stuff
 				DefaultSaveFileScanner.close();
 				
 				//Loads the values in Save.txt
-				//LoadSaveFile();
+				LoadSaveFile();
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
-				TypeLine("Something went wrong: There's no default save file (at \"Game Code/Default Save.txt\") to load!");
+				TypeLine("(Enter) Something went wrong: There's no default save file (at \"Game Code/Default Save.txt\") to load!");
+				AwesomeScanner.nextLine();
 			}
 			
 			SaveFileWriter.close();
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset!)");
+			TypeLine("(Enter) Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset!)");
+			AwesomeScanner.nextLine();
 		}
 		
 	}
