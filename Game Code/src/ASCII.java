@@ -299,21 +299,126 @@ public class ASCII
 	
 	public static void StudioIntro()
 	{
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("                                 *        *      *");
+		System.out.println("                                     *     * *");
+		System.out.println("                                *       *                             /");
+		System.out.println("                                       /\\                   *       /");
+		System.out.println("                                      /  \\    *      \\            /");
+		System.out.println("                                     / __ \\           \\     /|\\    *");
+		System.out.println("                                    / (__) \\        *      / ||");
+		System.out.println("                                   /        \\              | ||     /");
+		System.out.println("                                  (    [     )       \\     | ||    /");
+		System.out.println("                                  |     ]    |             | ||   /          /\\             /\\");
+		System.out.println("                                  \\   [     /              | ||             / |             | \\");
+		System.out.println("                                   |    ]   |              | ||     ____    \\_\\_           _/_/");
+		System.out.println("                                  /|   ||   |\\    ____  *  | ||               \\ \\_/\\___/\\_/_ /");
+		System.out.println("                                 / |   ||   | \\            | ||     *          \\|           |/");
+		System.out.println("                                /  |\\__||__/|  \\           | ||                 | (*)   (*) |");
+		System.out.println("                               /___/  \\||/  \\___\\       |\\_| ||_/|              \\     ^     /");
+		System.out.println("                                 ()    ()               | ______ |               \\    __    /");
+		System.out.println("                                      () ()()    ()     |/  ||  \\|                |   \\/   |");
+		System.out.println("                                  ()   () ()                ||                     \\      /");
+		System.out.println("                                () ()       ()             ()                      \\ / _/");
+		System.out.println("                                                                                      \\/");
+	}   
+	
+	public static void StudioIntro2()
+	{
+		System.out.println("                                 *        *      *                                                                     ");
+		System.out.println("                                     *     * *                                                                     ");
+		System.out.println("                                *       *                             /                                              ");
+		System.out.println("                                       /\\                   *       /                                              ");
+		System.out.println("                                      /  \\    *      \\            /                                              ");
+		System.out.println("                                     / __ \\           \\     /|\\    *                                              ");
+		System.out.println("                                    / (__) \\        *      / ||                                              ");
+		System.out.println("                                   /        \\              | ||     /                                              ");
+		System.out.println("                                  (    [     )       \\     | ||    /                                              ");
+		System.out.println("                                  |     ]    |             | ||   /          /\\             /\\                       ");
+		System.out.println("                                  \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                                   |    ]   |              | ||     ____    \\_\\_           _/_/                       ");
+		System.out.println("                                  /|   ||   |\\    ____  *  | ||   ((_))       \\ \\_/\\___/\\_/_ /                       ");
+		System.out.println("                                 / |   ||   | \\            | ||  (((_)))       \\|           |/                       ");
+		System.out.println("                                /  |\\__||__/|  \\           | ||  (( ))          | (*)   (*) |                       ");
+		System.out.println("                               /___/  \\||/  \\___\\       |\\_| ||_/|              \\     ^     /                       ");
+		System.out.println("                                 ()    ()               | ______ |               \\    __    /                       ");
+		System.out.println("                                      () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
+		System.out.println("                                  ()   () ()                ||                     \\      /                       ");
+		System.out.println("                                () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                                                                                      \\/                       ");
+	}   
+	
+	public static void StudioIntro3()
+	{
+		System.out.println("                                 *        *      *                                                                     ");
+		System.out.println("                                     *     * *                                                                     ");
+		System.out.println("                                *       *                             /                                              ");
+		System.out.println("                                       /\\                   *       /                                              ");
+		System.out.println("                                      /  \\    *      \\            /                                              ");
+		System.out.println("                                     / __ \\           \\     /|\\    *                                              ");
+		System.out.println("                                    / (__) \\        *      / ||                                              ");
+		System.out.println("                                   /        \\              | ||     /                                              ");
+		System.out.println("                                  (    [     )       \\     | ||    /                                              ");
+		System.out.println("                                  |     ]    |             | ||   /          /\\             /\\                       ");
+		System.out.println("                                  \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                                   |    ]   |              | ||     (( ))   \\_\\_           _/_/                       ");
+		System.out.println("                                  /|   ||   |\\    ____  *  | ||  ((     ))    \\ \\_/\\___/\\_/_ /                       ");
+		System.out.println("                                 / |   ||   | \\            | || ((       ))    \\|           |/                       ");
+		System.out.println("                                /  |\\__||__/|  \\           | || ((     ))       | (*)   (*) |                       ");
+		System.out.println("                               /___/  \\||/  \\___\\       |\\_| ||_(( ))           \\     ^     /                       ");
+		System.out.println("                                 ()    ()               | ______ |               \\    __    /                       ");
+		System.out.println("                                      () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
+		System.out.println("                                  ()   () ()                ||                     \\      /                       ");
+		System.out.println("                                () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                                                                                      \\/                       ");
+	}
+	
+	public static void StudioIntro4()
+	{
+		System.out.println("                                 *        *      *                                                                     ");
+		System.out.println("                                     *     * *                                                                     ");
+		System.out.println("                                *       *                             /                                              ");
+		System.out.println("                                       /\\                   *       /                                              ");
+		System.out.println("                                      /  \\    *      \\            /                                              ");
+		System.out.println("                                     / __ \\           \\     /|\\    *                                              ");
+		System.out.println("                                    / (__) \\        *      / ||                                              ");
+		System.out.println("                                   /        \\              | ||     /                                              ");
+		System.out.println("                                  (    [     )       \\     | ||    /                                              ");
+		System.out.println("                                  |     ]    |             | ||   /(     )   /\\             /\\                       ");
+		System.out.println("                                  \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                                   |    ]   |              | || (   (   )   \\)\\_           _/_/                       ");
+		System.out.println("                                  /|   ||   |\\     _____________ (      )) _______________/\\_/_ /                       ");
+		System.out.println("                                 / |   ||   | \\  ((_____________(         )_____________))   |/                       ");
+		System.out.println("                                /  |\\__||__/|  \\           | || (       )       | (*)   (*) |                       ");
+		System.out.println("                               /___/  \\||/  \\___\\       |\\_|(||_(   )   )       \\     ^     /                       ");
+		System.out.println("                                 ()    ()               | ______ |               \\    __    /                       ");
+		System.out.println("                                      () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
+		System.out.println("                                  ()   () ()                ||                     \\      /                       ");
+		System.out.println("                                () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                                                                                      \\/                       ");
+	}
+	
+	public static void StudioIntro5()
+	{
+		System.out.println("                                 *        *      *                                                                     ");
+		System.out.println("                                     *     * *                                                                     ");
+		System.out.println("                                *       *                             /                                              ");
+		System.out.println("                                       /\\                   *       /                                              ");
+		System.out.println("                                      /  \\    *      \\            /                                              ");
+		System.out.println("                                     / __ \\           \\     /|\\    *                                              ");
+		System.out.println("                                    / (__) \\        *      / ||          ))                                  ");
+		System.out.println("                                   /        \\              | ||                                                    ");
+		System.out.println("                                  (    [     )       \\ ((  | ||                  ))                               ");
+		System.out.println("                                  |     ]    |             ((||   ((         /\\             /\\                       ");
+		System.out.println("                                  \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                                   |    ]   |              | || (           \\)\\_           _/_/                       ");
+		System.out.println("                                   __________________________                   __________________________                ");
+		System.out.println("                                 ((_________________________(((              )))__________________________))           ");
+		System.out.println("                                /  |\\__||__/|  \\           | ||                 | (*)   (*) |                       ");
+		System.out.println("                               /___/  \\||/  \\___\\       |\\_|(|          )       \\     ^     /                       ");
+		System.out.println("                                 ()    ()               | ______ |               \\    __    /                       ");
+		System.out.println("                                      () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
+		System.out.println("                                  ()   () ()                ||                     \\      /                       ");
+		System.out.println("                                () ()       ()             () ((               ))  \\ / _/                       ");
+		System.out.println("                                                                                      \\/                       ");
 	}
 }
