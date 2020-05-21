@@ -186,16 +186,17 @@ public class Stuff
 			//Creates or locks into the save file
 			if (SaveFile.createNewFile())
 			{
+				//If true created new save file
 			    System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
 			}
 			else
 			{
+				//If false save file already existed and was locked onto
 			    System.out.println("A save file already exists, saving to it...");
 			}
-			 
-			//Saves to the save file: Line 1 is the save version, line 2 is if debug mode is on or not, line 3 is the fancy typing speed rate, line 4 is the number of turns the player has made, line 5 is whether or not the game has begun, line 6 is whether or not the story has begun, line 7 is what story branch the player was on, line 8 is what story location the player was on, and line 9 is whether or not the player has the lucky gauntlet
+			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(SaveVersion + "\n" + BooleanToInt(DebugMode) + "\n" + FancyTypingSpeed + "\n" + TurnCount + "\n" + BooleanToInt(GameBeginning) + "\n" + BooleanToInt(StoryBeginning) + "\n" + CurrentBranchNumber + "\n" + CurrentLocationNumber + "\n" + BooleanToInt(HasLuckyGauntlet));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			AwesomeScanner.nextLine();
@@ -230,12 +231,15 @@ public class Stuff
 			
 			try
 			{
+				//Replaces the values in Save.txt with DefaultSave.txt's values
 				Scanner DefaultSaveFileScanner = new Scanner(DefaultSaveFile);
 				while (DefaultSaveFileScanner.hasNextLine())
 				{
 					SaveFileWriter.write(DefaultSaveFileScanner.nextLine() + "\n");
 				}
 				DefaultSaveFileScanner.close();
+				
+				//Loads the values in Save.txt
 				//LoadSaveFile();
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
@@ -265,10 +269,9 @@ public class Stuff
 		{
 			Scanner AwesomeFile = new Scanner(SaveFile);
 			
-			//The save file's Line 1 is the save version
-			
 			try
 			{
+				//The save file's Line 1 is the save version
 				int FileSaveVersion = StringToInt(AwesomeFile.nextLine());
 				if (FileSaveVersion < 3)
 				{
