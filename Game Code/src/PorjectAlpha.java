@@ -109,7 +109,7 @@ public class PorjectAlpha
 					else
 					{
 						Stuff.TypeLine("Are you sure you want to start a new game? All unsaved progress in your current one'll be lost!");
-						Stuff.TypeLine("(Yes) Delete unsaved progress and make a new game");
+						Stuff.TypeLine("(Yes) Delete unsaved progress and make a new game. This is caps sensitive!");
 						Stuff.TypeLine("(Anything else) Keep your progress, don't make a new game, and go back to the main menu");
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
@@ -124,7 +124,7 @@ public class PorjectAlpha
 					break;
 				case "load":
 					Stuff.TypeLine("Are you sure you wanna load a save file? This'll erase any current unsaved progress!");
-					Stuff.TypeLine("(Yes) Delete any currently unsaved progress and load a save file");
+					Stuff.TypeLine("(Yes) Delete any currently unsaved progress and load a save file. This is caps sensitive!");
 					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 					{
