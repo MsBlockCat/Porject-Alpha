@@ -47,23 +47,23 @@ public class StudioAnimations
 		Stuff.Wait(1500);
 	}
 	
-	public static void RodrigoStudio()
+	public static void DigoSonNCo()
 	{
 		Stuff.HitEnter(13);
 		ASCII.RodrigoStudio();
-		System.out.println("                                                    Digo Son N'Co");
+		System.out.println("                                               Digo Son N'Co");
 		Stuff.HitEnter(13);
 		Stuff.Wait(1500);
 		
 		Stuff.HitEnter(13);
 		ASCII.RodrigoStudio2();
-		System.out.println("                                                    Digo Son N'Co");
+		System.out.println("                                               Digo Son N'Co");
 		Stuff.HitEnter(13);
 		Stuff.Wait(300);
 		
 		Stuff.HitEnter(13);
 		ASCII.RodrigoStudio();
-		System.out.println("                                                    Digo Son N'Co");
+		System.out.println("                                               Digo Son N'Co");
 		Stuff.HitEnter(13);
 		Stuff.Wait(1500);
 	}
