@@ -296,4 +296,24 @@ public class ASCII
 		System.out.println("                                              (             )");
 		System.out.println("                                               \\___________/");
 	}
+	
+	public static void StudioIntro()
+	{
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
 }
