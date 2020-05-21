@@ -57,7 +57,7 @@ public class PorjectAlpha
 			//Studio Animations
 			StudioAnimations.FalconCoLtd();
 			Stuff.Wait(1000);
-			StudioAnimations.RodrigoStudio();
+			StudioAnimations.DigoSonNCo();
 			Stuff.Wait(1000);
 			StudioAnimations.MattEntertainment();
 			Stuff.Wait(1000);
