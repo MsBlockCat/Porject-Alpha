@@ -297,6 +297,7 @@ public class Stuff
 					}
 					else
 					{
+						//These lines replace the variables in game with the values in Save.txt
 						/* File Line 2 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						/* File Line 3 */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
 						/* File Line 4 */ TurnCount = StringToInt(AwesomeFile.nextLine());
