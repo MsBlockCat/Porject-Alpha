@@ -329,7 +329,8 @@ public class Stuff
 			{
 				if (BeQuiet == false)
 				{
-					System.out.println("Woah there! You seem to have a save file at \"Game Code/Saves/Save.txt\", but it has nothing in it!");
+					System.out.println("(Enter) Woah there! You seem to have a save file at \"Game Code/Saves/Save.txt\", but it has nothing in it!");
+					AwesomeScanner.nextLine();
 				}
 				return false;
 			}
@@ -338,7 +339,8 @@ public class Stuff
 		{
 			if (BeQuiet == false)
 			{
-				TypeLine("You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+				TypeLine("(Enter) You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+				AwesomeScanner.nextLine();
 			}
 			return false;
 		}
