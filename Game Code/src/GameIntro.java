@@ -26,5 +26,10 @@ public class GameIntro
 		ASCII.GameIntro5();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro6();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
 	}
 }
