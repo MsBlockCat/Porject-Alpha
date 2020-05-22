@@ -180,9 +180,11 @@ public class Stuff
 	
 	public static void SaveGame()
 	{
+		//Makes Saves folder if need be
 		File SaveFolder = new File("Saves");
 		SaveFolder.mkdir();
 		
+		//Location of Save file
 		File SaveFile = new File("Saves/Save.txt");
 		
 		try
@@ -228,11 +230,28 @@ public class Stuff
 	
 	public static void ResetSave()
 	{
+		//Makes Saves folder if need be
+		File SaveFolder = new File("Saves");
+		SaveFolder.mkdir();
+		
+		//Locations of Save and Default Save files
 		File SaveFile = new File("Saves/Save.txt");
 		File DefaultSaveFile = new File("Default Save.txt");
 		
 		try
 		{
+			//Creates or locks onto the save file
+			if (SaveFile.createNewFile())
+			{
+				//If true created new save file
+			    System.out.println("A new save file was created to reset! You can find it at \"Game Code/Saves/Save.txt\".");
+			}
+			else
+			{
+				//If false save file already existed and was locked onto
+			    System.out.println("A save file already exists, resetting it...");
+			}
+			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
 			
 			try
@@ -244,6 +263,7 @@ public class Stuff
 					SaveFileWriter.write(DefaultSaveFileScanner.nextLine() + "\n");
 				}
 				DefaultSaveFileScanner.close();
+				SaveFileWriter.close();
 				
 				//Loads the values in Save.txt
 				LoadSaveFile();
@@ -253,12 +273,10 @@ public class Stuff
 				TypeLine("(Enter) Something went wrong: There's no default save file (at \"Game Code/Default Save.txt\") to load!");
 				AwesomeScanner.nextLine();
 			}
-			
-			SaveFileWriter.close();
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("(Enter) Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset!)");
+			TypeLine("(Enter) Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
 		
@@ -325,7 +343,7 @@ public class Stuff
 					}
 				}
 			}
-			catch (RuntimeException NoSuchElementException)
+			catch (RuntimeException NoNewLineException)
 			{
 				if (BeQuiet == false)
 				{

@@ -3,27 +3,27 @@ public class GameIntro
 	public static void DaGameIntro()
 	{
 		Stuff.HitEnter(9);
-		ASCII.StudioIntro();
+		ASCII.GameIntro1();
 		Stuff.HitEnter(10);
 		Stuff.Wait(1500);
 		
 		Stuff.HitEnter(9);
-		ASCII.StudioIntro2();
+		ASCII.GameIntro2();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
 		
 		Stuff.HitEnter(9);
-		ASCII.StudioIntro3();
+		ASCII.GameIntro3();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
 		
 		Stuff.HitEnter(9);
-		ASCII.StudioIntro4();
+		ASCII.GameIntro4();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
 		
 		Stuff.HitEnter(9);
-		ASCII.StudioIntro5();
+		ASCII.GameIntro5();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
 	}
