@@ -157,9 +157,9 @@ public class Stuff
 		Scanner CreditsScanner = null;
 		
 		try {
-			CreditsScanner = new Scanner(new File("Credits.txt"));
+			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
 		} catch (FileNotFoundException NoFileException) {
-			System.out.println("(Enter) Error 6: Looks like the \"Game Code/Credits.txt\" file isn't in the game code, but it should be!");
+			System.out.println("(Enter) Error 6: Looks like the \"Porject-Alpha/Game Code/Credits.txt\" file isn't in the game code, but it should be!");
 			NoFileException.printStackTrace();
 			AwesomeScanner.nextLine();
 		}
@@ -216,7 +216,7 @@ public class Stuff
 			}
 			catch (IllegalArgumentException IAE)
 			{
-				System.out.println("(Enter) Error 8: The save file's folder (at \"Game Code/Saves\") wasn't found and couldn't be made!");
+				System.out.println("(Enter) Error 8: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
 				AwesomeScanner.nextLine();
 			}
 		}
@@ -244,7 +244,7 @@ public class Stuff
 			if (SaveFile.createNewFile())
 			{
 				//If true created new save file
-			    System.out.println("A new save file was created to reset! You can find it at \"Game Code/Saves/Save.txt\".");
+			    System.out.println("A new save file was created to reset! You can find it at \"Porject-Alpha/Saves/Save.txt\".");
 			}
 			else
 			{
@@ -270,13 +270,13 @@ public class Stuff
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
-				TypeLine("(Enter) Something went wrong: There's no default save file (at \"Game Code/Default Save.txt\") to load!");
+				TypeLine("(Enter) Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
 				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("(Enter) Sorry, but there's no save file (at \"Game Code/Saves/Save.txt\") to reset and one couldn't be made!");
+			TypeLine("(Enter) Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
 		
@@ -347,7 +347,7 @@ public class Stuff
 			{
 				if (BeQuiet == false)
 				{
-					System.out.println("(Enter) Woah there! You seem to have a save file at \"Game Code/Saves/Save.txt\", but it has nothing in it!");
+					System.out.println("(Enter) Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has nothing in it!");
 					AwesomeScanner.nextLine();
 				}
 				return false;
@@ -383,7 +383,7 @@ public class Stuff
 		{
 			if (!Character.isDigit(Number.charAt(Cursor)))
 			{
-				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted value is an integer in the String variable type.");
+				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
 				return 0;
 			}
 		}
@@ -676,7 +676,9 @@ public class Stuff
 		}
 		catch (InterruptedException Exception)
 		{
+			System.out.println("(Enter) There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
 			Exception.printStackTrace();
+			AwesomeScanner.nextLine();
 		}
 	}
 }
