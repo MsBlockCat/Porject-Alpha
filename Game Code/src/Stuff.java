@@ -236,7 +236,7 @@ public class Stuff
 		
 		//Locations of Save and Default Save files
 		File SaveFile = new File("Saves/Save.txt");
-		File DefaultSaveFile = new File("Default Save.txt");
+		File DefaultSaveFile = new File("Game Code/Default Save.txt");
 		
 		try
 		{
