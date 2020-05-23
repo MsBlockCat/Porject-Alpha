@@ -252,12 +252,11 @@ public class Stuff
 			    System.out.println("A save file already exists, resetting it...");
 			}
 			
-			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			
 			try
 			{
 				//Replaces the values in Save.txt with DefaultSave.txt's values
 				Scanner DefaultSaveFileScanner = new Scanner(DefaultSaveFile);
+				FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
 				while (DefaultSaveFileScanner.hasNextLine())
 				{
 					SaveFileWriter.write(DefaultSaveFileScanner.nextLine() + "\n");
@@ -279,7 +278,6 @@ public class Stuff
 			TypeLine("(Enter) Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
-		
 	}
 	
 	public static boolean LoadSaveFile()

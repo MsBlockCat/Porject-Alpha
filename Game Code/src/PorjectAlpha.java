@@ -114,8 +114,6 @@ public class PorjectAlpha
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
 							Stuff.ResetSave();
-							StayOnTitleScreen = false;
-							ModernBranch.GoToModernBranch("Lab1");
 						}
 					}
 					break;
