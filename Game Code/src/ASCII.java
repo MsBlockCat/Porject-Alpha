@@ -299,6 +299,131 @@ public class ASCII
 	
 	public static void GameIntro1()
 	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                             /\\       ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                                             ||        ");
+		System.out.println("                        *                    ||        ");
+		System.out.println("                           *         *       ||        ");
+		System.out.println("                 *    *     * *              /\\                         *");
+		System.out.println("                   *    *                    ||        ");
+		System.out.println("                        /\\                   \\/      ");
+		System.out.println("                       /  \\    *             ||       ");
+		System.out.println("                *     / __ \\                 ()       ");
+		System.out.println("                     / (__) \\        *                ");
+	}
+	
+	public static void GameIntro2()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                            / \\       ");
+		System.out.println("                                            | |        ");
+		System.out.println("                                            | |        ");
+		System.out.println("                                            | |        ");
+		System.out.println("                  *        *     *          | |        ");
+		System.out.println("                      *     * *             | |        ");
+		System.out.println("                 *       *                  | |        ");
+		System.out.println("                        /\\                  | |       ");
+		System.out.println("                       /  \\    *            | |                       *   *  ");
+		System.out.println("                      / __ \\                | |                       *****  ");
+		System.out.println("                     / (__) \\       *     |\\| ||                       * *   ");
+		System.out.println("                    /        \\            |____|                        *    ");
+		System.out.println("                   (    [     )           |/ |||       ");
+		System.out.println("                   |     ]    |              ||        ");
+		System.out.println("                   \\    [     /              ()       ");
+		System.out.println("                    |    ]   |                         ");
+	}
+	
+	public static void GameIntro3()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                             / \\      ");
+		System.out.println("                                            /  |       ");
+		System.out.println("                        /\\                  |  |      ");
+		System.out.println("                       /  \\                 |  |      ");
+		System.out.println("                  *   / __ \\     *          |  |      ");
+		System.out.println("                     / (__) \\               |  |      ");
+		System.out.println("                 *  /        \\              |  |      ");
+		System.out.println("                   (    [     )             |  |                     *     * ");
+		System.out.println("                   |     ]    | *           |  |                     **   ** ");
+		System.out.println("                   \\    [     /             |  |                     * *** *  ");
+		System.out.println("                    |    ]   |       *   |\\_|  |/|                    *   *  ");
+		System.out.println("                   /|   ||   |\\          | ______|                    *   *  ");
+		System.out.println("                  / |   ||   | \\         |/  || \\|                      *    ");
+		System.out.println("                 /  |\\__||__/|  \\            ||      ");
+		System.out.println("                /___/  \\||/  \\___\\           ()     ");
+		System.out.println("                     ()   ()                           ");
+	}
+	
+	public static void GameIntro4()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                        /\\                            ");
+		System.out.println("                       /  \\                           ");
+		System.out.println("                      / __ \\                          ");
+		System.out.println("                     / (__) \\                /|\\     ");
+		System.out.println("                    /        \\              / ||      ");
+		System.out.println("                   (    [     )             | ||       ");
+		System.out.println("                   |     ]    |             | ||       ");
+		System.out.println("                  *\\    [     / *           | ||      ");
+		System.out.println("                    |    ]   |              | ||       ");
+		System.out.println("                 * /|   ||   |\\             | ||                   *         *    ");
+		System.out.println("                  / |   ||   | \\            | ||                   *         *    ");
+		System.out.println("                 /  |\\__||__/|  \\           | ||                    ***   ***    ");
+		System.out.println("                /___/  \\||/  \\___\\          | ||                    *  ***  *   ");
+		System.out.println("                       ()  ()        *   |\\_| ||_/|                  *  ^  *      ");
+		System.out.println("                         ()              | ______ |                   \\   /       ");
+		System.out.println("                      ()    ()           |/  ||  \\|                    * *        ");
+		System.out.println("                   ()      ()   ()           ||                         *          ");
+		System.out.println("                                             ()        ");
+		System.out.println("                                                       ");
+	}
+	
+	public static void GameIntro5()
+	{
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                                                       ");
+		System.out.println("                        /\\                            ");
+		System.out.println("                       /  \\                           ");
+		System.out.println("                      / __ \\           \\     /|\\    ");
+		System.out.println("                     / (__) \\               / ||      ");
+		System.out.println("                    /        \\              | ||      ");
+		System.out.println("                   (    [     )   *         | ||       ");
+		System.out.println("                   |     ]    |             | ||   /   ");
+		System.out.println("                 * \\    [     /             | ||                                 ");
+		System.out.println("                    |    ]   |              | ||   __              *         *    ");
+		System.out.println("                   /|   ||   |\\      __     | ||                   *         *   ");
+		System.out.println("                  / |   ||   | \\            | ||                    ***   ***    ");
+		System.out.println("                 /  |\\__||__/|  \\           | ||                    *  ***  *   ");
+		System.out.println("                /___/  \\||/  \\___\\ *     |\\_| ||_/|                  *  ^  *  ");
+		System.out.println("                        ()               | ______ |                   \\   /      ");
+		System.out.println("                     ()    ()            |/  ||  \\|                    * *       ");
+		System.out.println("                    ()   ()   ()             ||                         *         ");
+		System.out.println("                                             ()                                   ");
+		System.out.println("                                                       ");
+	}
+	
+	public static void GameIntro6()
+	{
 		System.out.println("                  *        *      *");
 		System.out.println("                      *     * *");
 		System.out.println("                 *       *                             /");
@@ -309,7 +434,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||     /");
 		System.out.println("                   (    [     )       \\     | ||    /");
 		System.out.println("                   |     ]    |             | ||   /          /\\             /\\");
-		System.out.println("                   \\   [     /              | ||             / |             | \\");
+		System.out.println("                   \\    [     /             | ||             / |             | \\");
 		System.out.println("                    |    ]   |              | ||     ____    \\_\\_           _/_/");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||               \\ \\_/\\___/\\_/_ /");
 		System.out.println("                  / |   ||   | \\            | ||     *          \\|           |/");
@@ -318,11 +443,11 @@ public class ASCII
 		System.out.println("                  ()    ()               | ______ |               \\    __    /");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |");
 		System.out.println("                   ()   () ()                ||                     \\      /");
-		System.out.println("                 () ()       ()             ()                      \\ / _/");
+		System.out.println("                 () ()       ()              ()                     \\ / _/");
 		System.out.println("                                                                       \\/");
-	}   
+	}
 	
-	public static void GameIntro2()
+	public static void GameIntro7()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -334,7 +459,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||     /                                              ");
 		System.out.println("                   (    [     )       \\     | ||    /                                              ");
 		System.out.println("                   |     ]    |             | ||   /          /\\             /\\                       ");
-		System.out.println("                   \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | ||     ____    \\_\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||   ((_))       \\ \\_/\\___/\\_/_ /                       ");
 		System.out.println("                  / |   ||   | \\            | ||  (((_)))       \\|           |/                       ");
@@ -343,11 +468,11 @@ public class ASCII
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                                                       \\/                       ");
-	}   
+	}
 	
-	public static void GameIntro3()
+	public static void GameIntro8()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -359,7 +484,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||     /                                              ");
 		System.out.println("                   (    [     )       \\     | ||    /                                              ");
 		System.out.println("                   |     ]    |             | ||   /          /\\             /\\                       ");
-		System.out.println("                   \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | ||     (( ))   \\_\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||  ((     ))    \\ \\_/\\___/\\_/_ /                       ");
 		System.out.println("                  / |   ||   | \\            | || ((       ))    \\|           |/                       ");
@@ -368,11 +493,11 @@ public class ASCII
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                                                       \\/                       ");
 	}
 	
-	public static void GameIntro4()
+	public static void GameIntro9()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -384,7 +509,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||     /                                              ");
 		System.out.println("                   (    [     )       \\     | ||    /                                              ");
 		System.out.println("                   |     ]    |             | ||   /(     )   /\\             /\\                       ");
-		System.out.println("                   \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | || (   (   )   \\)\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\     _____________ (      )) _______________/\\_/_ /                       ");
 		System.out.println("                  / |   ||   | \\  ((_____________(         )_____________))   |/                       ");
@@ -393,11 +518,11 @@ public class ASCII
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                                                       \\/                       ");
 	}
 	
-	public static void GameIntro5()
+	public static void GameIntro10()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -409,7 +534,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||                                                    ");
 		System.out.println("                   (    [     )       \\ ((  | ||                  ))                               ");
 		System.out.println("                   |     ]    |             ((||   ((         /\\             /\\                       ");
-		System.out.println("                   \\   [     /              | ||             / |             | \\                       ");
+		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | || (           \\)\\_           _/_/                       ");
 		System.out.println("                    __________________________                   __________________________                ");
 		System.out.println("                  ((_________________________(((              )))__________________________))           ");
@@ -418,11 +543,11 @@ public class ASCII
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()             () ((               ))  \\ / _/                       ");
+		System.out.println("                 () ()       ()              () ((              ))  \\ / _/                       ");
 		System.out.println("                                                                       \\/                       ");
 	}
 	
-	public static void GameIntro6()
+	public static void GameIntro11()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -434,7 +559,7 @@ public class ASCII
 		System.out.println("                    /        \\              | ||               ))                                     ");
 		System.out.println("                   (    [     )       \\                                                            ");
 		System.out.println("                   |     ]    |                ((                            /\\                       ");
-		System.out.println("                   \\   [     /        ((                                     | \\                       ");
+		System.out.println("                   \\    [     /       ((                                     | \\                       ");
 		System.out.println("                    |    ]   |                                              _/_/                       ");
 		System.out.println("          ________________________                              ))            __________________________     ");
 		System.out.println("        ((________________________(((          ((                          )))__________________________))           ");
@@ -443,7 +568,7 @@ public class ASCII
 		System.out.println("                  ()    ()               | ___                          __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||     ((                 \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()             ()                      \\ / _/                       ");
+		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                     ((                                \\/                       ");
 	}
 }
