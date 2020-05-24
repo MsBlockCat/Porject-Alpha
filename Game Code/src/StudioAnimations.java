@@ -70,9 +70,113 @@ public class StudioAnimations
 	
 	public static void MattEntertainment()
 	{
-		//You can name this method whatever you want and show whatever you want in here as long as it doesn't break lol
-		Stuff.HitEnter(19);
-		System.out.println("Placeholder Matt studio animation");
-		Stuff.HitEnter(20);
+		Stuff.HitEnter(10);
+		ASCII.MattIntro1();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro2();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro3();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro4();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro5();
+		Stuff.HitEnter(11);
+		Stuff.Wait(1000);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro6();
+		Stuff.HitEnter(11);
+		Stuff.Wait(500);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro7();
+		Stuff.HitEnter(11);
+		Stuff.Wait(1000);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro8();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro9();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro10();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro11();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro12();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro13();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro14();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro15();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro16();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro17();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro18();
+		Stuff.HitEnter(11);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(10);
+		ASCII.MattIntro19();
+		Stuff.HitEnter(11);
+		Stuff.Wait(1000);
+		
+		Stuff.HitEnter(39);
+		System.out.println("                                     Really Cool Studios by Matt");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 }

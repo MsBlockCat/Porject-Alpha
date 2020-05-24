@@ -571,4 +571,460 @@ public class ASCII
 		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                     ((                                \\/                       ");
 	}
+	
+	public static void MattIntro1() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                             ___________");
+		System.out.println("                                            \\   •   •   / ");
+		System.out.println("                                              \\__>-<__/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro2() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                            _____________");
+		System.out.println("                                          /    •    •     \\ ");
+		System.out.println("                                           \\     •   •   / ");
+		System.out.println("                                             (  •   •  ) ");
+		System.out.println("                                             \\__>---<__/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro3() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                           _______________");
+		System.out.println("                                          /         •     \\ ");
+		System.out.println("                                         /    •    •       \\ ");
+		System.out.println("                                         \\        •   •    / ");
+		System.out.println("                                          \\_______________/ ");
+		System.out.println("                                            (  •     •  ) ");
+		System.out.println("                                            \\__>-----<__/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro4() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                          _________________");
+		System.out.println("                                         /           •     \\ ");
+		System.out.println("                                        /    •    •         \\ ");
+		System.out.println("                                        |       •        •  | ");
+		System.out.println("                                        \\        •     •    / ");
+		System.out.println("                                         \\_________________/ ");
+		System.out.println("                                           (  •       •  ) ");
+		System.out.println("                                           |  >-------<  | ");
+		System.out.println("                                           \\_____________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro5() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println("                                          |               | ");
+		System.out.println("                                          (  •         •  ) ");
+		System.out.println("                                          |  >---------<  | ");
+		System.out.println("                                          \\_______________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro6() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println("                                          |               | ");
+		System.out.println("                                          (  •        --- ) ");
+		System.out.println("                                          |  >---------<  | ");
+		System.out.println("                                          \\_______________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro7() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println("                                          |               | ");
+		System.out.println("                                          (  •         •  ) ");
+		System.out.println("                                          |  >---------<  | ");
+		System.out.println("                                          \\_______________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro8() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println("                                         |                 | ");
+		System.out.println("                                         (  •           •  ) ");
+		System.out.println("                                         |  >-----------<  | ");
+		System.out.println("                                         \\_________________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro9() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println("                                         |                 | ");
+		System.out.println("                                        /  •             •  \\ ");
+		System.out.println("                                        |   >-----------<   | ");
+		System.out.println("                                        \\                   / ");
+		System.out.println("                                         \\_________________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro10() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       \\        •       •    / ");
+		System.out.println("                                       /_____________________\\ ");
+		System.out.println("                                       |                     | ");
+		System.out.println("                                       /  •               •  \\ ");
+		System.out.println("                                       |   >-------------<   | ");
+		System.out.println("                                       \\                     / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro11() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println("                                        /             •     \\ ");
+		System.out.println("                                       /    •      •         \\ ");
+		System.out.println("                                       |       •          •  | ");
+		System.out.println("                                       |   •        •        | ");
+		System.out.println("                                       /        •       •    \\ ");
+		System.out.println("                                       \\_____________________/ ");
+		System.out.println("                                       |                     | ");
+		System.out.println("                                       \\  •               •  / ");
+		System.out.println("                                       |   >-------------<   | ");
+		System.out.println("                                       \\                     / ");
+		System.out.println("                                        \\___________________/ ");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+	
+	public static void MattIntro12() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ___________________");
+		System.out.println();
+		System.out.println("                                        /             •     \\ ");
+		System.out.println();
+		System.out.println("                                      /    •        •         \\ ");
+		System.out.println("                                      |        •           •  | ");
+		System.out.println("                                      |   •          •        | ");
+		System.out.println("                                      \\        •         •    / ");
+		System.out.println("                                      /__________  ___________\\ ");
+		System.out.println("                                      |                       | ");
+		System.out.println("                                      /  •                 •  \\ ");
+		System.out.println("                                      |   >------  -------<   | ");
+		System.out.println();
+		System.out.println("                                      \\                       / ");
+		System.out.println();
+		System.out.println("                                       \\_________  __________/ ");
+		System.out.println();
+	}
+	
+	public static void MattIntro13() 
+	{
+		System.out.println("                                         ___________________");
+		System.out.println();
+		System.out.println("                                        /             •     \\ ");
+		System.out.println();
+		System.out.println("                                      /    •        •         \\ ");
+		System.out.println();
+		System.out.println("                                      |        •           •  | ");
+		System.out.println();
+		System.out.println("                                    |   •              •        | ");
+		System.out.println("                                    \\          •           •    / ");
+		System.out.println("                                    /____  ______  ___ ___ _____\\ ");
+		System.out.println("                                   |                             | ");
+		System.out.println();
+		System.out.println("                                    /  •                     •  \\ ");
+		System.out.println();
+		System.out.println("                                   |   >-  ---  --  ---  ----<   | ");
+		System.out.println();
+		System.out.println("                                    \\                           / ");
+		System.out.println();
+		System.out.println("                                     \\____  _____  ___  _______/ ");
+	}
+	
+	public static void MattIntro14() 
+	{
+		System.out.println("                                         ** ** *    *     * ");
+		System.out.println();
+		System.out.println("                                        *             *     * ");
+		System.out.println();
+		System.out.println("                                      *    *        *         * ");
+		System.out.println();
+		System.out.println("                                      *        *           *  * ");
+		System.out.println();
+		System.out.println("                                    *   *              *        * ");
+		System.out.println("                                    *          *           *    * ");
+		System.out.println("                                    * *   *  *   *    *  *  * * ");
+		System.out.println("                                   *                             * ");
+		System.out.println();
+		System.out.println("                                    *  *                     *  * ");
+		System.out.println();
+		System.out.println("                                   *  *    **        *   *  *   * ");
+		System.out.println();
+		System.out.println("                                    *                           * ");
+		System.out.println();
+		System.out.println("                                     *   *     *   *   * *     * ");
+	}
+	
+	public static void MattIntro15() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ** ** *    *     * ");
+		System.out.println();
+		System.out.println("                                        *             *     * ");
+		System.out.println();
+		System.out.println("                                      *    *        *         * ");
+		System.out.println();
+		System.out.println("                                      *        *           *  * ");
+		System.out.println();
+		System.out.println("                                    *   *              *        * ");
+		System.out.println("                                    *          *           *    * ");
+		System.out.println("                                    * *   *  *   *    *  *  * * ");
+		System.out.println("                                   *                             * ");
+		System.out.println("                                    *  *                     *  * ");
+		System.out.println("                                   *  *    **        *   *  *   * ");
+		System.out.println("                                    *                           * ");
+		System.out.println("                                     *   *     *   *   * *     * ");
+	}
+	
+	public static void MattIntro16() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ** ** *    *     * ");
+		System.out.println("                                        *             *     * ");
+		System.out.println("                                      *    *        *         * ");
+		System.out.println("                                      *        *           *  * ");
+		System.out.println("                                    *   *              *        * ");
+		System.out.println("                                    *          *           *    * ");
+		System.out.println("                                    * *   *  *   *    *  *  * * ");
+		System.out.println("                                   *                             * ");
+		System.out.println("                                    *  *                     *  * ");
+		System.out.println("                                   *  *    **        *   *  *   * ");
+		System.out.println("                                    *                           * ");
+		System.out.println("                                     *   *     *   *   * *     * ");
+	}
+	
+	public static void MattIntro17() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ** ** *    *     * ");
+		System.out.println("                                        *             *     * ");
+		System.out.println("                                      *    *        *         * ");
+		System.out.println("                                      *        *           *  * ");
+		System.out.println("                                    *   *              *        * ");
+		System.out.println("                                    *          *           *    * ");
+		System.out.println("                                    * *   *  *   *    *  *  * * ");
+		System.out.println("                                     *   *     *   *   * *     * ");
+	}
+	
+	public static void MattIntro18() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                         ** ** *    *     * ");
+		System.out.println("                                        *             *     * ");
+		System.out.println("                                    * *   *  *   *    *  *  * * ");
+		System.out.println("                                     *   *     *   *   * *     * ");
+	}
+	
+	public static void MattIntro19() 
+	{
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("                                     ****** **** ******* ** **** ");
+	}
 }
