@@ -59,5 +59,95 @@ public class GameIntro
 		ASCII.GameIntro11();
 		Stuff.HitEnter(10);
 		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro12();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro13();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro14();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro15();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro16();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro17();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro18();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro18();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro19();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro20();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro21();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro22();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro23();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro24();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro25();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro26();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro28();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(9);
+		ASCII.GameIntro29();
+		Stuff.HitEnter(10);
+		Stuff.Wait(100);
 	}
 }

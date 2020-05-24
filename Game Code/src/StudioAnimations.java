@@ -59,13 +59,25 @@ public class StudioAnimations
 		ASCII.RodrigoStudio2();
 		System.out.println("                                               Digo Son N'Co");
 		Stuff.HitEnter(13);
-		Stuff.Wait(300);
+		Stuff.Wait(270);
 		
 		Stuff.HitEnter(13);
 		ASCII.RodrigoStudio();
 		System.out.println("                                               Digo Son N'Co");
 		Stuff.HitEnter(13);
-		Stuff.Wait(1500);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(13);
+		ASCII.RodrigoStudio3();
+		System.out.println("                                               Digo Son N'Co");
+		Stuff.HitEnter(13);
+		Stuff.Wait(100);
+		
+		Stuff.HitEnter(13);
+		ASCII.RodrigoStudio4();
+		System.out.println("                                               Digo Son N'Co");
+		Stuff.HitEnter(13);
+		Stuff.Wait(500);
 	}
 	
 	public static void MattEntertainment()

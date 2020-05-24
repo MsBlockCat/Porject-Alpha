@@ -116,6 +116,42 @@ public class ASCII
 		System.out.println("                                               \\___________/");
 	}
 	
+	public static void RodrigoStudio3()
+	{
+		System.out.println("                                             |\\      /\\      /|");
+		System.out.println("                                             | \\    /  \\    / |");
+		System.out.println("                                             |  \\  / @  \\  /  |");
+		System.out.println("                                             | @ \\/  @   \\/ @ |");
+		System.out.println("                                             |     __   /\\    |");
+		System.out.println("                                             |____/ /__/  \\___|");
+		System.out.println("                                            _|__/___     ___\\_|_");
+		System.out.println("                                           |    (_@_)   (_@_)   |");
+		System.out.println("                                           \\_         /        _/");
+		System.out.println("                                             |       /__      |");
+		System.out.println("                                             |                |");
+		System.out.println("                                             \\  \\________/   /");
+		System.out.println("                                              (  \\______/   )");
+		System.out.println("                                               \\___________/");
+	}
+	
+	public static void RodrigoStudio4()
+	{
+		System.out.println("                                             |\\      /\\      /|");
+		System.out.println("                                             | \\    /  \\    / |");
+		System.out.println("                                             |  \\  / @  \\  /  |");
+		System.out.println("                                             | @ \\/  @   \\/ @ |");
+		System.out.println("                                             |     __   /\\    |");
+		System.out.println("                                             |____/ /__/  \\___|");
+		System.out.println("                                            _|__/___     ___\\_|_");
+		System.out.println("                                           |    (_@_)   (_@_)   |");
+		System.out.println("                                           \\_         /        _/");
+		System.out.println("                                             |       /__      |");
+		System.out.println("                                             |   _________    |");
+		System.out.println("                                             \\  \\        /   /");
+		System.out.println("                                              (  \\______/   )");
+		System.out.println("                                               \\___________/");
+	}
+	
 	public static void MattIntro1() 
 	{
 		System.out.println();
@@ -713,7 +749,7 @@ public class ASCII
 		System.out.println("                    |    ]   |              | ||     ____    \\_\\_           _/_/");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||               \\ \\_/\\___/\\_/_ /");
 		System.out.println("                  / |   ||   | \\            | ||     *          \\|           |/");
-		System.out.println("                 /  |\\__||__/|  \\           | ||                 | (*)   (*) |");
+		System.out.println("                 /  |\\__||__/|  \\           | ||                 | (I)   (I) |");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_| ||_/|              \\     ^     /");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |");
@@ -738,7 +774,7 @@ public class ASCII
 		System.out.println("                    |    ]   |              | ||     ____    \\_\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||   ((_))       \\ \\_/\\___/\\_/_ /                       ");
 		System.out.println("                  / |   ||   | \\            | ||  (((_)))       \\|           |/                       ");
-		System.out.println("                 /  |\\__||__/|  \\           | ||  (( ))          | (*)   (*) |                       ");
+		System.out.println("                 /  |\\__||__/|  \\           | ||  (( ))          | (I)   (I) |                       ");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_| ||_/|              \\     ^     /                       ");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
@@ -762,8 +798,8 @@ public class ASCII
 		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | ||     (( ))   \\_\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\    ____  *  | ||  ((     ))    \\ \\_/\\___/\\_/_ /                       ");
-		System.out.println("                  / |   ||   | \\            | || ((       ))    \\|           |/                       ");
-		System.out.println("                 /  |\\__||__/|  \\           | || ((     ))       | (*)   (*) |                       ");
+		System.out.println("                  / |   ||   | \\            | || ((   *   ))    \\|           |/                       ");
+		System.out.println("                 /  |\\__||__/|  \\           | || ((     ))       | (I)   (I) |                       ");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_| ||_(( ))           \\     ^     /                       ");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|                |   \\/   |                       ");
@@ -787,8 +823,8 @@ public class ASCII
 		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
 		System.out.println("                    |    ]   |              | || (   (   )   \\)\\_           _/_/                       ");
 		System.out.println("                   /|   ||   |\\     _____________ (      )) _______________/\\_/_ /                       ");
-		System.out.println("                  / |   ||   | \\  ((_____________(         )_____________))   |/                       ");
-		System.out.println("                 /  |\\__||__/|  \\           | || (       )       | (*)   (*) |                       ");
+		System.out.println("                  / |   ||   | \\  ((_____________(    *    )_____________))   |/                       ");
+		System.out.println("                 /  |\\__||__/|  \\           | || (       )       | (I)   (I) |                       ");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_|(||_(   )   )       \\     ^     /                       ");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
@@ -810,10 +846,10 @@ public class ASCII
 		System.out.println("                   (    [     )       \\ ((  | ||                  ))                               ");
 		System.out.println("                   |     ]    |             ((||   ((         /\\             /\\                       ");
 		System.out.println("                   \\    [     /             | ||             / |             | \\                       ");
-		System.out.println("                    |    ]   |              | || (           \\)\\_           _/_/                       ");
+		System.out.println("                    |    ]   |              | || (*      *   \\)\\_           _/_/                       ");
 		System.out.println("                    __________________________                   __________________________                ");
 		System.out.println("                  ((_________________________(((              )))__________________________))           ");
-		System.out.println("                 /  |\\__||__/|  \\           | ||                 | (*)   (*) |                       ");
+		System.out.println("                 /  |\\__||__/|  \\           | ||    *            | (I)   (I) |                       ");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_|(|          )       \\     ^     /                       ");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
@@ -831,20 +867,469 @@ public class ASCII
 		System.out.println("                       /  \\    *      \\            /                                              ");
 		System.out.println("                      / __ \\           \\     /|\\    *                                              ");
 		System.out.println("                     / (__) \\        *      / ||                               ))             ");
-		System.out.println("                    /        \\              | ||               ))                                     ");
+		System.out.println("                    /        \\              | ||               ))    *                                ");
 		System.out.println("                   (    [     )       \\                                                            ");
 		System.out.println("                   |     ]    |                ((                            /\\                       ");
 		System.out.println("                   \\    [     /       ((                                     | \\                       ");
-		System.out.println("                    |    ]   |                                              _/_/                       ");
+		System.out.println("                    |    ]   |                           *                  _/_/                       ");
 		System.out.println("          ________________________                              ))            __________________________     ");
 		System.out.println("        ((________________________(((          ((                          )))__________________________))           ");
-		System.out.println("                 /  |\\__||__/|  \\                                        (*) |                       ");
-		System.out.println("                /___/  \\||/  \\___\\                          ))         ^     /                       ");
+		System.out.println("                 /  |\\__||__/|  \\                                        (I) |                       ");
+		System.out.println("                /___/  \\||/  \\___\\              *           ))         ^     /                       ");
 		System.out.println("                  ()    ()               | ___                          __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||     ((                 \\/   |                       ");
 		System.out.println("                   ()   () ()                ||                     \\      /                       ");
 		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
 		System.out.println("                                     ((                                \\/                       ");
+	}
+	
+	public static void GameIntro12()
+	{
+		System.out.println("                  *        *      *                                                                     ");
+		System.out.println("                      *     * *                                                                     ");
+		System.out.println("                 *       *                                                                            ");
+		System.out.println("                        /\\                   *                     ))                               ");
+		System.out.println("                       /  \\    *                                                                  ");
+		System.out.println("                      / __ \\       ((                *                                              ");
+		System.out.println("                     / (__) \\        *                                         ))             ");
+		System.out.println("                    /        \\                                 ))                                     ");
+		System.out.println("                   (    [     )                  ((                                                ");
+		System.out.println("                   |     ]                                                   /\\                       ");
+		System.out.println("                   \\    [    ((                                              | \\                       ");
+		System.out.println("                    |    ]   |                                *             _/_/                       ");
+		System.out.println("  ________________________           *                                  ))            __________________________     ");
+		System.out.println("((________________________(((                                                      )))__________________________))           ");
+		System.out.println("                 /  |\\__||__/|                  *                        (I) |                       ");
+		System.out.println("                /___/  \\||/  \\_                                  ))    ^     /                       ");
+		System.out.println("                  ()    ()                                               _    /                       ");
+		System.out.println("                       () ()()    ()                                    /   |                       ");
+		System.out.println("                   ()   () ()           ((                                 /                       ");
+		System.out.println("                 () ()       ()                                       / _/                       ");
+		System.out.println("                                     ((                       *        \\/                       ");
+	}
+	
+	public static void GameIntro13()
+	{
+		System.out.println("                  *        *                                                                            ");
+		System.out.println("                      *     *                                                                       ");
+		System.out.println("                 *       *                   *                                                        ");
+		System.out.println("                        /\\                               *                  ))                      ");
+		System.out.println("                       /  \\      ((                                                               ");
+		System.out.println("                      / __                                                                          ");
+		System.out.println("                     / (_                                                                     ");
+		System.out.println("                    /                                                     ))                          ");
+		System.out.println("                   (    [                *                 ))                                      ");
+		System.out.println("                   |                                                                                  ");
+		System.out.println("                   \\                                                           \\                       ");
+		System.out.println("                    |       ((                                                 /                       ");
+		System.out.println("  ________________                            ((                                           __________________     ");
+		System.out.println("((________________(((                                                                   )))__________________))           ");
+		System.out.println("                 /  |\\_                                         *            |                       ");
+		System.out.println("                /___/  \\                              *                      /                       ");
+		System.out.println("                  ()    ()                ((                                  /                       ");
+		System.out.println("                            ()                         ))                   |                       ");
+		System.out.println("                        ()                                                 /                       ");
+		System.out.println("                 ()          ()                                                                  ");
+		System.out.println("                                                                                               ");
+	}
+	
+	public static void GameIntro14()
+	{
+		System.out.println("                  *                                                                                     ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                 *                                                                                    ");
+		System.out.println("                                                        *                                           ");
+		System.out.println("                            ((                  ((               ))                               ");
+		System.out.println("                                   *                                        *                       ");
+		System.out.println("                                                                                              ");
+		System.out.println("                    /                                                       ))                        ");
+		System.out.println("                   (                                                                               ");
+		System.out.println("                   |                                                                                  ");
+		System.out.println("                   \\                   ((           *                                                  ");
+		System.out.println("                    |                                                    *                             ");
+		System.out.println("  __________                                                                                     ____________     ");
+		System.out.println("((__________(((                                               ))                              )))____________))           ");
+		System.out.println("                 /         ((                                                  *                     ");
+		System.out.println("                /___                                                                                 ");
+		System.out.println("                  ()                            *                                                     ");
+		System.out.println("                                       ((                                                           ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                          *                                    ))                                ");
+		System.out.println("                                                                                  ))           ");
+	}
+	
+	public static void GameIntro15()
+	{
+		System.out.println("                  *                                                                                     ");
+		System.out.println("                                                                  *                                 ");
+		System.out.println("                                                                                   ))                 ");
+		System.out.println("                                                        *                                           ");
+		System.out.println("                            ((                  ((               ))                               ");
+		System.out.println("                                   *                                        *                       ");
+		System.out.println("          ((                                                                                   ");
+		System.out.println("                                                                            ))                        ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                       *                                                                              ");
+		System.out.println("        *                              ((           *                                                  ");
+		System.out.println("                                                                         *                             ");
+		System.out.println("                                                                                                      ");
+		System.out.println("(((                                               ))                                                      )))");
+		System.out.println("                           ((                                                  *                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("               ((                               *                                                     ");
+		System.out.println("                                       ((                                                           ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                          *                                    ))                                ");
+		System.out.println("                                                                                  ))           ");
+	}
+	
+	public static void GameIntro16()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                 *                                                                  ");
+		System.out.println("            *                                                                     *               ");
+		System.out.println("                                                      ))                                        ");
+		System.out.println("                   ((                                                                               ");
+		System.out.println("                                               *                                               ");
+		System.out.println("                                                                      ))                             ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                       ");
+		System.out.println("                    ((                                                                                 ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                         *                                  *                          ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("              *                                                                                       ");
+		System.out.println("                                    ((                                                              ");
+		System.out.println("                                                            ))                                     ");
+		System.out.println("                                                                                                 ");
+		System.out.println("                                                                                               ");
+	}
+	
+	public static void GameIntro17()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                 *                                                                  ");
+		System.out.println("            *                                                                     *               ");
+		System.out.println("                                                      ))                                        ");
+		System.out.println("                   ((                                                                               ");
+		System.out.println("                                               *                                               ");
+		System.out.println("                                                                      ))                             ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                       ");
+		System.out.println("                    ((                                                                                 ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                         *                                  *                          ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("              *                                                                                       ");
+		System.out.println("                                    ((                                                              ");
+		System.out.println("                                                            ))                                     ");
+		System.out.println("                                                                                                 ");
+		System.out.println("                                                                                       ))      ");
+	}
+	
+	public static void GameIntro18()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                      ))                                        ");
+		System.out.println("                                                                                                  ");
+		System.out.println("                                                                          *                    ");
+		System.out.println("              *                                                                                     ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                       ");
+		System.out.println("                                      ((                                                               ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                         *                                  *                          ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("              *                                              *                                        ");
+		System.out.println("                               ((                                                              ");
+		System.out.println("                                                                                                 ");
+		System.out.println("                                                                                                 ");
+		System.out.println("                                                                             ))                 ");
+	}
+	
+	public static void GameIntro19()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                        ))                          ");
+		System.out.println("                                                                                               ");
+		System.out.println("                   *                ((                                                                 ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                            *                                          ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                     ");
+		System.out.println("              ((                                                                                      ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                ))                              ");
+		System.out.println("                                       *                                                         ");
+		System.out.println("                                                                                                 ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro20()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                     ))                           ");
+		System.out.println("                            ((                                                                  ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                     *                                                                                 ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                               *                                       ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("              *                                                                                 ");
+		System.out.println("                                                                  ))                              ");
+		System.out.println("                                                                                              ");
+	}
+	public static void GameIntro21()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                               *                                    ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                     *                                                                                 ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                 ))                                               ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro22()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro23()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJJ  EEEEE   CCC   TTTTT                                                                                         ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro24()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                         ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T                                                    ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro25()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                         ");
+		System.out.println("                            ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T               ");
+		System.out.println("             PPPP   O   O  RRRR      J   EEE    C        T                   ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro26()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T                                                                                         ");
+		System.out.println("                                                                                                       ");
+		System.out.println("             PPPP   O   O  RRRR      J   EEE    C        T                                                     ");
+		System.out.println("                                                            ");
+		System.out.println("             P      O   O  R  R   J  J   E      C        T                           ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro27()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T                                                                                         ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             PPPP   O   O  RRRR      J   EEE    C        T                                                                                          ");
+		System.out.println("                                                                            ");
+		System.out.println("             P      O   O  R  R   J  J   E      C        T               ");
+		System.out.println("             P       OOO   R   R   JJ    EEEEE   CCC     T");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro28()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                      ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T                                                                                         ");
+		System.out.println("                                                                                                       ");
+		System.out.println("             PPPP   O   O  RRRR      J   EEE    C        T                                                               ");
+		System.out.println("             P      O   O  R  R   J  J   E      C        T               ");
+		System.out.println("             P       OOO   R   R   JJ    EEEEE   CCC     T");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
+	}
+	
+	public static void GameIntro29()
+	{
+		System.out.println("                                                                                                       ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                                   ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                               ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                             ");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                   ");
+		System.out.println("             PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                                                                         ");
+		System.out.println("                                                                                                      ");
+		System.out.println("             P   P  O   O  R   R     J   E      C        T                                                                                          ");
+		System.out.println("             PPPP   O   O  RRRR      J   EEE    C        T                                                               ");
+		System.out.println("             P      O   O  R  R   J  J   E      C        T               ");
+		System.out.println("             P       OOO   R   R   JJ    EEEEE   CCC     T");
+		System.out.println("                                                                                                    ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                              ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                                ");
+		System.out.println("                                                                                              ");
 	}
 	
 	public static void CalibrationScreen()
