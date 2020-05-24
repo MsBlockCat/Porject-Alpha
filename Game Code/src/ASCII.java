@@ -409,17 +409,17 @@ public class ASCII
 		System.out.println("                    /        \\              | ||      ");
 		System.out.println("                   (    [     )   *         | ||       ");
 		System.out.println("                   |     ]    |             | ||   /   ");
-		System.out.println("                 * \\    [     /             | ||                                 ");
-		System.out.println("                    |    ]   |              | ||   __              *         *    ");
-		System.out.println("                   /|   ||   |\\      __     | ||                   *         *   ");
-		System.out.println("                  / |   ||   | \\            | ||                    ***   ***    ");
-		System.out.println("                 /  |\\__||__/|  \\           | ||                    *  ***  *   ");
-		System.out.println("                /___/  \\||/  \\___\\ *     |\\_| ||_/|                  *  ^  *  ");
-		System.out.println("                        ()               | ______ |                   \\   /      ");
-		System.out.println("                     ()    ()            |/  ||  \\|                    * *       ");
-		System.out.println("                    ()   ()   ()             ||                         *         ");
-		System.out.println("                                             ()                                   ");
-		System.out.println("                                                       ");
+		System.out.println("                 * \\    [     /             | ||                  *         *    ");
+		System.out.println("                    |    ]   |              | ||   __             **         **   ");
+		System.out.println("                   /|   ||   |\\      __     | ||                  **  ^   ^  **  ");
+		System.out.println("                  / |   ||   | \\            | ||                  *****   *****  ");
+		System.out.println("                 /  |\\__||__/|  \\           | ||                   **  ***  **  ");
+		System.out.println("                /___/  \\||/  \\___\\ *     |\\_| ||_/|                 *   ^   *  ");
+		System.out.println("                        ()               | ______ |                  \\     /      ");
+		System.out.println("                     ()    ()            |/  ||  \\|                   \\** /       ");
+		System.out.println("                    ()   ()   ()             ||                        ****       ");
+		System.out.println("                                             ()                          *        ");
+		System.out.println("                                                                          *");
 	}
 	
 	public static void GameIntro6()
