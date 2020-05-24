@@ -113,41 +113,41 @@ public class GameIntro
 		Stuff.HitEnter(9);
 		ASCII.GameIntro21();
 		Stuff.HitEnter(10);
-		Stuff.Wait(200);
+		Stuff.Wait(150);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro22();
 		Stuff.HitEnter(10);
-		Stuff.Wait(300);
+		Stuff.Wait(200);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro23();
 		Stuff.HitEnter(10);
-		Stuff.Wait(400);
+		Stuff.Wait(250);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro24();
 		Stuff.HitEnter(10);
-		Stuff.Wait(500);
+		Stuff.Wait(300);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro25();
 		Stuff.HitEnter(10);
-		Stuff.Wait(600);
+		Stuff.Wait(350);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro26();
 		Stuff.HitEnter(10);
-		Stuff.Wait(400);
+		Stuff.Wait(300);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro28();
 		Stuff.HitEnter(10);
-		Stuff.Wait(300);
+		Stuff.Wait(200);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro29();
 		Stuff.HitEnter(10);
-		Stuff.Wait(200);
+		Stuff.Wait(150);
 	}
 }
