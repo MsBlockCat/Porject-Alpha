@@ -166,17 +166,7 @@ public class StudioAnimations
 		Stuff.Wait(1000);
 		
 		Stuff.HitEnter(39);
-		System.out.println("                                     Really Cool Studios by Matt");
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
+		System.out.println("                                         Really Cool Studios by Matt");
+		Stuff.HitEnter(11);
 	}
 }
