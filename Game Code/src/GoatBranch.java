@@ -9,6 +9,18 @@ public class GoatBranch
 			case "RuralAustralia1":
 				RuralAustralia1();
 				break;
+			case "2":
+			case "Mountain":
+				Mountain();
+				break;
+			case "3":
+			case "GroceryStore":
+				GroceryStore();
+				break;
+			case "4":
+			case "RockOfSelfReflection":
+				RockOfSelfReflection();
+				break;
 			default:
 				System.out.println("Error 5: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 		}
@@ -53,16 +65,22 @@ public class GoatBranch
 	}
 	
 	public static void Mountain() {
+		Stuff.CurrentLocationNumber = 2;
+		
 		Stuff.typeln ("\"Welcome to the mountain\" says a nearby tree.");
 		
 	}
 	
 	public static void GroceryStore() {
+		Stuff.CurrentLocationNumber = 3;
+		
 		Stuff.typeln ("Welcome to Stop, Shop, and Roll.");
 		
 	}
 	
 	public static void RockOfSelfReflection() {
+		Stuff.CurrentLocationNumber = 4;
+		
 		Stuff.typeln("Lucky for you, there was a sick looking rock nearby that should be good for self-reflection.");
 		
 	}

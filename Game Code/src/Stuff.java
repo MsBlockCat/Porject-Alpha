@@ -13,7 +13,7 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.0.4a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 3;
+	public static final int SaveVersion = 4;
 	public static boolean DebugMode = false;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
@@ -23,6 +23,7 @@ public class Stuff
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
+	public static boolean TimeinatorWorks = true;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -202,7 +203,7 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 10 */ BooleanToInt(TimeinatorWorks));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			AwesomeScanner.nextLine();
@@ -322,13 +323,22 @@ public class Stuff
 					else
 					{
 						//These lines replace the variables in game with the values in Save.txt
-						/* File Line 2 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 3 */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
-						/* File Line 4 */ TurnCount = StringToInt(AwesomeFile.nextLine());
-						/* File Line 5 */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 6 */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 7 */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 8 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 2  */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 3  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+						/* File Line 4  */ TurnCount = StringToInt(AwesomeFile.nextLine());
+						/* File Line 5  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 6  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 7  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 8  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 9  */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						if (FileSaveVersion > 3)
+						{
+							/* File Line 10 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							TimeinatorWorks = true;
+						}
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
 						{

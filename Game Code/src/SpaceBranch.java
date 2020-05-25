@@ -28,6 +28,7 @@ public class SpaceBranch
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
 			Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
 			Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
+			Stuff.TimeinatorWorks = false;
 			Stuff.TypeLine("A massive launchpad is nearby with a rocket preparing to launch on it, a giant stylized X on both.");
 			Stuff.TypeLine("You see Elon Musk watching over its feuling.");
 			Stuff.TypeLine("Walking up to him, he greets you first.");
@@ -50,7 +51,7 @@ public class SpaceBranch
 					Stuff.TypeLine("Seeing no other choices, you thank him, take the time machine, and replace the broken one on your wrist with it.");
 					Stuff.TypeLine("You set it for Dr. Doofenschmirtz's labratory, and head back.");
 					Stuff.StoryBeginning = false;
-					ModernBranch.GoToModernBranch("Lab1");
+					ModernBranch.GoToModernBranch("Lab2");
 					break;
 			}
 		}
@@ -95,7 +96,7 @@ public class SpaceBranch
 				Stuff.Wait(250);
 				Stuff.TypeLine("...It doesn't work.");
 				Stuff.TypeLine("Fortunately, seeing this, Elon lets you borrow one of his, so you use it and are on your way.");
-				ModernBranch.GoToModernBranch("Lab1");
+				ModernBranch.GoToModernBranch("Lab2");
 				break;
 		}
 	}
@@ -103,6 +104,7 @@ public class SpaceBranch
 	public static void EarthOrbit1()
 	{
 		Stuff.CurrentLocationNumber = 2;
+		
 		Stuff.TypeLine("You see the Earth rotating beneath your very eyes.");
 		ASCII.Earth();
 		Stuff.TypeLine("It's very majestic.");
