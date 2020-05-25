@@ -98,7 +98,7 @@ public class GameIntro
 		Stuff.HitEnter(9);
 		ASCII.GameIntro19();
 		Stuff.HitEnter(10);
-		Stuff.Wait(200);
+		Stuff.Wait(100);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro20();
@@ -108,7 +108,7 @@ public class GameIntro
 		Stuff.HitEnter(9);
 		ASCII.GameIntro21();
 		Stuff.HitEnter(10);
-		Stuff.Wait(100);
+		Stuff.Wait(125);
 		
 		Stuff.HitEnter(9);
 		ASCII.GameIntro22();
