@@ -730,7 +730,7 @@ public class ASCII
 		System.out.println("                     ()    ()            |/  ||  \\|                   \\** /       ");
 		System.out.println("                    ()   ()   ()             ||                        ****       ");
 		System.out.println("                                             ()                          *        ");
-		System.out.println("                                                                          *");
+		System.out.println("                                                                                  ");
 	}
 	
 	public static void GameIntro6()
@@ -760,6 +760,31 @@ public class ASCII
 	
 	public static void GameIntro7()
 	{
+		System.out.println("                  *        *      *");
+		System.out.println("                      *     * *");
+		System.out.println("                 *       *                             /");
+		System.out.println("                        /\\                   *       /");
+		System.out.println("                       /  \\    *      \\            /");
+		System.out.println("                      / __ \\           \\     /|\\    *");
+		System.out.println("                     / (__) \\        *      / ||");
+		System.out.println("                    /        \\              | ||     /");
+		System.out.println("                   (    [     )       \\     | ||    /");
+		System.out.println("                   |     ]    |             | ||   /          /\\             /\\");
+		System.out.println("                   \\    [     /             | ||             / |             | \\");
+		System.out.println("                    |    ]   |              | ||     ____    \\_\\_           _/_/");
+		System.out.println("                   /|   ||   |\\    ____  *  | ||               \\ \\_/\\___/\\_/_ /");
+		System.out.println("                  / |   ||   | \\            | ||     *          \\|           |/");
+		System.out.println("                 /  |\\__||__/|  \\           | ||                 | (I)   (I) |");
+		System.out.println("                /___/  \\||/  \\___\\       |\\_| ||_/|              \\     ^     /");
+		System.out.println("                   ()    ()              | ______ |               \\    __    /");
+		System.out.println("                      ()   ()    ()      |/  ||  \\|                |   \\/   |");
+		System.out.println("                   ()     ()                 ||                     \\      /");
+		System.out.println("               ()    ()       ()             ()                     \\ / _/");
+		System.out.println("                           ()                                          \\/");
+	}
+	
+	public static void GameIntro8()
+	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
 		System.out.println("                 *       *                             /                                              ");
@@ -783,7 +808,7 @@ public class ASCII
 		System.out.println("                              ()                                       \\/                       ");
 	}
 	
-	public static void GameIntro8()
+	public static void GameIntro9()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -808,7 +833,7 @@ public class ASCII
 		System.out.println("                                                                       \\/                       ");
 	}
 	
-	public static void GameIntro9()
+	public static void GameIntro10()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -827,13 +852,13 @@ public class ASCII
 		System.out.println("                 /  |\\__||__/|  \\           | || (       )       | (I)   (I) |                       ");
 		System.out.println("                /___/  \\||/  \\___\\       |\\_|(||_(   )   )       \\     ^     /                       ");
 		System.out.println("                  ()    ()               | ______ |               \\    __    /                       ");
-		System.out.println("                       () ()()    ()     |/  ||  \\|(     )         |   \\/   |                       ");
-		System.out.println("                   ()   () ()                ||                     \\      /                       ");
+		System.out.println("                       () () ()   ()     |/  ||  \\|(     )         |   \\/   |                       ");
+		System.out.println("                   ()   ()  ()               ||                     \\      /                       ");
 		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
-		System.out.println("                                                                       \\/                       ");
+		System.out.println("                        ()                                             \\/                       ");
 	}
 	
-	public static void GameIntro10()
+	public static void GameIntro11()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -858,7 +883,7 @@ public class ASCII
 		System.out.println("                    ()    ()                                           \\/                       ");
 	}
 	
-	public static void GameIntro11()
+	public static void GameIntro12()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -878,12 +903,12 @@ public class ASCII
 		System.out.println("                /___/  \\||/  \\___\\              *           ))         ^     /                       ");
 		System.out.println("                  ()    ()               | ___                          __    /                       ");
 		System.out.println("                       () ()()    ()     |/  ||     ((                 \\/   |                       ");
-		System.out.println("                   ()   () ()                ||                     \\      /                       ");
-		System.out.println("                 () ()       ()              ()                     \\ / _/                       ");
+		System.out.println("                   ()   ()                   ||                     \\      /                       ");
+		System.out.println("                 () ()   ()  ()              ()                     \\ / _/                       ");
 		System.out.println("                                     ((                                \\/                       ");
 	}
 	
-	public static void GameIntro12()
+	public static void GameIntro13()
 	{
 		System.out.println("                  *        *      *                                                                     ");
 		System.out.println("                      *     * *                                                                     ");
@@ -908,7 +933,7 @@ public class ASCII
 		System.out.println("               ()                    ((                       *        \\/                       ");
 	}
 	
-	public static void GameIntro13()
+	public static void GameIntro14()
 	{
 		System.out.println("                  *        *                                                                            ");
 		System.out.println("                      *     *                                                                       ");
@@ -933,7 +958,7 @@ public class ASCII
 		System.out.println("                   ()                                                                          ");
 	}
 	
-	public static void GameIntro14()
+	public static void GameIntro15()
 	{
 		System.out.println("                  *                                                                                     ");
 		System.out.println("                                                                                                    ");
@@ -958,7 +983,7 @@ public class ASCII
 		System.out.println("                                                                                  ))           ");
 	}
 	
-	public static void GameIntro15()
+	public static void GameIntro16()
 	{
 		System.out.println("                  *                                                                                     ");
 		System.out.println("                                                                  *                                 ");
@@ -983,7 +1008,7 @@ public class ASCII
 		System.out.println("                                                                                  ))           ");
 	}
 	
-	public static void GameIntro16()
+	public static void GameIntro17()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1008,7 +1033,7 @@ public class ASCII
 		System.out.println("                                                                                               ");
 	}
 	
-	public static void GameIntro17()
+	public static void GameIntro18()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1033,7 +1058,7 @@ public class ASCII
 		System.out.println("                                                                                       ))      ");
 	}
 	
-	public static void GameIntro18()
+	public static void GameIntro19()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1058,7 +1083,7 @@ public class ASCII
 		System.out.println("                                                                             ))                 ");
 	}
 	
-	public static void GameIntro19()
+	public static void GameIntro20()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1083,7 +1108,7 @@ public class ASCII
 		System.out.println("                                                                                              ");
 	}
 	
-	public static void GameIntro20()
+	public static void GameIntro21()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1107,7 +1132,7 @@ public class ASCII
 		System.out.println("                                                                  ))                              ");
 		System.out.println("                                                                                              ");
 	}
-	public static void GameIntro21()
+	public static void GameIntro22()
 	{
 		System.out.println("                                                                                                       ");
 		System.out.println("                                                                                                   ");
@@ -1132,7 +1157,7 @@ public class ASCII
 		System.out.println("                                                                                              ");
 	}
 	
-	public static void GameIntro22()
+	public static void GameIntro23()
 	{
 		System.out.println("                                                                                                    ");
 		System.out.println("                                                                                                    ");
@@ -1157,7 +1182,7 @@ public class ASCII
 		System.out.println("                                                                                                    ");
 	}
 	
-	public static void GameIntro23()
+	public static void GameIntro24()
 	{
 		System.out.println("                                                                                                    ");
 		System.out.println("                                                                                                    ");
@@ -1182,7 +1207,7 @@ public class ASCII
 		System.out.println("                                                                                                    ");
 	}
 	
-	public static void GameIntro24()
+	public static void GameIntro25()
 	{
 		System.out.println("                                                                                                    ");
 		System.out.println("                                                                                                    ");
@@ -1207,7 +1232,7 @@ public class ASCII
 		System.out.println("                                                                                                    ");
 	}
 	
-	public static void GameIntro25()
+	public static void GameIntro26()
 	{
 		System.out.println("                                                                                                    ");
 		System.out.println("                                                                                                    ");
@@ -1232,7 +1257,7 @@ public class ASCII
 		System.out.println("                                                                                                    ");
 	}
 	
-	public static void GameIntro26()
+	public static void GameIntro27()
 	{
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
@@ -1257,7 +1282,7 @@ public class ASCII
 		System.out.println("                                                                                                     ");
 	}
 	
-	public static void GameIntro27()
+	public static void GameIntro28()
 	{
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
@@ -1282,7 +1307,7 @@ public class ASCII
 		System.out.println("                                                                                                     ");
 	}
 	
-	public static void GameIntro28()
+	public static void GameIntro29()
 	{
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
@@ -1309,40 +1334,6 @@ public class ASCII
 		System.out.println("                                                                                                     ");
 	}
 	
-	public static void GameIntro29()
-	{
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                     AAA   L      PPPP   H   H   AAA ");
-		System.out.println("                                                                    A   A  L      P   P  H   H  A   A");
-		System.out.println("                                                                    AAAAA  L      PPPP   HHHHH  AAAAA");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                    A   A  L      P      H   H  A   A");
-		System.out.println("                                                                    A   A  LLLLL  P      H   H  A   A");
-		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                          ");
-		System.out.println("            P   P  O   O  R   R     J   E      C        T                                            ");
-		System.out.println("                                                                                                     ");
-		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T                                            ");
-		System.out.println("            P      O   O  R  R   J  J   E      C        T                                            ");
-		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T                                            ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-		System.out.println("                                                                                                     ");
-	}
-	
 	public static void GameIntro30()
 	{
 		System.out.println("                                                                                                     ");
@@ -1357,6 +1348,40 @@ public class ASCII
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
+		System.out.println("                                                                     AAA   L      PPPP   H   H   AAA ");
+		System.out.println("                                                                    A   A  L      P   P  H   H  A   A");
+		System.out.println("                                                                    AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                    A   A  L      P      H   H  A   A");
+		System.out.println("                                                                    A   A  LLLLL  P      H   H  A   A");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT                                          ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T                                            ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T                                            ");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T                                            ");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T                                            ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+	}
+	
+	public static void GameIntro31()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
@@ -1375,7 +1400,7 @@ public class ASCII
 		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T                                            ");
 	}
 	
-	public static void GameIntro31()
+	public static void GameIntro32()
 	{
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
@@ -1404,7 +1429,7 @@ public class ASCII
 		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
 	}
 	
-	public static void GameIntro32()
+	public static void GameIntro33()
 	{
 		System.out.println("                                                                                                     ");
 		System.out.println("                                                                                                     ");
