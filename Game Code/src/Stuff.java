@@ -211,46 +211,46 @@ public class Stuff
 			ASCII.AboutTitle();
 			Divider();
 			
-			Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
-			Stuff.HitEnter(1);
-			Stuff.TypeLine("(Credits) Shows the credits");
-			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
-			Stuff.TypeLine("(Enter) Leave the about menu");
-			Input = Stuff.AwesomeScanner.nextLine().toLowerCase();
+			TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+			HitEnter(1);
+			TypeLine("(Credits) Shows the credits");
+			TypeLine("(Changelog) Release notes of versions of this game");
+			TypeLine("(Enter) Leave the about menu");
+			Input = AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (Input)
 			{
 				case "credits":
-					Stuff.Credits();
+					Credits();
 					break;
 				case "changelog":
 					PorjectAlpha.Changelog();
-					Stuff.HitEnter(1);
-					Stuff.Divider();
-					Stuff.TypeLine("(Enter) Return to the main menu");
-					Stuff.AwesomeScanner.nextLine();
+					HitEnter(1);
+					Divider();
+					TypeLine("(Enter) Return to the main menu");
+					AwesomeScanner.nextLine();
 					break;
 				case "hackery stuff":
-					Stuff.HitEnter(50);
-					Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
-					Stuff.TypeLine("Save Version: " + Stuff.SaveVersion);
-					Stuff.TypeLine("Current Branch Number: " + Stuff.CurrentBranchNumber);
-					Stuff.TypeLine("Current Location Number: " + Stuff.CurrentLocationNumber);
-					Stuff.HitEnter(1);
-					Stuff.TypeLine("(Enter) Leave the secret hackery stuff menu");
-					Stuff.AwesomeScanner.nextLine();
+					HitEnter(50);
+					TypeLine("Porject Alpha Version: " + GameVersion);
+					TypeLine("Save Version: " + SaveVersion);
+					TypeLine("Current Branch Number: " + CurrentBranchNumber);
+					TypeLine("Current Location Number: " + CurrentLocationNumber);
+					HitEnter(1);
+					TypeLine("(Enter) Leave the secret hackery stuff menu");
+					AwesomeScanner.nextLine();
 					break;
 				case "easter egg":
-					Stuff.HitEnter(50);
+					HitEnter(50);
 					ASCII.EasterEgg();
-					Stuff.HitEnter(3);
-					Stuff.TypeLine("The best games have easter eggs");
-					Stuff.TypeLine("This is an easter egg");
-					Stuff.Wait(1000);
-					Stuff.TypeLine("You're welcome");
-					Stuff.HitEnter(1);
-					Stuff.TypeLine("(Enter) Leave the super secret easter egg");
-					Stuff.AwesomeScanner.nextLine();
+					HitEnter(3);
+					TypeLine("The best games have easter eggs");
+					TypeLine("This is an easter egg");
+					Wait(1000);
+					TypeLine("You're welcome");
+					HitEnter(1);
+					TypeLine("(Enter) Leave the super secret easter egg");
+					AwesomeScanner.nextLine();
 					break;
 				default:
 					break;
@@ -676,6 +676,30 @@ public class Stuff
 				return Choice;
 			}
 		}
+	}
+	
+	public static void StoryEnding()
+	{
+		TempSpeedForContinue = false;
+		Wait(1250);
+		Type("(Enter) ");
+		switch (RandomInt(1, 3))
+		{
+			case 1:
+				Type("That's all, folks!");
+				break;
+			case 2:
+				Type("Aaaand cut!");
+				break;
+			case 3:
+				Type("That's the story!");
+				break;
+			default:
+				Type("That's it for this tale!");
+		}
+		TypeLine(" Return to the main menu whenever you're ready.");
+		AwesomeScanner.nextLine();
+		PorjectAlpha.TitleScreen();
 	}
 	
 	public static void typeln(String Phrase)
