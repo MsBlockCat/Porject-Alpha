@@ -83,7 +83,7 @@ public class Stuff
 		}
 		else
 		{
-			Stuff.HitEnter(4);
+			HitEnter(4);
 		}
 		TypeLine("(Enter) Go to the main menu of Porject Alpha");
 		HitEnter(6);
@@ -176,7 +176,7 @@ public class Stuff
 		Wait(2000);
 		HitEnter(1);
 		Divider();
-		Stuff.TypeLine("(Enter) Leave the credits.");
+		TypeLine("(Enter) Leave the credits.");
 		AwesomeScanner.nextLine();
 	}
 	
@@ -211,7 +211,7 @@ public class Stuff
 			ASCII.AboutTitle();
 			Divider();
 			
-			TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+			TypeLine("Porject Alpha Version: " + GameVersion);
 			HitEnter(1);
 			TypeLine("(Credits) Shows the credits");
 			TypeLine("(Changelog) Release notes of versions of this game");
