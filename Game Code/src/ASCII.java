@@ -1458,6 +1458,209 @@ public class ASCII
 		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
 	}
 	
+	public static void GameIntro34()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro35()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro36()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |       :  |                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro37()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |   x      |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 |       :  |                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro38()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |   xx     |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 | x   x :  |                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro39()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |   xxx    |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 | xx  xx:x |                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
+	public static void GameIntro40()
+	{
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                    \\----\\                                         ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                 |   xxxx   |=                                       ");
+		System.out.println("                                                 |          |=                                       ");
+		System.out.println("                                                 | xxx xx:xx|                                        ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          ||                                       ");
+		System.out.println("                                                 |          |                                        ");
+		System.out.println("                                                  ----------                                         ");
+		System.out.println("                                                    /----/                                           ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("                                                                                                     ");
+		System.out.println("            PPPP    OOO   RRRR   JJJJJ  EEEEE   CCC   TTTTT          AAA   L      PPPP   H   H   AAA ");
+		System.out.println("            P   P  O   O  R   R     J   E      C        T           A   A  L      P   P  H   H  A   A");
+		System.out.println("            PPPP   O   O  RRRR      J   EEE    C        T           AAAAA  L      PPPP   HHHHH  AAAAA");
+		System.out.println("            P      O   O  R  R   J  J   E      C        T           A   A  L      P      H   H  A   A");
+		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
+	}
+	
 	public static void CalibrationScreen()
 	{
 		System.out.println("                                              ------------------");
@@ -1506,16 +1709,16 @@ public class ASCII
 	public static void TitleTimeinator()
 	{
 		//Totally not an Apple Watch
-		System.out.println("                                                    \\----\\    ");
-		System.out.println("                                                  ---------- ");
-		System.out.println("                                                 |   xxxx   |=");
-		System.out.println("                                                 |          |=");
-		System.out.println("                                                 | xxx xx:xx| ");
-		System.out.println("                                                 |          ||");
-		System.out.println("                                                 |          ||");
-		System.out.println("                                                 |          | ");
-		System.out.println("                                                  ----------  ");
-		System.out.println("                                                    /----/    ");
+		System.out.println("                                                    \\----\\     ");
+		System.out.println("                                                  ----------     ");
+		System.out.println("                                                 |   xxxx   |=   ");
+		System.out.println("                                                 |          |=   ");
+		System.out.println("                                                 | xxx xx:xx|    ");
+		System.out.println("                                                 |          ||   ");
+		System.out.println("                                                 |          ||   ");
+		System.out.println("                                                 |          |    ");
+		System.out.println("                                                  ----------     ");
+		System.out.println("                                                    /----/       ");
 	}
 	
 	public static void MainTitle()

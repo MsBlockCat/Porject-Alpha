@@ -28,6 +28,9 @@ public class PorjectAlpha
 		ASCII.ChangelogTitle();
 		Stuff.Divider();
 		
+		Stuff.TypeLine("0.1.0a");
+		Stuff.TypeLine(" More story and ASCII, game intro and studio animations, lots of bugfixes, a new About menu, and lots more!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.0.4a");
 		Stuff.TypeLine(" Even more advanced text displaying, tpyo fixes, more ASCII art and more!");
 		Stuff.Divider();
