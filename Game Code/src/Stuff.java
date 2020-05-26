@@ -52,7 +52,7 @@ public class Stuff
 			TypeLine("Debug Menu");
 			HitEnter(1);
 			TypeLine("GameVersion: " + GameVersion);
-			TypeLine("HasGauntlet: " + HasLuckyGauntlet);
+			TypeLine("HasLuckyGauntlet: " + HasLuckyGauntlet);
 			TypeLine("TurnCount: " + TurnCount);
 			TypeLine("CurrentBranchNumber: " + CurrentBranchNumber);
 			TypeLine("CurrentLocationNumber: " + CurrentLocationNumber);
@@ -227,7 +227,7 @@ public class Stuff
 					PorjectAlpha.Changelog();
 					HitEnter(1);
 					Divider();
-					TypeLine("(Enter) Return to the main menu");
+					TypeLine("(Enter) Leave the changelog");
 					AwesomeScanner.nextLine();
 					break;
 				case "hackery stuff":
