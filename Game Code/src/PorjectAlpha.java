@@ -28,19 +28,19 @@ public class PorjectAlpha
 		ASCII.ChangelogTitle();
 		Stuff.Divider();
 		
-		Stuff.TypeLine("0.1.0a");
+		Stuff.TypeLine("0.1.0a (5/25/2020)");
 		Stuff.TypeLine(" More story and ASCII, game intro and studio animations, lots of bugfixes, a new About menu, and lots more!");
 		Stuff.Divider();
-		Stuff.TypeLine("0.0.4a");
+		Stuff.TypeLine("0.0.4a (2/14/2020)");
 		Stuff.TypeLine(" Even more advanced text displaying, tpyo fixes, more ASCII art and more!");
 		Stuff.Divider();
-		Stuff.TypeLine("0.0.3a");
+		Stuff.TypeLine("0.0.3a (2/14/2020)");
 		Stuff.TypeLine(" Settings menu and the beginnings of ASCII art!");
 		Stuff.Divider();
-		Stuff.TypeLine("0.0.2a");
+		Stuff.TypeLine("0.0.2a (2/14/2020)");
 		Stuff.TypeLine(" Working credits and save files, and this changelog!");
 		Stuff.Divider();
-		Stuff.TypeLine("0.0.1a");
+		Stuff.TypeLine("0.0.1a (2/13/2020)");
 		Stuff.TypeLine(" Initial version, with working save codes, a basic storyline, and a mostly functional main menu!");
 	}
 	
