@@ -179,6 +179,85 @@ public class Stuff
 		AwesomeScanner.nextLine();
 	}
 	
+	public static void AboutMenu()
+	{
+		String Input = "";
+		do
+		{
+			HitEnter(50);
+			ASCII.AboutIcon();
+			HitEnter(22);
+			Wait(1000);
+			
+			HitEnter(50);
+			ASCII.AboutIcon();
+			HitEnter(17);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.AboutIcon();
+			HitEnter(12);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.AboutIcon();
+			HitEnter(7);
+			Wait(350);
+			
+			HitEnter(50);
+			ASCII.AboutIcon();
+			HitEnter(1);
+			ASCII.AboutTitle();
+			Divider();
+			
+			Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+			Stuff.HitEnter(1);
+			Stuff.TypeLine("(Credits) Shows the credits");
+			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
+			Stuff.TypeLine("(Enter) Leave the about menu");
+			Input = Stuff.AwesomeScanner.nextLine().toLowerCase();
+			
+			switch (Input)
+			{
+				case "credits":
+					Stuff.Credits();
+					break;
+				case "changelog":
+					PorjectAlpha.Changelog();
+					Stuff.HitEnter(1);
+					Stuff.Divider();
+					Stuff.TypeLine("(Enter) Return to the main menu");
+					Stuff.AwesomeScanner.nextLine();
+					break;
+				case "hackery stuff":
+					Stuff.HitEnter(50);
+					Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+					Stuff.TypeLine("Save Version: " + Stuff.SaveVersion);
+					Stuff.TypeLine("Current Branch Number: " + Stuff.CurrentBranchNumber);
+					Stuff.TypeLine("Current Location Number: " + Stuff.CurrentLocationNumber);
+					Stuff.HitEnter(1);
+					Stuff.TypeLine("(Enter) Leave the secret hackery stuff menu");
+					Stuff.AwesomeScanner.nextLine();
+					break;
+				case "easter egg":
+					Stuff.HitEnter(50);
+					ASCII.EasterEgg();
+					Stuff.HitEnter(3);
+					Stuff.TypeLine("The best games have easter eggs");
+					Stuff.TypeLine("This is an easter egg");
+					Stuff.Wait(1000);
+					Stuff.TypeLine("You're welcome");
+					Stuff.HitEnter(1);
+					Stuff.TypeLine("(Enter) Leave the super secret easter egg");
+					Stuff.AwesomeScanner.nextLine();
+					break;
+				default:
+					break;
+			}
+		}
+		while (Input.length() != 0);
+	}
+	
 	public static void SaveGame()
 	{
 		//Makes Saves folder if need be

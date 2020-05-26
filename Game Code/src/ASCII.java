@@ -1804,6 +1804,29 @@ public class ASCII
 		System.out.println("                          CCCC  H   H  A   A  N   N   GGG   EEEEE  LLLLL   OOO    GGG ");
 	}
 	
+	public static void AboutIcon()
+	{
+		System.out.println("                                                  __------__");
+		System.out.println("                                                _/          \\_");
+		System.out.println("                                               /      OO      \\");
+		System.out.println("                                              /       OO       \\");
+		System.out.println("                                             |                  |");
+		System.out.println("                                             |        II        |");
+		System.out.println("                                              \\       II       /");
+		System.out.println("                                               \\      II      /");
+		System.out.println("                                                -\\    II    /-");
+		System.out.println("                                                  --______--");
+	}
+	
+	public static void AboutTitle()
+	{
+		System.out.println("                                       AAA   BBBB    OOO   U   U  TTTTT               ");
+		System.out.println("                                      A   A  B   B  O   O  U   U    T                 ");
+		System.out.println("                                      AAAAA  BBBB   O   O  U   U    T                 ");
+		System.out.println("                                      A   A  B   B  O   O  U   U    T                 ");
+		System.out.println("                                      A   A  BBBB    OOO    UUUU    T                 ");
+	}
+	
 	public static void EasterEgg()
 	{
 		System.out.println("                                                  __------__");
