@@ -91,6 +91,10 @@ public class PorjectAlpha
 			Stuff.HitEnter(3);
 			ASCII.MainTitle();
 			Stuff.HitEnter(5);
+			if (Stuff.CurrentBranchNumber != 0)
+			{
+				Stuff.TypeLine("(Continue) Continue on your adventure!");
+			}
 			Stuff.TypeLine("(New) Start a new game!");
 			Stuff.TypeLine("(Save) Makes a save file you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save file!");
@@ -102,6 +106,31 @@ public class PorjectAlpha
 			
 			switch (TitleScreenPlayerChoice)
 			{
+				case "continue":
+					if (Stuff.CurrentBranchNumber != 0)
+					{
+						Stuff.TempSpeedForContinue = true;
+						switch (Stuff.CurrentBranchNumber)
+						{
+							case 1:
+								StayOnTitleScreen = false;
+								ModernBranch.GoToModernBranch(Stuff.CurrentLocationNumber + "");
+								break;
+							case 2:
+								StayOnTitleScreen = false;
+								SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
+								break;
+							case 3:
+								StayOnTitleScreen = false;
+								GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
+								break;
+							case 4:
+								StayOnTitleScreen = false;
+								OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
+								break;
+						}
+					}
+					break;
 				case "new":
 					if (Stuff.CurrentBranchNumber == 0)
 					{
@@ -138,18 +167,22 @@ public class PorjectAlpha
 									break;
 								case 1:
 									StayOnTitleScreen = false;
+									Stuff.TempSpeedForContinue = true;
 									ModernBranch.GoToModernBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 2:
 									StayOnTitleScreen = false;
+									Stuff.TempSpeedForContinue = true;
 									SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 3:
 									StayOnTitleScreen = false;
+									Stuff.TempSpeedForContinue = true;
 									GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 4:
 									StayOnTitleScreen = false;
+									Stuff.TempSpeedForContinue = true;
 									OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
 									break;
 							}

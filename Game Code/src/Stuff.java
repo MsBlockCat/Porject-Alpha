@@ -19,6 +19,7 @@ public class Stuff
 	public static int TurnCount = 0;
 	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
+	/* Doesn't need to be saved to save file */ public static boolean TempSpeedForContinue = false;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
@@ -524,6 +525,7 @@ public class Stuff
 		Divider();
 		if (Choice1 == null)
 		{
+			TempSpeedForContinue = false;
 			System.out.println("Error 2: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
 			return null;
 		}
@@ -649,6 +651,8 @@ public class Stuff
 				}
 			}
 			
+			TempSpeedForContinue = false;
+			
 			if (Choice.equals("menu"))
 			{
 				PorjectAlpha.TitleScreen();
@@ -692,7 +696,7 @@ public class Stuff
 	
 	public static void Type(String Phrase)
 	{
-		if (FancyTypingSpeed != 0)
+		if (FancyTypingSpeed != 0 && TempSpeedForContinue == false)
 		{
 			for (int Counter = 0; Counter < Phrase.length(); Counter++)
 			{
@@ -757,15 +761,18 @@ public class Stuff
 	
 	public static void Wait(int Milliseconds)
 	{
-		try
+		if (TempSpeedForContinue == false)
 		{
-			Thread.sleep(Milliseconds);
-		}
-		catch (InterruptedException Exception)
-		{
-			System.out.println("(Enter) There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
-			Exception.printStackTrace();
-			AwesomeScanner.nextLine();
+			try
+			{
+				Thread.sleep(Milliseconds);
+			}
+			catch (InterruptedException Exception)
+			{
+				System.out.println("(Enter) There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
+				Exception.printStackTrace();
+				AwesomeScanner.nextLine();
+			}
 		}
 	}
 }
