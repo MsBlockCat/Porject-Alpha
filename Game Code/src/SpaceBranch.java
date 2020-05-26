@@ -37,7 +37,9 @@ public class SpaceBranch
 			Stuff.TypeLine("He gestures to a sleek looking time machine about the size of a phone booth, able to fit a person inside.");
 			Stuff.TypeLine("The style of it is reminiscent of an airplane's, with flowing, glossy sides.");
 			Stuff.TypeLine("\"It runs entirely on solar power, of course.\"");
+			Stuff.TypeLine("\"Well, besides the space/time-altering liquid, but that doesn't pollute either.\"");
 			Stuff.TypeLine("\"Anyway, you can be an astronaut on this Falcon X spaceship if you'd like. I saved you a spot!\"");
+			Stuff.TypeLine("\"Its mission is actually to get more juice for these time machines from the moon. I bet yours runs on it, too.\"");
 			switch (Stuff.PlayerChoice("be an astronaut", "don't"))
 			{
 				case "be an astronaut":
@@ -57,7 +59,8 @@ public class SpaceBranch
 		}
 		
 		Stuff.TypeLine("You climb a tall ladder, walk across a metal walkway, and enter the massive spaceship.");
-		Stuff.TypeLine("Looking around a little, you then climb up to the cockpit and sit down in the pilot's seat.");
+		Stuff.TypeLine("Looking around a little, you notice a console with your favorite video games on it.");
+		Stuff.TypeLine("You then climb up the ladder to the cockpit and sit down in the pilot's seat.");
 		Stuff.TypeLine("You see a big red button, clearly indicated with text beneath saying \"Launch\".");
 		Stuff.TypeLine("You could launch Elon's rocket, with you in it.");
 		Stuff.TypeLine("Alternatively, if you've changed your mind, it's still not too late to abort the launch!");
@@ -108,5 +111,12 @@ public class SpaceBranch
 		Stuff.TypeLine("You see the Earth rotating beneath your very eyes.");
 		ASCII.Earth();
 		Stuff.TypeLine("It's very majestic.");
+		Stuff.TypeLine("You recall your mission, to get more liquid to power Elon Musk's time machines.");
+		Stuff.TypeLine("Sitting down, you think about how incredibly boring these next 24 hours will be.");
+		Stuff.Wait(2000);
+		Stuff.TypeLine("...But then you remember seeing the video games.");
+		Stuff.HitEnter(2);
+		Stuff.TypeLine("                                             ~~~72 hours later~~~");
+		Stuff.TypeLine("The Full Self Flying systems safely land you on the moon.");
 	}
 }
