@@ -192,15 +192,16 @@ public class PorjectAlpha
 							case "credits":
 								Stuff.Credits();
 								break;
-							case "save info":
+							case "hackery stuff":
 								Stuff.HitEnter(50);
 								Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
 								Stuff.TypeLine("Save Version: " + Stuff.SaveVersion);
 								Stuff.TypeLine("Current Branch Number: " + Stuff.CurrentBranchNumber);
 								Stuff.TypeLine("Current Location Number: " + Stuff.CurrentLocationNumber);
 								Stuff.HitEnter(1);
-								Stuff.TypeLine("(Enter) Leave the secret save info menu");
+								Stuff.TypeLine("(Enter) Leave the secret hackery stuff menu");
 								Stuff.AwesomeScanner.nextLine();
+								break;
 							case "easter egg":
 								Stuff.HitEnter(50);
 								ASCII.EasterEgg();
@@ -212,6 +213,7 @@ public class PorjectAlpha
 								Stuff.HitEnter(1);
 								Stuff.TypeLine("(Enter) Leave the super secret easter egg");
 								Stuff.AwesomeScanner.nextLine();
+								break;
 							default:
 								break;
 						}
