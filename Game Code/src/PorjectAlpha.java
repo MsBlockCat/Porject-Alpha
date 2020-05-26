@@ -95,7 +95,7 @@ public class PorjectAlpha
 			Stuff.TypeLine("(Calibrate) Shows the window calibration screen");
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(Changelog) Release notes of versions of this game");
-			Stuff.TypeLine("(Credits) Shows the credits");
+			Stuff.TypeLine("(About) Shows Porject Alpha's version number and credits");
 			TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (TitleScreenPlayerChoice)
@@ -172,8 +172,48 @@ public class PorjectAlpha
 					Stuff.TypeLine("(Enter) Return to the main menu");
 					Stuff.AwesomeScanner.nextLine();
 					break;
-				case "credits":
-					Stuff.Credits();
+				case "about":
+					do
+					{
+						Stuff.HitEnter(50);
+						ASCII.MainTitle();
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+						Stuff.HitEnter(1);
+						Stuff.TypeLine("(Credits) Shows the credits");
+						Stuff.TypeLine("(Enter) Leave the about menu");
+						TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
+						
+						switch (TitleScreenPlayerChoice)
+						{
+							case "credits":
+								Stuff.Credits();
+								break;
+							case "save info":
+								Stuff.HitEnter(50);
+								Stuff.TypeLine("Porject Alpha Version: " + Stuff.GameVersion);
+								Stuff.TypeLine("Save Version: " + Stuff.SaveVersion);
+								Stuff.TypeLine("Current Branch Number: " + Stuff.CurrentBranchNumber);
+								Stuff.TypeLine("Current Location Number: " + Stuff.CurrentLocationNumber);
+								Stuff.HitEnter(1);
+								Stuff.TypeLine("(Enter) Leave the secret save info menu");
+								Stuff.AwesomeScanner.nextLine();
+							case "easter egg":
+								Stuff.HitEnter(50);
+								ASCII.EasterEgg();
+								Stuff.HitEnter(3);
+								Stuff.TypeLine("The best games have easter eggs");
+								Stuff.TypeLine("This is an easter egg");
+								Stuff.Wait(1000);
+								Stuff.TypeLine("You're welcome");
+								Stuff.HitEnter(1);
+								Stuff.TypeLine("(Enter) Leave the super secret easter egg");
+								Stuff.AwesomeScanner.nextLine();
+							default:
+								break;
+						}
+					}
+					while (TitleScreenPlayerChoice.length() != 0);
 					break;
 			}
 		}

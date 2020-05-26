@@ -1601,6 +1601,20 @@ public class ASCII
 		System.out.println("                          CCCC  H   H  A   A  N   N   GGG   EEEEE  LLLLL   OOO    GGG ");
 	}
 	
+	public static void EasterEgg()
+	{
+		System.out.println("                                                  __------__");
+		System.out.println("                                                _/__  __    \\_");
+		System.out.println("                                               /    \\ |/  ____\\");
+		System.out.println("                                              /     /    _\\    \\");
+		System.out.println("                                             |This is an|_      |");
+		System.out.println("                                             |easter egg /  __  |");
+		System.out.println("                                              \\   / yup |   | \\/");
+		System.out.println("                                               \\ \\   totally/  /");
+		System.out.println("                                                -\\       \\/ /-");
+		System.out.println("                                                  --______--");
+	}
+	
 	public static void DoofInc()
 	{
 		System.out.println("                                                      _____");
