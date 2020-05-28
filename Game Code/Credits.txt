@@ -29,5 +29,8 @@ Rodrigo Portal
 Matthew Frey
 
 File Writing
-howtodoinjava.com
-baeldung.com
+howtodoinjava.com/java/io/java-write-to-file
+baeldung.com/java-write-to-file
+
+ASCII Map Partial Source
+ascii.co.uk/art/treasuremap
