@@ -1878,4 +1878,73 @@ public class ASCII
 		System.out.println("                                                -\\       \\/ /-");
 		System.out.println("                                                  --______--");
 	}
+	
+	public static void Map1()
+	{
+		System.out.println("  ____________________________________________________________________");
+		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
+		System.out.println(" \\_/__________________________________________________________________/");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |                                                                         ");
+		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
+		System.out.println(" \\_/__________________________________________________________________/");
+	}
+	
+	public static void Map2()
+	{
+		System.out.println(" ______________________________  _________________________________");
+		System.out.println("/                              | |                               /");
+		System.out.println("\\                              | |                               \\ ");
+		System.out.println(" \\                             / \\                        *       \\ ");
+		System.out.println(" /        Grocery Store                      _______              /");
+		System.out.println("/           _______            *             \\  *   \\            /");
+		System.out.println("|          /       \\                          \\__*__/            |");
+		System.out.println("|          |  ===  |                     cool looking rock       |");
+		System.out.println("|          |_______|                                             |");
+		System.out.println("|______                                                          |");
+		System.out.println("______/                                                          |");
+		System.out.println("|           ~          *                   I am here             |");
+		System.out.println("|          ~                                 \\                   |");
+		System.out.println("|         ~                   *               \\                  |");
+		System.out.println("/        /\\                                    \\--> (0)          /");
+		System.out.println("\\       / .\\      *                                              \\ ");
+		System.out.println(" \\     /-_-_\\                                                     \\ ");
+		System.out.println(" /    / /    \\                *                          *        /");
+		System.out.println("/    /    \\   \\  Mountain                                        /");
+		System.out.println("\\________________________________________________________________\\ ");
+	}
+	
+	public static void Leaf()
+	{
+		Stuff.HitEnter(1);
+		System.out.println("               _____________________________________                       ");
+		System.out.println("              /                                     \\                      ");
+		System.out.println("             /        /      /      /      /         \\                     ");
+		System.out.println("____________/        /      /      /      /           \\                    ");
+		System.out.println("|      *      IT WAS NED     I COULDN'T SAY OUT LOUD   \\                   ");
+		System.out.println("|   *            HE ALWAYS LISTENS           BEWARE     |                  ");
+		System.out.println("|___________                                           /                   ");
+		System.out.println("            \\        \\      \\      \\      \\           /                    ");
+		System.out.println("             \\        \\      \\      \\      \\         /                     ");
+		System.out.println("              \\_____________________________________/                      ");
+		Stuff.HitEnter(2);
+	}
 }
