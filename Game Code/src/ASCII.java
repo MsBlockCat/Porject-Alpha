@@ -1829,16 +1829,16 @@ public class ASCII
 	
 	public static void EasterEgg()
 	{
-		System.out.println("                                                  __------__");
-		System.out.println("                                                _/__  __    \\_");
-		System.out.println("                                               /    \\ |/  ____\\");
-		System.out.println("                                              /     /    _\\    \\");
-		System.out.println("                                             |This is an|_      |");
-		System.out.println("                                             |easter egg /  __  |");
-		System.out.println("                                              \\   / yup |   | \\/");
-		System.out.println("                                               \\ \\   totally/  /");
-		System.out.println("                                                -\\       \\/ /-");
-		System.out.println("                                                  --______--");
+		System.out.println("                                                   __--__");
+		System.out.println("                                                 _/      \\_");
+		System.out.println("                                                /      *   \\");
+		System.out.println("                                               /   *        \\");
+		System.out.println("                                              |~~~~~~~~~~~~~~|");
+		System.out.println("                                              |^^^^^^^^^^^^^^|");
+		System.out.println("                                              \\  *     *     /");
+		System.out.println("                                               \\------------/");
+		System.out.println("                                                -\\    *   /-");
+		System.out.println("                                                  --____--");
 	}
 	
 	public static void DoofInc()
