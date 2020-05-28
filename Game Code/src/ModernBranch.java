@@ -77,7 +77,7 @@ public class ModernBranch
 				OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
 				break;
 			case "1954":
-				GoatBranch.GoToGoatBranch("RuralAustralia1"); //make it a new place since you only got here if you died to apu
+				GoatBranch.GoToGoatBranch("RuralAustralia1"); //make an if thing for you to go different places depending if apu killed you
 				break;
 			case "2030":
 				SpaceBranch.GoToSpaceBranch("Launchpad");

@@ -48,25 +48,27 @@ public class GoatBranch
 			Stuff.typeln ("You are a goat.");
 			Stuff.typeln ("That is, despite having the same human (presumably) brain you had before, you now are a goat.");
 			Stuff.typeln ("What fun things shall you do first?");
-			Stuff.StoryBeginning = false;
-		
 		
 			switch (Stuff.PlayerChoice("climb a mountain", "figure out location", "eat something", "investigate"))
 			{
 			case "climb a mountain":
 				Stuff.typeln ("Fortunately for you, there is a mountain nearby.");
+				Stuff.StoryBeginning = false;
 				Mountain();
 				break;
 			case "figure out location":
 				Stuff.typeln ("You decide to investigate your location...");
+				Stuff.StoryBeginning = false;
 				RuralAustralia2();
 				break;
 			case "eat something":
 				Stuff.typeln ("As one often is after time travel, you are quite hungry. Luckily, as a goat, you can eat things you couldn't as a human.");
+				Stuff.StoryBeginning = false;
 				GroceryStore();
 				break;
 			case "investigate":
 				Stuff.typeln ("Being the inquisitive goat that you are, you decide to investigate just how you came to exist.");
+				Stuff.StoryBeginning = false;
 				RockOfSelfReflection();
 				break;
 			}
@@ -140,7 +142,23 @@ public class GoatBranch
 		Stuff.Wait(2000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedtoTree == true) {
-			
+			switch (Stuff.PlayerChoice("ask about ned", "ask anything hehe", "ask cereal price"))
+			{
+			case "ask about ned":
+				Stuff.typeln ("Good choice. You are a goat, after all.");
+				Mountain();
+				break;
+			case "ask anything hehe":
+				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
+				Stuff.typeln("Everything fades to black...");
+				Stuff.Wait(1500);
+				ModernBranch.GoToModernBranch("Lab2");
+				break;
+			case "ask cereal price":
+				Stuff.typeln ("As one often is after time travel, you are quite hungry. Luckily, as a goat, you can eat things you couldn't as a human.");
+				GroceryStore();
+				break;
+			}
 		}
 		else {
 			
