@@ -32,17 +32,22 @@ public class OldTimeBranch
 			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
 			ASCII.Map1();
 			Stuff.TypeLine("\"Where will you begin your search?\" an passer by asked.");
-			Stuff.StoryBeginning = false;
+			switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
+			{
+				case "eating the banana":
+					Stuff.StoryBeginning = false;
+					break;
+				case "Sunday church with Grandma":
+					Stuff.StoryBeginning = false;
+					break;
+				case "going on the klondike":
+					Stuff.StoryBeginning = false;
+					break;
+			}
 		}
-		
-		switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
+		else
 		{
-			case "eating the banana":
-				break;
-			case "Sunday church with Grandma":
-				break;
-			case "going on the klondike":
-				break;
+			//Digo if you ever wanna add stuff to do when you go to this location and the story's already begun (when Stuff.StoryBeginning == false), this'd be where you do it
 		}
 	}
 }
