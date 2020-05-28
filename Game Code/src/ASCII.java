@@ -1922,9 +1922,9 @@ public class ASCII
 		System.out.println("|______                                                          |");
 		System.out.println("______/                                                          |");
 		System.out.println("|           ~          *                   I am here             |");
-		System.out.println("|          ~                                 \\                   |");
-		System.out.println("|         ~                   *               \\                  |");
-		System.out.println("/        /\\                                    \\--> (0)          /");
+		System.out.println("|          ~                                   |                 |");
+		System.out.println("|         ~                   *                v                 |");
+		System.out.println("/        /\\                                  (0)                 /");
 		System.out.println("\\       / .\\      *                                              \\ ");
 		System.out.println(" \\     /-_-_\\                                                     \\ ");
 		System.out.println(" /    / /    \\                *                          *        /");

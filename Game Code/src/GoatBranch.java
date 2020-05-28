@@ -25,6 +25,10 @@ public class GoatBranch
 			case "Tree":
 				Tree();
 				break;
+			case "6":
+			case "RuralAustralia2":
+				RuralAustralia2();
+				break;
 			default:
 				System.out.println("Error 5: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 		}
@@ -32,10 +36,8 @@ public class GoatBranch
 	
 	public static void RuralAustralia1()
 	{
-		Stuff.CurrentLocationNumber = 1;
+		Stuff.CurrentLocationNumber = 6;
 		
-		if (Stuff.StoryBeginning == true)
-		{
 			Stuff.TypeLine("And everything is black.");
 			Stuff.Wait(2000);
 			Stuff.typeln("For a few seconds, at least.");
@@ -57,7 +59,7 @@ public class GoatBranch
 				break;
 			case "figure out location":
 				Stuff.typeln ("You decide to investigate your location...");
-				RuralAustralia1();
+				RuralAustralia2();
 				break;
 			case "eat something":
 				Stuff.typeln ("As one often is after time travel, you are quite hungry. Luckily, as a goat, you can eat things you couldn't as a human.");
@@ -68,13 +70,16 @@ public class GoatBranch
 				RockOfSelfReflection();
 				break;
 			}
-		}
-		else {
-			Stuff.typeln ("Exploration time, I suppose.");
+	}
+	
+	public static void RuralAustralia2()
+	{
+			Stuff.typeln ("Exploration time, you suppose.");
 			Stuff.Wait(1500);
-			Stuff.typeln("After some brief exploration, you are able to formulate the following map.");
-			Stuff.typeln("It's quite messy, which is owed to your lack of thumbs or fingers.");
+			Stuff.typeln("After a brief walk, you are able to formulate the following map.");
+			Stuff.typeln("It's quite messy, which is owed to your lack of thumbs and fingers.");
 			ASCII.Map2();
+			Stuff.Wait(5000);
 			Stuff.typeln("Where ever shall you go? (so many fun locations!)");
 			switch (Stuff.PlayerChoice("mountain", "rock", "grocery store", "nowhere"))
 			{
@@ -96,7 +101,6 @@ public class GoatBranch
 				break;
 			}
 		}
-	}
 	
 	public static void Mountain() {
 		Stuff.CurrentLocationNumber = 2;
@@ -111,8 +115,8 @@ public class GoatBranch
 			break;
 		case "discuss with tree":
 			Stuff.typeln("\"Why are you able to talk?\" you ask the tree.");
-			Stuff.typeln("\"Mate,\" says the tree, \"I have been through the unthinkable.\"");
-			Stuff.typeln("\"You're not going to want to hear it.\" ");
+			Stuff.typeln("\"Mate,\" says the tree, \"I have been through the unthinkable.");
+			Stuff.typeln("You're not going to want to hear it.\" ");
 			Stuff.typeln("\"Yes I am!\" you protest, but alas. The tree has gone back to sleep, leaving you answerless.");
 			Stuff.typeln("Or so you think. Until he drops a leaf.");
 			Stuff.Wait(1000);
@@ -120,6 +124,7 @@ public class GoatBranch
 			ASCII.Leaf();
 			Stuff.Wait(5000);
 			Stuff.typeln("Well... either way, time to climb the mountain I suppose.");
+			Stuff.TalkedtoTree = true;
 			break;
 		}
 		
@@ -129,6 +134,18 @@ public class GoatBranch
 		Stuff.CurrentLocationNumber = 3;
 		
 		Stuff.typeln ("Welcome to Stop, Shop, and Roll.");
+		Stuff.typeln("\"Apu?!\" you exclaim. \"Is that you? The famous cashier from the hit sitcom 'The Simpsons'?\"");
+		Stuff.typeln("\"Yes, indeed,\" he replies, \"Please feel free to ask me anything as you shop.\"");
+		Stuff.typeln("*shopping*");
+		Stuff.Wait(2000);
+		Stuff.typeln("So, what do you ask Apu?");
+		if (Stuff.TalkedtoTree == true) {
+			
+		}
+		else {
+			
+		}
+		
 		
 	}
 	

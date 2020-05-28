@@ -25,6 +25,7 @@ public class Stuff
 	public static int CurrentLocationNumber = 0;
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
+	public static boolean TalkedtoTree = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
