@@ -26,6 +26,12 @@ public class OldTimeBranch
 			Stuff.TypeLine("And some old man who seems to be dead?");
 			Stuff.Wait(3000);
 			Stuff.TypeLine("Ooap, never mind he just coughed up a small bone, probably his lunch.");
+			Stuff.TypeLine("While walking the lanes, you stumble appon a wanted poster of a criminal,");
+			Stuff.TypeLine("One who had attempted to assasinate the king of this land. The prize, porject alpha.");
+			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
+			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
+			ASCII.Map1();
+			Stuff.TypeLine("\"Where will you begin your search?\" an passer by asked.");
 			Stuff.StoryBeginning = false;
 		}
 		

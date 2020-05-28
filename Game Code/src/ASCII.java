@@ -1878,4 +1878,33 @@ public class ASCII
 		System.out.println("                                                -\\       \\/ /-");
 		System.out.println("                                                  --______--");
 	}
+	
+	public static void Map1()
+	{
+		System.out.println("  ____________________________________________________________________");
+		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
+		System.out.println(" \\_/__________________________________________________________________/");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |");
+		System.out.println(" |                                                                         ");
+		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
+		System.out.println(" \\_/__________________________________________________________________/");
+	}
 }
