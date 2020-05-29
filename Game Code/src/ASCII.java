@@ -2,6 +2,12 @@ public class ASCII
 {
 	//This is where all of our ASCII should go, just to make the code simpler in other places
 	
+	//IIIII  N   N  TTTTT  RRRR    OOO    SSSS
+	//  I    NN  N    T    R   R  O   O  S
+	//  I    N N N    T    RRRR   O   O   SSS
+	//  I    N  NN    T    R  R   O   O      S
+	//IIIII  N   N    T    R   R   OOO   SSSS
+	
 	public static void FalconCoLtd1()
 	{
 		System.out.println("                                                       ");
@@ -1661,6 +1667,12 @@ public class ASCII
 		System.out.println("            P       OOO   R   R   JJ    EEEEE   CCC     T           A   A  LLLLL  P      H   H  A   A");
 	}
 	
+	//M   M  EEEEE  N   N  U   U          SSSS  TTTTT  U   U  FFFFF  FFFFF
+	//MM MM  E      NN  N  U   U         S        T    U   U  F      F
+	//MM MM  EEE    N N N  U   U          SSS     T    U   U  FFF    FFF
+	//M M M  E      N  NN  U   U             S    T    U   U  F      F
+	//M M M  EEEEE  N   N   UUU          SSSS     T     UUU   F      F
+	
 	public static void CalibrationScreen()
 	{
 		System.out.println("                                              ------------------");
@@ -1841,6 +1853,14 @@ public class ASCII
 		System.out.println("                                                  --____--");
 	}
 	
+	//IIIII  N   N          GGGG   AAA   M   M  EEEEE          SSSS  TTTTT  U   U  FFFFF  FFFFF
+	//  I    NN  N         G      A   A  MM MM  E             S        T    U   U  F      F
+	//  I    N N N         G  GG  AAAAA  MM MM  EEE            SSS     T    U   U  FFF    FFF
+	//  I    N  NN         G   G  A   A  M M M  E                 S    T    U   U  F      F
+	//IIIII  N   N          GGG   A   A  M M M  EEEEE         SSSS     T     UUU   F      F
+	
+	//Modern Branch
+	
 	public static void DoofInc()
 	{
 		System.out.println("                                                      _____");
@@ -1865,6 +1885,8 @@ public class ASCII
 		System.out.println("                                                       ");
 	}
 	
+	//Space Branch
+	
 	public static void Earth()
 	{
 		System.out.println("                                                  __------__");
@@ -1878,6 +1900,8 @@ public class ASCII
 		System.out.println("                                                -\\       \\/ /-");
 		System.out.println("                                                  --______--");
 	}
+	
+	//Old Time Branch
 	
 	public static void OldTimeMap1()
 	{
@@ -1907,6 +1931,8 @@ public class ASCII
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
+	
+	//Goat Branch
 	
 	public static void GoatMap1()
 	{
