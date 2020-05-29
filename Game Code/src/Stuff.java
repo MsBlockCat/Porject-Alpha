@@ -13,7 +13,7 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.1.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 4;
+	public static final int SaveVersion = 5;
 	public static boolean DebugMode = false;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
@@ -284,7 +284,7 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 10 */ BooleanToInt(TimeinatorWorks));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 10 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 11 */ BooleanToInt(TalkedtoTree));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			AwesomeScanner.nextLine();
@@ -420,6 +420,14 @@ public class Stuff
 						{
 							TimeinatorWorks = true;
 						}
+						if (FileSaveVersion > 4)
+						{
+							/* File Line 11 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							TalkedtoTree = false;
+						}
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
 						{
@@ -468,7 +476,7 @@ public class Stuff
 			}
 		}
 		
-		for (int Cursor = 0; Cursor < Number.length(); Cursor ++)
+		for (int Cursor = 0; Cursor < Number.length(); Cursor++)
 		{
 			if (!Character.isDigit(Number.charAt(Cursor)))
 			{

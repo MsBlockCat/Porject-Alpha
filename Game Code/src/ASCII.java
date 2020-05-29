@@ -1910,10 +1910,10 @@ public class ASCII
 	
 	public static void Map2()
 	{
-		System.out.println(" ______________________________  _________________________________");
-		System.out.println("/                              | |                               /");
-		System.out.println("\\                              | |                               \\ ");
-		System.out.println(" \\                             / \\                        *       \\ ");
+		System.out.println(" ______________________________ __________________________________");
+		System.out.println("/                             | |                                /");
+		System.out.println("\\                             | |                                \\ ");
+		System.out.println(" \\                            / \\                         *       \\ ");
 		System.out.println(" /        Grocery Store                      _______              /");
 		System.out.println("/           _______            *             \\  *   \\            /");
 		System.out.println("|          /       \\                          \\__*__/            |");

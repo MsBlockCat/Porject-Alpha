@@ -36,7 +36,7 @@ public class GoatBranch
 	
 	public static void RuralAustralia1()
 	{
-		Stuff.CurrentLocationNumber = 6;
+		Stuff.CurrentLocationNumber = 1;
 		
 			Stuff.TypeLine("And everything is black.");
 			Stuff.Wait(2000);
@@ -76,6 +76,8 @@ public class GoatBranch
 	
 	public static void RuralAustralia2()
 	{
+		Stuff.CurrentLocationNumber = 6;
+		
 			Stuff.typeln ("Exploration time, you suppose.");
 			Stuff.Wait(1500);
 			Stuff.typeln("After a brief walk, you are able to formulate the following map.");
