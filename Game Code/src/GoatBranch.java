@@ -82,7 +82,7 @@ public class GoatBranch
 			Stuff.Wait(1500);
 			Stuff.typeln("After a brief walk, you are able to formulate the following map.");
 			Stuff.typeln("It's quite messy, which is owed to your lack of thumbs and fingers.");
-			ASCII.Map2();
+			ASCII.GoatMap1();
 			Stuff.Wait(5000);
 			Stuff.typeln("Where ever shall you go? (so many fun locations!)");
 			switch (Stuff.PlayerChoice("mountain", "rock", "grocery store", "nowhere"))
@@ -125,7 +125,9 @@ public class GoatBranch
 			Stuff.typeln("Or so you think. Until he drops a leaf.");
 			Stuff.Wait(1000);
 			Stuff.typeln("You examine it carefully. . .  and find that there is text on it!");
-			ASCII.Leaf();
+			Stuff.HitEnter(1);
+			ASCII.GoatLeaf();
+			Stuff.HitEnter(2);
 			Stuff.Wait(5000);
 			Stuff.typeln("Well... either way, time to climb the mountain I suppose.");
 			Stuff.TalkedtoTree = true;

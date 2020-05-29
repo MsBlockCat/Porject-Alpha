@@ -1879,7 +1879,7 @@ public class ASCII
 		System.out.println("                                                  --______--");
 	}
 	
-	public static void Map1()
+	public static void OldTimeMap1()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -1908,33 +1908,32 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void Map2()
+	public static void GoatMap1()
 	{
 		System.out.println(" ______________________________ __________________________________");
 		System.out.println("/                             | |                                /");
 		System.out.println("\\                             | |                                \\ ");
 		System.out.println(" \\                            / \\                         *       \\ ");
-		System.out.println(" /        Grocery Store                      _______              /");
+		System.out.println(" /        grocery store                      _______              /");
 		System.out.println("/           _______            *             \\  *   \\            /");
 		System.out.println("|          /       \\                          \\__*__/            |");
 		System.out.println("|          |  ===  |                     cool looking rock       |");
 		System.out.println("|          |_______|                                             |");
 		System.out.println("|______                                                          |");
 		System.out.println("______/                                                          |");
-		System.out.println("|           ~          *                   I am here             |");
+		System.out.println("|           ~          *                   i am here             |");
 		System.out.println("|          ~                                   |                 |");
 		System.out.println("|         ~                   *                v                 |");
 		System.out.println("/        /\\                                   (0)                /");
 		System.out.println("\\       / .\\      *                                              \\ ");
 		System.out.println(" \\     /-_-_\\                                                     \\ ");
 		System.out.println(" /    / /    \\                *                          *        /");
-		System.out.println("/    /    \\   \\  Mountain                                        /");
+		System.out.println("/    /    \\   \\  mountain                                        /");
 		System.out.println("\\________________________________________________________________\\ ");
 	}
 	
-	public static void Leaf()
+	public static void GoatLeaf()
 	{
-		Stuff.HitEnter(1);
 		System.out.println("               _____________________________________                       ");
 		System.out.println("              /                                     \\                      ");
 		System.out.println("             /        /      /      /      /         \\                     ");
@@ -1945,6 +1944,5 @@ public class ASCII
 		System.out.println("            \\        \\      \\      \\      \\           /                    ");
 		System.out.println("             \\        \\      \\      \\      \\         /                     ");
 		System.out.println("              \\_____________________________________/                      ");
-		Stuff.HitEnter(2);
 	}
 }

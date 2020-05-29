@@ -30,7 +30,7 @@ public class OldTimeBranch
 			Stuff.TypeLine("One who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
 			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
 			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
-			ASCII.Map1();
+			ASCII.OldTimeMap1();
 			Stuff.TypeLine("\"Where will you begin your search?\" a passerby asked.");
 			switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
 			{
