@@ -32,8 +32,9 @@ File Writing
 howtodoinjava.com/java/io/java-write-to-file
 baeldung.com/java-write-to-file
 
-ASCII Map Partial Source
+ASCII Map Partial Sources
 ascii.co.uk/art/treasuremap
+asciiart.eu/buildings-and-places/castles
 
 Check for if char is letter
 stackoverflow.com/questions/93976/how-to-determine-whether-a-character-is-a-letter-in-java
