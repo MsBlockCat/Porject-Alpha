@@ -159,10 +159,13 @@ public class Stuff
 		
 		Scanner CreditsScanner = null;
 		
-		try {
+		try
+		{
 			CreditsScanner = new Scanner(new File("Game Code/Credits.txt"));
-		} catch (FileNotFoundException NoFileException) {
-			System.out.println("(Enter) Error 6: Looks like the \"Porject-Alpha/Game Code/Credits.txt\" file isn't in the game code, but it should be!");
+		}
+		catch (FileNotFoundException NoFileException)
+		{
+			System.out.println("(Enter) Error 5: Looks like the \"Porject-Alpha/Game Code/Credits.txt\" file isn't in the game code, but it should be! Please make sure your runtime looks at the main Porject-Alpha folder.");
 			NoFileException.printStackTrace();
 			AwesomeScanner.nextLine();
 		}
@@ -178,6 +181,7 @@ public class Stuff
 		HitEnter(1);
 		Divider();
 		TypeLine("(Enter) Leave the credits.");
+		HitEnter(1);
 		AwesomeScanner.nextLine();
 	}
 	
@@ -298,13 +302,13 @@ public class Stuff
 			}
 			catch (IllegalArgumentException IAE)
 			{
-				System.out.println("(Enter) Error 8: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
+				System.out.println("(Enter) Error 7: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
 				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException IOException)
 		{
-			System.out.println("(Enter) Error 7: There was an IOException when saving your game.");
+			System.out.println("(Enter) Error 6: There was an IOException when saving your game. Please make sure your runtime looks at the main Porject-Alpha folder.");
 			IOException.printStackTrace();
 			AwesomeScanner.nextLine();
 		}
@@ -351,13 +355,13 @@ public class Stuff
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
-				TypeLine("(Enter) Error: Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
+				TypeLine("(Enter) Error 8: Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
 				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("(Enter) Error: Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
+			TypeLine("(Enter) Error 9: Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
 	}
@@ -383,7 +387,7 @@ public class Stuff
 				{
 					if (BeQuiet == false)
 					{
-						TypeLine("(Enter) Error: Sorry, either that's not a save file or it got corrupted!");
+						TypeLine("(Enter) Error 10: Sorry, either that's not a save file at \"Saves/Save.txt\" or it got corrupted!");
 						AwesomeScanner.nextLine();
 					}
 					AwesomeFile.close();
@@ -444,7 +448,7 @@ public class Stuff
 			{
 				if (BeQuiet == false)
 				{
-					System.out.println("(Enter) Error: Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has missing lines!");
+					System.out.println("(Enter) Error 11: Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has missing lines!");
 					AwesomeScanner.nextLine();
 				}
 				return false;
@@ -480,7 +484,8 @@ public class Stuff
 		{
 			if (!Character.isDigit(Number.charAt(Cursor)))
 			{
-				System.out.println("Error 1: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
+				System.out.println("(Enter) Error 12: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
+				AwesomeScanner.nextLine();
 				return 0;
 			}
 		}
@@ -535,7 +540,8 @@ public class Stuff
 		if (Choice1 == null)
 		{
 			TempSpeedForContinue = false;
-			System.out.println("Error 2: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
+			System.out.println("(Enter) Error 13: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
+			AwesomeScanner.nextLine();
 			return null;
 		}
 		else
@@ -822,7 +828,7 @@ public class Stuff
 			}
 			catch (InterruptedException Exception)
 			{
-				System.out.println("(Enter) Error: There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
+				System.out.println("(Enter) Error 14: Everything was by design supposed to stop for " + Milliseconds + " milliseconds here. We don't know what happened.");
 				Exception.printStackTrace();
 				AwesomeScanner.nextLine();
 			}

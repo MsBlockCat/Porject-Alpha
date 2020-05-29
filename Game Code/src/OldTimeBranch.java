@@ -10,7 +10,8 @@ public class OldTimeBranch
 				OuterVillage1();
 				break;
 			default:
-				System.out.println("Error 6: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				Stuff.AwesomeScanner.nextLine();
 		}
 	}
 	

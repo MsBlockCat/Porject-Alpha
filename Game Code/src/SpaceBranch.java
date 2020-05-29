@@ -14,7 +14,8 @@ public class SpaceBranch
 				EarthOrbit1();
 				break;
 			default:
-				System.out.println("Error 4: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("(Enter) Error 2: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				Stuff.AwesomeScanner.nextLine();
 		}
 	}
 	

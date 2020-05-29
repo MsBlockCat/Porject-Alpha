@@ -3,9 +3,7 @@ public class ModernBranch
 	public static void GoToModernBranch(String StartingPosition)
 	{
 		Stuff.CurrentBranchNumber = 1;
-		String PlayerLocation = StartingPosition;
-		
-		switch (PlayerLocation)
+		switch (StartingPosition)
 		{
 			case "1":
 			case "Lab1":
@@ -16,7 +14,8 @@ public class ModernBranch
 				Lab2();
 				break;
 			default:
-				System.out.println("Error 3: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + PlayerLocation + ", which isn't a place!");
+				System.out.println("(Enter) Error 1: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				Stuff.AwesomeScanner.nextLine();
 		}
 	}
 	
