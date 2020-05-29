@@ -2,31 +2,39 @@ public class PorjectAlpha
 {
 	public static void Changelog()
 	{
-		Stuff.HitEnter(50);
-		ASCII.ChangelogWindow1();
-		Stuff.HitEnter(22);
-		Stuff.Wait(1000);
-		
-		Stuff.HitEnter(50);
-		ASCII.ChangelogWindow2();
-		Stuff.HitEnter(17);
-		Stuff.Wait(350);
-		
-		Stuff.HitEnter(50);
-		ASCII.ChangelogWindow3();
-		Stuff.HitEnter(12);
-		Stuff.Wait(350);
-		
-		Stuff.HitEnter(50);
-		ASCII.ChangelogWindow4();
-		Stuff.HitEnter(7);
-		Stuff.Wait(350);
+		if (Stuff.QuickMenus == false)
+		{
+			Stuff.HitEnter(50);
+			ASCII.ChangelogWindow1();
+			Stuff.HitEnter(22);
+			Stuff.Wait(1000);
+			
+			Stuff.HitEnter(50);
+			ASCII.ChangelogWindow2();
+			Stuff.HitEnter(17);
+			Stuff.Wait(350);
+			
+			Stuff.HitEnter(50);
+			ASCII.ChangelogWindow3();
+			Stuff.HitEnter(12);
+			Stuff.Wait(350);
+			
+			Stuff.HitEnter(50);
+			ASCII.ChangelogWindow4();
+			Stuff.HitEnter(7);
+			Stuff.Wait(350);
+		}
 		
 		Stuff.HitEnter(50);
 		ASCII.ChangelogWindow5();
 		Stuff.HitEnter(1);
 		ASCII.ChangelogTitle();
 		Stuff.Divider();
+		
+		if (Stuff.QuickMenus == true)
+		{
+			Stuff.TempInstantText = true;
+		}
 		
 		Stuff.TypeLine("0.1.0a (5/25/2020)");
 		Stuff.TypeLine(" More story and ASCII, game intro and studio animations, lots of bugfixes, a new About menu, and lots more!");
@@ -42,6 +50,11 @@ public class PorjectAlpha
 		Stuff.Divider();
 		Stuff.TypeLine("0.0.1a (2/13/2020)");
 		Stuff.TypeLine(" Initial version, with working save codes, a basic storyline, and a mostly functional main menu!");
+		
+		if (Stuff.QuickMenus == true)
+		{
+			Stuff.TempInstantText = false;
+		}
 	}
 	
 	public static void main(String[] args)
@@ -91,6 +104,12 @@ public class PorjectAlpha
 			Stuff.HitEnter(3);
 			ASCII.MainTitle();
 			Stuff.HitEnter(5);
+			
+			if (Stuff.QuickMenus == true)
+			{
+				Stuff.TempInstantText = true;
+			}
+			
 			if (Stuff.CurrentBranchNumber != 0)
 			{
 				Stuff.TypeLine("(Continue) Continue on your adventure!");
@@ -103,6 +122,12 @@ public class PorjectAlpha
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(About) Shows Porject Alpha's version number, credits, and more");
 			Stuff.HitEnter(1);
+			
+			if (Stuff.QuickMenus == true)
+			{
+				Stuff.TempInstantText = false;
+			}
+			
 			TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (TitleScreenPlayerChoice)
@@ -110,7 +135,7 @@ public class PorjectAlpha
 				case "continue":
 					if (Stuff.CurrentBranchNumber != 0)
 					{
-						Stuff.TempSpeedForContinue = true;
+						Stuff.TempInstantText = true;
 						switch (Stuff.CurrentBranchNumber)
 						{
 							case 1:
@@ -171,22 +196,22 @@ public class PorjectAlpha
 									break;
 								case 1:
 									StayOnTitleScreen = false;
-									Stuff.TempSpeedForContinue = true;
+									Stuff.TempInstantText = true;
 									ModernBranch.GoToModernBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 2:
 									StayOnTitleScreen = false;
-									Stuff.TempSpeedForContinue = true;
+									Stuff.TempInstantText = true;
 									SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 3:
 									StayOnTitleScreen = false;
-									Stuff.TempSpeedForContinue = true;
+									Stuff.TempInstantText = true;
 									GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
 									break;
 								case 4:
 									StayOnTitleScreen = false;
-									Stuff.TempSpeedForContinue = true;
+									Stuff.TempInstantText = true;
 									OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
 									break;
 							}

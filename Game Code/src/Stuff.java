@@ -13,13 +13,14 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.1.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 5;
+	public static final int SaveVersion = 6;
 	public static boolean DebugMode = false;
+	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
 	public static int TurnCount = 0;
 	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
-	/* Doesn't need to be saved to save file */ public static boolean TempSpeedForContinue = false;
+	/* Doesn't need to be saved to save file */ public static boolean TempInstantText = false;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
@@ -97,25 +98,28 @@ public class Stuff
 		String Input = "";
 		do
 		{
-			HitEnter(50);
-			ASCII.SettingsGear2();
-			HitEnter(22);
-			Wait(1000);
-			
-			HitEnter(50);
-			ASCII.SettingsGear1();
-			HitEnter(17);
-			Wait(350);
-			
-			HitEnter(50);
-			ASCII.SettingsGear2();
-			HitEnter(12);
-			Wait(350);
-			
-			HitEnter(50);
-			ASCII.SettingsGear1();
-			HitEnter(7);
-			Wait(350);
+			if (QuickMenus == false)
+			{
+				HitEnter(50);
+				ASCII.SettingsGear2();
+				HitEnter(22);
+				Wait(1000);
+				
+				HitEnter(50);
+				ASCII.SettingsGear1();
+				HitEnter(17);
+				Wait(350);
+				
+				HitEnter(50);
+				ASCII.SettingsGear2();
+				HitEnter(12);
+				Wait(350);
+				
+				HitEnter(50);
+				ASCII.SettingsGear1();
+				HitEnter(7);
+				Wait(350);
+			}
 			
 			HitEnter(50);
 			ASCII.SettingsGear2();
@@ -123,12 +127,34 @@ public class Stuff
 			ASCII.SettingsTitle();
 			Divider();
 			
+			if (QuickMenus == true)
+			{
+				TempInstantText = true;
+			}
+			
 			TypeLine("To change a setting, type the setting's name plus the new setting you wanna change it to.");
 			TypeLine("For example, \"Text Speed 2\" would change the speed all the text is written on screen.");
 			Divider();
 			HitEnter(1);
+			//FancyTypingSpeed
 			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
 			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 3 is slowest.");
+			//QuickMenus
+			if (QuickMenus == false)
+			{
+				TypeLine("Quick Menus: On or off (Currently off)");
+			}
+			else
+			{
+				TypeLine("Quick Menus: On or off (Currently on)");
+			}
+			TypeLine(" This makes menus show up much faster. On is instant, off uses overall Text Speed.");
+
+			if (QuickMenus == true)
+			{
+				TempInstantText = false;
+			}
+			
 			TypeLine("(Enter) Leave the settings menu.");
 			HitEnter(1);
 			
@@ -140,6 +166,7 @@ public class Stuff
 				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3'))
 				{
 					TypeLine("(Enter) Text Speed can be set to 0, 1, 2, or 3.");
+					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
 				else
@@ -147,6 +174,56 @@ public class Stuff
 					Type("(Enter) Your Text Speed went from " + FancyTypingSpeed);
 					FancyTypingSpeed = StringToInt(Input.charAt(11) + "");
 					TypeLine(" to " + FancyTypingSpeed + ".");
+					HitEnter(1);
+					AwesomeScanner.nextLine();
+				}
+			}
+			
+			//QuickMenus
+			if ((Input.length() == 14 || Input.length() == 15) && Input.startsWith("quick menus "))
+			{
+				if ((Input.charAt(12) == 'o') && !((Input.charAt(13) == 'n' && Input.length() == 15) || (Input.charAt(13) == 'f' && Input.length() == 14) || (Input.charAt(13) != 'n' && Input.length() == 14)))
+				{
+					if (Input.charAt(13) == 'f' && Input.charAt(14) != 'f')
+					{
+						TypeLine("(Enter) Quick Menus can be set to on or off.");
+						HitEnter(1);
+						AwesomeScanner.nextLine();
+					}
+					else
+					{
+						if (QuickMenus == false)
+						{
+							Type("(Enter) Quick Menus went from off");
+						}
+						else
+						{
+							Type("(Enter) Quick Menus went from on");
+						}
+						if (Input.charAt(13) == 'n')
+						{
+							QuickMenus = true;
+						}
+						else
+						{
+							QuickMenus = false;
+						}
+						
+						if (QuickMenus == false)
+						{
+							TypeLine(" to off.");
+						}
+						else
+						{
+							TypeLine(" to on.");
+						}
+						HitEnter(1);
+						AwesomeScanner.nextLine();
+					}
+				}
+				else
+				{
+					TypeLine("(Enter) Quick Menus can be set to on or off.");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
@@ -192,25 +269,28 @@ public class Stuff
 		String Input = "";
 		do
 		{
-			HitEnter(50);
-			ASCII.AboutIcon();
-			HitEnter(22);
-			Wait(1000);
-			
-			HitEnter(50);
-			ASCII.AboutIcon();
-			HitEnter(17);
-			Wait(350);
-			
-			HitEnter(50);
-			ASCII.AboutIcon();
-			HitEnter(12);
-			Wait(350);
-			
-			HitEnter(50);
-			ASCII.AboutIcon();
-			HitEnter(7);
-			Wait(350);
+			if (QuickMenus == false)
+			{
+				HitEnter(50);
+				ASCII.AboutIcon();
+				HitEnter(22);
+				Wait(1000);
+				
+				HitEnter(50);
+				ASCII.AboutIcon();
+				HitEnter(17);
+				Wait(350);
+				
+				HitEnter(50);
+				ASCII.AboutIcon();
+				HitEnter(12);
+				Wait(350);
+				
+				HitEnter(50);
+				ASCII.AboutIcon();
+				HitEnter(7);
+				Wait(350);
+			}
 			
 			HitEnter(50);
 			ASCII.AboutIcon();
@@ -218,10 +298,21 @@ public class Stuff
 			ASCII.AboutTitle();
 			Divider();
 			
+			if (QuickMenus == true)
+			{
+				TempInstantText = true;
+			}
+			
 			TypeLine("Porject Alpha Version: " + GameVersion);
 			HitEnter(1);
 			TypeLine("(Credits) Shows the credits");
 			TypeLine("(Changelog) Release notes of versions of this game");
+			
+			if (QuickMenus == true)
+			{
+				TempInstantText = false;
+			}
+			
 			TypeLine("(Enter) Leave the about menu");
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
@@ -240,12 +331,24 @@ public class Stuff
 					break;
 				case "hackery stuff":
 					HitEnter(50);
+					
+					if (QuickMenus == true)
+					{
+						TempInstantText = true;
+					}
+					
 					TypeLine("Porject Alpha Version: " + GameVersion);
 					TypeLine("Save Version: " + SaveVersion);
 					TypeLine("Current Branch Number: " + CurrentBranchNumber);
 					TypeLine("Current Location Number: " + CurrentLocationNumber);
 					HitEnter(1);
 					TypeLine("(Enter) Leave the secret hackery stuff menu");
+					
+					if (QuickMenus == true)
+					{
+						TempInstantText = false;
+					}
+					
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
@@ -293,7 +396,7 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 10 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 11 */ BooleanToInt(TalkedtoTree));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 11 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 12 */ BooleanToInt(TalkedtoTree));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			HitEnter(1);
@@ -415,17 +518,26 @@ public class Stuff
 					else
 					{
 						//These lines replace the variables in game with the values in Save.txt
-						/* File Line 2  */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 3  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
-						/* File Line 4  */ TurnCount = StringToInt(AwesomeFile.nextLine());
-						/* File Line 5  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 6  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 7  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 8  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 9  */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						//Left is save versions 5 and below, right is 6 and above
+						/* File Line 2      */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						if (FileSaveVersion > 5)
+						{
+							/* File Line 3  */ QuickMenus = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							QuickMenus = false;
+						}
+						/* File Line 3 | 4  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+						/* File Line 4 | 5  */ TurnCount = StringToInt(AwesomeFile.nextLine());
+						/* File Line 5 | 6  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 6 | 7  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 7 | 8  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 8 | 9  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 9 | 10 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						if (FileSaveVersion > 3)
 						{
-							/* File Line 10 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 10| 11 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
@@ -433,7 +545,7 @@ public class Stuff
 						}
 						if (FileSaveVersion > 4)
 						{
-							/* File Line 11 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 11| 12 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
@@ -548,7 +660,7 @@ public class Stuff
 		Divider();
 		if (Choice1 == null)
 		{
-			TempSpeedForContinue = false;
+			TempInstantText = false;
 			System.out.println("(Enter) Error 13: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
 			AwesomeScanner.nextLine();
 			return null;
@@ -675,7 +787,7 @@ public class Stuff
 				}
 			}
 			
-			TempSpeedForContinue = false;
+			TempInstantText = false;
 			
 			if (Choice.equals("menu"))
 			{
@@ -724,7 +836,7 @@ public class Stuff
 	
 	public static void StoryEnding()
 	{
-		TempSpeedForContinue = false;
+		TempInstantText = false;
 		Wait(1250);
 		HitEnter(1);
 		Divider();
@@ -767,7 +879,7 @@ public class Stuff
 	
 	public static void Type(String Phrase)
 	{
-		if (FancyTypingSpeed != 0 && TempSpeedForContinue == false)
+		if (FancyTypingSpeed != 0 && TempInstantText == false)
 		{
 			for (int Counter = 0; Counter < Phrase.length(); Counter++)
 			{
@@ -832,7 +944,7 @@ public class Stuff
 	
 	public static void Wait(int Milliseconds)
 	{
-		if (TempSpeedForContinue == false)
+		if (TempInstantText == false)
 		{
 			try
 			{
