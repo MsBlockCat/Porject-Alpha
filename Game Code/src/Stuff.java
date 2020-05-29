@@ -130,6 +130,7 @@ public class Stuff
 			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
 			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 3 is slowest.");
 			TypeLine("(Enter) Leave the settings menu.");
+			HitEnter(1);
 			
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
@@ -146,6 +147,7 @@ public class Stuff
 					Type("(Enter) Your Text Speed went from " + FancyTypingSpeed);
 					FancyTypingSpeed = StringToInt(Input.charAt(11) + "");
 					TypeLine(" to " + FancyTypingSpeed + ".");
+					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
 			}
@@ -233,6 +235,7 @@ public class Stuff
 					HitEnter(1);
 					Divider();
 					TypeLine("(Enter) Leave the changelog");
+					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
 				case "hackery stuff":
@@ -243,6 +246,7 @@ public class Stuff
 					TypeLine("Current Location Number: " + CurrentLocationNumber);
 					HitEnter(1);
 					TypeLine("(Enter) Leave the secret hackery stuff menu");
+					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
 				case "easter egg":
@@ -255,6 +259,7 @@ public class Stuff
 					TypeLine("You're welcome");
 					HitEnter(1);
 					TypeLine("(Enter) Leave the super secret easter egg");
+					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
 				default:
@@ -291,6 +296,7 @@ public class Stuff
 			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ FancyTypingSpeed + "\n" + /* Line 4 */ TurnCount + "\n" + /* Line 5 */ BooleanToInt(GameBeginning) + "\n" + /* Line 6 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 7 */ CurrentBranchNumber + "\n" + /* Line 8 */ CurrentLocationNumber + "\n" + /* Line 9 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 10 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 11 */ BooleanToInt(TalkedtoTree));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
+			HitEnter(1);
 			AwesomeScanner.nextLine();
 			
 			Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -400,6 +406,7 @@ public class Stuff
 						if (BeQuiet == false)
 						{
 							TypeLine("(Enter) Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+							HitEnter(1);
 							AwesomeScanner.nextLine();
 						}
 						AwesomeFile.close();
@@ -436,6 +443,7 @@ public class Stuff
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
 						{
 							TypeLine("(Enter) Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
+							HitEnter(1);
 							AwesomeScanner.nextLine();
 						}
 
@@ -459,6 +467,7 @@ public class Stuff
 			if (BeQuiet == false)
 			{
 				TypeLine("(Enter) You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+				HitEnter(1);
 				AwesomeScanner.nextLine();
 			}
 			return false;
@@ -717,6 +726,8 @@ public class Stuff
 	{
 		TempSpeedForContinue = false;
 		Wait(1250);
+		HitEnter(1);
+		Divider();
 		Type("(Enter) ");
 		switch (RandomInt(1, 3))
 		{
@@ -733,6 +744,7 @@ public class Stuff
 				Type("That's it for this tale!");
 		}
 		TypeLine(" Return to the main menu whenever you're ready.");
+		HitEnter(1);
 		AwesomeScanner.nextLine();
 		PorjectAlpha.TitleScreen();
 	}

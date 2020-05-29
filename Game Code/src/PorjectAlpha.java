@@ -102,6 +102,7 @@ public class PorjectAlpha
 			Stuff.TypeLine("(Calibrate) Shows the window calibration screen");
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(About) Shows Porject Alpha's version number, credits, and more");
+			Stuff.HitEnter(1);
 			TitleScreenPlayerChoice = Stuff.AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (TitleScreenPlayerChoice)
@@ -142,6 +143,7 @@ public class PorjectAlpha
 						Stuff.TypeLine("Are you sure you want to start a new game? All unsaved progress in your current one'll be lost!");
 						Stuff.TypeLine("(Yes) Delete unsaved progress and make a new game. This is caps sensitive!");
 						Stuff.TypeLine("(Anything else) Keep your progress, don't make a new game, and go back to the main menu");
+						Stuff.HitEnter(1);
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
 							Stuff.ResetSave();
@@ -155,11 +157,13 @@ public class PorjectAlpha
 					Stuff.TypeLine("Are you sure you wanna load a save file? This'll erase any current unsaved progress!");
 					Stuff.TypeLine("(Yes) Delete any currently unsaved progress and load a save file. This is caps sensitive!");
 					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
+					Stuff.HitEnter(1);
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 					{
 						if (Stuff.LoadSaveFile() == true)
 						{
 							Stuff.TypeLine("(Enter) Successfully loaded!");
+							Stuff.HitEnter(1);
 							Stuff.AwesomeScanner.nextLine();
 							switch (Stuff.CurrentBranchNumber)
 							{
