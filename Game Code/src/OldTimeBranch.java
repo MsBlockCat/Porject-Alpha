@@ -32,7 +32,9 @@ public class OldTimeBranch
 			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
 			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
 			ASCII.OldTimeMap1();
-			Stuff.TypeLine("\"Where will you begin your search?\" a passerby asked.");
+			Stuff.Wait(2000);
+			Stuff.TypeLine("");
+			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passer by ask.");
 			switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
 			{
 				case "eating the banana":
