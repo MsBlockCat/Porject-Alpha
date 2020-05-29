@@ -351,13 +351,13 @@ public class Stuff
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
-				TypeLine("(Enter) Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
+				TypeLine("(Enter) Error: Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
 				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("(Enter) Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
+			TypeLine("(Enter) Error: Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
 	}
@@ -383,7 +383,7 @@ public class Stuff
 				{
 					if (BeQuiet == false)
 					{
-						TypeLine("(Enter) Sorry, either that's not a save file or it got corrupted!");
+						TypeLine("(Enter) Error: Sorry, either that's not a save file or it got corrupted!");
 						AwesomeScanner.nextLine();
 					}
 					AwesomeFile.close();
@@ -444,7 +444,7 @@ public class Stuff
 			{
 				if (BeQuiet == false)
 				{
-					System.out.println("(Enter) Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has nothing in it!");
+					System.out.println("(Enter) Error: Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has missing lines!");
 					AwesomeScanner.nextLine();
 				}
 				return false;
@@ -669,10 +669,26 @@ public class Stuff
 			}
 			else
 			{
+				String CapitalChoice = "";
+				
+				if (Choice.length() > 0)
+				{
+					CapitalChoice = Choice.charAt(0) + "";
+				}
+				
+				if (Character.isLetter(Choice.charAt(0)) && Choice.length() > 1)
+				{
+					CapitalChoice = CapitalChoice.toUpperCase().concat(Choice.substring(1));
+				}
+				else
+				{
+					CapitalChoice = Choice;
+				}
+				
 				switch (RandomInt(1, 3))
 				{
 					case 1:
-						TypeLine(Choice + " it is.");
+						TypeLine(CapitalChoice + " it is.");
 						break;
 					case 2:
 						TypeLine("Very well, " + Choice + " it is.");
@@ -680,8 +696,12 @@ public class Stuff
 					case 3:
 						TypeLine("You chose " + Choice + ".");
 						break;
+					default:
+						TypeLine("You decided on " + Choice + ".");
+						break;
 				}
 				TurnCount ++;
+				
 				return Choice;
 			}
 		}
@@ -789,7 +809,7 @@ public class Stuff
 	
 	public static int RandomInt(int MinimumInt, int MaximumInt)
 	{
-		return (((int) (Math.random() * (MaximumInt + MinimumInt))) + 1 - MinimumInt);
+		return (((int) (Math.random() * ((MaximumInt - MinimumInt) + 1))) + MinimumInt);
 	}
 	
 	public static void Wait(int Milliseconds)
@@ -802,7 +822,7 @@ public class Stuff
 			}
 			catch (InterruptedException Exception)
 			{
-				System.out.println("(Enter) There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
+				System.out.println("(Enter) Error: There was supposed to be a brief wait of " + Milliseconds + " milliseconds here. We don't know what happened.");
 				Exception.printStackTrace();
 				AwesomeScanner.nextLine();
 			}

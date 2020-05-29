@@ -34,3 +34,6 @@ baeldung.com/java-write-to-file
 
 ASCII Map Partial Source
 ascii.co.uk/art/treasuremap
+
+Check for if char is letter
+stackoverflow.com/questions/93976/how-to-determine-whether-a-character-is-a-letter-in-java
