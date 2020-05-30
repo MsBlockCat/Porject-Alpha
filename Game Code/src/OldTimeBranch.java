@@ -9,6 +9,10 @@ public class OldTimeBranch
 			case "OuterVillage1":
 				OuterVillage1();
 				break;
+			case "2":
+			case "Bazar":
+				Bazar();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -35,10 +39,11 @@ public class OldTimeBranch
 			Stuff.Wait(2000);
 			Stuff.TypeLine("");
 			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passer by ask.");
-			switch (Stuff.PlayerChoice("eating the banana", "Sunday church with Grandma", "going on the Klondike"))
+			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "visit the harbor", "search the castle"))
 			{
-				case "eating the banana":
+				case "explore the bazar":
 					Stuff.StoryBeginning = false;
+					Bazar();
 					break;
 				case "Sunday church with Grandma":
 					Stuff.StoryBeginning = false;
@@ -46,11 +51,19 @@ public class OldTimeBranch
 				case "going on the klondike":
 					Stuff.StoryBeginning = false;
 					break;
+				case "search the castle":
+					Stuff.StoryBeginning = false;
+					break;
 			}
 		}
 		else
 		{
 			//Digo if you ever wanna add stuff to do when you go to this location and the story's already begun (when Stuff.StoryBeginning == false), this'd be where you do it
-		}
+		}	
+	}
+	
+	public static void Bazar()
+	{
+		Stuff.CurrentLocationNumber = 2;
 	}
 }
