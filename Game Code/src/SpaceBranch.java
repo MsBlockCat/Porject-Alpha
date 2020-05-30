@@ -116,6 +116,12 @@ public class SpaceBranch
 		Stuff.TypeLine("Sitting down, you think about how incredibly boring these next 24 hours will be.");
 		Stuff.Wait(2000);
 		Stuff.TypeLine("...But then you remember seeing the video games.");
+		ASCII.GamingSystem();
+		Stuff.Wait(2000);
+		Stuff.TypeLine("You see four game icons: A blocky piece of grass, an animatronic fox's head,");
+		Stuff.TypeLine(" a red cap with an M on it, and 3 golden triangles.");
+		Stuff.TypeLine("Plenty of time to play all four of these games that were definitely custom made for the expedition!");
+		Stuff.Wait(1000);
 		Stuff.HitEnter(2);
 		Stuff.TypeLine("                                             ~~~72 hours later~~~");
 		Stuff.TypeLine("The Full Self Flying systems safely land you on the moon.");

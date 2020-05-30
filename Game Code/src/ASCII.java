@@ -1901,6 +1901,30 @@ public class ASCII
 		System.out.println("                                                  --______--");
 	}
 	
+	public static void GamingSystem()
+	{
+		System.out.println(" _________________________________________________________________ ");
+		System.out.println("/                                T                      < * >   **\\");
+		System.out.println("|-----------------------------------------------------------------|");
+		System.out.println("|               __.              |                                |");
+		System.out.println("|              |\\__\\             |                                |");
+		System.out.println("|              \\|__|             |                                |");
+		System.out.println("|                                |                                |");
+		System.out.println("|            ^/-/-\\^             |                                |");
+		System.out.println("|            /_0 . \\             |                                |");
+		System.out.println("|             \\/.\\/              |                                |");
+		System.out.println("|              \\-/               |         Select a game          |");
+		System.out.println("|             -----              |                                |");
+		System.out.println("|            /  M  \\             |                                |");
+		System.out.println("|            |\\---/|             |                                |");
+		System.out.println("|             \\___/              |                                |");
+		System.out.println("|               /\\               |                                |");
+		System.out.println("|              /__\\              |                                |");
+		System.out.println("|             /\\  /\\             |                                |");
+		System.out.println("|            /__\\/__\\            |                                |");
+		System.out.println("\\_________________________________________________________________/");
+	}
+	
 	//Old Time Branch
 	
 	public static void OldTimeMap1()
