@@ -136,22 +136,19 @@ public class PorjectAlpha
 					if (Stuff.CurrentBranchNumber != 0)
 					{
 						Stuff.TempInstantText = true;
+						StayOnTitleScreen = false;
 						switch (Stuff.CurrentBranchNumber)
 						{
 							case 1:
-								StayOnTitleScreen = false;
 								ModernBranch.GoToModernBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 2:
-								StayOnTitleScreen = false;
 								SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 3:
-								StayOnTitleScreen = false;
 								GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
 								break;
 							case 4:
-								StayOnTitleScreen = false;
 								OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
 								break;
 						}
@@ -172,6 +169,28 @@ public class PorjectAlpha
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
 							Stuff.ResetSave();
+							
+							switch (Stuff.CurrentBranchNumber)
+							{
+								case 0:
+									break;
+								case 1:
+									StayOnTitleScreen = false;
+									ModernBranch.GoToModernBranch(Stuff.CurrentLocationNumber + "");
+									break;
+								case 2:
+									StayOnTitleScreen = false;
+									SpaceBranch.GoToSpaceBranch(Stuff.CurrentLocationNumber + "");
+									break;
+								case 3:
+									StayOnTitleScreen = false;
+									GoatBranch.GoToGoatBranch(Stuff.CurrentLocationNumber + "");
+									break;
+								case 4:
+									StayOnTitleScreen = false;
+									OldTimeBranch.GoToOldTimeBranch(Stuff.CurrentLocationNumber + "");
+									break;
+							}
 						}
 					}
 					break;
