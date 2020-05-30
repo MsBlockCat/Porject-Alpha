@@ -118,7 +118,7 @@ public class SpaceBranch
 		Stuff.TypeLine("...But then you remember seeing the video games.");
 		ASCII.GamingSystem();
 		Stuff.Wait(2000);
-		Stuff.TypeLine("You see four game icons: A blocky piece of grass, an animatronic fox's head,");
+		Stuff.TypeLine("You see four game icons: A blocky piece of grass, an animatronic pirate fox's head,");
 		Stuff.TypeLine(" a red cap with an M on it, and 3 golden triangles.");
 		Stuff.TypeLine("Plenty of time to play all four of these games that were definitely custom made for the expedition!");
 		Stuff.Wait(1000);
