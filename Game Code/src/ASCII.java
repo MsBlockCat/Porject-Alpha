@@ -1938,7 +1938,7 @@ public class ASCII
 		System.out.println(" |         /    ||  @                                                |   ");
 		System.out.println(" | Harbor |         |                             _   |~  _          |   ");
 		System.out.println(" |        J                                      [_]--'--[_]         |   ");
-		System.out.println(" |       /                                       |'|\"\"`\"\"|'|        |   ");
+		System.out.println(" |       /                                       |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |   ___/                                        | | /^\\ | |         |   ");
 		System.out.println(" |__/                                            |_|_|I|_|_|         |   ");
 		System.out.println(" |                                                                   |   ");
