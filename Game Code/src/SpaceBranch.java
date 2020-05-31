@@ -187,6 +187,9 @@ public class SpaceBranch
 		Stuff.TypeLine("There were other people on board, but they probably already got to work at their various places around the area.");
 		Stuff.TypeLine("You certainly hope so, as the ship begins taking off back to Earth, to restock and come back in about two weeks when");
 		Stuff.TypeLine(" it's needed by the others.");
+		Stuff.HitEnter(1);
+	    ASCII.Rocket();
+	    Stuff.HitEnter(1);
 		Stuff.TypeLine("Taking one last look at the ship as it flies off, you see the X on its side fade into a speck in the distance.");
 		MoonLanding();
 	}
@@ -281,6 +284,10 @@ public class SpaceBranch
 	{
 		Stuff.CurrentLocationNumber = 5;
 		
+		Stuff.HitEnter(2);
+		ASCII.SpoopyBuilding();
+		Stuff.HitEnter(2);
+		
 		if (Stuff.FoundTrapdoor == false)
 		{
 			Stuff.TypeLine("In terms of places to look around for clues as to where some Porject Alpha might be, you see a");
@@ -292,7 +299,8 @@ public class SpaceBranch
 					Stuff.TypeLine("You walk over to the carpet and crouch down.");
 					Stuff.Wait(500);
 					Stuff.TypeLine("Hey, wait a minute!");
-					Stuff.TypeLine("There's a trapdoor under this carpet. You can see it through the worn out spots in the carpet.");
+					Stuff.TypeLine("There's a trapdoor under this carpet. You can see the handle for it through the");
+					Stuff.TypeLine(" especially worn through spot in the carpet.");
 					Stuff.FoundTrapdoor = true;
 					Stuff.TypeLine("What a classic hiding spot for a secret area.");
 					Stuff.TypeLine("Pushing aside the carpet, with a lot of effort you open up the trapdoor and enter.");

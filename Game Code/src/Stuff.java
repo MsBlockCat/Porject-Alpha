@@ -47,7 +47,7 @@ public class Stuff
 	
 	public static void Divider()
 	{
-		//That's 110 dashes, so 55 characters gives you the middle
+		//That's 110 dashes, so between 55 and 56 characters gives you the middle
 		System.out.println("--------------------------------------------------------------------------------------------------------------");
 	}
 	
