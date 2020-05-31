@@ -1904,7 +1904,7 @@ public class ASCII
 	public static void GamingSystem()
 	{
 		System.out.println(" _________________________________________________________________ ");
-		System.out.println("/                                T                      < * >   **\\");
+		System.out.println("/                                F                      < * >   **\\");
 		System.out.println("|-----------------------------------------------------------------|");
 		System.out.println("|               __.              |                                |");
 		System.out.println("|              |\\__\\             |                                |");

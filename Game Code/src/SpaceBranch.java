@@ -106,7 +106,7 @@ public class SpaceBranch
 				Stuff.TypeLine("T-minus 1 minute to liftoff.");
 				Stuff.Wait(1500);
 				Stuff.TypeLine("T-minus ten seconds.");
-				Stuff.Wait(100);
+				Stuff.Wait(200);
 				Stuff.TypeLine("Nine.");
 				Stuff.Wait(650);
 				Stuff.TypeLine("Eight.");
@@ -210,6 +210,37 @@ public class SpaceBranch
 		Stuff.TypeLine("You walk towards the building, the warm lights from inside welcoming you as you approach.");
 		Stuff.TypeLine("It almost looks like a home, except that its surroundings are rather bleak and desolate still.");
 		Stuff.TypeLine("Entering the building, a few friendly people greet you.");
+		if (Stuff.FavoriteGame == 0)
+		{
+			Stuff.TypeLine("\"Oh, hey!\" says one man.");
+			Stuff.TypeLine("\"We were just talking about what the best video game is.\"");
+			Stuff.TypeLine("\"We've narrowed it down to four games now.\"");
+			Stuff.TypeLine("\"They're so commonly known I'm sure I don't have to tell you their names, but");
+			Stuff.TypeLine(" there's the game with animatronic animals, the one made of pixelates blocks,");
+			Stuff.TypeLine(" the one with an Italian plumber who loves to wear red, and");
+			Stuff.TypeLine(" the one where a green-clad hero saves a princess from some weird demonic thing.\"");
+			Stuff.TypeLine("\"Maybe you could help us figure out the winner! Which of those do you think is the best?\"");
+			switch (Stuff.PlayerChoice("animatronics", "blocks", "plumber", "green hero"))
+			{
+				case "animatronics":
+					Stuff.TypeLine("\"That's a good one! My personal favorite. Lots of spooks.\" Says one woman.");
+					Stuff.FavoriteGame = 2;
+					break;
+				case "blocks":
+					Stuff.TypeLine("\"Yes! That was my choice too.\" Says a woman.");
+					Stuff.FavoriteGame = 1;
+					break;
+				case "plumber":
+					Stuff.TypeLine("\"Oh, sweet! That's gotta be my favorite.\" Says another man.");
+					Stuff.FavoriteGame = 3;
+					break;
+				case "green hero":
+					Stuff.TypeLine("\"Oh, nice! That's my favorite.\" Says the man.");
+					Stuff.FavoriteGame = 4;
+					break;
+			}
+			Stuff.TypeLine("But anyway, you're on a mission.");
+		}
 		Stuff.TypeLine("You could ask them if they have any idea where Porject Alpha might be, or you could walk through to the");
 		Stuff.TypeLine(" cave behind the building.");
 		Stuff.TypeLine("You could also leave and go to the other house.");
@@ -257,6 +288,28 @@ public class SpaceBranch
 		Stuff.CurrentLocationNumber = 6;
 		
 		Stuff.TypeLine("You approach the cave.");
+		Stuff.TypeLine("Upon entering, you wish you had a flashlight... It's very dark.");
+		Stuff.TypeLine("Braving the darkness, you keep walking forward, and soon see a glow.");
+		switch (Stuff.FavoriteGame)
+		{
+			case 1:
+				Stuff.TypeLine("You see a random giant grassy block on the side of the cave.");
+				break;
+			case 2:
+				Stuff.Wait(3000);
+				System.out.print("Suddenly, a red blur starts running at you!");
+				Stuff.Wait(750);
+				Stuff.TypeLine("You dodge the blur just in time, and it keeps running, off into the distance.");
+				Stuff.TypeLine("You made out an animatronic that looks like a red fox, with a patch over one eye.");
+				break;
+			case 3:
+				Stuff.TypeLine("You see a random giant grassy block on the side of the cave.");
+				break;
+			case 4:
+				Stuff.TypeLine("You notice three golden triangles on the side of the cave.");
+				break;
+		}
+		Stuff.TypeLine("While very odd, you keep walking.");
 	}
 	
 	public static void SecretBasement()
