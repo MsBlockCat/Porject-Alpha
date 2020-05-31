@@ -27,7 +27,11 @@ public class Stuff
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
 	public static boolean TalkedtoTree = false;
-	/* Add to SaveVersion 7 once Digo makes up his mind about the existence of the SeenRuins variable */ public static int FavoriteGame = 0;
+	//Add below to SaveVersion 7 once Digo makes up his mind about the existence of the SeenRuins variable
+	public static int FavoriteGame = 0;
+	public static boolean FoundTrapdoor = false;
+	public static boolean SeenRuins = false;
+	public static boolean ApuNerfedYou = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -594,7 +598,7 @@ public class Stuff
 	
 	public static int StringToInt(String Number)
 	{
-		while (Number.length() != 1)
+		while ((Number.length() != 1) && Number.startsWith("0"))
 		{
 			if (Number.startsWith("0"))
 			{
@@ -856,7 +860,7 @@ public class Stuff
 			default:
 				Type("That's it for this tale!");
 		}
-		TypeLine(" Return to the main menu whenever you're ready.");
+		TypeLine(" You made " + TurnCount + " choices. Return to the main menu whenever you're ready.");
 		HitEnter(1);
 		AwesomeScanner.nextLine();
 		PorjectAlpha.TitleScreen();

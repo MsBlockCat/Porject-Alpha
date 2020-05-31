@@ -31,10 +31,13 @@ public class ModernBranch
 		Stuff.TypeLine("After two decades, Doofenshmirtz finally had a breakthrough with the Timeinator.");
 		Stuff.TypeLine("A rat was tested with it and mostly survived.");
 		Stuff.TypeLine("As Dr. Doofenshmirtz's assistant, you get to be the first human to test the time machine.");
+		Stuff.TypeLine("He would also appreciate it if you could find him some more Porject Alpha on your journey, but");
+		Stuff.TypeLine(" never bothered explaining what that meant.");
 		Stuff.TypeLine("You pick up the surprisingly small device. It has \"The Timeinator\" engraved on the bottom of it.");
 		Stuff.TypeLine("You put the time machine on your left wrist, noting its similarities in appearance to a smartwatch.");
-		Stuff.TypeLine("The legendary Doof gives you a few choices.");
-		Stuff.TypeLine("Would you like to go back to the old times in the year 1253, in rural Australia in the year 1954, or to space in the year 2030?");
+		Stuff.TypeLine("After rambling for 20 minutes straight about his backstory, the legendary Doof gives you a few choices.");
+		Stuff.TypeLine("Would you like to go back to the old times in the year 1253,");
+		Stuff.TypeLine(" in rural Australia in the year 1954, or to space in the year 2030?");
 		switch (Stuff.PlayerChoice("1253", "1954", "2030"))
 		{
 			case "1253":
