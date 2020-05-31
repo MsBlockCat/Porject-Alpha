@@ -27,6 +27,7 @@ public class Stuff
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
 	public static boolean TalkedtoTree = false;
+	/* Add to SaveVersion 7 once Digo makes up his mind about the existence of the SeenRuins variable */ public static int FavoriteGame = 0;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -61,7 +62,7 @@ public class Stuff
 		}
 	}
 	
-	public static void ScreenSizeRecommendation(boolean FirstTime)
+	public static void ScreenSizeRecommendation()
 	{
 		//50 enters standard as a buffer
 		HitEnter(50);
@@ -76,7 +77,7 @@ public class Stuff
 		System.out.println("                                                   |  ter |");
 		System.out.println("                                                   --------");
 		HitEnter(6);
-		if (FirstTime == true)
+		if (GameBeginning == true)
 		{
 			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
 			System.out.println("   |");

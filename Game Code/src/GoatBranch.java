@@ -39,16 +39,23 @@ public class GoatBranch
 	{
 		Stuff.CurrentLocationNumber = 1;
 		
-			Stuff.TypeLine("And everything is black.");
-			Stuff.Wait(2000);
-			Stuff.typeln("For a few seconds, at least.");
-			Stuff.typeln("Soon enough, you wake up.");
-			Stuff.typeln("It is with great surprise that you find Doof's machine didn't harm you.");
-			Stuff.typeln ("Well... except that...");
-			Stuff.Wait(1000);
-			Stuff.typeln ("You are a goat.");
-			Stuff.typeln ("That is, despite having the same human (presumably) brain you had before, you now are a goat.");
-			Stuff.typeln ("What fun things shall you do first?");
+			if (Stuff.StoryBeginning == true)
+			{
+				Stuff.TypeLine("And everything is black.");
+				Stuff.Wait(2000);
+				Stuff.typeln("For a few seconds, at least.");
+				Stuff.typeln("Soon enough, you wake up.");
+				Stuff.typeln("It is with great surprise that you find Doof's machine didn't harm you.");
+				Stuff.typeln ("Well... except that...");
+				Stuff.Wait(1000);
+				Stuff.typeln ("You are a goat.");
+				Stuff.typeln ("That is, despite having the same human (presumably) brain you had before, you now are a goat.");
+				Stuff.typeln ("What fun things shall you do first?");
+			}
+			else
+			{
+				Stuff.typeln ("Where to go, what to do?");
+			}
 		
 			switch (Stuff.PlayerChoice("climb a mountain", "figure out location", "eat something", "investigate"))
 			{

@@ -62,11 +62,11 @@ public class PorjectAlpha
 		//Loads save data quietly
 		Stuff.LoadSaveFile(true);
 		
+		//Calibration Screen, with first time directions if needed
+		Stuff.ScreenSizeRecommendation();
+		
 		if (Stuff.GameBeginning == true)
 		{
-			//Calibration Screen with first time explanation
-			Stuff.ScreenSizeRecommendation(true);
-			
 			//Initial Settings Menu
 			Stuff.SettingsMenu();
 			
@@ -77,11 +77,6 @@ public class PorjectAlpha
 			Stuff.Wait(1000);
 			StudioAnimations.MattEntertainment();
 			Stuff.Wait(1000);
-		}
-		else
-		{
-			//Normal Calibration Screen
-			Stuff.ScreenSizeRecommendation(false);
 		}
 		
 		//Game Intro Animation
@@ -99,16 +94,19 @@ public class PorjectAlpha
 		String TitleScreenPlayerChoice = null;
 		do
 		{
-			Stuff.HitEnter(50);
-			ASCII.TitleTimeinator();
-			Stuff.HitEnter(3);
-			ASCII.MainTitle();
-			Stuff.HitEnter(5);
-			
 			if (Stuff.QuickMenus == true)
 			{
 				Stuff.TempInstantText = true;
 			}
+			
+			Stuff.HitEnter(50);
+			ASCII.TitleTimeinator();
+			Stuff.HitEnter(3);
+			ASCII.MainTitle();
+			Stuff.HitEnter(1);
+			System.out.println("                                                    © " + Stuff.CopyrightYear);
+			Stuff.HitEnter(3);
+			Stuff.Wait(500);
 			
 			if (Stuff.CurrentBranchNumber != 0)
 			{
@@ -243,7 +241,7 @@ public class PorjectAlpha
 					ModernBranch.GoToModernBranch("Lab1");
 					break;
 				case "calibrate":
-					Stuff.ScreenSizeRecommendation(false);
+					Stuff.ScreenSizeRecommendation();
 					break;
 				case "settings":
 					Stuff.SettingsMenu();
