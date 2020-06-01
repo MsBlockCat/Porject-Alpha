@@ -402,7 +402,7 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasPorjectAlpha) + "\n" + /* Line 11 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 12 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 13 */ BooleanToInt(TalkedtoTree) + "\n" + /* Line 14 */ FavoriteGame + "\n" + /* Line 15 */ BooleanToInt(FoundTrapdoor) + /* Line 16 */ BooleanToInt(ApuNerfedYou));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasPorjectAlpha) + "\n" + /* Line 11 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 12 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 13 */ BooleanToInt(TalkedtoTree) + "\n" + /* Line 14 */ FavoriteGame + "\n" + /* Line 15 */ BooleanToInt(FoundTrapdoor) + "\n" + /* Line 16 */ BooleanToInt(ApuNerfedYou));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			HitEnter(1);
