@@ -299,12 +299,12 @@ public class SpaceBranch
 	{
 		Stuff.CurrentLocationNumber = 5;
 		
-		Stuff.HitEnter(2);
-		ASCII.SpoopyBuilding();
-		Stuff.HitEnter(2);
-		
 		if (Stuff.FoundTrapdoor == false)
 		{
+			Stuff.HitEnter(2);
+			ASCII.SpoopyBuilding();
+			Stuff.HitEnter(2);
+			
 			Stuff.TypeLine("In terms of places to look around for clues as to where some Porject Alpha might be, you see a");
 			Stuff.TypeLine(" suspicious looking worn down carpet, a desk with some faded old papers on it, and a ladder to a second floor.");
 			Stuff.TypeLine("You are rather creeped out by the building, so you're also tempted to leave and go to the other one you saw.");
@@ -316,7 +316,6 @@ public class SpaceBranch
 					Stuff.TypeLine("Hey, wait a minute!");
 					Stuff.TypeLine("There's a trapdoor under this carpet. You can see the handle for it through the");
 					Stuff.TypeLine(" especially worn through spot in the carpet.");
-					Stuff.FoundTrapdoor = true;
 					Stuff.TypeLine("What a classic hiding spot for a secret area.");
 					Stuff.TypeLine("Pushing aside the carpet, with a lot of effort you open up the trapdoor and enter.");
 					SecretBasement();
@@ -340,6 +339,10 @@ public class SpaceBranch
 		}
 		else
 		{
+			Stuff.HitEnter(2);
+			ASCII.SpoopyBuildingTrapdoorFound();
+			Stuff.HitEnter(2);
+			
 			Stuff.TypeLine("In terms of places to look around for clues as to where some Porject Alpha might be, you see the");
 			Stuff.TypeLine(" secret trapdoor you found earlier, a desk with some faded old papers on it, and a ladder to a second floor.");
 			Stuff.TypeLine("You are rather creeped out by the building, so you're also tempted to leave and go to the other one you saw.");
@@ -455,14 +458,26 @@ public class SpaceBranch
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
-		Stuff.TypeLine("Now downstairs, you see a crumbling desk with more papers on it. You walk over to it.");
-		Stuff.TypeLine("Looking at the papers, you see one that stands out from the rest.");
-		Stuff.TypeLine("A newspaper article, proclaiming Elon Musk to be misleading everyone for reasons as of yet unknown and");
-		Stuff.TypeLine(" sending people to the moon for an impossible task.");
-		Stuff.TypeLine("It says the last of Porject Alpha, discovered and named by Dr. Heinz Doofenshmirmtz, was found");
-		Stuff.TypeLine(" in Australia, over half a century ago in the year 1954.");
-		Stuff.TypeLine("After discovering such a shocking fact, you have to seriously consider if you should trust Elon and keep");
-		Stuff.TypeLine(" trying for Porject Alpha here, or go to Australia in 1954.");
+		if (Stuff.FoundTrapdoor == false)
+		{
+			Stuff.FoundTrapdoor = true;
+			Stuff.TypeLine("Now downstairs, you see a crumbling desk with more papers on it. You walk over to it.");
+			Stuff.TypeLine("Looking at the papers, you see one that stands out from the rest.");
+			Stuff.TypeLine("A newspaper article, proclaiming Elon Musk to be misleading everyone for reasons as of yet unknown and");
+			Stuff.TypeLine(" sending people to the moon for an impossible task.");
+			Stuff.TypeLine("It says the last of Porject Alpha, discovered and named by Dr. Heinz Doofenshmirmtz, was found");
+			Stuff.TypeLine(" in Australia, over half a century ago in the year 1954.");
+			Stuff.TypeLine("After discovering such a shocking fact, you have to seriously consider if you should trust Elon and keep");
+			Stuff.TypeLine(" trying for Porject Alpha here, or go to Australia in 1954.");
+		}
+		else
+		{
+			Stuff.TypeLine("You revisit the secret basement.");
+			Stuff.TypeLine("Taking another look at the newspaper article bashing Elon, you wonder why you came back down here again.");
+			Stuff.TypeLine("Visiting Australia does sound pretty fun.");
+			Stuff.TypeLine("Perhaps you've changed your mind about him?");
+		}
+		
 		switch (Stuff.PlayerChoice("trust", "don't trust"))
 		{
 			case "trust":

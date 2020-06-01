@@ -1959,10 +1959,34 @@ public class ASCII
 		System.out.println("                             ~/----------- ----------/~                                               || == ||");
 		System.out.println("                             /   ~            ~     /~                                                ||   ==|");
 		System.out.println("                           ~/         _-__         /                                                  ||    ||");
-		System.out.println("       _________          ~/      ~  |~ ] \\   ~   /~                                                  |==   ||");
+		System.out.println("       _________          ~/      ~  |~ _/\\   ~   /~                                                  |==   ||");
 		System.out.println("      / _____  /          /    ~      \\  ~|                                                           || == ||");
 		System.out.println("     /_/~ ~ / /|        ~/             --/      /                                                     ||   ==|");
 		System.out.println("    ///__~_/ /||        /------ ---  -----  ---/~                                                           ||");
+		System.out.println("   //____/  / ||                                                                                            ||");
+		System.out.println("  /        /  ||                                                                                              ");
+		System.out.println(" /________/                                                                                                   ");
+		System.out.println(" ||     ||                                                                                                    ");
+		System.out.println(" ||     ||                                                                                                    ");
+		System.out.println(" ||     ||                                                                                                    ");
+		System.out.println(" ||     ||                                                                                                    ");
+		System.out.println(" ||     ||                                                                                                    ");
+		System.out.println("______________________________________________________________________________________________________________");
+	}
+	
+	public static void SpoopyBuildingTrapdoorFound()
+	{
+		System.out.println("                                                                                                      || == ||");
+		System.out.println("                          _-_                                                                         ||   ==|");
+		System.out.println("                         /   \\                                                                        ||    ||");
+		System.out.println("                        / ~   \\_                                                                      |==   ||");
+		System.out.println("       ~/------------__/       /~                                                                     || == ||");
+		System.out.println("       /   ~                ~ /~   /----------/                                                       ||   ==|");
+		System.out.println("     ~/                ~     /    /      _   /                                                        ||    ||");
+		System.out.println("    ~/ _________     ~      /~   /      _/  /                                                         |==   ||");
+		System.out.println("    / / _____  /   /-_          /          /                                                          || == ||");
+		System.out.println("  ~/ /_/~ ~ / /|  /   \\   /    /----------/                                                           ||   ==|");
+		System.out.println("  /-///__~_/ /||_-     \\_/~                                                                                 ||");
 		System.out.println("   //____/  / ||                                                                                            ||");
 		System.out.println("  /        /  ||                                                                                              ");
 		System.out.println(" /________/                                                                                                   ");
