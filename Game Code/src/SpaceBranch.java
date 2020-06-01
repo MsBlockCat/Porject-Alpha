@@ -70,15 +70,15 @@ public class SpaceBranch
 				Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
 			}
 			Stuff.TypeLine("A massive launchpad is nearby with a rocket preparing to launch on it, a giant stylized X on both.");
-			Stuff.TypeLine("You see Elon Musk watching over its feuling.");
+			Stuff.TypeLine("You see Elon Musk watching over its fueling.");
 			Stuff.TypeLine("Walking up to him, he greets you first.");
 			Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
 			Stuff.TypeLine("\"What, you thought I didn't invent a time machine? I'm Elon Musk!\"");
 			Stuff.TypeLine("He gestures to a sleek looking time machine about the size of a phone booth, able to fit a person inside.");
 			Stuff.TypeLine("The style of it is reminiscent of an airplane's, with flowing, glossy sides.");
 			Stuff.TypeLine("\"It runs entirely on solar power, of course.\"");
-			Stuff.TypeLine("\"Well, besides the space/time-altering liquid, but that doesn't pollute either.\"");
-			Stuff.TypeLine("\"Anyway, you can be an astronaut on this Falcon X spaceship if you'd like. I saved you a spot!\"");
+			Stuff.TypeLine("\"Well, besides the space/time-altering liquid, Porject Alpha, but that doesn't pollute either.\"");
+			Stuff.TypeLine("\"Anyway, you can be an astronaut on this spaceship of mine if you'd like. I saved you a spot!\"");
 			Stuff.TypeLine("\"Its mission is actually to get more juice for these time machines from the moon. I bet yours runs on it, too.\"");
 			switch (Stuff.PlayerChoice("be an astronaut", "don't"))
 			{

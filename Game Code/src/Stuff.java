@@ -24,13 +24,13 @@ public class Stuff
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
-	/* Add to SaveVersion 7 */ public static boolean HasPorjectAlpha = false;
+	public static boolean HasPorjectAlpha = false;
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
 	public static boolean TalkedtoTree = false;
-	/* Add to SaveVersion 7 */ public static int FavoriteGame = 0;
-	/* Add to SaveVersion 7 */ public static boolean FoundTrapdoor = false;
-	/* Add to SaveVersion 7 */ public static boolean ApuNerfedYou = false;
+	public static int FavoriteGame = 0;
+	public static boolean FoundTrapdoor = false;
+	public static boolean ApuNerfedYou = false;
 	//Add below to SaveVersion 8 once Digo makes up his mind about the existence of the SeenRuins variable
 	public static boolean SeenRuins = false;
 	
@@ -380,6 +380,11 @@ public class Stuff
 	
 	public static void SaveGame()
 	{
+		SaveGame(false);
+	}
+	
+	public static void SaveGame(boolean BeKindaQuiet)
+	{
 		//Makes Saves folder if need be
 		File SaveFolder = new File("Saves");
 		SaveFolder.mkdir();
@@ -390,7 +395,7 @@ public class Stuff
 		try
 		{
 			//Creates or locks into the save file
-			if (SaveFile.createNewFile())
+			if ((SaveFile.createNewFile()) && (BeKindaQuiet == false))
 			{
 				//If true created new save file
 			    System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
@@ -402,23 +407,43 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasPorjectAlpha) + "\n" + /* Line 11 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 12 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 13 */ BooleanToInt(TalkedtoTree) + "\n" + /* Line 14 */ FavoriteGame + "\n" + /* Line 15 */ BooleanToInt(FoundTrapdoor) + "\n" + /* Line 16 */ BooleanToInt(ApuNerfedYou));
-			SaveFileWriter.close();
-			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
-			HitEnter(1);
-			AwesomeScanner.nextLine();
 			
-			Desktop AwesomeDesktop = Desktop.getDesktop();
-			File FolderToOpen = null;
-			try
+			/* Line 1  */ SaveFileWriter.write(SaveVersion + "\n");
+			/* Line 2  */ SaveFileWriter.write(BooleanToInt(DebugMode) + "\n");
+			/* Line 3  */ SaveFileWriter.write(BooleanToInt(QuickMenus) + "\n");
+			/* Line 4  */ SaveFileWriter.write(FancyTypingSpeed + "\n");
+			/* Line 5  */ SaveFileWriter.write(TurnCount + "\n");
+			/* Line 6  */ SaveFileWriter.write(BooleanToInt(GameBeginning) + "\n");
+			/* Line 7  */ SaveFileWriter.write(BooleanToInt(StoryBeginning) + "\n");
+			/* Line 8  */ SaveFileWriter.write(CurrentBranchNumber + "\n");
+			/* Line 9  */ SaveFileWriter.write(CurrentLocationNumber + "\n");
+			/* Line 10 */ SaveFileWriter.write(BooleanToInt(HasPorjectAlpha) + "\n");
+			/* Line 11 */ SaveFileWriter.write(BooleanToInt(HasLuckyGauntlet) + "\n");
+			/* Line 12 */ SaveFileWriter.write(BooleanToInt(TimeinatorWorks) + "\n");
+			/* Line 13 */ SaveFileWriter.write(BooleanToInt(TalkedtoTree) + "\n");
+			/* Line 14 */ SaveFileWriter.write(FavoriteGame + "\n");
+			/* Line 15 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
+			/* Line 16 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
+			
+			SaveFileWriter.close();
+			if (BeKindaQuiet == false)
 			{
-				FolderToOpen = new File("Saves");
-				AwesomeDesktop.open(FolderToOpen);
-			}
-			catch (IllegalArgumentException IAE)
-			{
-				System.out.println("(Enter) Error 7: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
+				TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
+				HitEnter(1);
 				AwesomeScanner.nextLine();
+				
+				Desktop AwesomeDesktop = Desktop.getDesktop();
+				File FolderToOpen = null;
+				try
+				{
+					FolderToOpen = new File("Saves");
+					AwesomeDesktop.open(FolderToOpen);
+				}
+				catch (IllegalArgumentException IAE)
+				{
+					System.out.println("(Enter) Error 7: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
+					AwesomeScanner.nextLine();
+				}
 			}
 		}
 		catch (IOException IOException)
@@ -438,6 +463,9 @@ public class Stuff
 		//Locations of Save and Default Save files
 		File SaveFile = new File("Saves/Save.txt");
 		File DefaultSaveFile = new File("Game Code/Default Save.txt");
+		
+		boolean OldQuickMenus = QuickMenus;
+		int OldFancyTypingSpeed = FancyTypingSpeed;
 		
 		try
 		{
@@ -467,6 +495,13 @@ public class Stuff
 				
 				//Loads the values in Save.txt
 				LoadSaveFile();
+				
+				//Readds settings
+				QuickMenus = OldQuickMenus;
+				FancyTypingSpeed = OldFancyTypingSpeed;
+				
+				//Saves to solidify the readding settings
+				SaveGame(true);
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
