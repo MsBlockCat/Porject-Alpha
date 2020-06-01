@@ -17,8 +17,9 @@ Rodrigo Portal
 Matt Frey
 
 
-Lead Developer
+Lead Manager
 Ms. LaBrosse
+
 
 Lead Framework Developer
 Falcon Yule
