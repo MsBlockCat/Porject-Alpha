@@ -31,8 +31,8 @@ public class Stuff
 	public static int FavoriteGame = 0;
 	public static boolean FoundTrapdoor = false;
 	public static boolean ApuNerfedYou = false;
-	//Add below to SaveVersion 8 once Digo makes up his mind about the existence of the SeenRuins variable
-	public static boolean SeenRuins = false;
+	/* Add to SaveVersion 8 */ public static boolean SeenRuins = false;
+	/* Add to SaveVersion 8 */ public static boolean RoulletteSpin = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
