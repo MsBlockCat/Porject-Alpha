@@ -45,10 +45,10 @@ public class OldTimeBranch
 					Stuff.StoryBeginning = false;
 					Bazar();
 					break;
-				case "Sunday church with Grandma":
+				case "check out the barracks":
 					Stuff.StoryBeginning = false;
 					break;
-				case "going on the klondike":
+				case "visit the harbor":
 					Stuff.StoryBeginning = false;
 					break;
 				case "search the castle":
@@ -65,5 +65,7 @@ public class OldTimeBranch
 	public static void Bazar()
 	{
 		Stuff.CurrentLocationNumber = 2;
+		
+		Stuff.TypeLine("");
 	}
 }
