@@ -59,6 +59,7 @@ public class SpaceBranch
 		{
 			Stuff.TypeLine("You travel to the year 2030.");
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
+		}
 			if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
 			{
 				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
@@ -69,6 +70,8 @@ public class SpaceBranch
 			{
 				Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
 			}
+		if (Stuff.StoryBeginning == true)
+		{
 			Stuff.TypeLine("A massive launchpad is nearby with a rocket preparing to launch on it, a giant stylized X on both.");
 			Stuff.TypeLine("You see Elon Musk watching over its fueling.");
 			Stuff.TypeLine("Walking up to him, he greets you first.");
