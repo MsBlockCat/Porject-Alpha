@@ -17,6 +17,10 @@ Rodrigo Portal
 Matt Frey
 
 
+Text Engine Founder
+Matthew Frey
+
+
 Lead Manager
 Ms. LaBrosse
 
@@ -33,7 +37,7 @@ File Writing
 howtodoinjava.com/java/io/java-write-to-file
 baeldung.com/java-write-to-file
 
-ASCII Map Partial Sources
+Old Time ASCII Map Partial Sources
 ascii.co.uk/art/treasuremap
 asciiart.eu/buildings-and-places/castles
 
