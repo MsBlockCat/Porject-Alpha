@@ -66,7 +66,28 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 2;
 		
-		Stuff.TypeLine("Whilst parusing the shops, some infinity gauntlet esk glove catches your eye.");
-		Stuff.TypeLine("");
+		Stuff.TypeLine("Whilst perusing the shops, some infinity gauntlet esk glove catches your eye.");
+		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
+		Stuff.TypeLine("\"You like what you're seeing? Even I dont know how it got here or what that turnip shaped thing is\"");
+		Stuff.TypeLine("\"but I found it right outside my farm a couple o' years ago, no clue how long its been there\"");
+		Stuff.TypeLine("\"Care to play a little roulet? I spin this wheel, and if the arrow lands on, what say you, the number 5\"");
+		Stuff.TypeLine("\"You get the \"Lucky Gauntlet\", sounds fair? Well is doesnt matter because I make the rules\"");
+		switch (Stuff.PlayerChoice("spin", "don't spin"))
+		{
+			case "spin":
+				Stuff.RandomInt(1, 6);
+				
+				if (Stuff.RandomInt() != 5);
+				{
+					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can gain here.\"");
+					Stuff.HasLuckyGauntlet = false;
+				}
+				if (Stuff.RandomInt() == 5);
+				{
+					Stuff.TypeLine("\"Arent you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assasin\"");
+					Stuff.HasLuckyGauntlet = true;
+				}
+
+		}
 	}
 }
