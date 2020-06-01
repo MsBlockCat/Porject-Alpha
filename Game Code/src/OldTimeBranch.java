@@ -82,7 +82,8 @@ public class OldTimeBranch
 					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can gain here.\"");
 					Stuff.HasLuckyGauntlet = false;
 				}
-				if (Stuff.RandomInt() == 5);
+				
+				else if (Stuff.RandomInt() == 5);
 				{
 					Stuff.TypeLine("\"Arent you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assasin\"");
 					Stuff.HasLuckyGauntlet = true;
