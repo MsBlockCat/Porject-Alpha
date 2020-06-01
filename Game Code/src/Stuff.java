@@ -11,9 +11,9 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.1.0a";
+	public static final String GameVersion = "0.2.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 6;
+	public static final int SaveVersion = 7;
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
@@ -24,14 +24,15 @@ public class Stuff
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
+	/* Add to SaveVersion 7 */ public static boolean HasPorjectAlpha = false;
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
 	public static boolean TalkedtoTree = false;
-	//Add below to SaveVersion 7 once Digo makes up his mind about the existence of the SeenRuins variable
-	public static int FavoriteGame = 0;
-	public static boolean FoundTrapdoor = false;
+	/* Add to SaveVersion 7 */ public static int FavoriteGame = 0;
+	/* Add to SaveVersion 7 */ public static boolean FoundTrapdoor = false;
+	/* Add to SaveVersion 7 */ public static boolean ApuNerfedYou = false;
+	//Add below to SaveVersion 8 once Digo makes up his mind about the existence of the SeenRuins variable
 	public static boolean SeenRuins = false;
-	public static boolean ApuNerfedYou = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -401,7 +402,7 @@ public class Stuff
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);
-			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 11 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 12 */ BooleanToInt(TalkedtoTree));
+			SaveFileWriter.write(/* Line 1 */ SaveVersion + "\n" + /* Line 2 */ BooleanToInt(DebugMode) + "\n" + /* Line 3 */ BooleanToInt(QuickMenus) + "\n" + /* Line 4 */ FancyTypingSpeed + "\n" + /* Line 5 */ TurnCount + "\n" + /* Line 6 */ BooleanToInt(GameBeginning) + "\n" + /* Line 7 */ BooleanToInt(StoryBeginning) + "\n" + /* Line 8 */ CurrentBranchNumber + "\n" + /* Line 9 */ CurrentLocationNumber + "\n" + /* Line 10 */ BooleanToInt(HasPorjectAlpha) + "\n" + /* Line 11 */ BooleanToInt(HasLuckyGauntlet) + "\n" + /* Line 12 */ BooleanToInt(TimeinatorWorks) + "\n" + /* Line 13 */ BooleanToInt(TalkedtoTree) + "\n" + /* Line 14 */ FavoriteGame + "\n" + /* Line 15 */ BooleanToInt(FoundTrapdoor) + /* Line 16 */ BooleanToInt(ApuNerfedYou));
 			SaveFileWriter.close();
 			TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 			HitEnter(1);
@@ -525,7 +526,7 @@ public class Stuff
 						//These lines replace the variables in game with the values in Save.txt
 						//Left is save versions 5 and below, right is 6 and above
 						/* File Line 2      */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						if (FileSaveVersion > 5)
+						if (FileSaveVersion >= 6)
 						{
 							/* File Line 3  */ QuickMenus = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
@@ -533,28 +534,48 @@ public class Stuff
 						{
 							QuickMenus = false;
 						}
-						/* File Line 3 | 4  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
-						/* File Line 4 | 5  */ TurnCount = StringToInt(AwesomeFile.nextLine());
-						/* File Line 5 | 6  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 6 | 7  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 7 | 8  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 8 | 9  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 9 | 10 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						if (FileSaveVersion > 3)
+						/* File Line 3  | 4  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+						/* File Line 4  | 5  */ TurnCount = StringToInt(AwesomeFile.nextLine());
+						/* File Line 5  | 6  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 6  | 7  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 7  | 8  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 8  | 9  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
+						if (FileSaveVersion >= 7)
 						{
-						/* File Line 10| 11 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line       10 */ HasPorjectAlpha = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							HasPorjectAlpha = false;
+						}
+						/* File Line 9  | 10 | 11 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						if (FileSaveVersion >= 4)
+						{
+						/* File Line 10 | 11 | 12 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
 							TimeinatorWorks = true;
 						}
-						if (FileSaveVersion > 4)
+						if (FileSaveVersion >= 5)
 						{
-						/* File Line 11| 12 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 11 | 12 | 13 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
 							TalkedtoTree = false;
+						}
+						if (FileSaveVersion >= 7)
+						{
+							/* File Line       14 */ FavoriteGame = StringToInt(AwesomeFile.nextLine());
+							/* File Line       15 */ FoundTrapdoor = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line       16 */ ApuNerfedYou = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							FavoriteGame = 0;
+							FoundTrapdoor = false;
+							ApuNerfedYou = false;
 						}
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))

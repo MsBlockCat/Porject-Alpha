@@ -6,8 +6,8 @@ public class SpaceBranch
 		switch (StartingPosition)
 		{
 			case "1":
-			case "Launchpad":
-				Launchpad();
+			case "Launchpad1":
+				Launchpad1();
 				break;
 			case "2":
 			case "EarthOrbit1":
@@ -33,13 +33,25 @@ public class SpaceBranch
 			case "SecretBasement":
 				SecretBasement();
 				break;
+			case "8":
+			case "SecondFloor":
+				SecondFloor();
+				break;
+			case "9":
+			case "EarthOrbit2":
+				EarthOrbit2();
+				break;
+			case "10":
+			case "Launchpad2":
+				Launchpad2();
+				break;
 			default:
 				System.out.println("(Enter) Error 2: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
 		}
 	}
 	
-	public static void Launchpad()
+	public static void Launchpad1()
 	{
 		Stuff.CurrentLocationNumber = 1;
 		
@@ -47,7 +59,7 @@ public class SpaceBranch
 		{
 			Stuff.TypeLine("You travel to the year 2030.");
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
-			if (Stuff.RandomInt() < 6)
+			if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
 			{
 				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
 				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
@@ -72,7 +84,7 @@ public class SpaceBranch
 			{
 				case "be an astronaut":
 					Stuff.StoryBeginning = false;
-					Launchpad();
+					Launchpad1();
 					break;
 				case "don't":
 					Stuff.TypeLine("\"Very well then, if that's your choice.\"");
@@ -307,10 +319,14 @@ public class SpaceBranch
 					SecretBasement();
 					break;
 				case "desk":
-					//Make desk
+					Stuff.TypeLine("You search the desk for clues as to where Porject Alpha might be, but none of the papers have important");
+					Stuff.TypeLine(" stuff on them. The most interesting thing you see is tax forms, which says a lot.");
+					Stuff.TypeLine("You'd best try something else!");
+					SpoopyBuilding();
 					break;
 				case "ladder":
-					//Make second floor
+					Stuff.TypeLine("You climb up the ladder, a bit rickety with age.");
+					SecondFloor();
 					break;
 				case "leave":
 					Stuff.TypeLine("Appropriately creeped out by this building, you leave and head for the nicer seeming one.");
@@ -330,10 +346,14 @@ public class SpaceBranch
 					SecretBasement();
 					break;
 				case "desk":
-					//Make desk
+					Stuff.TypeLine("You search the desk for clues as to where you might find Porject Alpha, but none of the papers have");
+					Stuff.TypeLine(" important stuff on them. The most interesting thing you see is tax forms, which says a lot.");
+					Stuff.TypeLine("You'd best look somewhere else!");
+					SpoopyBuilding();
 					break;
 				case "ladder":
-					//Make second floor
+					Stuff.TypeLine("You climb up the ladder, rather rickety with age.");
+					SecondFloor();
 					break;
 				case "leave":
 					Stuff.TypeLine("Justifiably creeped out by this building, you leave and head for the nicer seeming one.");
@@ -376,6 +396,7 @@ public class SpaceBranch
 		Stuff.TypeLine(" the Doof will want some too.");
 		Stuff.TypeLine("It's formed a big pond, making it easy to get, simply needing to put in a container.");
 		Stuff.TypeLine("You go back to the building, grab a glass jar, head back into the cave, and put some Porject Alpha in.");
+		Stuff.HasPorjectAlpha = true;
 		Stuff.TypeLine("You ask the people in the building where a way to contact Elon is, one of the men hands you a");
 		Stuff.TypeLine(" tablet, and you call him with it.");
 		Stuff.TypeLine("After explaining that you've already got a little more Porject Alpha for him, he asks");
@@ -383,7 +404,7 @@ public class SpaceBranch
 		if (Stuff.TimeinatorWorks == true)
 		{
 			Stuff.TypeLine("You tell him that you indeed can, hang up, hand back the tablet and travel to Earth with the jar.");
-			//Make meeting Elon Musk, add link to it here
+			Launchpad2();
 		}
 		else
 		{
@@ -423,7 +444,7 @@ public class SpaceBranch
 			Stuff.TypeLine("One.");
 			Stuff.Wait(650);
 			Stuff.TypeLine("The rocket shakes, and you launch off the moon base and into space.");
-			//Make EarthOrbit2 (which talks about playing your favorite "generic" video game then goes to meeting Elon Musk), add it here
+			EarthOrbit2();
 		}
 	}
 	
@@ -461,11 +482,22 @@ public class SpaceBranch
 					Stuff.TypeLine("It doesn't work.");
 					Stuff.TypeLine("Remembering now that it broke earlier, you realize you'll have to contact Elon Musk and ask him for");
 					Stuff.TypeLine(" completely unrelated reasons to let you use his time machine to teleport back to the lab.");
-					Stuff.TypeLine("The other building probably has a way to contact Elon.");
+					Stuff.TypeLine("The other building probably has a way to contact Elon Musk.");
+					Stuff.TypeLine("You head back upstairs, close the trapdoor, carefully put the carpet back, and leave the creepy building.");
+					Stuff.TypeLine("Once you arrive in the other building, you ask someone if you can let Elon know you'd like to use his transporter.");
+					Stuff.TypeLine("One man hands you a nearby tablet, and you call Elon with it.");
+					Stuff.TypeLine("After explaining that you'd like to head back to your lab, he's dissapointed you didn't find any");
+					Stuff.TypeLine(" Porject Alpha, but understanding all the same. He says, however, you'll have to wait a few");
+					Stuff.TypeLine(" weeks for the rocket to arrive.");
+					Stuff.Wait(750);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("                                             ~~~2 weeks later~~~");
+					ModernBranch.GoToModernBranch("Lab2");
 				}
 				else
 				{
 					Stuff.TypeLine("Immediately the spooky basement fades, and you feel whooshing around you. Everything is dark.");
+					Stuff.Wait(200);
 					Stuff.TypeLine("The whooshing grows weaker, and what's hopefully an Australian outback comes into view.");
 					Stuff.TypeLine("Something seems off to you, though.");
 					Stuff.TypeLine("You look at your Timeinator, to be sure you're in the right place and time.");
@@ -475,6 +507,96 @@ public class SpaceBranch
 					GoatBranch.GoToGoatBranch("RuralAustralia1");
 				}
 				break;
+		}
+	}
+	
+	public static void SecondFloor()
+	{
+		Stuff.CurrentLocationNumber = 8;
+		
+		Stuff.TypeLine("Climbing up and off of the ladder, you take a look around.");
+		Stuff.TypeLine("Even more broken down than the first floor, it has barely anything noteworthy besides holes and debris.");
+		Stuff.TypeLine("You do spot one thing, though: A piece of paper among the debris.");
+		Stuff.TypeLine("Walking over to it, you bend down and pick the paper up, wiping off small bits of building from it.");
+		Stuff.TypeLine("It's labelled...");
+		Stuff.Wait(1000);
+		Stuff.TypeLine("\"Land Permit\".");
+		Stuff.Wait(500);
+		Stuff.TypeLine("It just has lots of legal stuff in it, nothing noteworthy.");
+		Stuff.TypeLine("Welp, you should probably head back downstairs.");
+		Stuff.TypeLine("You climb back down the ladder.");
+		SpoopyBuilding();
+	}
+	
+	public static void EarthOrbit2()
+	{
+		Stuff.CurrentLocationNumber = 9;
+		
+		Stuff.TypeLine("The rocket having successfully launched into space, you unbuckle and get out of your chair.");
+		Stuff.TypeLine("Heading downstairs, you see a gaming system.");
+		ASCII.GamingSystem();
+		switch (Stuff.FavoriteGame)
+		{
+			case 0:
+				Stuff.TypeLine("Fortunately, you'll have plenty of time to play these games over the next few days!");
+				break;
+			case 1:
+				Stuff.TypeLine("Fortunately, you'll have plenty of time to play the generic blocky game over the next few days!");
+				break;
+			case 2:
+				Stuff.TypeLine("Fortunately, you'll have plenty of time to play the generic horror and animatronic-filled");
+				Stuff.TypeLine(" game over the next few days!");
+				break;
+			case 3:
+				Stuff.TypeLine("Fortunately, you'll have plenty of time to play the \"Generic Red-Wearing Italian Plumber Who's");
+				Stuff.TypeLine(" Always Saving a Princess From Some Mutant Turtle Thing\" game over the next few days!");
+				break;
+			case 4:
+				Stuff.TypeLine("Fortunately, you'll have plenty of time to play the \"Generic Green-Wearing Boy Who's Always");
+				Stuff.TypeLine(" Saving a Princess From Some Demonic Thing\" game over the next few days!");
+				break;
+		}
+		
+		Stuff.TypeLine("The rocket settles down on the launchpad.");
+		Stuff.TypeLine("The door lowers.");
+		Stuff.TypeLine("You, and the rest of the crew, come outside.");
+		Launchpad2();
+	}
+	
+	public static void Launchpad2()
+	{
+		Stuff.CurrentLocationNumber = 10;
+		
+		Stuff.TypeLine("\"Welcome back to Earth!\" exclaims Elon Musk.");
+		Stuff.TypeLine("\"Were you able to get me any Porject Alpha?\"");
+		if (Stuff.HasPorjectAlpha == true)
+		{
+			Stuff.TypeLine("Telling him that you were indeed, he's very glad.");
+			Stuff.Type("You give him some, and after goodbyes are had ");
+			if (Stuff.TimeinatorWorks == true)
+			{
+				Stuff.TypeLine("you use your Timeinator to get back to the lab and give the legendary Doof the rest.");
+				ModernBranch.GoToModernBranch("Lab3");
+			}
+			else
+			{
+				Stuff.TypeLine("he lets you use his time machine to get back to your lab.");
+				ModernBranch.GoToModernBranch("Lab3");
+			}
+		}
+		else
+		{
+			Stuff.Type("After telling him you haven't found any Porject Alpha yet, he's somewhat disappointed");
+			if (Stuff.TimeinatorWorks == true)
+			{
+				Stuff.TypeLine(", but understanding. After goodbyes are said, though, you use your Timeinator to get back to the lab.");
+				ModernBranch.GoToModernBranch("Lab2");
+			}
+			else
+			{
+				Stuff.TypeLine(", yet understanding. After goodbyes are said, he lets you use his time machine to get back to your lab regardless.");
+				ModernBranch.GoToModernBranch("Lab2");
+			}
 		}
 	}
 }

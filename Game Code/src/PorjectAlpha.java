@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("0.2.0a (5/31/2020)");
+		Stuff.TypeLine(" Just about finished space story branch, more other story, and some important bugfixes under the hood!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.1.0a (5/25/2020)");
 		Stuff.TypeLine(" More story and ASCII, game intro and studio animations, lots of bugfixes, a new About menu, and lots more!");
 		Stuff.Divider();

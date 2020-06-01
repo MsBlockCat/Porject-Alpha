@@ -13,6 +13,10 @@ public class ModernBranch
 			case "Lab2":
 				Lab2();
 				break;
+			case "3":
+			case "Lab3":
+				Lab3();
+				break;
 			default:
 				System.out.println("(Enter) Error 1: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -85,5 +89,16 @@ public class ModernBranch
 				SpaceBranch.GoToSpaceBranch("Launchpad");
 				break;
 		}
+	}
+	
+	public static void Lab3()
+	{
+		Stuff.CurrentLocationNumber = 3;
+		
+		Stuff.TypeLine("\"Hooh boy, you did it!\" The Doof immediately exclaims.");
+		Stuff.TypeLine("\"You brought back some Porject Alpha!\"");
+		Stuff.TypeLine("\"Oh yeah, you also survived, which is pretty cool I guess.\"");
+		Stuff.TypeLine("\"Now gimme it! I'd estimate I have about 30 seconds before that blasted platypus--\"");
+		Stuff.StoryEnding();
 	}
 }
