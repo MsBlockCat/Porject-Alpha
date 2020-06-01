@@ -51,7 +51,7 @@ public class ModernBranch
 				GoatBranch.GoToGoatBranch("RuralAustralia1");
 				break;
 			case "2030":
-				SpaceBranch.GoToSpaceBranch("Launchpad");
+				SpaceBranch.GoToSpaceBranch("Launchpad1");
 				break;
 		}
 	}
@@ -86,7 +86,7 @@ public class ModernBranch
 				GoatBranch.GoToGoatBranch("RuralAustralia1"); //make an if thing for you to go different places depending if apu killed you
 				break;
 			case "2030":
-				SpaceBranch.GoToSpaceBranch("Launchpad");
+				SpaceBranch.GoToSpaceBranch("Launchpad1");
 				break;
 		}
 	}
@@ -95,10 +95,18 @@ public class ModernBranch
 	{
 		Stuff.CurrentLocationNumber = 3;
 		
-		Stuff.TypeLine("\"Hooh boy, you did it!\" The Doof immediately exclaims.");
-		Stuff.TypeLine("\"You brought back some Porject Alpha!\"");
-		Stuff.TypeLine("\"Oh yeah, you also survived, which is pretty cool I guess.\"");
-		Stuff.TypeLine("\"Now gimme it! I'd estimate I have about 30 seconds before that blasted platypus--\"");
-		Stuff.StoryEnding();
+		if (Stuff.HasPorjectAlpha == true)
+		{
+			Stuff.TypeLine("\"Hooh boy, you did it!\" The Doof immediately exclaims.");
+			Stuff.TypeLine("\"You brought back some Porject Alpha!\"");
+			Stuff.TypeLine("\"Oh yeah, you also survived, which is pretty cool I guess.\"");
+			Stuff.TypeLine("\"Now gimme it! I'd estimate I have about 30 seconds before that blasted platypus--\"");
+			Stuff.StoryEnding();
+		}
+		else
+		{
+			//Up to y'all what you do with this, but for now just going to Lab2
+			Lab2();
+		}
 	}
 }
