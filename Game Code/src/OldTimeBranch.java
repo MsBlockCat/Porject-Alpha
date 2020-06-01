@@ -10,8 +10,8 @@ public class OldTimeBranch
 				OuterVillage1();
 				break;
 			case "2":
-			case "Bazar":
-				Bazar();
+			case "RouletShop":
+				RouletShop();
 				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
@@ -43,7 +43,7 @@ public class OldTimeBranch
 			{
 				case "explore the bazar":
 					Stuff.StoryBeginning = false;
-					Bazar();
+					RouletShop();
 					break;
 				case "check out the barracks":
 					Stuff.StoryBeginning = false;
@@ -62,7 +62,7 @@ public class OldTimeBranch
 		}	
 	}
 	
-	public static void Bazar()
+	public static void RouletShop()
 	{
 		Stuff.CurrentLocationNumber = 2;
 		
