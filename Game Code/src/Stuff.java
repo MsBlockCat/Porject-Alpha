@@ -11,7 +11,7 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.2.0a";
+	public static final String GameVersion = "0.2.1a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 7;
 	public static boolean DebugMode = false;
@@ -395,15 +395,21 @@ public class Stuff
 		try
 		{
 			//Creates or locks into the save file
-			if ((SaveFile.createNewFile()) && (BeKindaQuiet == false))
+			if (SaveFile.createNewFile())
 			{
 				//If true created new save file
-			    System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
+				if (BeKindaQuiet == false)
+				{
+					System.out.println("A new save file was created! You can find it at \"Game Code/Saves/Save.txt\".");
+				}
 			}
 			else
 			{
 				//If false save file already existed and was locked onto
-			    System.out.println("A save file already exists, saving to it...");
+				if (BeKindaQuiet == false)
+				{
+					System.out.println("A save file already exists, saving to it...");
+				}
 			}
 			
 			FileWriter SaveFileWriter = new FileWriter(SaveFile, false);

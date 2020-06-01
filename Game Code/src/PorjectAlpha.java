@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("0.2.1a (5/31/2020)");
+		Stuff.TypeLine(" Settings now don't reset when story does, typo and bug fixes, and more!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.2.0a (5/31/2020)");
 		Stuff.TypeLine(" Just about finished space story branch, more other story, and some important bugfixes under the hood!");
 		Stuff.Divider();
