@@ -83,7 +83,7 @@ public class OldTimeBranch
 				
 				if (Stuff.RandomInt() != 5)
 				{
-					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword\"");
+					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles\"");
 					Stuff.TypeLine("\" you are gonna need it on your quest for that assasin!\"");
 					Stuff.TypeLine("The sword is made of emerals which gives it a magnificent green glow in the sun.");
 					Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assasin.");
@@ -104,7 +104,9 @@ public class OldTimeBranch
 				
 			case "dont spin":
 			{
-				Stuff.TypeLine("\"Well then.");
+				Stuff.TypeLine("\"Well then, here take this sword, its made of emeralds and will help you on your journey.\"");
+				Stuff.TypeLine("\"Most people around here know about it and boy are we thankfull. Our kind is a good one so I dont know why anyone would attempt to murder him.\"");
+				Stuff.TypeLine("\'Good luck travelor.\" With these words you leave the shop and continue your search.");
 				Bazar();
 			}
 				break;
