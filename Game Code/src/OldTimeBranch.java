@@ -66,6 +66,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 2;
 		
+		Stuff.TypeLine("Whilst parusing the shops, some infinity gauntlet esk glove catches your eye.");
 		Stuff.TypeLine("");
 	}
 }
