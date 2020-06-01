@@ -12,6 +12,9 @@ public class OldTimeBranch
 			case "2":
 			case "RouletShop":
 				RouletShop();
+			case "3":
+			case "Bazar":
+				Bazar();
 				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
@@ -70,25 +73,46 @@ public class OldTimeBranch
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
 		Stuff.TypeLine("\"You like what you're seeing? Even I dont know how it got here or what that turnip shaped thing is\"");
 		Stuff.TypeLine("\"but I found it right outside my farm a couple o' years ago, no clue how long its been there\"");
-		Stuff.TypeLine("\"Care to play a little roulet? I spin this wheel, and if the arrow lands on, what say you, the number 5\"");
+		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, and if the arrow lands on, what say you, the number 5\"");
 		Stuff.TypeLine("\"You get the \"Lucky Gauntlet\", sounds fair? Well is doesnt matter because I make the rules\"");
 		switch (Stuff.PlayerChoice("spin", "don't spin"))
 		{
 			case "spin":
 				Stuff.RandomInt(1, 6);
+				Stuff.RoulletteSpin = true;
 				
 				if (Stuff.RandomInt() != 5)
 				{
-					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can gain here.\"");
+					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword\"");
+					Stuff.TypeLine("\" you are gonna need it on your quest for that assasin!\"");
+					Stuff.TypeLine("The sword is made of emerals which gives it a magnificent green glow in the sun.");
+					Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assasin.");
 					Stuff.HasLuckyGauntlet = false;
+					Stuff.HasEmeraldSword = true;
+					Bazar();
 				}
 				
 				else
 				{
 					Stuff.TypeLine("\"Arent you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assasin\"");
+					Stuff.TypeLine("He wishes you good luck and you go on your way. ");
 					Stuff.HasLuckyGauntlet = true;
+					Stuff.HasEmeraldSword = false;
+					Bazar();
 				}
-
+				break;
+				
+			case "dont spin":
+			{
+				Stuff.TypeLine("\"Well then.");
+				Bazar();
+			}
+				break;
 		}
+	}
+	
+	public static void Bazar()
+	{
+		Stuff.CurrentLocationNumber = 3;
 	}
 }
