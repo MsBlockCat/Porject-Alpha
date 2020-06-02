@@ -2000,7 +2000,7 @@ public class ASCII
 	
 	//Old Time Branch
 	
-	public static void OldTimeMap1()
+	public static void OldTimeMapBazar()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2029,7 +2029,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMap2()
+	public static void OldTimeMapBarracks()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2058,7 +2058,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMap3()
+	public static void OldTimeMapCastle()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2087,7 +2087,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMap4()
+	public static void OldTimeMapHarbor()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2116,7 +2116,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapRuins1()
+	public static void OldTimeMapBazarR()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2145,7 +2145,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapRuins2()
+	public static void OldTimeMapBarracksR()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2174,7 +2174,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapRuins3()
+	public static void OldTimeMapRuins()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2203,7 +2203,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapRuins4()
+	public static void OldTimeMapHarborR()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2232,7 +2232,7 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapRuins5()
+	public static void OldTimeMapCastleR()
 	{
 		System.out.println("  ____________________________________________________________________");
 		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
@@ -2277,6 +2277,21 @@ public class ASCII
 		System.out.println("|____/  *                               ");
 		System.out.println("                          *       ");
 		System.out.println("              *                   ");
+	}
+	
+	public static void TimeinatorBroken()
+	{
+		//Totally not a broken Apple Watch
+		System.out.println("                                          \\--  \\     ");
+		System.out.println("                                        ----------     ");
+		System.out.println("                                       |          |( =  ");
+		System.out.println("                                       | \\/   /   | )=   ");
+		System.out.println("                                       |  |__\\    |    ");
+		System.out.println("                                       |  /  \\    | /  ");
+		System.out.println("                                       |  |   |   |/   ");
+		System.out.println("                                       |  \\       |    ");
+		System.out.println("                                        ----------     ");
+		System.out.println("                                          /- --/       ");
 	}
 	
 	//Goat Branch
