@@ -17,6 +17,10 @@ public class OldTimeBranch
 			case "Bazar":
 				Bazar();
 				break;
+			case "4":
+			case "Barracks":
+				barracks();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -91,10 +95,26 @@ public class OldTimeBranch
 						Stuff.HasLuckyGauntlet = true;
 						Bazar();
 						break;
+					
+					case 6:
+						Stuff.TypeLine("\"Ohh so close my friend but no cigar, still, take this\"");
+						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
+						Stuff.TypeLine("\"Everyone is overjoyed that someone has taken the deed of locating this assasin. Our poor king must have been shook after the attack\"");
+						Stuff.TypeLine("As you wish eachother good bye, you still marvel at the sword in all its beautiful splendor.");
+						Stuff.HasEmeraldSword = true;
+						break;
+						
+					case 4:
+						Stuff.TypeLine("\"Ohh so close my friend but no cigar, still, take this\"");
+						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
+						Stuff.TypeLine("\"Everyone is overjoyed that someone has taken the deed of locating this assasin. Our poor king must have been shook after the attack\"");
+						Stuff.TypeLine("As you wish eachother good bye, you still marvel at the sword in all its beautiful splendor.");
+						Stuff.HasEmeraldSword = true;
+						break;
 						
 					default:
 						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
-						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin!\"");
+						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin! Yes word spreads fast doesnt it.\"");
 						Stuff.TypeLine("The sword is made of emeralds which gives it a magnificent green glow in the sun.");
 						Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
 						Stuff.HasEmeraldSword = true;
@@ -113,15 +133,30 @@ public class OldTimeBranch
 		}
 	}
 	
-	public static void barracks()
-	{
-		
-	}
-	
 	public static void Bazar()
 	{
 		Stuff.CurrentLocationNumber = 3;
 		
-		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search");
+		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search in a different part of the kingdom.");
+		switch (Stuff.PlayerChoice("check out barracks", "visit the harbor", "search the castle"))
+		{
+			case "check out the barracks":
+				Stuff.StoryBeginning = false;
+				barracks();
+				break;
+			case "visit the harbor":
+				Stuff.StoryBeginning = false;
+				break;
+			case "search the castle":
+				Stuff.StoryBeginning = false;
+				break;
+		}
+	}
+	
+	public static void barracks()
+	{
+		Stuff.CurrentLocationNumber = 4;
+		
+		
 	}
 }
