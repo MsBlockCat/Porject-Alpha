@@ -2066,7 +2066,7 @@ public class ASCII
 		System.out.println("|    \\___         _/    /______  ___                          ");
 		System.out.println("\\    U   \\______/      {}_____{}___|    *            ");
 		System.out.println(" |>   U                   |______  ___            ");
-		System.out.println(" |>   U      @ )==D     {} ______{}___|          ");
+		System.out.println(" |>   U      @ )==>     {} ______{}___|          ");
 		System.out.println(" |>   U       o-(---      |_____  ___       *  ");
 		System.out.println(" |>   U        <U:K     {} _____{}___|            ");
 		System.out.println(" |>   U    ________       |___  ___    *        ");
