@@ -2043,8 +2043,8 @@ public class ASCII
 		System.out.println(" |~~~~~~~/                ruins                  |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
 		System.out.println(" |~~/               {}    _V \\   []              |_|_|I|_|_|         |   ");
-		System.out.println(" |                  [|   /    \\  {}             ~~~~~~#~~~~~~        |   ");
-		System.out.println(" |                  []  /\\     \\                     #               |   ");
+		System.out.println(" |                  [|   /    \\  {}              ~~~~~~#~~~~~~       |   ");
+		System.out.println(" |                  []  /\\     \\                       #             |   ");
 		System.out.println(" |                                                                   |   ");
 		System.out.println(" |                                        barracks                   |   ");
 		System.out.println(" |             bazar                      _______                    |   ");
@@ -2060,20 +2060,20 @@ public class ASCII
 	
 	public static void LuckyGauntlet()
 	{
-		System.out.println("                                 ");
-		System.out.println("                                 ");
-		System.out.println(" ____                                ");
-		System.out.println("|    \\____                             ");
-		System.out.println("\\    U                             ");
-		System.out.println(" |    U                            ");
-		System.out.println(" |    U                            ");
-		System.out.println(" |    U                            ");
-		System.out.println(" |    U                            ");
-		System.out.println(" |    U                            ");
-		System.out.println(" /    U____                            ");
-		System.out.println("|____/                                 ");
-		System.out.println("                                 ");
-		System.out.println("                                 ");
+		System.out.println("                   *              ");
+		System.out.println("      *                ________            ");
+		System.out.println(" ____     *          /  ______|     *            ");
+		System.out.println("|    \\___         _/    /___________                          ");
+		System.out.println("\\    U   \\______/        __________|    *            ");
+		System.out.println(" |>   U                   |___________            ");
+		System.out.println(" |>   U                    ___________|          ");
+		System.out.println(" |>   U                   |__________       *  ");
+		System.out.println(" |>   U                    __________|            ");
+		System.out.println(" |>   U    ________       |________    *        ");
+		System.out.println(" /    U___/        \\_______________|             ");
+		System.out.println("|____/  *                               ");
+		System.out.println("                          *       ");
+		System.out.println("              *                   ");
 	}
 	
 	//Goat Branch
