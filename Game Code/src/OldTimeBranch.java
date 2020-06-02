@@ -30,7 +30,7 @@ public class OldTimeBranch
 		if (Stuff.StoryBeginning == true)
 		{
 			Stuff.TypeLine("You travel back to the year 1253.");
-			Stuff.TypeLine("It seems you are in the middle of a Bazar. There are women and children begging for food,");
+			Stuff.TypeLine("It seems you are in the middle of a bazar. There are women and children begging for food,");
 			Stuff.TypeLine("Others yelling out prices for food and goods (much lower than modern day you notice),");
 			Stuff.TypeLine("And some old man who seems to be dead?");
 			Stuff.Wait(3000);
@@ -42,7 +42,7 @@ public class OldTimeBranch
 			ASCII.OldTimeMap1();
 			Stuff.HitEnter(1);
 			Stuff.Wait(2000);
-			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passer by ask.");
+			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passerby ask.");
 			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "visit the harbor", "search the castle"))
 			{
 				case "explore the bazar":
