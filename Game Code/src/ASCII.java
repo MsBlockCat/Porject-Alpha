@@ -2061,16 +2061,16 @@ public class ASCII
 	public static void LuckyGauntlet()
 	{
 		System.out.println("                   *              ");
-		System.out.println("      *                ________            ");
-		System.out.println(" ____     *          /  ______|     *            ");
-		System.out.println("|    \\___         _/    /___________                          ");
-		System.out.println("\\    U   \\______/        __________|    *            ");
-		System.out.println(" |>   U                   |___________            ");
-		System.out.println(" |>   U                    ___________|          ");
-		System.out.println(" |>   U                   |__________       *  ");
-		System.out.println(" |>   U                    __________|            ");
-		System.out.println(" |>   U    ________       |________    *        ");
-		System.out.println(" /    U___/        \\_______________|             ");
+		System.out.println("      *                ___  __            ");
+		System.out.println(" ____     *          /   _{}__|     *            ");
+		System.out.println("|    \\___         _/    /______  ___                          ");
+		System.out.println("\\    U   \\______/      {}_____{}___|    *            ");
+		System.out.println(" |>   U                   |______  ___            ");
+		System.out.println(" |>   U      @ )==D     {} ______{}___|          ");
+		System.out.println(" |>   U       o-(---      |_____  ___       *  ");
+		System.out.println(" |>   U        <U:K     {} _____{}___|            ");
+		System.out.println(" |>   U    ________       |___  ___    *        ");
+		System.out.println(" /    U___/        \\____{}___{}___|             ");
 		System.out.println("|____/  *                               ");
 		System.out.println("                          *       ");
 		System.out.println("              *                   ");
