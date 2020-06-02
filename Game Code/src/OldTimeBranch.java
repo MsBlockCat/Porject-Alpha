@@ -71,6 +71,8 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 2;
 		
 		Stuff.TypeLine("Whilst perusing the shops, some infinity gauntlet esque glove catches your eye.");
+		ASCII.LuckyGauntlet();
+		Stuff.Wait(1000);
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
 		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is\"");
 		Stuff.TypeLine("\" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
