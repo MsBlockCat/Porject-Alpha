@@ -113,5 +113,7 @@ public class OldTimeBranch
 	public static void Bazar()
 	{
 		Stuff.CurrentLocationNumber = 3;
+		
+		Stuff.TypeLine("");
 	}
 }
