@@ -138,6 +138,8 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 3;
 		
 		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search in a different part of the kingdom.");
+		Stuff.Wait(500);
+		ASCII.OldTimeMapBazar();
 		switch (Stuff.PlayerChoice("check out barracks", "visit the harbor", "search the castle"))
 		{
 			case "check out the barracks":
@@ -157,6 +159,21 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 4;
 		
+		Stuff.TypeLine("After the walk from the bazar you sit in the shade of a tree and hear something...");
+		Stuff.Wait(500);
+		Stuff.TypeLine("Something loud... and close...");
+		Stuff.Wait(500);
+		Stuff.TypeLine("Oh my you are very hungry. You realize that the noise is coming from you. YOUR STOMACH.");
+		Stuff.TypeLine("You remember you brought some snacks. Good thing you thought ahead");
+		Stuff.TypeLine("What are you going to eat out of your array of snacks");
+		switch (Stuff.PlayerChoice("chocolate candy bar", "chocolate candy bar", "chocolate candy bar"))
+		{
+			case "chocolate candy bar":
+				Stuff.TypeLine("You realize that you only have one chocolate candy bar and that you said the same thing 3 times");
+				Stuff.TypeLine("You decide to eat is anyway because you are hungary.");
+				break;
+		}
 		
+		Stuff.TypeLine("");
 	}
 }
