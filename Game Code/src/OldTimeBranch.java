@@ -83,22 +83,23 @@ public class OldTimeBranch
 			case "spin":
 				Stuff.RoulletteSpin = true;
 				
-				if (Stuff.RandomInt(1, 6) != 5)
+				switch (Stuff.RandomInt(1, 6))
 				{
-					Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
-					Stuff.TypeLine("\"You are gonna need it on your quest for that assassin!\"");
-					Stuff.TypeLine("The sword is made of emeralds which gives it a magnificent green glow in the sun.");
-					Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
-					Stuff.HasEmeraldSword = true;
-					Bazar();
-				}
-				
-				else
-				{
-					Stuff.TypeLine("\"Aren't you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assassin.\"");
-					Stuff.TypeLine("He wishes you good luck and you go on your way.");
-					Stuff.HasLuckyGauntlet = true;
-					Bazar();
+					case 5:
+						Stuff.TypeLine("\"Aren't you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assassin.\"");
+						Stuff.TypeLine("He wishes you good luck and you go on your way.");
+						Stuff.HasLuckyGauntlet = true;
+						Bazar();
+						break;
+						
+					default:
+						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
+						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin!\"");
+						Stuff.TypeLine("The sword is made of emeralds which gives it a magnificent green glow in the sun.");
+						Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
+						Stuff.HasEmeraldSword = true;
+						Bazar();
+						break;
 				}
 				break;
 				
@@ -121,6 +122,6 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 3;
 		
-		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search elsewhere");
+		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search");
 	}
 }
