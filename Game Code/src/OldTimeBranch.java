@@ -112,6 +112,11 @@ public class OldTimeBranch
 		}
 	}
 	
+	public static void barracks()
+	{
+		
+	}
+	
 	public static void Bazar()
 	{
 		Stuff.CurrentLocationNumber = 3;
