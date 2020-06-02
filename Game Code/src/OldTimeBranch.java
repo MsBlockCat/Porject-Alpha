@@ -121,6 +121,6 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 3;
 		
-		Stuff.TypeLine("");
+		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search elsewhere");
 	}
 }
