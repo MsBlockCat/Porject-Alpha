@@ -357,7 +357,7 @@ public class GoatBranch
 		{
 		case "yes":
 			Stuff.typeln ("\"Good choice,\" Apu says. \"Well, then...");
-			Stuff.typeln ("Back to the store with you.");
+			Stuff.typeln ("Back to the store with you.\"");
 			Stuff.Wait(1000);
 			GroceryStore();
 			break;
