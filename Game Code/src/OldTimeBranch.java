@@ -239,6 +239,21 @@ public class OldTimeBranch
 					}	
 					else
 					{
+						Stuff.TypeLine("One of the soldiers approaches you and the rest form a ring for the dule. The man introduces himself as Harold. What a cool name");
+						Stuff.TypeLine("One of the knights starts to count down.");
+						Stuff.TypeLine("Five.");
+						Stuff.Wait(650);
+						Stuff.TypeLine("Since you dont have a sword to combat Harold, you look around for something to use.");
+						Stuff.TypeLine("Some of the other knights join in");
+						Stuff.TypeLine("Four.");
+						Stuff.Wait(650);
+						Stuff.TypeLine("even more");
+						Stuff.TypeLine("Three!");
+						Stuff.Wait(650);
+						Stuff.TypeLine("You find a rock.");
+						Stuff.TypeLine("more");
+						Stuff.TypeLine("Two!!");
+						Stuff.Wait(650);
 						Stuff.TypeLine("");
 					}
 				}
