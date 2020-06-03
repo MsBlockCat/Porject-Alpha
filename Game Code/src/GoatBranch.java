@@ -341,12 +341,8 @@ public class GoatBranch
 				break;
 			}
 			break;
-		case "pull it":
-			Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
-			Stuff.typeln("Everything fades to black...");
-			Stuff.ApuNerfedYou = true;
-			Stuff.Wait(1500);
-			ModernBranch.GoToModernBranch("Lab2");
+		case "ignore it":
+			//idk yet
 			break;
 		}
 	}
