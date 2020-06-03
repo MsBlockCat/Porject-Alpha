@@ -170,13 +170,26 @@ public class OldTimeBranch
 				break;
 		}
 		
-		Stuff.TypeLine("You finaly make it to the barracks. There are knights sparring out side and others taking group baths in the near by lake.");
+		Stuff.TypeLine("You finally make it to the barracks. There are knights sparring out side and others taking group baths in the near by lake.");
 		Stuff.Wait(200);
 		Stuff.TypeLine("Yuck.");
-		Stuff.TypeLine("\"Hey yuo want to spar with us?\" One of the knights asked");
+		Stuff.TypeLine("\"Hey you want to spar with us?\" One of the knights asked.");
 		switch (Stuff.PlayerChoice("spar", "don't spar"))
 		{
 			case "spar":
+				if (Stuff.HasEmeraldSword = true)
+				{
+					Stuff.TypeLine("Some knight named Haroled walked out of the crowd and all the others made a big ring around the two of you.");
+					Stuff.TypeLine("There was no commentary, only silence and the clashing of swords.");
+					Stuff.Wait(200);
+					Stuff.TypeLine("and the occasional grunt");
+					
+				}
+				else 
+				{
+					if (Stuff.HasLuckyGauntlet = true)
+						
+				}
 				break;
 			case "don't spar":
 				break;
