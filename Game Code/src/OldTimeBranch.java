@@ -197,8 +197,8 @@ public class OldTimeBranch
 					Stuff.Wait(100);
 					Stuff.TypeLine("But with an addition");
 					Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
-					Stuff.TypeLine("\"Hey show me your map and i'll add it for you.\"");
-					Stuff.TypeLine("He makes a quick sketch and boom, a neww location has been added in your search. What joy.");
+					Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
+					Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 					Stuff.TypeLine("Maybe there will be something good there.");
 					Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 				}
@@ -206,8 +206,8 @@ public class OldTimeBranch
 				{
 					if (Stuff.HasLuckyGauntlet = true)
 					{
-						Stuff.TypeLine("Although you do not have a swword, you still feel like you are going to win against whoever you spar against.");
-						Stuff.TypeLine("One of the knights (whose name is Harold you hear someone murmer in the silence) aproaches you from withing the crowd.");
+						Stuff.TypeLine("Although you do not have a sword, you still feel like you are going to win against whoever you spar against.");
+						Stuff.TypeLine("One of the knights (whose name is Harold you hear someone murmur in the silence) approaches you from within the crowd.");
 						Stuff.MetHarold = true;
 						Stuff.TypeLine("\'Good luck and may the best fighter win!\" he states looking confident in himself, but you feel more confident.");
 						Stuff.TypeLine("One of the other knights starts to count down.");
@@ -224,7 +224,7 @@ public class OldTimeBranch
 						Stuff.Wait(650);
 						Stuff.TypeLine("One!!!");
 						Stuff.TypeLine("As Harold lunges toward you, you slip and fall back, kicking a pebble forward.");
-						Stuff.TypeLine("He steps on the pepple and flies back.");
+						Stuff.TypeLine("He steps on the pebble and flies back.");
 						Stuff.TypeLine("You land on some grass, he lands on some gravel.");
 						Stuff.TypeLine("You stand up and rush over to help him up. You stretch out your hand to help him up and surprisingly he takes it,");
 						Stuff.TypeLine("Flashes a smile, and beckons you inside the barracks for a feast with the other knights.");
@@ -232,8 +232,8 @@ public class OldTimeBranch
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition");
 						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
-						Stuff.TypeLine("\"Hey show me your map and i'll add it for you.\"");
-						Stuff.TypeLine("He makes a quick sketch and boom, a neww location has been added in your search. What joy.");
+						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
+						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 						Stuff.TypeLine("Maybe there will be something good there.");
 						Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 					}	
