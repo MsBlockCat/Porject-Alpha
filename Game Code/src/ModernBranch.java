@@ -83,7 +83,10 @@ public class ModernBranch
 				OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
 				break;
 			case "1954":
-				GoatBranch.GoToGoatBranch("RuralAustralia1"); //make an if thing for you to go different places depending if apu killed you
+				if (Stuff.ApuNerfedYou == false)
+					GoatBranch.GoToGoatBranch("RuralAustralia1");
+				else
+					GoatBranch.GoToGoatBranch("ApuRevenge");
 				break;
 			case "2030":
 				SpaceBranch.GoToSpaceBranch("Launchpad1");

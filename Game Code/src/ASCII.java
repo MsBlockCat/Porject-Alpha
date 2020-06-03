@@ -2115,4 +2115,50 @@ public class ASCII
 		System.out.println("             \\        \\      \\      \\      \\         /                     ");
 		System.out.println("              \\_____________________________________/                      ");
 	}
+	
+	public static void TreeMessage()
+	{
+		System.out.println("             /                               /                               ");
+		System.out.println("            /              |                /                               ");
+		System.out.println("           /       |                       /                                 ");
+		System.out.println("           |                      |        |                                 ");
+		System.out.println("           |   - - - - - - - - - - - -     |                                 ");
+		System.out.println("           |   |   N               *  |    |                                 ");
+		System.out.println("           |          F                    |                                 ");
+		System.out.println("           |   |         O            |    |                                 ");
+		System.out.println("           |                O              |                                 ");
+		System.out.println("           /   | *             C      |    /                                  ");
+		System.out.println("          |    - - - - - - - - - - - -    |                                 ");
+		System.out.println("          |                      |        |                                 ");
+		System.out.println("          |         |                     |                                 ");
+		System.out.println("          |                               |                                 ");
+		System.out.println("         /     /             \\             \\                                ");
+		System.out.println("        /    /                  \\           \\                                 ");
+		System.out.println("      _/        /                      \\      \\_                                ");
+	}
+	
+	public static void BulletinBoard()
+	{
+		System.out.println("      ----------------------------------------------------------------                               ");
+		System.out.println("      |   --------------------------------------------------------   |                    ");
+		System.out.println("      |   |      _____________         _  _   ___  _              |  |          ");
+		System.out.println("      |   |     /             \\       | \\| | |___ | \\             |  |           ");
+		System.out.println("      |   |     |-( O )-( O )-|       |    | |___ |_/             |  |           ");
+		System.out.println("      |   |     |      U      |       |_|\\_| is cool              |  |           ");
+		System.out.println("      |   |     |   /=====\\   |                                   |  |           ");
+		System.out.println("      |   |     |  \\_______/  |                                   |  |           ");                    
+		System.out.println("      |   |    /               \\                                  |  |           ");
+		System.out.println("      |   |                                                       |  |           ");
+		System.out.println("      |   |     NED IS WATCHING                                   |  |           ");
+		System.out.println("      |   |                                  yay ned! :)          |  |           ");
+		System.out.println("      |   |                                                       |  |           ");
+		System.out.println("      |   |                                                       |  |           ");
+		System.out.println("      |   |            reminders                                  |  |           ");
+		System.out.println("      |   |                -report anti-Ned activity              |  |           ");
+		System.out.println("      |   |                -goat hunting season has begun         |  |           ");
+		System.out.println("      |   |                -Ned is watching                       |  |           ");
+		System.out.println("      |   |                                                       |  |           ");
+		System.out.println("      |   --------------------------------------------------------   |           ");
+		System.out.println("      ----------------------------------------------------------------                              ");
+	}
 }

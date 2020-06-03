@@ -34,6 +34,7 @@ public class Stuff
 	/* Add to SaveVersion 8 */ public static boolean SeenRuins = false;
 	/* Add to SaveVersion 8 */ public static boolean RoulletteSpin = false;
 	/* Add to SaveVersion 8 */ public static boolean HasEmeraldSword = false;
+	/* Add to SaveVersion 8 */ public static boolean NedLoreAcquried = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
