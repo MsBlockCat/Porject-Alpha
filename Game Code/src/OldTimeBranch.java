@@ -170,6 +170,9 @@ public class OldTimeBranch
 				break;
 		}
 		
-		Stuff.TypeLine("");
+		Stuff.TypeLine("You finaly make it to the barracks. There are soldiers sparring out side and others taking group baths in the near by lake.");
+		Stuff.Wait(200);
+		Stuff.TypeLine("Yuck.");
+		
 	}
 }
