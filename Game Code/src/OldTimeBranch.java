@@ -180,6 +180,7 @@ public class OldTimeBranch
 				if (Stuff.HasEmeraldSword = true)
 				{
 					Stuff.TypeLine("Some knight named Haroled walked out of the crowd and all the others made a big ring around the two of you.");
+					Stuff.MetHarold = true;
 					Stuff.TypeLine("There was no commentary, only silence and the clashing of swords.");
 					Stuff.Wait(200);
 					Stuff.TypeLine("and the occasional grunt.");
@@ -192,6 +193,13 @@ public class OldTimeBranch
 					Stuff.TypeLine("All the knights start to talk to you asking questions like \"Where are you from?\" \"where did you get that sword?\"");
 					Stuff.TypeLine("You tell them that you got it from an old man who runs a roullette shop in the bazar.");
 					Stuff.HelpingHand = true;
+					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
+					Stuff.Wait(100);
+					Stuff.TypeLine("But with an addition");
+					Stuff.TypeLine("You ask him what he is adding and he sais something about runes, in the middle of the kingdom at that.");
+					Stuff.TypeLine("\"Hey show me your map and ill add it for you.\"");
+					Stuff.TypeLine("He makes a quick sketch and boom, a neww location has been added in your search. What joy.");
+					Stuff.TypeLine("Maybe there will be something good there.");
 				}
 				else 
 				{
