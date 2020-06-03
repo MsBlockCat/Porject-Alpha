@@ -19,7 +19,7 @@ public class OldTimeBranch
 				break;
 			case "4":
 			case "Barracks":
-				barracks();
+				Barracks();
 				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
@@ -80,7 +80,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
 		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is\"");
 		Stuff.TypeLine("\" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
-		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, and if the arrow lands on, what say you, the number 5\"");
+		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5\"");
 		Stuff.TypeLine("\"You get the \"Lucky Gauntlet\", sounds fair? Well it doesn't matter because I make the rules!\"");
 		switch (Stuff.PlayerChoice("spin", "don't spin"))
 		{
@@ -97,19 +97,21 @@ public class OldTimeBranch
 						break;
 					
 					case 6:
-						Stuff.TypeLine("\"Ohh so close my friend but no cigar, still, take this\"");
+						Stuff.TypeLine("\"Ohh so close my friend: you got a 6! But no cigar, still, take this.\"");
 						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
 						Stuff.TypeLine("\"Everyone is overjoyed that someone has taken the deed of locating this assasin. Our poor king must have been shook after the attack\"");
-						Stuff.TypeLine("As you wish eachother good bye, you still marvel at the sword in all its beautiful splendor.");
+						Stuff.TypeLine("As you wish each other good bye, you still marvel at the sword in all its beautiful splendor.");
 						Stuff.HasEmeraldSword = true;
+						Bazar();
 						break;
 						
 					case 4:
-						Stuff.TypeLine("\"Ohh so close my friend but no cigar, still, take this\"");
+						Stuff.TypeLine("\"Ohh so close my friend: a 4! But no cigar, still, take this.\"");
 						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
 						Stuff.TypeLine("\"Everyone is overjoyed that someone has taken the deed of locating this assasin. Our poor king must have been shook after the attack\"");
-						Stuff.TypeLine("As you wish eachother good bye, you still marvel at the sword in all its beautiful splendor.");
+						Stuff.TypeLine("As you wish each other good bye, you still marvel at the sword in all its beautiful splendor.");
 						Stuff.HasEmeraldSword = true;
+						Bazar();
 						break;
 						
 					default:
@@ -143,19 +145,16 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("check out barracks", "visit the harbor", "search the castle"))
 		{
 			case "check out the barracks":
-				Stuff.StoryBeginning = false;
-				barracks();
+				Barracks();
 				break;
 			case "visit the harbor":
-				Stuff.StoryBeginning = false;
 				break;
 			case "search the castle":
-				Stuff.StoryBeginning = false;
 				break;
 		}
 	}
 	
-	public static void barracks()
+	public static void Barracks()
 	{
 		Stuff.CurrentLocationNumber = 4;
 		
@@ -164,13 +163,13 @@ public class OldTimeBranch
 		Stuff.TypeLine("Something loud... and close...");
 		Stuff.Wait(500);
 		Stuff.TypeLine("Oh my you are very hungry. You realize that the noise is coming from you. YOUR STOMACH.");
-		Stuff.TypeLine("You remember you brought some snacks. Good thing you thought ahead");
-		Stuff.TypeLine("What are you going to eat out of your array of snacks");
+		Stuff.TypeLine("You remember you brought some snacks. Good thing you thought ahead!");
+		Stuff.TypeLine("What are you going to eat out of your array of snacks?");
 		switch (Stuff.PlayerChoice("chocolate candy bar", "chocolate candy bar", "chocolate candy bar"))
 		{
 			case "chocolate candy bar":
-				Stuff.TypeLine("You realize that you only have one chocolate candy bar and that you said the same thing 3 times");
-				Stuff.TypeLine("You decide to eat is anyway because you are hungary.");
+				Stuff.TypeLine("You realize that you only have one chocolate candy bar and that you said the same thing 3 times!");
+				Stuff.TypeLine("You decide to eat it anyway because you are hungry.");
 				break;
 		}
 		
