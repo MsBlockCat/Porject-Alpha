@@ -61,15 +61,30 @@ public class SpaceBranch
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
 		}
 		
-		if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
+		if (Stuff.TempInstantText == false)
 		{
-			Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
-			Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
-			Stuff.TimeinatorWorks = false;
+			if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
+			{
+				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
+				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
+				Stuff.TimeinatorWorks = false;
+			}
+			else
+			{
+				Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
+			}
 		}
 		else
 		{
-			Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
+			if (Stuff.TimeinatorWorks == true)
+			{
+				Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
+			}
+			else
+			{
+				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
+				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
+			}
 		}
 		
 		if (Stuff.StoryBeginning == true)
