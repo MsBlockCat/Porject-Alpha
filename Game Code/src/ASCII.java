@@ -2022,9 +2022,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|  X   |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |               ^                                  /7   /(          |   ");
-		System.out.println(" |              you                                                  |   ");
+		System.out.println(" |        |=|=|  X   |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |               ^                     /~~|         /7   /(          |   ");
+		System.out.println(" |              you                   |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2080,9 +2080,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |                                                  /7   /(          |   ");
-		System.out.println(" |                                                                   |   ");
+		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |                                     /~~|         /7   /(          |   ");
+		System.out.println(" |                                    |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2109,9 +2109,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |                                                  /7   /(          |   ");
-		System.out.println(" |                                                                   |   ");
+		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |                                     /~~|         /7   /(          |   ");
+		System.out.println(" |                                    |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2138,9 +2138,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|  X   |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |               ^                                  /7   /(          |   ");
-		System.out.println(" |              you                                                  |   ");
+		System.out.println(" |        |=|=|  X   |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |               ^                     /~~|         /7   /(          |   ");
+		System.out.println(" |              you                   |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2196,9 +2196,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |                                                  /7   /(          |   ");
-		System.out.println(" |                                                                   |   ");
+		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |                                     /~~|         /7   /(          |   ");
+		System.out.println(" |                                    |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2225,9 +2225,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |                                                  /7   /(          |   ");
-		System.out.println(" |                                                                   |   ");
+		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
+		System.out.println(" |                                     /~~|         /7   /(          |   ");
+		System.out.println(" |                                    |~~~|                          |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
@@ -2254,9 +2254,9 @@ public class ASCII
 		System.out.println(" |               __     (                | O O  O|                   |   ");
 		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
 		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^             /0)- \\0-         |   ");
-		System.out.println(" |                                                  /7   /(          |   ");
-		System.out.println(" |                                                                   |   ");
+		System.out.println(" |        |=|=|      |[]|             ^  __         /0)- \\0-         |   ");
+		System.out.println(" |                                      /~~|        /7   /(          |   ");
+		System.out.println(" |                                     |~~~|                         |   ");
 		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
