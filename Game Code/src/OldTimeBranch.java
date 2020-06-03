@@ -170,7 +170,7 @@ public class OldTimeBranch
 				break;
 		}
 		
-		Stuff.TypeLine("You finally make it to the barracks. There are knights sparring out side and others taking group baths in the near by lake.");
+		Stuff.TypeLine("You finally make it to the barracks. There are knights sparring outside and others taking group baths in the near by lake.");
 		Stuff.Wait(200);
 		Stuff.TypeLine("Yuck.");
 		Stuff.TypeLine("\"Hey you want to spar with us?\" One of the knights asked.");
@@ -182,13 +182,27 @@ public class OldTimeBranch
 					Stuff.TypeLine("Some knight named Haroled walked out of the crowd and all the others made a big ring around the two of you.");
 					Stuff.TypeLine("There was no commentary, only silence and the clashing of swords.");
 					Stuff.Wait(200);
-					Stuff.TypeLine("and the occasional grunt");
-					
+					Stuff.TypeLine("and the occasional grunt.");
+					Stuff.TypeLine("The battle went on for quite some time that even some of the other soldiers left.");
+					Stuff.TypeLine("Even Harold seemed ot be getting tired but looks can be decieving.");
+					Stuff.TypeLine("With one final slash, your sword was knocked out of yuor hand, implanting itself a couple feet from you.");
+					Stuff.TypeLine("\"Wow you gave me a good fight\" Harold stated stretching out a hand. You grab it and he pulls you up.");
+					Stuff.TypeLine("He also gets your sword for you. What a nice guy.");
+					Stuff.TypeLine("As you are being escorted into the barracks,");
+					Stuff.TypeLine("All the knights start to talk to you asking questions like \"Where are you from?\" \"where did you get that sword?\"");
+					Stuff.TypeLine("You tell them that you got it from an old man who runs a roullette shop in the bazar.");
+					Stuff.HelpingHand = true;
 				}
 				else 
 				{
 					if (Stuff.HasLuckyGauntlet = true)
-						
+					{
+						Stuff.TypeLine("");
+					}	
+					else
+					{
+						Stuff.TypeLine("");
+					}
 				}
 				break;
 			case "don't spar":
