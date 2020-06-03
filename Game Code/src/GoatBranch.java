@@ -297,7 +297,7 @@ public class GoatBranch
 		Stuff.typeln("Sitting under it, you notice that its trunk has an acronym inscribed in it.");
 		ASCII.TreeMessage();
 		Stuff.Wait(3000);
-		Stuff.typeln("Odd. Perculiar. Yes, it doesn't really make much sense.");
+		Stuff.typeln("Odd. Peculiar. Yes, it doesn't really make much sense.");
 		Stuff.typeln("What ever could it stand for?");
 		Stuff.Wait(500);
 		Stuff.type("You also notice that the letters seem to be a part of a panel. What is your next move?");
