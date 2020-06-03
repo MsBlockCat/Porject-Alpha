@@ -95,7 +95,6 @@ public class OldTimeBranch
 						Stuff.HasLuckyGauntlet = true;
 						Bazar();
 						break;
-					
 					case 6:
 						Stuff.TypeLine("\"Ohh so close my friend: you got a 6! But no cigar, still, take this.\"");
 						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
@@ -104,7 +103,6 @@ public class OldTimeBranch
 						Stuff.HasEmeraldSword = true;
 						Bazar();
 						break;
-						
 					case 4:
 						Stuff.TypeLine("\"Ohh so close my friend: a 4! But no cigar, still, take this.\"");
 						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it");
@@ -113,7 +111,6 @@ public class OldTimeBranch
 						Stuff.HasEmeraldSword = true;
 						Bazar();
 						break;
-						
 					default:
 						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
 						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin! Yes word spreads fast doesnt it.\"");
