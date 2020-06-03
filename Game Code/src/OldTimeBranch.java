@@ -170,9 +170,16 @@ public class OldTimeBranch
 				break;
 		}
 		
-		Stuff.TypeLine("You finaly make it to the barracks. There are soldiers sparring out side and others taking group baths in the near by lake.");
+		Stuff.TypeLine("You finaly make it to the barracks. There are knights sparring out side and others taking group baths in the near by lake.");
 		Stuff.Wait(200);
 		Stuff.TypeLine("Yuck.");
-		
+		Stuff.TypeLine("\"Hey yuo want to spar with us?\" One of the knights asked");
+		switch (Stuff.PlayerChoice("spar", "don't spar"))
+		{
+			case "spar":
+				break;
+			case "don't spar":
+				break;
+		}
 	}
 }
