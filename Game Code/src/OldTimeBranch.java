@@ -179,7 +179,7 @@ public class OldTimeBranch
 			case "spar":
 				if (Stuff.HasEmeraldSword = true)
 				{
-					Stuff.TypeLine("Some knight named Haroled walked out of the crowd and all the others made a big ring around the two of you.");
+					Stuff.TypeLine("Some knight named Harold walked out of the crowd and all the others made a big ring around the two of you.");
 					Stuff.MetHarold = true;
 					Stuff.TypeLine("There was no commentary, only silence and the clashing of swords.");
 					Stuff.Wait(200);
@@ -196,16 +196,46 @@ public class OldTimeBranch
 					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
 					Stuff.Wait(100);
 					Stuff.TypeLine("But with an addition");
-					Stuff.TypeLine("You ask him what he is adding and he sais something about runes, in the middle of the kingdom at that.");
-					Stuff.TypeLine("\"Hey show me your map and ill add it for you.\"");
+					Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+					Stuff.TypeLine("\"Hey show me your map and i'll add it for you.\"");
 					Stuff.TypeLine("He makes a quick sketch and boom, a neww location has been added in your search. What joy.");
 					Stuff.TypeLine("Maybe there will be something good there.");
+					Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 				}
 				else 
 				{
 					if (Stuff.HasLuckyGauntlet = true)
 					{
-						Stuff.TypeLine("");
+						Stuff.TypeLine("Although you do not have a swword, you still feel like you are going to win against whoever you spar against.");
+						Stuff.TypeLine("One of the knights (whose name is Harold you hear someone murmer in the silence) aproaches you from withing the crowd.");
+						Stuff.MetHarold = true;
+						Stuff.TypeLine("\'Good luck and may the best fighter win!\" he states looking confident in himself, but you feel more confident.");
+						Stuff.TypeLine("One of the other knights starts to count down.");
+						Stuff.TypeLine("Five.");
+						Stuff.Wait(650);
+						Stuff.TypeLine("Some of the other knights join in");
+						Stuff.TypeLine("Four.");
+						Stuff.Wait(650);
+						Stuff.TypeLine("even more");
+						Stuff.TypeLine("Three!");
+						Stuff.Wait(650);
+						Stuff.TypeLine("more");
+						Stuff.TypeLine("Two!!");
+						Stuff.Wait(650);
+						Stuff.TypeLine("One!!!");
+						Stuff.TypeLine("As Harold lunges toward you, you slip and fall back, kicking a pebble forward.");
+						Stuff.TypeLine("He steps on the pepple and flies back.");
+						Stuff.TypeLine("You land on some grass, he lands on some gravel.");
+						Stuff.TypeLine("You stand up and rush over to help him up. You stretch out your hand to help him up and surprisingly he takes it,");
+						Stuff.TypeLine("Flashes a smile, and beckons you inside the barracks for a feast with the other knights.");
+						Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
+						Stuff.Wait(100);
+						Stuff.TypeLine("But with an addition");
+						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+						Stuff.TypeLine("\"Hey show me your map and i'll add it for you.\"");
+						Stuff.TypeLine("He makes a quick sketch and boom, a neww location has been added in your search. What joy.");
+						Stuff.TypeLine("Maybe there will be something good there.");
+						Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 					}	
 					else
 					{
