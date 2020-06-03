@@ -175,9 +175,43 @@ public class GoatBranch
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedToTree == true) {
-				switch (Stuff.PlayerChoice("ask about ned", "ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask about ned", "ask anything hehe", "ask to leave"))
+			{
+			case "ask about ned":
+				Stuff.typeln("\"Who is Ned?\" you ask politely.");
+				Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
+				Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
+				Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
+				Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
+				Stuff.typeln("You back towards the door.");
+				Stuff.typeln("\"Praise Ned! Praise Ned!\"");
+				Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
+				Stuff.NedLoreAcquired = true;
+				Stuff.typeln("Where to now...");
+				Crossroads();
+				break;
+			case "ask anything hehe":
+				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
+				Stuff.typeln("Everything fades to black...");
+				Stuff.ApuNerfedYou = true;
+				Stuff.Wait(1500);
+				ModernBranch.GoToModernBranch("Lab2");
+				break;
+			case "ask to leave":
+				Stuff.typeln("\"Mr. Apu, sir?\" you ask.\"");
+				Stuff.typeln("Apu looks up.");
+				Stuff.typeln("\"May I leave the store?\"");
+				Stuff.typeln("\"Yes,\" he says, \"I suppose you can.\"");
+				Stuff.typeln("\"Nice.\" You head for the door, and as you leave, you hear him mutter...");
+				Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
+				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
+				Stuff.typeln("Or maybe you do. Up to you, really.");
+				Stuff.TalkedToTree = true;
+				switch (Stuff.PlayerChoice("go back in", "leave"))
 				{
-				case "ask about ned":
+				case "go back in":
+					Stuff.typeln("You decide that you just need to know what all this is about.");
+					Stuff.typeln("Re-enting the store, you approach the checkout counter.");
 					Stuff.typeln("\"Who is Ned?\" you ask politely.");
 					Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
 					Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
@@ -190,48 +224,14 @@ public class GoatBranch
 					Stuff.typeln("Where to now...");
 					Crossroads();
 					break;
-				case "ask anything hehe":
-					Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
-					Stuff.typeln("Everything fades to black...");
-					Stuff.ApuNerfedYou = true;
-					Stuff.Wait(1500);
-					ModernBranch.GoToModernBranch("Lab2");
+				case "leave":
+					Stuff.typeln("I guess what he said wasn't important then.");
+					Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
+					Stuff.Wait(1000);
+					Crossroads();
 					break;
-				case "ask to leave":
-					Stuff.typeln("\"Mr. Apu, sir?\" you ask.\"");
-					Stuff.typeln("Apu looks up.");
-					Stuff.typeln("\"May I leave the store?\"");
-					Stuff.typeln("\"Yes,\" he says, \"I suppose you can.\"");
-					Stuff.typeln("\"Nice.\" You head for the door, and as you leave, you hear him mutter...");
-					Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
-					Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
-					Stuff.typeln("Or maybe you do. Up to you, really.");
-					Stuff.TalkedToTree = true;
-					switch (Stuff.PlayerChoice("go back in", "leave"))
-					{
-					case "go back in":
-						Stuff.typeln("You decide that you just need to know what all this is about.");
-						Stuff.typeln("Re-enting the store, you approach the checkout counter.");
-						Stuff.typeln("\"Who is Ned?\" you ask politely.");
-						Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
-						Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
-						Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
-						Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
-						Stuff.typeln("You back towards the door.");
-						Stuff.typeln("\"Praise Ned! Praise Ned!\"");
-						Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-						Stuff.NedLoreAcquired = true;
-						Stuff.typeln("Where to now...");
-						Crossroads();
-						break;
-					case "leave":
-						Stuff.typeln("I guess what he said wasn't important then.");
-						Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
-						Stuff.Wait(1000);
-						Crossroads();
-						break;
-					}
-					break;
+				}
+				break;
 			}
 		}
 		else {
@@ -279,7 +279,7 @@ public class GoatBranch
 					break;
 				}
 				break;
-		}
+			}
 		}
 	}
 	
