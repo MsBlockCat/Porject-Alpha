@@ -27,14 +27,14 @@ public class Stuff
 	public static boolean HasPorjectAlpha = false;
 	public static boolean HasLuckyGauntlet = false;
 	public static boolean TimeinatorWorks = true;
-	public static boolean TalkedtoTree = false;
+	public static boolean TalkedToTree = false;
 	public static int FavoriteGame = 0;
 	public static boolean FoundTrapdoor = false;
 	public static boolean ApuNerfedYou = false;
 	/* Add to SaveVersion 8 */ public static boolean SeenRuins = false;
 	/* Add to SaveVersion 8 */ public static boolean RoulletteSpin = false;
 	/* Add to SaveVersion 8 */ public static boolean HasEmeraldSword = false;
-	/* Add to SaveVersion 8 */ public static boolean NedLoreAcquried = false;
+	/* Add to SaveVersion 8 */ public static boolean NedLoreAcquired = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -428,7 +428,7 @@ public class Stuff
 			/* Line 10 */ SaveFileWriter.write(BooleanToInt(HasPorjectAlpha) + "\n");
 			/* Line 11 */ SaveFileWriter.write(BooleanToInt(HasLuckyGauntlet) + "\n");
 			/* Line 12 */ SaveFileWriter.write(BooleanToInt(TimeinatorWorks) + "\n");
-			/* Line 13 */ SaveFileWriter.write(BooleanToInt(TalkedtoTree) + "\n");
+			/* Line 13 */ SaveFileWriter.write(BooleanToInt(TalkedToTree) + "\n");
 			/* Line 14 */ SaveFileWriter.write(FavoriteGame + "\n");
 			/* Line 15 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
 			/* Line 16 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
@@ -602,11 +602,11 @@ public class Stuff
 						}
 						if (FileSaveVersion >= 5)
 						{
-						/* File Line 11 | 12 | 13 */ TalkedtoTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 11 | 12 | 13 */ TalkedToTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
-							TalkedtoTree = false;
+							TalkedToTree = false;
 						}
 						if (FileSaveVersion >= 7)
 						{

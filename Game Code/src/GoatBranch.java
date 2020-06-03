@@ -39,9 +39,11 @@ public class GoatBranch
 			case "9":
 			case "Town":
 				Town();
+				break;
 			case "10":
-			case "CrossRoads":
-				CrossRoads();
+			case "Crossroads":
+				Crossroads();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -151,7 +153,7 @@ public class GoatBranch
 			Stuff.HitEnter(2);
 			Stuff.Wait(5000);
 			Stuff.typeln("Well... either way, time to climb the mountain I suppose.");
-			Stuff.TalkedtoTree = true;
+			Stuff.TalkedToTree = true;
 			break;
 		}
 		
@@ -172,7 +174,7 @@ public class GoatBranch
 		Stuff.typeln("*shopping*");
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
-		if (Stuff.TalkedtoTree == true) {
+		if (Stuff.TalkedToTree == true) {
 				switch (Stuff.PlayerChoice("ask about ned", "ask anything hehe", "ask to leave"))
 				{
 				case "ask about ned":
@@ -184,9 +186,9 @@ public class GoatBranch
 					Stuff.typeln("You back towards the door.");
 					Stuff.typeln("\"Praise Ned! Praise Ned!\"");
 					Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-					Stuff.NedLoreAcquried = true;
+					Stuff.NedLoreAcquired = true;
 					Stuff.typeln("Where to now...");
-					CrossRoads();
+					Crossroads();
 					break;
 				case "ask anything hehe":
 					Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
@@ -204,7 +206,7 @@ public class GoatBranch
 					Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
 					Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
 					Stuff.typeln("Or maybe you do. Up to you, really.");
-					Stuff.TalkedtoTree = true;
+					Stuff.TalkedToTree = true;
 					switch (Stuff.PlayerChoice("go back in", "leave"))
 					{
 					case "go back in":
@@ -218,15 +220,15 @@ public class GoatBranch
 						Stuff.typeln("You back towards the door.");
 						Stuff.typeln("\"Praise Ned! Praise Ned!\"");
 						Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-						Stuff.NedLoreAcquried = true;
+						Stuff.NedLoreAcquired = true;
 						Stuff.typeln("Where to now...");
-						CrossRoads();
+						Crossroads();
 						break;
 					case "leave":
 						Stuff.typeln("I guess what he said wasn't important then.");
 						Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
 						Stuff.Wait(1000);
-						CrossRoads();
+						Crossroads();
 						break;
 					}
 					break;
@@ -248,10 +250,10 @@ public class GoatBranch
 				Stuff.typeln("\"May I leave the store?\"");
 				Stuff.typeln("\"Yes,\" he says, \"I suppose you can.\"");
 				Stuff.typeln("\"Nice.\" You head for the door, and as you leave, you hear him mutter...");
-				Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
+				Stuff.typeln("\"...Praise Ned. Ned is cool. Praise Ned.\"");
 				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
 				Stuff.typeln("Or maybe you do. Up to you, really.");
-				Stuff.TalkedtoTree = true;
+				Stuff.TalkedToTree = true;
 				switch (Stuff.PlayerChoice("go back in", "leave"))
 				{
 				case "go back in":
@@ -265,15 +267,15 @@ public class GoatBranch
 					Stuff.typeln("You back towards the door.");
 					Stuff.typeln("\"Praise Ned! Praise Ned!\"");
 					Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-					Stuff.NedLoreAcquried = true;
+					Stuff.NedLoreAcquired = true;
 					Stuff.typeln("Where to now...");
-					CrossRoads();
+					Crossroads();
 					break;
 				case "leave":
 					Stuff.typeln("I guess what he said wasn't important then.");
 					Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
 					Stuff.Wait(1000);
-					CrossRoads();
+					Crossroads();
 					break;
 				}
 				break;
@@ -389,7 +391,7 @@ public class GoatBranch
 		Stuff.Wait(7000);
 	}
 	
-	public static void CrossRoads() {
+	public static void Crossroads() {
 		Stuff.CurrentLocationNumber = 10;
 		//make this
 	}
