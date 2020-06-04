@@ -298,6 +298,7 @@ public class OldTimeBranch
 				Stuff.Divider();
 				Stuff.TypeLine("The Broken Watch Ending");
 				Stuff.Divider();
+				Stuff.StoryEnding();
 				break;
 		}
 	}
