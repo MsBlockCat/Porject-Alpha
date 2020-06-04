@@ -193,6 +193,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("All the knights start to talk to you asking questions like \"Where are you from?\" \"Where did you get that sword?\"");
 					Stuff.TypeLine("You tell them that you got it from an old man who runs a roullette shop in the bazar.");
 					Stuff.HelpingHand = true;
+					ASCII.CartographyRoom();
 					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
 					Stuff.Wait(100);
 					Stuff.TypeLine("But with an addition");
@@ -228,6 +229,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("You land on some grass, he lands on some gravel.");
 						Stuff.TypeLine("You stand up and rush over to help him up. You stretch out your hand to help him up and surprisingly he takes it,");
 						Stuff.TypeLine(" flashes a smile, and beckons you inside the barracks for a feast with the other knights.");
+						ASCII.CartographyRoom();
 						Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar to yours...");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition.");
@@ -266,6 +268,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("\"Come, join us, it is almost dinner and our little scurmish has made me hungry.\"");
 						Stuff.TypeLine("You realize that you are hungry too. That chocolate bar, although not filling, did taste good.");
 						Stuff.TypeLine("After dinner and some wandering, you come across a dimly lit room.");
+						ASCII.CartographyRoom();
 						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition");

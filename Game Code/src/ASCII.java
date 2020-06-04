@@ -2279,6 +2279,29 @@ public class ASCII
 		System.out.println("              *                   ");
 	}
 	
+	public static void CartographyRoom()
+	{
+		System.out.println("                                                        ");
+		System.out.println("                         .___________________.                              ");
+		System.out.println("                         |    |              |            ");
+		System.out.println("                         |    |              |            ");
+		System.out.println("                         |    |              |            ");
+		System.out.println("_________________        |    |              |            ");
+		System.out.println("| @       <|___<||       |    |              |            ");
+		System.out.println("/ |       []_H_[]|       |    |___________   |            ");
+		System.out.println("    /\\           |       |  @ |          /   |            ");
+		System.out.println(".=.       __     |       |    |_________/|__ |            ");
+		System.out.println("|Y|      |[]|    |       |    |        | | /~|            ");
+		System.out.println("_______()________|       |    |        |  /~ |            ");
+		System.out.println("                         |    |__________/~  |            ");
+		System.out.println("                         |   /__             |            ");
+		System.out.println("                         |  / __      ___    |            ");
+		System.out.println("                         | / /  ____/___     |            ");
+		System.out.println("_________________________|/                  |__________                                     ");
+		System.out.println(" ______ /_____________  /     _____         /         /                   ");
+		System.out.println("       /         /         ______/________        ______                       ");
+	}
+	
 	public static void TimeinatorBroken()
 	{
 		//Totally not a broken Apple Watch
