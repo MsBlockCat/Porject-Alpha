@@ -44,6 +44,14 @@ public class GoatBranch
 			case "Crossroads":
 				Crossroads();
 				break;
+			case "11":
+			case "RightOutsideStore":
+				RightOutsideStore();
+				break;
+			case "12":
+			case "RightOutsideHatch":
+				RightOutsideHatch();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -154,6 +162,7 @@ public class GoatBranch
 			Stuff.Wait(5000);
 			Stuff.typeln("Well... either way, time to climb the mountain I suppose.");
 			Stuff.TalkedToTree = true;
+			//carry on with this
 			break;
 		}
 		
@@ -161,6 +170,7 @@ public class GoatBranch
 	
 	public static void GroceryStore() {
 		Stuff.CurrentLocationNumber = 3;
+		
 		if (Stuff.ApuNerfedYou == false) {
 			Stuff.typeln ("\"Welcome to Stop, Shop, and Roll,\" a familiar man says.");
 			Stuff.typeln("\"Apu?!\" you exclaim. \"Is that you? The famous cashier from the hit sitcom 'The Simpsons'?\"");
@@ -207,30 +217,7 @@ public class GoatBranch
 				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
 				Stuff.typeln("Or maybe you do. Up to you, really.");
 				Stuff.TalkedToTree = true;
-				switch (Stuff.PlayerChoice("go back in", "leave"))
-				{
-				case "go back in":
-					Stuff.typeln("You decide that you just need to know what all this is about.");
-					Stuff.typeln("Re-enting the store, you approach the checkout counter.");
-					Stuff.typeln("\"Who is Ned?\" you ask politely.");
-					Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
-					Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
-					Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
-					Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
-					Stuff.typeln("You back towards the door.");
-					Stuff.typeln("\"Praise Ned! Praise Ned!\"");
-					Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-					Stuff.NedLoreAcquired = true;
-					Stuff.typeln("Where to now...");
-					Crossroads();
-					break;
-				case "leave":
-					Stuff.typeln("I guess what he said wasn't important then.");
-					Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
-					Stuff.Wait(1000);
-					Crossroads();
-					break;
-				}
+				RightOutsideStore();
 				break;
 			}
 		}
@@ -254,30 +241,7 @@ public class GoatBranch
 				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
 				Stuff.typeln("Or maybe you do. Up to you, really.");
 				Stuff.TalkedToTree = true;
-				switch (Stuff.PlayerChoice("go back in", "leave"))
-				{
-				case "go back in":
-					Stuff.typeln("You decide that you just need to know what all this is about.");
-					Stuff.typeln("Re-enting the store, you approach the checkout counter.");
-					Stuff.typeln("\"Who is Ned?\" you ask politely.");
-					Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
-					Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
-					Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
-					Stuff.typeln("\"Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
-					Stuff.typeln("You back towards the door.");
-					Stuff.typeln("\"Praise Ned! Praise Ned!\"");
-					Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
-					Stuff.NedLoreAcquired = true;
-					Stuff.typeln("Where to now...");
-					Crossroads();
-					break;
-				case "leave":
-					Stuff.typeln("I guess what he said wasn't important then.");
-					Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
-					Stuff.Wait(1000);
-					Crossroads();
-					break;
-				}
+				RightOutsideStore();
 				break;
 			}
 		}
@@ -312,34 +276,7 @@ public class GoatBranch
 			Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
 			Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
 			Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
-			switch (Stuff.PlayerChoice("go in hatch", "stay"))
-			{
-			case "go in hatch":
-				Stuff.typeln("Into the hatch you go.");
-				Stuff.typeln("You fall for a while.");
-				Stuff.Wait(3000);
-				Stuff.typeln("Luckily, you eventually land.");
-				TreeHatch();
-				break;
-			case "stay":
-				Stuff.typeln("Not a very bright choice, but a choice nonetheless.");
-				Stuff.typeln("A few seconds pass.");
-				Stuff.Wait(1000);
-				Stuff.typeln("The man returns with another. He is holding a NERF gun (registered trademark, NERF or nothing).");
-				Stuff.typeln("\"Bye bye, goat,\" the man says...");
-				Stuff.typeln("But you fight back!");
-				Stuff.typeln("Pow!");
-				Stuff.Wait(500);
-				Stuff.typeln("Slam!");
-				Stuff.Wait(500);
-				Stuff.typeln("Boom!");
-				Stuff.Wait(500);
-				Stuff.typeln("The NERF gun is no match for your horns.");
-				Stuff.typeln("With that out of the way, it's time to go see where they came from...");
-				Stuff.Wait(1000);
-				Town();
-				break;
-			}
+			RightOutsideHatch();
 			break;
 		case "ignore it":
 			//idk yet
@@ -349,6 +286,7 @@ public class GoatBranch
 	
 	public static void ApuRevenge() {
 		Stuff.CurrentLocationNumber = 7;
+		
 		Stuff.typeln("You wake up again...");
 		Stuff.typeln("And you are, once again, a goat...");
 		Stuff.typeln("And standing above you is Apu.");
@@ -374,11 +312,13 @@ public class GoatBranch
 	
 	public static void TreeHatch() {
 		Stuff.CurrentLocationNumber = 8;
+		
 		//make this
 	}
 	
 	public static void Town() {
 		Stuff.CurrentLocationNumber = 9;
+		
 		Stuff.typeln("You wander into town, trying to act nonchalant.");
 		Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 		Stuff.typeln(". . .well, you're a goat.");
@@ -389,6 +329,69 @@ public class GoatBranch
 	
 	public static void Crossroads() {
 		Stuff.CurrentLocationNumber = 10;
+		
 		//make this
+	}
+	
+	public static void RightOutsideStore() {
+		Stuff.CurrentLocationNumber = 11;
+		
+		switch (Stuff.PlayerChoice("go back in", "leave"))
+		{
+		case "go back in":
+			Stuff.typeln("You decide that you just need to know what all this is about.");
+			Stuff.typeln("Re-enting the store, you approach the checkout counter.");
+			Stuff.typeln("\"Who is Ned?\" you ask politely.");
+			Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
+			Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
+			Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
+			Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
+			Stuff.typeln("You back towards the door.");
+			Stuff.typeln("\"Praise Ned! Praise Ned!\"");
+			Stuff.typeln("The door shuts behind you and Apu's praise is silenced.");
+			Stuff.NedLoreAcquired = true;
+			Stuff.typeln("Where to now...");
+			Crossroads();
+			break;
+		case "leave":
+			Stuff.typeln("I guess what he said wasn't important then.");
+			Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
+			Stuff.Wait(1000);
+			Crossroads();
+			break;
+		}
+	}
+	
+	public static void RightOutsideHatch() {
+		Stuff.CurrentLocationNumber = 12;
+		
+		switch (Stuff.PlayerChoice("go in hatch", "stay"))
+		{
+		case "go in hatch":
+			Stuff.typeln("Into the hatch you go.");
+			Stuff.typeln("You fall for a while.");
+			Stuff.Wait(3000);
+			Stuff.typeln("Luckily, you eventually land.");
+			TreeHatch();
+			break;
+		case "stay":
+			Stuff.typeln("Not a very bright choice, but a choice nonetheless.");
+			Stuff.typeln("A few seconds pass.");
+			Stuff.Wait(1000);
+			Stuff.typeln("The man returns with another. He is holding a NERF gun (registered trademark, NERF or nothing).");
+			Stuff.typeln("\"Bye bye, goat,\" the man says...");
+			Stuff.typeln("But you fight back!");
+			Stuff.typeln("Pow!");
+			Stuff.Wait(500);
+			Stuff.typeln("Slam!");
+			Stuff.Wait(500);
+			Stuff.typeln("Boom!");
+			Stuff.Wait(500);
+			Stuff.typeln("The NERF gun is no match for your horns.");
+			Stuff.typeln("With that out of the way, it's time to go see where they came from...");
+			Stuff.Wait(1000);
+			Town();
+			break;
+		}
 	}
 }
