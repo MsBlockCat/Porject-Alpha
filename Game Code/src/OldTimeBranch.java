@@ -21,6 +21,14 @@ public class OldTimeBranch
 			case "Barracks":
 				Barracks();
 				break;
+			case "5":
+			case "ChoiceRoom":
+				ChoiceRoom();
+				break;
+			case "6":
+			case "Ruins":
+				Ruins();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -197,6 +205,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 					Stuff.TypeLine("Maybe there will be something good there.");
 					Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
+					ChoiceRoom();
 				}
 				else 
 				{
@@ -233,6 +242,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 						Stuff.TypeLine("Maybe there will be something good there.");
 						Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
+						ChoiceRoom();
 					}	
 					else
 					{
@@ -271,6 +281,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 						Stuff.TypeLine("Maybe there will be something good there.");
+						Ruins();
 					}
 				}
 				break;
@@ -303,5 +314,19 @@ public class OldTimeBranch
 				Stuff.StoryEnding();
 				break;
 		}
+	}
+	
+	public static void ChoiceRoom()
+	{
+		Stuff.CurrentLocationNumber = 5;
+		
+		Stuff.TypeLine("It seems like the timenator is running out of Porject Alpha.");
+		Stuff.TypeLine("You can travel to one more location before going back home.");
+	}
+	
+	public static void Ruins()
+	{
+		Stuff.CurrentLocationNumber = 6;
+		
 	}
 }
