@@ -17,10 +17,11 @@ public class Stuff
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
+	/* Add to SaveVersion 8 */ public static int LastRandomInt = 0;
+	/* Doesn't need to be saved to save file */ public static boolean TempInstantText = false;
 	public static int TurnCount = 0;
 	public static boolean GameBeginning = true;
 	public static boolean StoryBeginning = true;
-	/* Doesn't need to be saved to save file */ public static boolean TempInstantText = false;
 	public static int CurrentBranchNumber = 0;
 	//The branch is the different classes, or story branches (ie. SpaceBranch), and the location is the area within the story branch (ie. Launchpad)
 	public static int CurrentLocationNumber = 0;
@@ -1010,7 +1011,12 @@ public class Stuff
 	
 	public static int RandomInt(int MinimumInt, int MaximumInt)
 	{
-		return (((int) (Math.random() * ((MaximumInt - MinimumInt) + 1))) + MinimumInt);
+		if (TempInstantText == false)
+		{
+			LastRandomInt = (((int) (Math.random() * ((MaximumInt - MinimumInt) + 1))) + MinimumInt);
+		}
+		
+		return LastRandomInt;
 	}
 	
 	public static void Wait(int Milliseconds)
