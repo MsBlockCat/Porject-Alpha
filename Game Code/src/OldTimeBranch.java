@@ -277,9 +277,9 @@ public class OldTimeBranch
 			case "don't spar":
 				Stuff.TypeLine("\"You don't want to spar?\" It seems like you dook them by surprise. Maybe sparring is normal around here.");
 				Stuff.TypeLine("\"Hey who are you anyway? You don't look like you are from around here.\"");
-				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assasin. All of us were warned about him!\"");
-				Stuff.TypeLine("You claim to not be the assasin and you pull out your wanted poster with the map on it and show it to the knights.");
-				Stuff.TypeLine("Now that you see it, the assasin does look like you. Just... older.");
+				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assassin. All of us were warned about him!\"");
+				Stuff.TypeLine("You claim to not be the assassin and you pull out your wanted poster with the map on it and show it to the knights.");
+				Stuff.TypeLine("Now that you see it, the assassin does look like you. Just... older.");
 				Stuff.TypeLine("\"You are comming with us!\"");
 				Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
 				Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
