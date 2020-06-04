@@ -388,6 +388,11 @@ public class OldTimeBranch
 					Stuff.HitEnter(5);
 					Stuff.StoryEnding();
 				}
+				
+				else
+				{
+					
+				}
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
