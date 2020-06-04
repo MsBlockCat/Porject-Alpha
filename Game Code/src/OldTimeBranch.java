@@ -51,8 +51,9 @@ public class OldTimeBranch
 			Stuff.TypeLine("One who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
 			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
 			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
-			ASCII.OldTimeMapBazar();
 			Stuff.HitEnter(1);
+			ASCII.OldTimeMapBazar();
+			Stuff.HitEnter(2);
 			Stuff.Wait(2000);
 			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passerby ask.");
 			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
@@ -80,7 +81,9 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 2;
 		
 		Stuff.TypeLine("Whilst perusing the shops, some infinity gauntlet esque glove catches your eye.");
+		Stuff.HitEnter(1);
 		ASCII.LuckyGauntlet();
+		Stuff.HitEnter(1);
 		Stuff.Wait(1000);
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
 		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is\"");
@@ -143,7 +146,9 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search in a different part of the kingdom.");
 		Stuff.Wait(500);
+		Stuff.HitEnter(1);
 		ASCII.OldTimeMapBazar();
+		Stuff.HitEnter(2);
 		switch (Stuff.PlayerChoice("check out barracks", "visit the harbor", "search the castle"))
 		{
 			case "check out the barracks":
@@ -196,7 +201,9 @@ public class OldTimeBranch
 					Stuff.TypeLine("All the knights start to talk to you asking questions like \"Where are you from?\" \"Where did you get that sword?\"");
 					Stuff.TypeLine("You tell them that you got it from an old man who runs a roullette shop in the bazar.");
 					Stuff.HelpingHand = true;
+					Stuff.HitEnter(2);
 					ASCII.CartographyRoom();
+					Stuff.HitEnter(2);
 					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
 					Stuff.Wait(100);
 					Stuff.TypeLine("But with an addition");
@@ -233,7 +240,9 @@ public class OldTimeBranch
 						Stuff.TypeLine("You land on some grass, he lands on some gravel.");
 						Stuff.TypeLine("You stand up and rush over to help him up. You stretch out your hand to help him up and surprisingly he takes it,");
 						Stuff.TypeLine(" flashes a smile, and beckons you inside the barracks for a feast with the other knights.");
+						Stuff.HitEnter(2);
 						ASCII.CartographyRoom();
+						Stuff.HitEnter(2);
 						Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar to yours...");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition.");
@@ -273,7 +282,9 @@ public class OldTimeBranch
 						Stuff.TypeLine("\"Come, join us, it is almost dinner and our little scurmish has made me hungry.\"");
 						Stuff.TypeLine("You realize that you are hungry too. That chocolate bar, although not filling, did taste good.");
 						Stuff.TypeLine("After dinner and some wandering, you come across a dimly lit room.");
+						Stuff.HitEnter(2);
 						ASCII.CartographyRoom();
+						Stuff.HitEnter(2);
 						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition");
@@ -320,7 +331,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 5;
 		
-		Stuff.TypeLine("It seems like the timenator is running out of Porject Alpha.");
+		Stuff.TypeLine("It seems like the Timeinator is running out of Porject Alpha.");
 		Stuff.TypeLine("You can travel to one more location before going back home.");
 		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
 		{
