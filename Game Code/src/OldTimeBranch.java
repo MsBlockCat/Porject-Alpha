@@ -365,9 +365,29 @@ public class OldTimeBranch
 				SpaceBranch.GoToSpaceBranch("right building");
 				break;
 			case "right":
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
+				Stuff.TypeLine("As you walk further in to the ruins, the temperature starts to drop and a faint purple glow starts to appear.");
+				Stuff.TypeLine("As the glow gets brighter, the hallway starts to widen and finaly it opens into a massive room with one thing in the middle.");
+				Stuff.TypeLine("The glow was coming from an object on a stand.");
+				Stuff.TypeLine("There are some runes on the stand and you try to decipher them.");
+				if (Stuff.HasLuckyGauntlet = true)
+				{
+					Stuff.TypeLine("Luckily you have the lucky gauntlet.");
+					Stuff.TypeLine("You know what the runes say.");
+					Stuff.TypeLine("Porject Alpha.");
+					Stuff.TypeLine("This is the stuff that Doof talks about and this was the reward for capturing the assassin.");
+					Stuff.TypeLine("You dont know its value but you have no time to think.");
+					Stuff.TypeLine("The Timeinator starts to beep. It is the end of the road.");
+					Stuff.TypeLine("You never caught the assassin.");
+					Stuff.TypeLine("But you accomplished your mission.");
+					Stuff.TypeLine("You grab the Porject Alpha and in an instant, you make it home.");
+					Stuff.TypeLine("Back to the lab.");
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("Mission Success Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
+				}
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
