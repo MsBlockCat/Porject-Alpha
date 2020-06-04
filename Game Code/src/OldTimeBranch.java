@@ -350,9 +350,9 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 6;
 		
-		Stuff.TypeLine("You follow where the map believe it or not, there is indeed a large ruins that resemble a pyramid.");
-		Stuff.TypeLine("There is also two crumbling pillars on either side of the massive entrance");
-		Stuff.TypeLine("When you enter There is a fork in the long sandy hall way.");
+		Stuff.TypeLine("You follow the map to the place the cartophapher added and believe it or not, there is indeed a large ruins that resemble a pyramid.");
+		Stuff.TypeLine("There are also two crumbling pillars on either side of the massive entrance");
+		Stuff.TypeLine("When you enter there is a fork in the long sandy hallway.");
 		Stuff.TypeLine("Do you want to go left right?");
 		switch (Stuff.PlayerChoice("left", "right"))
 		{
@@ -361,7 +361,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("It truly is a peculiar sensation.");
 				Stuff.TypeLine("You feel a rush of wind and your body starts contorting.");
 				Stuff.TypeLine("You are definitely moving.");
-				Stuff.TypeLine("Oh it seems like you stoped, but you are not in the same place, rather, a modern building.");
+				Stuff.TypeLine("Oh it seems like you stopped, but you are not in the same place, rather, a modern building.");
 				SpaceBranch.GoToSpaceBranch("right building");
 				break;
 			case "right":
