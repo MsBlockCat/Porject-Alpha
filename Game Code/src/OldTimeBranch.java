@@ -275,7 +275,7 @@ public class OldTimeBranch
 				}
 				break;
 			case "don't spar":
-				Stuff.TypeLine("\"You don't want to spar?\" It seems like you dook them by surprise. Maybe sparring is normal around here.");
+				Stuff.TypeLine("\"You don't want to spar?\" It seems like you took them by surprise. Maybe sparring is normal around here.");
 				Stuff.TypeLine("\"Hey who are you anyway? You don't look like you are from around here.\"");
 				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assassin. All of us were warned about him!\"");
 				Stuff.TypeLine("You claim to not be the assassin and you pull out your wanted poster with the map on it and show it to the knights.");
