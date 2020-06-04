@@ -52,6 +52,10 @@ public class GoatBranch
 			case "RightOutsideHatch":
 				RightOutsideHatch();
 				break;
+			case "13":
+			case "UpperMountain":
+				UpperMountain();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -113,7 +117,9 @@ public class GoatBranch
 			Stuff.Wait(1500);
 			Stuff.typeln("After a brief walk, you are able to formulate the following map.");
 			Stuff.typeln("It's quite messy, which is owed to your lack of thumbs and fingers.");
+			Stuff.HitEnter(2);
 			ASCII.GoatMap1();
+			Stuff.HitEnter(2);
 			Stuff.Wait(5000);
 			Stuff.typeln("Where ever shall you go? (so many fun locations!)");
 			switch (Stuff.PlayerChoice("mountain", "rock", "grocery store", "nowhere"))
@@ -156,15 +162,16 @@ public class GoatBranch
 			Stuff.typeln("Or so you think. Until he drops a leaf.");
 			Stuff.Wait(1000);
 			Stuff.typeln("You examine it carefully. . .  and find that there is text on it!");
-			Stuff.HitEnter(1);
+			Stuff.HitEnter(2);
 			ASCII.GoatLeaf();
 			Stuff.HitEnter(2);
 			Stuff.Wait(5000);
 			Stuff.typeln("Well... either way, time to climb the mountain I suppose.");
 			Stuff.TalkedToTree = true;
-			//carry on with this
 			break;
 		}
+		Stuff.Wait(1000);
+		UpperMountain();
 		
 	}
 	
@@ -212,11 +219,7 @@ public class GoatBranch
 				Stuff.typeln("Apu looks up.");
 				Stuff.typeln("\"May I leave the store?\"");
 				Stuff.typeln("\"Yes,\" he says, \"I suppose you can.\"");
-				Stuff.typeln("\"Nice.\" You head for the door, and as you leave, you hear him mutter...");
-				Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
-				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
-				Stuff.typeln("Or maybe you do. Up to you, really.");
-				Stuff.TalkedToTree = true;
+				Stuff.typeln("\"Nice.\"");
 				RightOutsideStore();
 				break;
 			}
@@ -236,11 +239,7 @@ public class GoatBranch
 				Stuff.typeln("Apu looks up.");
 				Stuff.typeln("\"May I leave the store?\"");
 				Stuff.typeln("\"Yes,\" he says, \"I suppose you can.\"");
-				Stuff.typeln("\"Nice.\" You head for the door, and as you leave, you hear him mutter...");
-				Stuff.typeln("\"...Praise Ned. Ned is cool. Praise Ned.\"");
-				Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
-				Stuff.typeln("Or maybe you do. Up to you, really.");
-				Stuff.TalkedToTree = true;
+				Stuff.typeln("\"Nice.\"");
 				RightOutsideStore();
 				break;
 			}
@@ -259,7 +258,9 @@ public class GoatBranch
 		
 		Stuff.typeln("A nearby tree provides some shade.");
 		Stuff.typeln("Sitting under it, you notice that its trunk has an acronym inscribed in it.");
+		Stuff.HitEnter(2);
 		ASCII.TreeMessage();
+		Stuff.HitEnter(2);
 		Stuff.Wait(3000);
 		Stuff.typeln("Odd. Peculiar. Yes, it doesn't really make much sense.");
 		Stuff.typeln("What ever could it stand for?");
@@ -268,15 +269,6 @@ public class GoatBranch
 		switch (Stuff.PlayerChoice("push it", "ignore it"))
 		{
 		case "push it":
-			Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
-			Stuff.typeln("The tree starts to make grinding, metallic sounds, and the bark begins to shift.");
-			Stuff.typeln("The sounds are defeaning!");
-			Stuff.typeln("Apparently they drew the attention of the nearby town, since a man suddenly runs up.");
-			Stuff.typeln("He is masked and wears sunglasses, so it's hard to discern his identity, but he looks upset.");
-			Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
-			Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
-			Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
-			RightOutsideHatch();
 			break;
 		case "ignore it":
 			//idk yet
@@ -323,7 +315,9 @@ public class GoatBranch
 		Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 		Stuff.typeln(". . .well, you're a goat.");
 		Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
+		Stuff.HitEnter(2);
 		ASCII.BulletinBoard();
+		Stuff.HitEnter(2);
 		Stuff.Wait(7000);
 	}
 	
@@ -336,9 +330,14 @@ public class GoatBranch
 	public static void RightOutsideStore() {
 		Stuff.CurrentLocationNumber = 11;
 		
+		Stuff.typeln("You head for the door, and as you leave the grocery store, you hear him mutter...");
+		Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
+		Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
+		Stuff.typeln("Or maybe you do. Up to you, really.");
 		switch (Stuff.PlayerChoice("go back in", "leave"))
 		{
 		case "go back in":
+			Stuff.TalkedToTree = true;
 			Stuff.typeln("You decide that you just need to know what all this is about.");
 			Stuff.typeln("Re-enting the store, you approach the checkout counter.");
 			Stuff.typeln("\"Who is Ned?\" you ask politely.");
@@ -354,6 +353,7 @@ public class GoatBranch
 			Crossroads();
 			break;
 		case "leave":
+			Stuff.TalkedToTree = true;
 			Stuff.typeln("I guess what he said wasn't important then.");
 			Stuff.typeln("That's fine, I guess. Gotta leave something for the next playthrough, eh?");
 			Stuff.Wait(1000);
@@ -365,6 +365,15 @@ public class GoatBranch
 	public static void RightOutsideHatch() {
 		Stuff.CurrentLocationNumber = 12;
 		
+		Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
+		Stuff.typeln("The tree starts to make grinding, metallic sounds, and the bark begins to shift.");
+		Stuff.typeln("The sounds are defeaning!");
+		Stuff.typeln("Apparently they drew the attention of the nearby town, since a man suddenly runs up.");
+		Stuff.typeln("He is masked and wears sunglasses, so it's hard to discern his identity, but he looks upset.");
+		Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
+		Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
+		Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
+		RightOutsideHatch();
 		switch (Stuff.PlayerChoice("go in hatch", "stay"))
 		{
 		case "go in hatch":
@@ -393,5 +402,14 @@ public class GoatBranch
 			Town();
 			break;
 		}
+	}
+	
+	public static void UpperMountain() {
+		Stuff.CurrentLocationNumber = 13;
+		
+		Stuff.typeln("And so, you begin your climb.");
+		Stuff.HitEnter(2);
+		ASCII.MountainScene();
+		Stuff.HitEnter(2);
 	}
 }

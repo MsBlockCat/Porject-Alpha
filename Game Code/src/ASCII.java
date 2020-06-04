@@ -2379,4 +2379,27 @@ public class ASCII
 		System.out.println("      |   --------------------------------------------------------   |           ");
 		System.out.println("      ----------------------------------------------------------------                              ");
 	}
+	
+	public static void MountainScene()
+	{
+		System.out.println("  \\    |    |   /                                                        |  ");
+		System.out.println("      __________                                                         | ");
+		System.out.println(" --  /         /  --                                                     /  ");
+		System.out.println(" -- /_________/   --                              baa                   /   ");
+		System.out.println("                                                 /                     /    ");
+		System.out.println("  /    |    |   \\                          ___                        /     ");
+		System.out.println("                                          / __\\         __w___V______/                   ");
+		System.out.println("                                 _______ / /       ____/                        ");
+		System.out.println("                                /       / /       /                         ");
+		System.out.println("                               /|_________|      /          *                ");
+		System.out.println("                              / __|_|_|_|___W___/                 *                          ");
+		System.out.println("                               /                                            ");
+		System.out.println("                             _/    *                                          ");
+		System.out.println("                            /                   *         *                            ");
+		System.out.println("                           /                                                ");
+		System.out.println("               ___v___V___/                        *                                    ");
+		System.out.println("              /                 *         *                                            ");
+		System.out.println("         __w_/      *                                                            ");
+		System.out.println("      __/                                                                     ");
+	}
 }
