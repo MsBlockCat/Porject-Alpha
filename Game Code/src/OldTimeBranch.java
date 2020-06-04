@@ -280,7 +280,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assassin. All of us were warned about him!\"");
 				Stuff.TypeLine("You claim to not be the assassin and you pull out your wanted poster with the map on it and show it to the knights.");
 				Stuff.TypeLine("Now that you see it, the assassin does look like you. Just... older.");
-				Stuff.TypeLine("\"You are comming with us!\"");
+				Stuff.TypeLine("\"You are coming with us!\"");
 				Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
 				Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
 				Stuff.TypeLine("As you are shouved into a cage, you ask how long you are going to be locked down their for.");
