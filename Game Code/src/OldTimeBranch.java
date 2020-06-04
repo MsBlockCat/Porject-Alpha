@@ -333,6 +333,9 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("It seems like the Timeinator is running out of Porject Alpha.");
 		Stuff.TypeLine("You can travel to one more location before going back home.");
+		Stuff.HitEnter(2);
+		ASCII.OldTimeMapBarracksR();
+		Stuff.HitEnter(2);
 		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
 		{
 			case "go to the castle":
@@ -347,5 +350,17 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 6;
 		
+		Stuff.TypeLine("You follow where the map believe it or not, there is indeed a large ruins that resemble a pyramid.");
+		Stuff.TypeLine("There is also two crumbling pillars on either side of the massive entrance");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
 	}
 }
