@@ -322,6 +322,14 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("It seems like the timenator is running out of Porject Alpha.");
 		Stuff.TypeLine("You can travel to one more location before going back home.");
+		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
+		{
+			case "go to the castle":
+				break;
+			case "go to the ruins":
+				Ruins();
+				break;
+		}
 	}
 	
 	public static void Ruins()
