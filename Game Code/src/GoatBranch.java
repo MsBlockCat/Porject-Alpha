@@ -331,7 +331,7 @@ public class GoatBranch
 		Stuff.CurrentLocationNumber = 11;
 		
 		Stuff.typeln("You head for the door, and as you leave the grocery store, you hear him mutter...");
-		Stuff.typeln("\"...Praise Ned. Ned is cool. Prise Ned.\"");
+		Stuff.typeln("\"...Praise Ned. Ned is cool. Praise Ned.\"");
 		Stuff.typeln("Now you're intrigued. Maybe you don't want to leave...");
 		Stuff.typeln("Or maybe you do. Up to you, really.");
 		switch (Stuff.PlayerChoice("go back in", "leave"))
@@ -373,7 +373,6 @@ public class GoatBranch
 		Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
 		Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
 		Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
-		RightOutsideHatch();
 		switch (Stuff.PlayerChoice("go in hatch", "stay"))
 		{
 		case "go in hatch":
