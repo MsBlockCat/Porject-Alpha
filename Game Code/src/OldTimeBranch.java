@@ -295,6 +295,7 @@ public class OldTimeBranch
 				Stuff.Wait(300);
 				ASCII.TimeinatorBroken();
 				Stuff.HitEnter(20);
+				Stuff.Divider();
 				Stuff.TypeLine("The Broken Watch Ending");
 				Stuff.Divider();
 				break;
