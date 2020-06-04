@@ -240,6 +240,7 @@ public class OldTimeBranch
 					else
 					{
 						Stuff.TypeLine("One of the soldiers approaches you and the rest form a ring for the dule. The man introduces himself as Harold. What a cool name");
+						Stuff.MetHarold = true;
 						Stuff.TypeLine("One of the knights starts to count down.");
 						Stuff.TypeLine("Five.");
 						Stuff.Wait(650);
@@ -254,11 +255,44 @@ public class OldTimeBranch
 						Stuff.TypeLine("more");
 						Stuff.TypeLine("Two!!");
 						Stuff.Wait(650);
-						Stuff.TypeLine("");
+						Stuff.TypeLine("You stand in your ready position with a rock and some blades of grass.");
+						Stuff.TypeLine("One!!!");
+						Stuff.TypeLine("You run at Harold and he runs back at you.");
+						Stuff.TypeLine("You throw the blades of grass at his face and it blinds him. But only for a little bit of time");
+						Stuff.TypeLine("He quickly runs at you, eyes crying and reddened because of the itchyness and takes a swing,");
+						Stuff.TypeLine("but misses because of his clowdy vision. You throw the rock at his arm and he drops the sword.");
+						Stuff.TypeLine("You run to pick it up but he grabs it in time and points it at your stomach.");
+						Stuff.TypeLine("\"It seems as if I have won. That was indeed a good match. You were able to hold me off even without a weapon.\"");
+						Stuff.TypeLine("\"Come, join us, it is almost dinner and our little scurmish has made me hungry.\"");
+						Stuff.TypeLine("You realize that you are hungry too. That chocolate bar, although not filling, did taste good.");
+						Stuff.TypeLine("After dinner and some wandering, you come across a dimly lit room.");
+						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
+						Stuff.Wait(100);
+						Stuff.TypeLine("But with an addition");
+						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
+						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
+						Stuff.TypeLine("Maybe there will be something good there.");
 					}
 				}
 				break;
 			case "don't spar":
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
 				break;
 		}
 	}
