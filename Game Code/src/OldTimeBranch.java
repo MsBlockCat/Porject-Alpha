@@ -47,16 +47,13 @@ public class OldTimeBranch
 			Stuff.HitEnter(1);
 			Stuff.Wait(2000);
 			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passerby ask.");
-			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "visit the harbor", "search the castle"))
+			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
 			{
 				case "explore the bazar":
 					Stuff.StoryBeginning = false;
 					RoulletteShop();
 					break;
 				case "check out the barracks":
-					Stuff.StoryBeginning = false;
-					break;
-				case "visit the harbor":
 					Stuff.StoryBeginning = false;
 					break;
 				case "search the castle":
@@ -143,8 +140,6 @@ public class OldTimeBranch
 		{
 			case "check out the barracks":
 				Barracks();
-				break;
-			case "visit the harbor":
 				break;
 			case "search the castle":
 				break;
@@ -280,22 +275,28 @@ public class OldTimeBranch
 				}
 				break;
 			case "don't spar":
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
+				Stuff.TypeLine("\"You don't want to spar?\" It seems like you dook them by surprise. Maybe sparring is normal around here.");
+				Stuff.TypeLine("\"Hey who are you anyway? You don't look like you are from around here.\"");
+				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assasin. All of us were warned about him!\"");
+				Stuff.TypeLine("You claim to not be the assasin and you pull out your wanted poster with the map on it and show it to the knights.");
+				Stuff.TypeLine("Now that you see it, the assasin does look like you. Just... older.");
+				Stuff.TypeLine("\"You are comming with us!\"");
+				Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
+				Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
+				Stuff.TypeLine("As you are shouved into a cage, you ask how long you are going to be locked down their for.");
+				Stuff.TypeLine("\"You wont every be getting out of there.\"");
+				Stuff.TypeLine("You arent scared though, you can just leave with the Timeinato-");
+				Stuff.Wait(300);
+				Stuff.TypeLine(".");
+				Stuff.Wait(300);
+				Stuff.TypeLine("..");
+				Stuff.Wait(300);
+				Stuff.TypeLine("...");
+				Stuff.Wait(300);
+				ASCII.TimeinatorBroken();
+				Stuff.HitEnter(20);
+				Stuff.TypeLine("The Broken Watch Ending");
+				Stuff.Divider();
 				break;
 		}
 	}
