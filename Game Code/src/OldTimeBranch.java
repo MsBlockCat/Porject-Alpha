@@ -283,9 +283,9 @@ public class OldTimeBranch
 				Stuff.TypeLine("\"You are coming with us!\"");
 				Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
 				Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
-				Stuff.TypeLine("As you are shouved into a cage, you ask how long you are going to be locked down their for.");
-				Stuff.TypeLine("\"You wont every be getting out of there.\"");
-				Stuff.TypeLine("You arent scared though, you can just leave with the Timeinato-");
+				Stuff.TypeLine("As you are shoved into a cage, you ask how long you are going to be locked down there for.");
+				Stuff.TypeLine("\"You won't ever be getting out of there.\"");
+				Stuff.TypeLine("You aren't scared though, you can just leave with the Timeinato-");
 				Stuff.Wait(300);
 				Stuff.TypeLine(".");
 				Stuff.Wait(300);
@@ -293,11 +293,14 @@ public class OldTimeBranch
 				Stuff.Wait(300);
 				Stuff.TypeLine("...");
 				Stuff.Wait(300);
+				Stuff.HitEnter(2);
 				ASCII.TimeinatorBroken();
-				Stuff.HitEnter(20);
-				Stuff.StoryEnding();
+				Stuff.Wait(1000);
+				Stuff.HitEnter(2);
 				Stuff.TypeLine("The Broken Watch Ending");
-				Stuff.Divider();
+				Stuff.Wait(500);
+				Stuff.HitEnter(5);
+				Stuff.StoryEnding();
 				break;
 		}
 	}
