@@ -343,7 +343,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
 		{
 			case "go to the castle":
-				Castle();
+				Castle2();
 				break;
 			case "go to the ruins":
 				Ruins();
@@ -437,5 +437,6 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
+		Stuff.TypeLine("");
 	}
 }
