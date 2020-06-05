@@ -439,6 +439,19 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("The walk to the castle was long, but it wasnt since a traveling circus picked you up and brough you to the castle gates");
 		Stuff.TypeLine("The only problem is that the draw bridge is up");
-		Stuff.TypeLine("");
+		Stuff.TypeLine("Yojust stand there and wait.");
+		Stuff.Wait(500);
+		Stuff.TypeLine("Wait.");
+		Stuff.Wait(500);
+		Stuff.TypeLine("Ok finally someone is at the other end of the draw bridge.");
+		Stuff.TypeLine("Buththey arent bringing it up.");
+		Stuff.TypeLine("You have two choices here. sit and wait, or give up.");
+		switch (Stuff.PlayerChoice("sit and wait", "give up"))
+		{
+			case "sit and wait":
+				break;
+			case "give up":
+				break;
+		}
 	}
 }
