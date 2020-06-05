@@ -596,13 +596,12 @@ public class SpaceBranch
 			if (Stuff.TimeinatorWorks == true)
 			{
 				Stuff.TypeLine("you use your Timeinator to get back to the lab and give the legendary Doof the rest.");
-				ModernBranch.GoToModernBranch("Lab3");
 			}
 			else
 			{
 				Stuff.TypeLine("he lets you use his time machine to get back to your lab.");
-				ModernBranch.GoToModernBranch("Lab3");
 			}
+			ModernBranch.GoToModernBranch("Lab3");
 		}
 		else
 		{
@@ -610,13 +609,12 @@ public class SpaceBranch
 			if (Stuff.TimeinatorWorks == true)
 			{
 				Stuff.TypeLine(", but understanding. After goodbyes are said, though, you use your Timeinator to get back to the lab.");
-				ModernBranch.GoToModernBranch("Lab2");
 			}
 			else
 			{
 				Stuff.TypeLine(", yet understanding. After goodbyes are said, he lets you use his time machine to get back to your lab regardless.");
-				ModernBranch.GoToModernBranch("Lab2");
 			}
+			ModernBranch.GoToModernBranch("Lab2");
 		}
 	}
 }
