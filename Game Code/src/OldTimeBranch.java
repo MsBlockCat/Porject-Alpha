@@ -30,8 +30,8 @@ public class OldTimeBranch
 				Ruins();
 				break;
 			case "7":
-			case "Castle":
-				Castle();
+			case "Castle2":
+				Castle2();
 				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
@@ -433,7 +433,7 @@ public class OldTimeBranch
 				break;
 		}
 	}
-	public static void Castle()
+	public static void Castle2()
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
