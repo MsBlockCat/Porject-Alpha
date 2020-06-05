@@ -437,6 +437,8 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
+		Stuff.TypeLine("The walk to the castle was long, but it wasnt since a traveling circus picked you up and brough you to the castle gates");
+		Stuff.TypeLine("The only problem is that the draw bridge is up");
 		Stuff.TypeLine("");
 	}
 }
