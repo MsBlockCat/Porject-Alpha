@@ -319,7 +319,7 @@ public class OldTimeBranch
 				ASCII.TimeinatorBroken();
 				Stuff.Wait(1000);
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("The Broken Watch Ending");
+				Stuff.TypeLine("Cut Short Ending");
 				Stuff.Wait(500);
 				Stuff.HitEnter(5);
 				Stuff.StoryEnding();
@@ -414,6 +414,16 @@ public class OldTimeBranch
 					else
 					{
 						//Is it possible to have neither the emerald sword or the lucky gauntlet? Maybe put something here lop
+						Stuff.TypeLine("As you walk down the hall you see a faint purple glow.");
+						Stuff.TypeLine("You start to run towards the glow but slip on some wetness on the ground.");
+						Stuff.TypeLine("You hear a beep coming from the Timeinator. you must have clicked a button.");
+						Stuff.TypeLine("You feel a rush of wind, see a purple glow, and your body starts to swirl.");
+						Stuff.TypeLine("What is this wierd feeling.");
+						Stuff.TypeLine("As you start to re appear you feel different.");
+						Stuff.TypeLine("You are still you, but not at the same time.");
+						Stuff.TypeLine("Hair, four legs, horns?");
+						Stuff.TypeLine("Yes yes you have traveled to rural Australia and you are now a human thinking goat.");
+						GoatBranch.GoToGoatBranch("RuralAustralia1");
 					}
 				}
 				Stuff.TypeLine("");
