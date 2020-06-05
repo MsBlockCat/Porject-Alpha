@@ -11,13 +11,13 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.2.1a";
+	public static final String GameVersion = "0.3.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 7;
+	public static final int SaveVersion = 8;
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
-	/* Add to SaveVersion 8 */ public static int LastRandomInt = 0;
+	public static int LastRandomInt = 0;
 	/* Doesn't need to be saved to save file */ public static boolean TempInstantText = false;
 	public static int TurnCount = 0;
 	public static boolean GameBeginning = true;
@@ -32,15 +32,15 @@ public class Stuff
 	public static int FavoriteGame = 0;
 	public static boolean FoundTrapdoor = false;
 	public static boolean ApuNerfedYou = false;
-	/* Add to SaveVersion 8 */ public static boolean SeenRuins = false;
-	/* Add to SaveVersion 8 */ public static boolean RoulletteSpin = false;
-	/* Add to SaveVersion 8 */ public static boolean HasEmeraldSword = false;
-	/* Add to SaveVersion 8 */ public static boolean NedLoreAcquired = false;
-	/* Add to SaveVersion 8 */ public static boolean HelpingHand = false;
-	/* Add to SaveVersion 8 */ public static boolean MetHarold = false;
-	/* Add to SaveVersion 8 */ public static boolean WentToTown = false;
-	/* Add to SaveVersion 8 */ public static boolean SeenHatch = false;
-	/* Add to SaveVersion 8 */ public static boolean GotShirt = false;
+	public static boolean SeenRuins = false;
+	public static boolean RoulletteSpin = false;
+	public static boolean HasEmeraldSword = false;
+	public static boolean NedLoreAcquired = false;
+	public static boolean HelpingHand = false;
+	public static boolean MetHarold = false;
+	public static boolean WentToTown = false;
+	public static boolean SeenHatch = false;
+	public static boolean GotShirt = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -426,18 +426,28 @@ public class Stuff
 			/* Line 2  */ SaveFileWriter.write(BooleanToInt(DebugMode) + "\n");
 			/* Line 3  */ SaveFileWriter.write(BooleanToInt(QuickMenus) + "\n");
 			/* Line 4  */ SaveFileWriter.write(FancyTypingSpeed + "\n");
-			/* Line 5  */ SaveFileWriter.write(TurnCount + "\n");
-			/* Line 6  */ SaveFileWriter.write(BooleanToInt(GameBeginning) + "\n");
-			/* Line 7  */ SaveFileWriter.write(BooleanToInt(StoryBeginning) + "\n");
-			/* Line 8  */ SaveFileWriter.write(CurrentBranchNumber + "\n");
-			/* Line 9  */ SaveFileWriter.write(CurrentLocationNumber + "\n");
-			/* Line 10 */ SaveFileWriter.write(BooleanToInt(HasPorjectAlpha) + "\n");
-			/* Line 11 */ SaveFileWriter.write(BooleanToInt(HasLuckyGauntlet) + "\n");
-			/* Line 12 */ SaveFileWriter.write(BooleanToInt(TimeinatorWorks) + "\n");
-			/* Line 13 */ SaveFileWriter.write(BooleanToInt(TalkedToTree) + "\n");
-			/* Line 14 */ SaveFileWriter.write(FavoriteGame + "\n");
-			/* Line 15 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
-			/* Line 16 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
+			/* Line 5  */ SaveFileWriter.write(LastRandomInt + "\n");
+			/* Line 6  */ SaveFileWriter.write(TurnCount + "\n");
+			/* Line 7  */ SaveFileWriter.write(BooleanToInt(GameBeginning) + "\n");
+			/* Line 8  */ SaveFileWriter.write(BooleanToInt(StoryBeginning) + "\n");
+			/* Line 9  */ SaveFileWriter.write(CurrentBranchNumber + "\n");
+			/* Line 10 */ SaveFileWriter.write(CurrentLocationNumber + "\n");
+			/* Line 11 */ SaveFileWriter.write(BooleanToInt(HasPorjectAlpha) + "\n");
+			/* Line 12 */ SaveFileWriter.write(BooleanToInt(HasLuckyGauntlet) + "\n");
+			/* Line 13 */ SaveFileWriter.write(BooleanToInt(TimeinatorWorks) + "\n");
+			/* Line 14 */ SaveFileWriter.write(BooleanToInt(TalkedToTree) + "\n");
+			/* Line 15 */ SaveFileWriter.write(FavoriteGame + "\n");
+			/* Line 16 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
+			/* Line 17 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
+			/* Line 18 */ SaveFileWriter.write(BooleanToInt(SeenRuins) + "\n");
+			/* Line 19 */ SaveFileWriter.write(BooleanToInt(RoulletteSpin) + "\n");
+			/* Line 20 */ SaveFileWriter.write(BooleanToInt(HasEmeraldSword) + "\n");
+			/* Line 21 */ SaveFileWriter.write(BooleanToInt(NedLoreAcquired) + "\n");
+			/* Line 22 */ SaveFileWriter.write(BooleanToInt(HelpingHand) + "\n");
+			/* Line 23 */ SaveFileWriter.write(BooleanToInt(MetHarold) + "\n");
+			/* Line 24 */ SaveFileWriter.write(BooleanToInt(WentToTown) + "\n");
+			/* Line 25 */ SaveFileWriter.write(BooleanToInt(SeenHatch) + "\n");
+			/* Line 26 */ SaveFileWriter.write(BooleanToInt(GotShirt) + "\n");
 			
 			SaveFileWriter.close();
 			if (BeKindaQuiet == false)
@@ -574,33 +584,41 @@ public class Stuff
 					{
 						//These lines replace the variables in game with the values in Save.txt
 						//Left is save versions 5 and below, right is 6 and above
-						/* File Line 2      */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 2                 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						if (FileSaveVersion >= 6)
 						{
-							/* File Line 3  */ QuickMenus = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line  3            */ QuickMenus = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
 							QuickMenus = false;
 						}
-						/* File Line 3  | 4  */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
-						/* File Line 4  | 5  */ TurnCount = StringToInt(AwesomeFile.nextLine());
-						/* File Line 5  | 6  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 6  | 7  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-						/* File Line 7  | 8  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
-						/* File Line 8  | 9  */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 3  | 4            */ FancyTypingSpeed = StringToInt(AwesomeFile.nextLine());
+						if (FileSaveVersion >= 8)
+						{
+							/* File Line          | 5  */ LastRandomInt = StringToInt(AwesomeFile.nextLine());
+						}
+						else
+						{
+							LastRandomInt = 0;
+						}
+						/* File Line 4  | 5       | 6  */ TurnCount = StringToInt(AwesomeFile.nextLine());
+						/* File Line 5  | 6       | 7  */ GameBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 6  | 7       | 8  */ StoryBeginning = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 7  | 8       | 9  */ CurrentBranchNumber = StringToInt(AwesomeFile.nextLine());
+						/* File Line 8  | 9       | 10 */ CurrentLocationNumber = StringToInt(AwesomeFile.nextLine());
 						if (FileSaveVersion >= 7)
 						{
-							/* File Line       10 */ HasPorjectAlpha = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line     | 10 | 11 */ HasPorjectAlpha = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
 							HasPorjectAlpha = false;
 						}
-						/* File Line 9  | 10 | 11 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 9  | 10 | 11 | 12 */ HasLuckyGauntlet = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						if (FileSaveVersion >= 4)
 						{
-						/* File Line 10 | 11 | 12 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 10 | 11 | 12 | 13 */ TimeinatorWorks = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
@@ -608,7 +626,7 @@ public class Stuff
 						}
 						if (FileSaveVersion >= 5)
 						{
-						/* File Line 11 | 12 | 13 */ TalkedToTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						/* File Line 11 | 12 | 13 | 14 */ TalkedToTree = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
@@ -616,9 +634,27 @@ public class Stuff
 						}
 						if (FileSaveVersion >= 7)
 						{
-							/* File Line       14 */ FavoriteGame = StringToInt(AwesomeFile.nextLine());
-							/* File Line       15 */ FoundTrapdoor = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-							/* File Line       16 */ ApuNerfedYou = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line       14 | 15 */ FavoriteGame = StringToInt(AwesomeFile.nextLine());
+							/* File Line       15 | 16 */ FoundTrapdoor = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line       16 | 17 */ ApuNerfedYou = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							FavoriteGame = 0;
+							FoundTrapdoor = false;
+							ApuNerfedYou = false;
+						}
+						if (FileSaveVersion >= 8)
+						{
+							/* File Line          | 18 */ SeenRuins = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 19 */ RoulletteSpin = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 20 */ HasEmeraldSword = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 21 */ NedLoreAcquired = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 22 */ HelpingHand = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 23 */ MetHarold = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 24 */ WentToTown = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 25 */ SeenHatch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 26 */ GotShirt = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{

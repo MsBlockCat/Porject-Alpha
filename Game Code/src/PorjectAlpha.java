@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("0.3.0a (6/5/2020)");
+		Stuff.TypeLine(" Bug fixes, such as having randomization at the current location save if needed, and lots more story!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.2.1a (5/31/2020)");
 		Stuff.TypeLine(" Settings now don't reset when story does, typo and bug fixes, and more!");
 		Stuff.Divider();
