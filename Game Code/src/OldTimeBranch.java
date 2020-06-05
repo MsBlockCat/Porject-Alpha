@@ -492,15 +492,15 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("go to it", "don't"))
 			{
 				case "go to it":
-					Stuff.TypeLine("You push through the people and right infront of you is the roullette man. ");
+					Stuff.TypeLine("You push through the people and right in front of you is the roullette man. ");
 					Stuff.TypeLine("The one that helped you on the start of your mission.");
 					Stuff.TypeLine("You run up to him and return the emerald sword.");
-					Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you spared with Harold.");
-					Stuff.TypeLine("You run in the opposite direction as to not attracks attention. You hear a faint thank you. Must have been the roullette man.");
+					Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+					Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roullette man.");
 					Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
-					Stuff.TypeLine("Your body starts to swirl and dissapear from this world.");
+					Stuff.TypeLine("Your body starts to swirl and disapear from this world.");
 					Stuff.TypeLine("In an instant, you are back in the lab.");
-					Stuff.TypeLine("No Porject Alpha, no caught assasin, but you are still happy.");
+					Stuff.TypeLine("No Porject Alpha, no caught assassin, but you are still happy.");
 					Stuff.Wait(1000);
 					Stuff.HitEnter(2);
 					Stuff.TypeLine("The Happy Ending");
@@ -509,7 +509,20 @@ public class OldTimeBranch
 					Stuff.StoryEnding();
 					break;
 				case "don't":
-					Stuff.TypeLine("");
+					Stuff.TypeLine("You don't think there is enough time.");
+					Stuff.TypeLine("There is a small break in the crowd, you two lock eyes.");
+					Stuff.TypeLine("He waves and you wave back.");
+					Stuff.TypeLine("It seems like the roullette man has become rather popular since he made you that sword.");
+					Stuff.TypeLine("Looks like you are going to keep it as a momento of the man that began your adventure.");
+					Stuff.TypeLine("The Timeinator activates.");
+					Stuff.TypeLine("Your body starts to swirl and dissapear from this world.");
+					Stuff.TypeLine("In an instant, you are back in the lab.");
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("The Touching Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
 					break;
 			}
 		}
@@ -518,5 +531,39 @@ public class OldTimeBranch
 	public static void Castle3()
 	{
 		Stuff.CurrentLocationNumber = 9;
+		
+		if (Stuff.MetHarold = true)
+		{
+			Stuff.TypeLine("What was even luckier whas seeing who opened the draw bridge.");
+			Stuff.TypeLine("The man you spared.");
+			Stuff.TypeLine("The knight Harold.");
+			Stuff.TypeLine("\"Hello! What brings you here?\"");
+			Stuff.TypeLine("You tell him that your search of the assassin took you here and that you don't have much more time.");
+			Stuff.TypeLine("\"Well I'll help you search. Let us split up to cover more ground.\"");
+			Stuff.TypeLine("After about 15 minutes of searching, you hear yelling. It sounds like Harold.");
+			Stuff.TypeLine("You run after the sound and find him chasing the hooded assassin.");
+			Stuff.TypeLine("You and Harold corner him in an alley and call out for reinforcements.");
+			Stuff.TypeLine("The assassin whips out its sword and goes on the attack.");
+			Stuff.TypeLine("Luckily a flower pot lands on his head and knocks him out.");
+			switch (Stuff.PlayerChoice("look up", "don't look up"))
+			{
+				case "look up":
+					Stuff.TypeLine("");
+					Stuff.TypeLine("");
+					Stuff.TypeLine("");
+					Stuff.TypeLine("");
+					Stuff.TypeLine("");
+					Stuff.TypeLine("");
+					break;
+				case "don't look up":
+					Stuff.TypeLine("To you it doesnt really matter howw that hit him, just that you got the assassin");
+					Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
+					Stuff.TypeLine("Probably went to a prison though.");
+					Stuff.TypeLine("You also never got to see his face.");
+					Stuff.TypeLine("All that matters is that you got to see your bud Harold.");
+					Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
+					break;
+			}
+		}
 	}
 }
