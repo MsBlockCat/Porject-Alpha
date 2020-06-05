@@ -38,6 +38,9 @@ public class Stuff
 	/* Add to SaveVersion 8 */ public static boolean NedLoreAcquired = false;
 	/* Add to SaveVersion 8 */ public static boolean HelpingHand = false;
 	/* Add to SaveVersion 8 */ public static boolean MetHarold = false;
+	/* Add to SaveVersion 8 */ public static boolean WentToTown = false;
+	/* Add to SaveVersion 8 */ public static boolean SeenHatch = false;
+	/* Add to SaveVersion 8 */ public static boolean GotShirt = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();

@@ -2425,4 +2425,80 @@ public class ASCII
 		System.out.println("         __w_/      *                                                            ");
 		System.out.println("      __/                                                                     ");
 	}
+	
+	public static void Signpost()
+	{
+		System.out.println("                         __                                              ");
+		System.out.println("                        /  \\                                            ");
+		System.out.println("                       / / /                                              ");
+		System.out.println("       _______________/___/________________________                              ");
+		System.out.println("      |    --                                      \\                       ");
+		System.out.println("      |        Stop, Shop and Roll Grocery          \\                      ");
+		System.out.println("      |      ---       1.2 miles            --      /                     ");
+		System.out.println("      |____________________________________________/                       ");
+		System.out.println("       ______________|____|________________________                                             ");
+		System.out.println("      |                                      ---   \\                       ");
+		System.out.println("      |  ---       A Nice Looking Rock              \\                      ");
+		System.out.println("      |         --     4.5 miles            -       /                     ");
+		System.out.println("      |____________________________________________/__                  ");
+		System.out.println("         /                                            |                   ");
+		System.out.println("        /    ---        A Cool Tree         -         |                      ");
+		System.out.println("        \\      -          3.0 miles              --   |                     ");
+		System.out.println("         \\____________________________________________|                  ");
+		System.out.println("                        \\   \\  \\                              ");
+		System.out.println("     ____________________\\______\\________________                                   ");
+		System.out.println("    |     -                                      \\                       ");
+		System.out.println("    |             A Tall Mountain      --  -      \\                      ");
+		System.out.println("    |    -    -      7.9 miles                    /                     ");
+		System.out.println("    |____________________________________________/                  ");
+		System.out.println("                       |      |                                            ");
+		System.out.println("                       | |    |                                            ");
+		System.out.println("                       |    | |                                            ");
+		System.out.println("_____v_______V_________|  |   |______W_______v____________w________   ");
+		System.out.println(" W                w    |      |                   V                          ");
+	}
+	
+	public static void MountainScene2()
+	{
+		System.out.println("  \\    |    |   /                                                        |  ");
+		System.out.println("      __________                                                         | ");
+		System.out.println(" --  /         /  --                                                     /  ");
+		System.out.println(" -- /_________/   --              can't beleive this                    /   ");
+		System.out.println("                                  /                                    /    ");
+		System.out.println("  /    |    |   \\            ___                                      /     ");
+		System.out.println("                            /__ \\                       __w___V______/                   ");
+		System.out.println("                               \\ \\________         ____/                        ");
+		System.out.println("                                \\ \\       \\       /                         ");
+		System.out.println("                                |_________|\\     /          *                ");
+		System.out.println("                                __|_|_|_|___\\___/                 *                          ");
+		System.out.println("                               /                                            ");
+		System.out.println("                             _/    *                                          ");
+		System.out.println("                            /                   *         *                            ");
+		System.out.println("                           /                                                ");
+		System.out.println("               ___v___V___/                        *                                    ");
+		System.out.println("              /                 *         *                                            ");
+		System.out.println("         __w_/      *                                                            ");
+		System.out.println("      __/                                                                     ");
+	}
+	
+	public static void MountainHatch()
+	{
+		System.out.println("              /     *                                  |            ");
+		System.out.println("             /                                 *       |               ");
+		System.out.println("            /          *                               |              ");
+		System.out.println("            |                                          |             ");
+		System.out.println("            |   - - - - - - - - - - - -                |               ");
+		System.out.println("            |   |   N               *  |               |               ");
+		System.out.println("            |          F                               |               ");
+		System.out.println("            |   |         O            |               |              ");
+		System.out.println("            |                O                         |             ");
+		System.out.println("           /   | *             C      |      *         |             ");
+		System.out.println("          |    - - - - - - - - - - - -                 |          ");
+		System.out.println("          |                                            |          ");
+		System.out.println("          |                                            |         ");
+		System.out.println("          |          *                                 |      ");
+		System.out.println("         /                                 *           |       ");
+		System.out.println("        /                        *                     |        ");
+		System.out.println("      _/                                               |                     ");
+	}
 }
