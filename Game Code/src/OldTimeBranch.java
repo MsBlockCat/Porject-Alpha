@@ -29,6 +29,10 @@ public class OldTimeBranch
 			case "Ruins":
 				Ruins();
 				break;
+			case "7":
+			case "Castle":
+				Castle();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -292,7 +296,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
 						Stuff.TypeLine("Maybe there will be something good there.");
-						Ruins();
+						ChoiceRoom();
 					}
 				}
 				break;
@@ -339,6 +343,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
 		{
 			case "go to the castle":
+				Castle();
 				break;
 			case "go to the ruins":
 				Ruins();
@@ -427,5 +432,10 @@ public class OldTimeBranch
 				}
 				break;
 		}
+	}
+	public static void Castle()
+	{
+		Stuff.CurrentLocationNumber = 7;
+		
 	}
 }
