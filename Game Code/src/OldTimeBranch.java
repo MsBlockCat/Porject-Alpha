@@ -33,6 +33,14 @@ public class OldTimeBranch
 			case "Castle2":
 				Castle2();
 				break;
+			case "8":
+			case "Bazar2":
+				Bazar2();
+				break;
+			case "9":
+			case "Castle3":
+				Castle3();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -437,21 +445,60 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
-		Stuff.TypeLine("The walk to the castle was long, but it wasnt since a traveling circus picked you up and brough you to the castle gates");
+		Stuff.TypeLine("The walk to the castle was long, but it wasnt since a traveling circus picked you up and brought you to the castle gates");
 		Stuff.TypeLine("The only problem is that the draw bridge is up");
-		Stuff.TypeLine("Yojust stand there and wait.");
+		Stuff.TypeLine("You just stand there and wait.");
 		Stuff.Wait(500);
 		Stuff.TypeLine("Wait.");
 		Stuff.Wait(500);
-		Stuff.TypeLine("Ok finally someone is at the other end of the draw bridge.");
-		Stuff.TypeLine("Buththey arent bringing it up.");
-		Stuff.TypeLine("You have two choices here. sit and wait, or give up.");
+		Stuff.TypeLine("Ok finally someone is at the other end of the drawbridge.");
+		Stuff.TypeLine("But they arent bringing it up.");
+		Stuff.TypeLine("It looks like you don't have many more options left.");
 		switch (Stuff.PlayerChoice("sit and wait", "give up"))
 		{
 			case "sit and wait":
 				break;
 			case "give up":
+				if(Stuff.HasLuckyGauntlet = true)
+				{
+					Stuff.TypeLine("Luckily all is not lost.");
+					Stuff.TypeLine("You hear some cranking and chains moving.");
+					Stuff.TypeLine("You turn around and the drawbridge is now open, inviting you to enter the grand castle.");
+					Stuff.TypeLine("Maybe this gauntlet actually does bring luck.");
+					Castle3();
+				}
+				else
+				{
+					Stuff.TypeLine("Looks like there is nothing else you can do.");
+					Stuff.TypeLine("You start to walk in a direction. None of any importance because no matter where you are, the Temeinator will takw you back to the same place.");
+					Stuff.TypeLine("In the disnance you see a crowd.");
+					Stuff.TypeLine("And even further you see a little town. Looks like. THE BAZAR!");
+					Stuff.TypeLine("You start running because the Timeinator is beeping faster now.");
+					Stuff.TypeLine("You remember an old friend.");
+					Stuff.Wait(1000);
+					Bazar2();
+				}
 				break;
 		}
+	}
+	
+	public static void Bazar2()
+	{
+		Stuff.CurrentLocationNumber = 8;
+		
+		if (Stuff.HasEmeraldSword = true)
+		{
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+		}
+	}
+	
+	public static void Castle3()
+	{
+		Stuff.CurrentLocationNumber = 9;
 	}
 }
