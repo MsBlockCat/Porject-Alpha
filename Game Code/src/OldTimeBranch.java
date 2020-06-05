@@ -351,9 +351,9 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 6;
 		
 		Stuff.TypeLine("You follow the map to the place the cartophapher added and believe it or not, there is indeed a large ruins that resemble a pyramid.");
-		Stuff.TypeLine("There are also two crumbling pillars on either side of the massive entrance");
+		Stuff.TypeLine("There are also two crumbling pillars on either side of the massive entrance.");
 		Stuff.TypeLine("When you enter there is a fork in the long sandy hallway.");
-		Stuff.TypeLine("Do you want to go left right?");
+		Stuff.TypeLine("Do you want to go left or right?");
 		switch (Stuff.PlayerChoice("left", "right"))
 		{
 			case "left":
@@ -362,11 +362,11 @@ public class OldTimeBranch
 				Stuff.TypeLine("You feel a rush of wind and your body starts contorting.");
 				Stuff.TypeLine("You are definitely moving.");
 				Stuff.TypeLine("Oh it seems like you stopped, but you are not in the same place, rather, a modern building.");
-				SpaceBranch.GoToSpaceBranch("right building");
+				SpaceBranch.GoToSpaceBranch("RightBuilding");
 				break;
 			case "right":
 				Stuff.TypeLine("As you walk further in to the ruins, the temperature starts to drop and a faint purple glow starts to appear.");
-				Stuff.TypeLine("As the glow gets brighter, the hallway starts to widen and finaly it opens into a massive room with one thing in the middle.");
+				Stuff.TypeLine("As the glow gets brighter, the hallway starts to widen and finally it opens into a massive room with one thing in the middle.");
 				Stuff.TypeLine("The glow was coming from an object on a stand.");
 				Stuff.TypeLine("There are some runes on the stand and you try to decipher them.");
 				if (Stuff.HasLuckyGauntlet = true)
@@ -391,24 +391,30 @@ public class OldTimeBranch
 				else
 				{
 					if(Stuff.HasEmeraldSword = true)
-					Stuff.TypeLine("It takes you a while to understand it but you finaly get it.");
-					Stuff.TypeLine("You think.");
-					Stuff.TypeLine("You have no idea. You hear a klink behind you and you swwing around with your sword.");
-					Stuff.TypeLine("It hits another. One exactly the same.");
-					Stuff.Wait(500);
-					Stuff.TypeLine("It's you. You are staring right at your self. Just older. He looks exactly like the man on the wanted poster.");
-					Stuff.TypeLine("You both lower your swords at the same time, creating an orange glow as the purple interacts with the green.");
-					Stuff.TypeLine("He shows you a broken timeinator and now you understand why he is here.");
-					Stuff.TypeLine("He walks over to the substance and inserts it into your Timeinator giving it more life.");
-					Stuff.TypeLine("The substance is Porject alpha.");
-					Stuff.TypeLine("He clicks a button on your timeinator ant in an after an array of colors and bursts of wind you are home.");
-					Stuff.TypeLine("You leave knowing that the kingdom is safe under your watch.");
-					Stuff.Wait(1000);
-					Stuff.HitEnter(2);
-					Stuff.TypeLine("Seeing Double Ending");
-					Stuff.Wait(500);
-					Stuff.HitEnter(5);
-					Stuff.StoryEnding();
+					{
+						Stuff.TypeLine("It takes you a while to understand it but you finaly get it.");
+						Stuff.TypeLine("You think.");
+						Stuff.TypeLine("You have no idea. You hear a clink behind you and you swing around with your sword.");
+						Stuff.TypeLine("It hits another. One exactly the same.");
+						Stuff.Wait(500);
+						Stuff.TypeLine("It's you. You are staring right at yourself. Just older. They looks exactly like the person on the wanted poster.");
+						Stuff.TypeLine("You both lower your swords at the same time, creating an orange glow as the purple interacts with the green.");
+						Stuff.TypeLine("He shows you a broken Timeinator and now you understand why he is here.");
+						Stuff.TypeLine("He walks over to the substance and inserts it into your Timeinator giving it more life.");
+						Stuff.TypeLine("The substance is Porject Alpha.");
+						Stuff.TypeLine("He clicks a button on your Timeinator and after an array of colors and bursts of wind you are home.");
+						Stuff.TypeLine("You leave knowing that the kingdom is safe under your watch.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("Seeing Double Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
+					else
+					{
+						//Is it possible to have neither the emerald sword or the lucky gauntlet? Maybe put something here lop
+					}
 				}
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
