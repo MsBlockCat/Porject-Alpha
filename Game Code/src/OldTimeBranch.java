@@ -45,6 +45,10 @@ public class OldTimeBranch
 			case "Castle":
 				Castle();
 				break;
+			case "11":
+			case "Run":
+				Run();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -660,7 +664,31 @@ public class OldTimeBranch
 		Stuff.TypeLine("\"Come with me.\"");
 		Stuff.TypeLine("You follow.");
 		Stuff.TypeLine("They lead you to a knight and whisper something into their ear.");
-		Stuff.TypeLine("");
+		Run();
+	}
+	
+	public static void Run()
+	{
+		Stuff.CurrentLocationNumber = 11;
 		
+		Stuff.TypeLine("The knight starts to chase after you calling for reinforcements.");
+		switch (Stuff.PlayerChoice("run", "don't run"))
+		{
+			case "run":
+				Stuff.TypeLine("You sprint in a direction, thinking to your self how dumb you were to trust a hooded man.");
+				Stuff.TypeLine("Everywhere you look there are knights emerging from their posts, running after you.");
+				Stuff.TypeLine("");
+				break;
+			case "don't run":
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				break;
+		}
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
 	}
 }
