@@ -41,6 +41,10 @@ public class OldTimeBranch
 			case "Castle3":
 				Castle3();
 				break;
+			case "10":
+			case "Castle":
+				Castle();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -167,8 +171,21 @@ public class OldTimeBranch
 				Barracks();
 				break;
 			case "search the castle":
+				Castle();
 				break;
 		}
+	}
+	
+	public static void Castle()
+	{
+		Stuff.CurrentLocationNumber = 10;
+		
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
 	}
 	
 	public static void Barracks()
@@ -526,6 +543,10 @@ public class OldTimeBranch
 					break;
 			}
 		}
+		else
+		{
+			Stuff.TypeLine("");
+		}
 	}
 	
 	public static void Castle3()
@@ -548,12 +569,24 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("look up", "don't look up"))
 			{
 				case "look up":
-					Stuff.TypeLine("");
-					Stuff.TypeLine("");
-					Stuff.TypeLine("");
-					Stuff.TypeLine("");
-					Stuff.TypeLine("");
-					Stuff.TypeLine("");
+					Stuff.TypeLine("You look up and see a grumpy old lady.");
+					Stuff.TypeLine("\"QUITE DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+					Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
+					Stuff.TypeLine("The reinforcements you called just arrived.");
+					Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled him away.");
+					Stuff.TypeLine("The two of you are escorted to the main hall where you meet the King.");
+					Stuff.TypeLine("Harold gets a new sword. It is so shiny that it reflects some of the incoming light and scorches the royal rug.");
+					Stuff.TypeLine("You on the other hand get some Porject Alpha.");
+					Stuff.TypeLine("You take a break in the \"royal potty\" and activate the Timeinator.");
+					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+					Stuff.TypeLine("In an instant, you make it back to the lab.");
+					Stuff.TypeLine("You caught the assassin and even aquired the Porject Alpha what Doof wanted.");
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("The Flower Pot Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
 					break;
 				case "don't look up":
 					Stuff.TypeLine("To you it doesn't really matter howw that hit him, just that you got the assassin.");
@@ -564,27 +597,20 @@ public class OldTimeBranch
 					Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
 					Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
 					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
-					Stuff.TypeLine("In an instant, you make it back to the lab");
+					Stuff.TypeLine("In an instant, you make it back to the lab.");
+					Stuff.TypeLine("You caught the assassin and even aquired the Porject Alpha what Doof wanted.");
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("The Hero of the Kingdom Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
 					break;
 			}
 		}
 		else
 		{
 			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			Stuff.TypeLine("");
-			
 		}
 	}
 }
