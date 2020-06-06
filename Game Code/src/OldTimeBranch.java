@@ -612,14 +612,54 @@ public class OldTimeBranch
 		Stuff.HitEnter(2);
 		Stuff.TypeLine("You keep on walking and finaly you make it to the castle gate.");
 		Stuff.TypeLine("The drawbridge is down so that was convenient.");
-		Stuff.TypeLine("As you enter you take one last look at the map");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
+		Stuff.TypeLine("As you enter you take one last look at the wanted poster with the map on it to remember the man you are hunting for.");
+		Stuff.TypeLine("You think they look familliar.");
+		Stuff.TypeLine("Either way you want to capture them because of the reward.");
+		Stuff.TypeLine("You start to get hungry and want to go to a food shop.");
+		Stuff.TypeLine("There are two near by.");
+		switch (Stuff.PlayerChoice("vegetarian", "chicken"))
+		{
+			case "vegetarin":
+				Stuff.TypeLine("At the vegetarian shop, there isn't much on the menu.");
+				Stuff.TypeLine("\"Kale\"");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("\"Boiled Kale.\"");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("\"Lettuce.\"");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("\"Carrot.\"");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("It seems like vegetarian cuisine has not yet made its debu.");
+				Stuff.TypeLine("You choose to go to the ckicken shop instead.");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Wow, there is a lot of different ways to eat chicken here.");
+				Stuff.TypeLine("Raw. Sounds disgusting");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Boiled.");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Baked");
+				Stuff.HasChicken = true;
+				break;
+			case "chicken":
+				Stuff.TypeLine("Wow, there is a lot of different ways to eat chicken here.");
+				Stuff.TypeLine("Raw. Sounds disgusting");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Boiled.");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Baked");
+				Stuff.HasChicken = true;
+				break;
+		}
+		Stuff.TypeLine("You eat half of the chicken and save the rest for later in your pocket.");
+		Stuff.TypeLine("You are now full and ready to look for assassin person, untill some hooded figure comes and asks for your help.");
+		Stuff.TypeLine("You feel obligated to help for no reason.");
+		Stuff.TypeLine("\"Come with me.\"");
+		Stuff.TypeLine("You follow.");
+		Stuff.TypeLine("They lead you to a knight and whisper something into their ear.");
 		Stuff.TypeLine("");
 		
 	}

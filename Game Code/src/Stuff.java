@@ -41,6 +41,7 @@ public class Stuff
 	public static boolean WentToTown = false;
 	public static boolean SeenHatch = false;
 	public static boolean GotShirt = false;
+	/* add to save file 9 or whatevs - rodrigo */ public static boolean HasChicken = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
