@@ -2009,7 +2009,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                                       |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                                        | | /^\\ | |         |   ");
@@ -2038,7 +2038,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                                       |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                                        | | /^\\ | |         |   ");
@@ -2067,40 +2067,11 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                                       |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                                        | | /^\\ | |         |   ");
 		System.out.println(" |~~/                                   you > X  |_|_|I|_|_|         |   ");
-		System.out.println(" |                                              ~~~~~~#~~~~~~        |   ");
-		System.out.println(" |                                                    #              |   ");
-		System.out.println(" |                                                                   |   ");
-		System.out.println(" |                                        barracks                   |   ");
-		System.out.println(" |             bazar                      _______                    |   ");
-		System.out.println(" |               __     (                | O O  O|                   |   ");
-		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
-		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
-		System.out.println(" |                                     /~~|         /7   /(          |   ");
-		System.out.println(" |                                    |~~~|                          |   ");
-		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
-		System.out.println(" \\_/__________________________________________________________________/");
-	}
-	
-	public static void OldTimeMapHarbor()
-	{
-		System.out.println("  ____________________________________________________________________");
-		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
-		System.out.println(" \\_/__________________________________________________________________/");
-		System.out.println(" |~~~~~~~~~~~|    (  )                                               |   ");
-		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
-		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
-		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
-		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
-		System.out.println(" |~~~~~~~/   X < you                             |'|\"\"`\"\"|'|         |   ");
-		System.out.println(" |~~~___/                                        | | /^\\ | |         |   ");
-		System.out.println(" |~~/                                            |_|_|I|_|_|         |   ");
 		System.out.println(" |                                              ~~~~~~#~~~~~~        |   ");
 		System.out.println(" |                                                    #              |   ");
 		System.out.println(" |                                                                   |   ");
@@ -2125,7 +2096,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                ruins                  |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
@@ -2154,7 +2125,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                ruins                  |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
@@ -2183,7 +2154,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                ruins                  |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
@@ -2203,35 +2174,6 @@ public class ASCII
 		System.out.println(" \\_/__________________________________________________________________/");
 	}
 	
-	public static void OldTimeMapHarborR()
-	{
-		System.out.println("  ____________________________________________________________________");
-		System.out.println(" / \\-----     ---------  -----------     -------------- ------    ----\\");
-		System.out.println(" \\_/__________________________________________________________________/");
-		System.out.println(" |~~~~~~~~~~~|    (  )                                               |   ");
-		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
-		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
-		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
-		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
-		System.out.println(" |~~~~~~~/  X < you       ruins                  |'|\"\"`\"\"|'|         |   ");
-		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
-		System.out.println(" |~~/               {}    _V \\   []              |_|_|I|_|_|         |   ");
-		System.out.println(" |                  [|   /    \\  {}              ~~~~~~#~~~~~~       |   ");
-		System.out.println(" |                  []  /\\     \\                       #             |   ");
-		System.out.println(" |                                                                   |   ");
-		System.out.println(" |                                        barracks                   |   ");
-		System.out.println(" |             bazar                      _______                    |   ");
-		System.out.println(" |               __     (                | O O  O|                   |   ");
-		System.out.println(" |              /  \\  __)             ^  |  O  O |                   |   ");
-		System.out.println(" |              |[]| /  \\           ^^   |__[]___|   @    @          |   ");
-		System.out.println(" |        |=|=|      |[]|             ^ __          /0)- \\0-         |   ");
-		System.out.println(" |                                     /~~|         /7   /(          |   ");
-		System.out.println(" |                                    |~~~|                          |   ");
-		System.out.println(" / \\----- ----- ------------  ------- ----- -------  --------  -------\\");
-		System.out.println(" \\_/__________________________________________________________________/");
-	}
-	
 	public static void OldTimeMapCastleR()
 	{
 		System.out.println("  ____________________________________________________________________");
@@ -2241,7 +2183,7 @@ public class ASCII
 		System.out.println(" |~~<|~~~~~~~|     ||@                                               |   ");
 		System.out.println(" |~\\_L_/~~~~/  C@@D  |                                               |   ");
 		System.out.println(" |~~~~~~~~~/    ||  @                               castle           |   ");
-		System.out.println(" |~harbor~|         |                             _   |~  _          |   ");
+		System.out.println(" |~~~~~~~~|         |                             _   |~  _          |   ");
 		System.out.println(" |~~~~~~~~J                                      [_]--'--[_]         |   ");
 		System.out.println(" |~~~~~~~/                ruins                  |'|\"\"`\"\"|'|         |   ");
 		System.out.println(" |~~~___/                   _      |]            | | /^\\ | |         |   ");
