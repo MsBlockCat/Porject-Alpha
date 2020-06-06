@@ -2405,7 +2405,7 @@ public class ASCII
 		System.out.println("  \\    |    |   /                                                        |  ");
 		System.out.println("      __________                                                         | ");
 		System.out.println(" --  /         /  --                                                     /  ");
-		System.out.println(" -- /_________/   --              can't beleive this                    /   ");
+		System.out.println(" -- /_________/   --              can't believe this                    /   ");
 		System.out.println("                                  /                                    /    ");
 		System.out.println("  /    |    |   \\            ___                                      /     ");
 		System.out.println("                            /__ \\                       __w___V______/                   ");
@@ -2425,22 +2425,45 @@ public class ASCII
 	
 	public static void MountainHatch()
 	{
-		System.out.println("              /     *                                  |            ");
-		System.out.println("             /                                 *       |               ");
-		System.out.println("            /          *                               |              ");
-		System.out.println("            |                                          |             ");
-		System.out.println("            |   - - - - - - - - - - - -                |               ");
-		System.out.println("            |   |   N               *  |               |               ");
-		System.out.println("            |          F                               |               ");
-		System.out.println("            |   |         O            |               |              ");
-		System.out.println("            |                O                         |             ");
-		System.out.println("           /   | *             C      |      *         |             ");
-		System.out.println("          |    - - - - - - - - - - - -                 |          ");
-		System.out.println("          |                                            |          ");
-		System.out.println("          |                                            |         ");
-		System.out.println("          |          *                                 |      ");
-		System.out.println("         /                                 *           |       ");
-		System.out.println("        /                        *                     |        ");
-		System.out.println("      _/                                               |                     ");
+		System.out.println("              /     *                                              ");
+		System.out.println("             /                                 *                      ");
+		System.out.println("            /          *                                             ");
+		System.out.println("            |                                                       ");
+		System.out.println("            |   - - - - - - - - - - - -                               ");
+		System.out.println("            |   |   N               *  |                             ");
+		System.out.println("            |          F                                              ");
+		System.out.println("            |   |         O            |                             ");
+		System.out.println("            |                O                                      ");
+		System.out.println("           /   | *             C      |      *                      ");
+		System.out.println("          |    - - - - - - - - - - - -                           ");
+		System.out.println("          |                                                      ");
+		System.out.println("          |                                                     ");
+		System.out.println("          |          *                                       ");
+		System.out.println("         /                                 *                  ");
+		System.out.println("        /                        *                             ");
+		System.out.println("      _/                                                                   ");
+	}
+	
+	public static void WaterScene()
+	{
+		System.out.println("                                                                     |           ");
+		System.out.println("                                                                     |           ");
+		System.out.println("            hey a goat                                               |           ");
+		System.out.println("            /                                                        |           ");
+		System.out.println("     ____                                                            |          ");
+		System.out.println("    /____\\_                                                          |          ");
+		System.out.println("    | . .|                                                           |           ");
+		System.out.println("     \\__/__                                                          |          ");
+		System.out.println("       |/ _|_ -------------------------------------------------------|           ");
+		System.out.println("      /| | v |                                                       |           ");
+		System.out.println("       | |_V_|                    oh dear                            |           ");
+		System.out.println("       |       \\                   /                                 |           ");
+		System.out.println("______/_\\______ \\             ___                                    |                ");
+		System.out.println("               | \\           /__ \\                                   |            ");
+		System.out.println("               |__\\_____________\\ \\__________________________________|            ");
+		System.out.println("               |       ~        _\\_\\_         ~                      |            ");
+		System.out.println("               |   ~     ~     ~          ~          ~          ~    |            ");
+		System.out.println("               |      ~             ~          ~          ~          |            ");
+		System.out.println("               |                                                     |           ");
 	}
 }

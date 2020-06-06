@@ -64,6 +64,26 @@ public class GoatBranch
 			case "RightOutsideMountainHatch":
 				RightOutsideMountainHatch();
 				break;
+			case "16":
+			case "MountainHatch":
+				MountainHatch();
+				break;
+			case "17":
+			case "WaterHole":
+				WaterHole();
+				break;
+			case "18":
+			case "Office":
+				Office();
+				break;
+			case "19":
+			case "EllipseOffice":
+				EllipseOffice();
+				break;
+			case "20":
+			case "RandomHouse":
+				RandomHouse();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -326,7 +346,58 @@ public class GoatBranch
 	public static void TreeHatch() {
 		Stuff.CurrentLocationNumber = 8;
 		
-		//make this
+		Stuff.typeln("When you do, you realize that it is pitch-black dark.");
+		Stuff.typeln("You can't see or hear anything.");
+		Stuff.typeln("I guess your best bet is just going to be to walk in a random direction and see what you find.");
+		Stuff.typeln("So, what direction do you walk?");
+		switch (Stuff.PlayerChoice("forward", "left", "right", "back"))
+		{
+		case "forward":
+			Stuff.typeln("You advance forward carefully...");
+			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+			Stuff.typeln("You fall for a short while...");
+			Stuff.Wait(1000);
+			Stuff.typeln("And splash down into cold water.");
+			Stuff.typeln("It seems you have walked off a ledge into some water.");
+			Stuff.typeln("But why is there water in this hatch?");
+			WaterHole();
+			break;
+		case "left":
+			Stuff.typeln("You walk left and quickly find a wall.");
+			Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
+			Stuff.typeln("Forward it is, you suppose.");
+			Stuff.typeln("You advance forward carefully...");
+			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+			Stuff.typeln("You fall for a short while...");
+			Stuff.Wait(1000);
+			Stuff.typeln("And splash down into cold water.");
+			Stuff.typeln("It seems you have walked off a ledge into some water.");
+			Stuff.typeln("But why is there water in this hatch?");
+			WaterHole();
+			break;
+		case "right":
+			Stuff.typeln("You walk right and quickly find a wall.");
+			Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
+			Stuff.typeln("Forward it is, you suppose.");
+			Stuff.typeln("You advance forward carefully...");
+			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+			Stuff.typeln("You fall for a short while...");
+			Stuff.Wait(1000);
+			Stuff.typeln("And splash down into cold water.");
+			Stuff.typeln("It seems you have walked off a ledge into some water.");
+			Stuff.typeln("But why is there water in this hatch?");
+			WaterHole();
+			break;
+		case "back":
+			Stuff.typeln("You turn around and walk back from where you landed.");
+			Stuff.typeln("It seems this room is either very large or a very long corridor...");
+			Stuff.Wait(2000);
+			Stuff.typeln("Eventually, you crash into a wall of sorts.");
+			Stuff.typeln("Except it's not a wall, it's a door! There's a handle. Poking at it with your nose, you find it's unlocked.");
+			Office();
+			break;
+		}
+		
 	}
 	
 	public static void Town() {
@@ -355,7 +426,7 @@ public class GoatBranch
 		Stuff.HitEnter(2);
 		Stuff.typeln("You arrive at a crossroads.");
 		Stuff.typeln("And wow, there's a handy signpost here!");
-		Stuff.typeln("It even directs you to seemingly pointless (but actually sinsiter) locations!"); 
+		Stuff.typeln("It even directs you to seemingly pointless (but actually sinister) locations!"); 
 		Stuff.Wait(4000);
 		Stuff.typeln("Where to go...");
 		switch (Stuff.PlayerChoice("grocery store", "rock", "tree", "mountain"))
@@ -376,7 +447,7 @@ public class GoatBranch
 			Tree();
 			break;
 		case "mountain":
-			Stuff.typeln ("Excerise your goat abilities. Good idea.");
+			Stuff.typeln ("Exercise your goat abilities. Good idea.");
 			Stuff.Wait(1000);
 			Mountain();
 			break;
@@ -540,7 +611,7 @@ public class GoatBranch
 		case "use machine":
 			Stuff.typeln("\"Hey,\" you inquire again.");
 			Stuff.typeln("\"Hey, what?\"");
-			Stuff.typeln("\"May I use one of the machine?\"");
+			Stuff.typeln("\"May I use one of the machines?\"");
 			Stuff.typeln("\"Well, I guess so.\" The doctor shrugs and steps out of the way");
 			Stuff.typeln("\"Just FYI, if you get hurt, it's not my fault or my problem.\"");
 			Stuff.typeln("You nod. You are a goat, so no one should notice you're gone anyway.");
@@ -576,7 +647,7 @@ public class GoatBranch
 			Stuff.typeln("You also notice that the letters seem to be a part of a panel.");
 		}
 		else {
-			Stuff.typeln("It's another hatch just like the one on the mountain!");
+			Stuff.typeln("It's another hatch just like the one in the tree!");
 		}
 		Stuff.typeln("What is your next move?");
 		Stuff.SeenHatch = true;
@@ -606,5 +677,84 @@ public class GoatBranch
 		Stuff.typeln("The hill starts to make grinding, metallic sounds, and the rock begins to shift.");
 		Stuff.typeln("The sounds are defeaning!");
 		//add things
+	}
+	
+	public static void WaterHole() {
+		Stuff.CurrentLocationNumber = 17;
+		
+		Stuff.Wait(1500);
+		Stuff.typeln("Either way, you need to figure out how to get out. You can't swim forever...");
+		Stuff.typeln("All of a sudden, there is a loud clang, and a light shines from above somewhere.");
+		Stuff.typeln("You continue to tread water, listening and watching carefully...");
+		Stuff.Wait(1500);
+		Stuff.typeln("The sound of footsteps approaches and soon enough, a man steps out from behind the light.");
+		Stuff.typeln("\"Well, howdy there, goat,\" the voice says.");
+		Stuff.HitEnter(2);
+		ASCII.WaterScene();
+		Stuff.HitEnter(2);
+		Stuff.Wait(3000);
+		Stuff.typeln("You debate whether it would be better to play dumb - that is, like a normal goat,");
+		Stuff.typeln("Or whether he's less likely to hurt you if you are just honest.");
+		Stuff.Wait(1500);
+		Stuff.typeln("Then you remember you have no free will and it's all up to the player anyway.");
+		Stuff.typeln("So, player - what's it gonna be?");
+		switch (Stuff.PlayerChoice("be honest", "play dumb"))
+		{
+		case "be honest":
+			Stuff.Wait(1000);
+			Stuff.typeln("\"Uh,\" you say with some uncertainty, \"Hello.\"");
+			Stuff.typeln("The man is startled by the voice and looks around.");
+			Stuff.typeln("\"Who said that?\" he demands.");
+			Stuff.typeln("\"It's me,\" you say, louder.");
+			Stuff.typeln("\"I was afraid of that,\" the man says solemnly.");
+			Stuff.typeln("That doesn't sound good.");
+			Stuff.typeln("\"You're gonna have to come with me,\" he says.");
+			Stuff.typeln("\"And why would I do that?\" you ask him.");
+			Stuff.typeln("\"Well, if you don't, I'm going to have to kill you.\"");
+			Stuff.typeln("He turns to you and you notice his round glasses.");
+			Stuff.Wait(2000);
+			Stuff.typeln("\"Ned, by the way,\" he says, nodding at you.");
+			Stuff.typeln("He suddenly pulls out a needle and injects you with it.");
+			Stuff.typeln("The world begins to fade as he pulls you up out of the water and slings you over his shoulder.");
+			EllipseOffice();
+			break;
+		case "play dumb":
+			Stuff.Wait(1000);
+			Stuff.typeln("You decide it's best to stay silent and let the guy figure out what to do without your input.");
+			Stuff.typeln("Unfortunately that doesn't work out so well.");
+			Stuff.typeln("He pulls out a NERF (or nothin!) gun and points it at you.");
+			Stuff.typeln("Not wanting to be shot, you swim away from him. A dart hits the water next to you and splashes your eyes.");
+			Stuff.typeln("Blinded and confused, you dive under the surface and frantically swim as deep as you can.");
+			Stuff.typeln("You encounter a door of sorts on the bottom.");
+			Stuff.Wait(1000);
+			Stuff.typeln("It's difficult with hooves and NERF darts whizzing by but you finally manage to pull it open.");
+			Stuff.typeln("The water begins to rush in and you are sucked into the door.");
+			Stuff.typeln("You crash back and forth with the current through a narrow corridor and suddenly slam against a grate.");
+			Stuff.typeln("You open your eyes and see the grate leads to a vacant room.");
+			Stuff.typeln("The water begins to pool on the floor and runs out the doorway.");
+			Stuff.typeln("You sure wouldn't want to live there, you note,");
+			Stuff.typeln("Thoughyou aren't in the best position yourself.");
+			Stuff.Wait(2000);
+			RandomHouse();
+			break;
+		}
+	}
+	
+	public static void Office() {
+		Stuff.CurrentLocationNumber = 18;
+		
+		//stuff
+	}
+	
+	public static void EllipseOffice() {
+		Stuff.CurrentLocationNumber = 19;
+		
+		//stuff
+	}
+	
+	public static void RandomHouse() {
+		Stuff.CurrentLocationNumber = 20;
+		
+		//stuff
 	}
 }
