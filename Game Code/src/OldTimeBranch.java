@@ -176,18 +176,6 @@ public class OldTimeBranch
 		}
 	}
 	
-	public static void Castle()
-	{
-		Stuff.CurrentLocationNumber = 10;
-		
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-	}
-	
 	public static void Barracks()
 	{
 		Stuff.CurrentLocationNumber = 4;
@@ -612,5 +600,27 @@ public class OldTimeBranch
 		{
 			Stuff.TypeLine("");
 		}
+	}
+	
+	public static void Castle()
+	{
+		Stuff.CurrentLocationNumber = 10;
+		
+		Stuff.TypeLine("As you walk down to the castle, you meet up with a wandering circus.");
+		Stuff.TypeLine("They seem friendly so you ask if you can hitch a ride with them.");
+		Stuff.TypeLine("They say no.");
+		Stuff.HitEnter(2);
+		Stuff.TypeLine("You keep on walking and finaly you make it to the castle gate.");
+		Stuff.TypeLine("The drawbridge is down so that was convenient.");
+		Stuff.TypeLine("As you enter you take one last look at the map");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		Stuff.TypeLine("");
+		
 	}
 }
