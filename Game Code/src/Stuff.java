@@ -328,6 +328,7 @@ public class Stuff
 			}
 			
 			TypeLine("(Enter) Leave the about menu");
+			HitEnter(1);
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
 			switch (Input)
@@ -367,7 +368,7 @@ public class Stuff
 					if (AwesomeScanner.nextLine().toLowerCase().equals("stuff diagnostics"))
 					{
 						Stuff.HitEnter(50);
-						Stuff.TypeLine("> Commencing Stuff Diagnostics v1.0.0");
+						Stuff.TypeLine("> Commencing Stuff Diagnostics v1.1.0");
 						Stuff.TypeLine("> No going back now.");
 						Stuff.TypeLine("> ");
 						Stuff.Wait(200);
@@ -501,6 +502,63 @@ public class Stuff
 						else
 						{
 							Stuff.Type(" Negative min positive max test failed.");
+						}
+						Stuff.Wait(300);
+						RandomIntFailed = false;
+						RandomNumber = 0;
+						int[] IntArray = new int[]{0, 0, 0, 0, 0};
+						int FailingNumber = 0;
+						for (int Counter = 1; Counter <= 100; Counter ++)
+						{
+							IntArray[(RandomInt(-2, 2) + 2)] ++;
+						}
+						if (IntArray[0] == 0)
+						{
+							FailingNumber = -2;
+							RandomIntFailed = true;
+						}
+						if (IntArray[1] == 0)
+						{
+							FailingNumber = -1;
+							RandomIntFailed = true;
+						}
+						if (IntArray[2] == 0)
+						{
+							FailingNumber = 0;
+							RandomIntFailed = true;
+						}
+						if (IntArray[3] == 0)
+						{
+							FailingNumber = 1;
+							RandomIntFailed = true;
+						}
+						if (IntArray[4] == 0)
+						{
+							FailingNumber = 2;
+							RandomIntFailed = true;
+						}
+						if (RandomIntFailed == false)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" Range test failed");
+							if (FailingNumber == -2)
+							{
+								Stuff.Type(" (min. value).");
+							}
+							else
+							{
+								if (FailingNumber == 2)
+								{
+									Stuff.Type(" (max. value).");
+								}
+								else
+								{
+									Stuff.Type(".");
+								}
+							}
 						}
 						Stuff.Wait(300);
 						RandomIntFailed = false;
