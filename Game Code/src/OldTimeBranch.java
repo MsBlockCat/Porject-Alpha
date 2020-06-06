@@ -562,8 +562,29 @@ public class OldTimeBranch
 					Stuff.TypeLine("You also never got to see his face.");
 					Stuff.TypeLine("All that matters is that you got to see your bud Harold.");
 					Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
+					Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
+					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+					Stuff.TypeLine("In an instant, you make it back to the lab");
 					break;
 			}
+		}
+		else
+		{
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			
 		}
 	}
 }
