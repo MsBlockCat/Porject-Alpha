@@ -364,7 +364,170 @@ public class Stuff
 					}
 					
 					HitEnter(1);
-					AwesomeScanner.nextLine();
+					if (AwesomeScanner.nextLine().toLowerCase().equals("stuff diagnostics"))
+					{
+						Stuff.HitEnter(50);
+						Stuff.TypeLine("> Commencing Stuff Diagnostics v1.0.0");
+						Stuff.TypeLine("> No going back now.");
+						Stuff.TypeLine("> ");
+						Stuff.Wait(200);
+						Stuff.Type("> Running test of StringToInt.");
+						Stuff.Wait(300);
+						if (StringToInt("-1") == -1)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" String -1 test failed.");
+						}
+						Stuff.Wait(300);
+						if (StringToInt("1234567890") == 1234567890)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" String 1234567890 test failed.");
+						}
+						Stuff.Wait(300);
+						if (StringToInt('9') == 9)
+						{
+							Stuff.TypeLine(".");
+						}
+						else
+						{
+							Stuff.TypeLine(" Char 9 test failed.");
+						}
+						Stuff.Wait(500);
+						Stuff.TypeLine("> StringToInt test complete.");
+						Stuff.Type("> Running test of BooleanToInt.");
+						Stuff.Wait(300);
+						if (BooleanToInt(false) == 0)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" False test failed.");
+						}
+						Stuff.Wait(300);
+						if (BooleanToInt(true) == 1)
+						{
+							Stuff.TypeLine(".");
+						}
+						else
+						{
+							Stuff.TypeLine(" True test failed.");
+						}
+						Stuff.Wait(500);
+						Stuff.TypeLine("> BooleanToInt test complete.");
+						Stuff.Type("> Running test of IntToBoolean.");
+						Stuff.Wait(300);
+						if (IntToBoolean(0) == false)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" False test failed.");
+						}
+						Stuff.Wait(300);
+						if (IntToBoolean(1) == true)
+						{
+							Stuff.TypeLine(".");
+						}
+						else
+						{
+							Stuff.TypeLine(" True test failed.");
+						}
+						Stuff.Wait(500);
+						Stuff.TypeLine("> IntToBoolean test complete.");
+						Stuff.Type("> Running test of RandomInt.");
+						Stuff.Wait(300);
+						boolean RandomIntFailed = false;
+						for (int Counter = 1; Counter <= 10; Counter ++)
+						{
+							if (RandomInt(1, 1) != 1)
+							{
+								RandomIntFailed = true;
+								break;
+							}
+						}
+						if (RandomIntFailed == false)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" 1 wide test failed.");
+						}
+						Stuff.Wait(300);
+						RandomIntFailed = false;
+						int RandomNumber = 0;
+						for (int Counter = 1; Counter <= 100; Counter ++)
+						{
+							RandomNumber = RandomInt(-10, -1);
+							if ((-10 > RandomNumber) || (RandomNumber > -1))
+							{
+								RandomIntFailed = true;
+								break;
+							}
+						}
+						if (RandomIntFailed == false)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" Negative min & max test failed.");
+						}
+						Stuff.Wait(300);
+						RandomIntFailed = false;
+						RandomNumber = 0;
+						for (int Counter = 1; Counter <= 100; Counter ++)
+						{
+							RandomNumber = RandomInt(-10, 3);
+							if ((-10 > RandomNumber) || (RandomNumber > 3))
+							{
+								RandomIntFailed = true;
+								break;
+							}
+						}
+						if (RandomIntFailed == false)
+						{
+							Stuff.Type(".");
+						}
+						else
+						{
+							Stuff.Type(" Negative min positive max test failed.");
+						}
+						Stuff.Wait(300);
+						RandomIntFailed = false;
+						RandomNumber = 0;
+						for (int Counter = 1; Counter <= 100; Counter ++)
+						{
+							RandomNumber = RandomInt();
+							if ((1 > RandomNumber) || (RandomNumber > 10))
+							{
+								RandomIntFailed = true;
+								break;
+							}
+						}
+						if (RandomIntFailed == false)
+						{
+							Stuff.TypeLine(".");
+						}
+						else
+						{
+							Stuff.TypeLine(" Standard test failed.");
+						}
+						Stuff.Wait(500);
+						Stuff.TypeLine("> RandomInt test complete. (Incorrect RandomInt passes are possible.)");
+						Stuff.TypeLine("> Stuff Diagnostics complete. Hit enter to leave.");
+						
+						AwesomeScanner.nextLine();
+					}
 					break;
 				case "easter egg":
 					HitEnter(50);
@@ -714,7 +877,7 @@ public class Stuff
 		
 		for (int Cursor = 0; Cursor < Number.length(); Cursor++)
 		{
-			if (!Character.isDigit(Number.charAt(Cursor)))
+			if (!(Character.isDigit(Number.charAt(Cursor)) || ((Cursor == 0) && (Number.charAt(Cursor) == '-'))))
 			{
 				System.out.println("(Enter) Error 12: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
 				AwesomeScanner.nextLine();

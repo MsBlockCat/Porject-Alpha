@@ -55,19 +55,19 @@ public class OldTimeBranch
 		{
 			Stuff.TypeLine("You travel back to the year 1253.");
 			Stuff.TypeLine("It seems you are in the middle of a bazar. There are women and children begging for food,");
-			Stuff.TypeLine("Others yelling out prices for food and goods (much lower than modern day you notice),");
-			Stuff.TypeLine("And some old man who seems to be dead?");
+			Stuff.TypeLine(" others yelling out prices for food and goods (much lower than modern day you notice),");
+			Stuff.TypeLine(" and some old man who seems to be dead?");
 			Stuff.Wait(3000);
 			Stuff.TypeLine("Ooap, never mind he just coughed up a small bone, probably his lunch.");
-			Stuff.TypeLine("While walking the lanes, you stumble upon a wanted poster of a criminal,");
-			Stuff.TypeLine("One who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
+			Stuff.TypeLine("While walking through the streets, you stumble upon a wanted poster of a criminal,");
+			Stuff.TypeLine(" one who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
 			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
 			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
 			Stuff.HitEnter(1);
 			ASCII.OldTimeMapBazar();
 			Stuff.HitEnter(2);
 			Stuff.Wait(2000);
-			Stuff.TypeLine("\"Where will you begin your search?\" you hear a passerby ask.");
+			Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
 			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
 			{
 				case "explore the bazar":
@@ -133,7 +133,7 @@ public class OldTimeBranch
 						break;
 					default:
 						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
-						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin! Yes word spreads fast doesnt it.\"");
+						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin! Yes word spreads fast doesn't it.\"");
 						Stuff.TypeLine("The sword is made of emeralds which gives it a magnificent green glow in the sun.");
 						Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
 						Stuff.HasEmeraldSword = true;
@@ -161,9 +161,9 @@ public class OldTimeBranch
 		Stuff.HitEnter(1);
 		ASCII.OldTimeMapBazar();
 		Stuff.HitEnter(2);
-		switch (Stuff.PlayerChoice("check out barracks", "visit the harbor", "search the castle"))
+		switch (Stuff.PlayerChoice("check out barracks", "search the castle"))
 		{
-			case "check out the barracks":
+			case "check out barracks":
 				Barracks();
 				break;
 			case "search the castle":
