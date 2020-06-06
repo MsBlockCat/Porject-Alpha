@@ -678,6 +678,9 @@ public class OldTimeBranch
 				Stuff.TypeLine("You sprint in a direction, thinking to your self how dumb you were to trust a hooded man.");
 				Stuff.TypeLine("Everywhere you look there are knights emerging from their posts, running after you.");
 				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
 				break;
 			case "don't run":
 				Stuff.TypeLine("");
