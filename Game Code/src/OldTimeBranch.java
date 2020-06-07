@@ -736,7 +736,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("Fantastic.");
 		Stuff.TypeLine("You stand in a line with other criminals although you yourself are not one.");
 		Stuff.TypeLine("Your complaints to the guards don't work either.");
-		Stuff.TypeLine("Since the mood is grim you come up with some ideas.");
+		Stuff.TypeLine("Since the mood is grim you come up with some ideas to try and stay positive.");
 		switch (Stuff.PlayerChoice("Make a joke", "blah blah place holder", "Some other place holder"))
 		{
 		
