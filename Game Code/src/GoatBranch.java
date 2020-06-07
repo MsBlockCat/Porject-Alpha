@@ -84,6 +84,10 @@ public class GoatBranch
 			case "RandomHouse":
 				RandomHouse();
 				break;
+			case "21":
+			case "RightOutsideHouse":
+				RightOutsideHouse();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -221,7 +225,7 @@ public class GoatBranch
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedToTree == true) {
-			switch (Stuff.PlayerChoice("ask about ned", "ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask about Ned", "ask anything hehe", "ask to leave"))
 			{
 			case "ask about ned":
 				Stuff.typeln("\"Who is Ned?\" you ask politely.");
@@ -298,7 +302,7 @@ public class GoatBranch
 			Stuff.typeln("You also notice that the letters seem to be a part of a panel.");
 		}
 		else {
-			Stuff.typeln("It's another hatch just like the one on the mountain!");
+			Stuff.typeln("It's a hatch again!");
 		}
 		Stuff.typeln("What is your next move?");
 		Stuff.SeenHatch = true;
@@ -402,7 +406,7 @@ public class GoatBranch
 	
 	public static void Town() {
 		Stuff.CurrentLocationNumber = 9;
-		
+		if (Stuff.WentToTown == false) {
 		Stuff.typeln("You wander into town, trying to act nonchalant.");
 		Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 		Stuff.typeln(". . .well, you're a goat.");
@@ -410,9 +414,18 @@ public class GoatBranch
 		Stuff.HitEnter(2);
 		ASCII.BulletinBoard();
 		Stuff.HitEnter(2);
-		Stuff.Wait(7000);
+		Stuff.Wait(5000);
 		Stuff.typeln("That is quite perculiar. Yes, indeed, very weird.");
 		Stuff.typeln("You'll have to be sure to report any anti-Ned activity, I suppose.");
+		}
+		else {
+			Stuff.typeln("It's the same town as before. Nothing interesting to see. There is that bulliten board again.");
+			Stuff.HitEnter(2);
+			ASCII.BulletinBoard();
+			Stuff.HitEnter(2);
+			Stuff.Wait(5000);
+			Stuff.typeln("Well, off you go.");
+		}
 		Stuff.Wait(1000);
 		Stuff.WentToTown = true;
 		Crossroads();
@@ -427,14 +440,22 @@ public class GoatBranch
 		Stuff.typeln("You arrive at a crossroads.");
 		Stuff.typeln("And wow, there's a handy signpost here!");
 		Stuff.typeln("It even directs you to seemingly pointless (but actually sinister) locations!"); 
-		Stuff.Wait(4000);
+		Stuff.Wait(2500);
 		Stuff.typeln("Where to go...");
+		while (5 == 2 + 3) {
 		switch (Stuff.PlayerChoice("grocery store", "rock", "tree", "mountain"))
 		{
 		case "grocery store":
-			Stuff.typeln ("Yim yum.");
-			Stuff.Wait(1000);
-			GroceryStore();
+			if (Stuff.NedLoreAcquired == false) {
+				Stuff.typeln ("Yim yum.");
+				Stuff.Wait(1000);
+				GroceryStore();
+			}
+			else {
+				Stuff.typeln("Too bad.");
+				Stuff.typeln("You already went there.");
+				Stuff.typeln("Pick somewhere else.");
+			}
 			break;
 		case "rock":
 			Stuff.typeln ("Yes, perhaps the rock will hold some answers...");
@@ -451,6 +472,7 @@ public class GoatBranch
 			Stuff.Wait(1000);
 			Mountain();
 			break;
+		}
 		}
 	}
 	
@@ -503,6 +525,7 @@ public class GoatBranch
 		switch (Stuff.PlayerChoice("go in hatch", "stay"))
 		{
 		case "go in hatch":
+			Stuff.WentInTreeHatch = true;
 			Stuff.typeln("Into the hatch you go.");
 			Stuff.typeln("You fall for a while.");
 			Stuff.Wait(3000);
@@ -532,14 +555,20 @@ public class GoatBranch
 	
 	public static void UpperMountain() {
 		Stuff.CurrentLocationNumber = 13;
-		
+		if (Stuff.GotShirt == true) {
+			Stuff.typeln("You already climbed once. We'll spare you the theatrics.");
+			Stuff.Wait(3000);
+			Stuff.typeln("Hooray you're at the top!");
+			Stuff.typeln("Now what...");
+		}
+		else {
 		Stuff.typeln("And so, you begin your climb.");
 		Stuff.HitEnter(2);
 		ASCII.MountainScene();
 		Stuff.HitEnter(2);
 		Stuff.Wait(2000);
 		Stuff.typeln("And you continue your climb...");
-		Stuff.typeln("And 20 grueling days, you reach the top, where there is a gift shop.");
+		Stuff.typeln("After 20 grueling days, you reach the top, where there is a gift shop.");
 		Stuff.typeln("You walk to the door and enter...");
 		Stuff.Wait(500);
 		Stuff.typeln("\"Welcome to the gift shop,\" says the woman at the counter.");
@@ -560,9 +589,11 @@ public class GoatBranch
 		Stuff.typeln("And back up you go.");
 		Stuff.Wait(2000);
 		Stuff.typeln("40 days later, you return to the gift shop.");
-		Stuff.typeln("Luckily, you are able to buy yourself a cool shirt.");
+		Stuff.typeln("Luckily, you are able to buy yourself a cool Ned-themed shirt.");
+		Stuff.GotShirt = true;
 		Stuff.Wait(3000);
 		Stuff.typeln("With the important things out of the way, it's time to do some pointless lame things.");
+		}
 		Stuff.typeln("You notice that there is another building that says \"Time Machine Manufacturing Center\" on the door.");
 		Stuff.typeln("\"Wow,\" you remark, \"that is quite boring compared to the gift shop.\"");
 		Stuff.typeln("You suppose you should enter though.");
@@ -612,7 +643,7 @@ public class GoatBranch
 			Stuff.typeln("\"Hey,\" you inquire again.");
 			Stuff.typeln("\"Hey, what?\"");
 			Stuff.typeln("\"May I use one of the machines?\"");
-			Stuff.typeln("\"Well, I guess so.\" The doctor shrugs and steps out of the way");
+			Stuff.typeln("\"Well, I guess so.\" The doctor shrugs and steps out of the way.");
 			Stuff.typeln("\"Just FYI, if you get hurt, it's not my fault or my problem.\"");
 			Stuff.typeln("You nod. You are a goat, so no one should notice you're gone anyway.");
 			Stuff.typeln("Into the machine you go.");
@@ -647,13 +678,17 @@ public class GoatBranch
 			Stuff.typeln("You also notice that the letters seem to be a part of a panel.");
 		}
 		else {
-			Stuff.typeln("It's another hatch just like the one in the tree!");
+			Stuff.typeln("It's a hatch again!");
 		}
 		Stuff.typeln("What is your next move?");
 		Stuff.SeenHatch = true;
 		switch (Stuff.PlayerChoice("push it", "ignore it"))
 		{
 		case "push it":
+			Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
+			Stuff.typeln("The hill starts to make grinding, metallic sounds, and the rock begins to shift.");
+			Stuff.typeln("The sounds are defeaning!");
+			//add things
 			MountainHatch();
 			break;
 		case "ignore it":
@@ -673,10 +708,7 @@ public class GoatBranch
 	public static void MountainHatch() {
 		Stuff.CurrentLocationNumber = 16;
 		
-		Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
-		Stuff.typeln("The hill starts to make grinding, metallic sounds, and the rock begins to shift.");
-		Stuff.typeln("The sounds are defeaning!");
-		//add things
+		//add things (make it go to the same place as that tree one)
 	}
 	
 	public static void WaterHole() {
@@ -733,7 +765,7 @@ public class GoatBranch
 			Stuff.typeln("You open your eyes and see the grate leads to a vacant room.");
 			Stuff.typeln("The water begins to pool on the floor and runs out the doorway.");
 			Stuff.typeln("You sure wouldn't want to live there, you note,");
-			Stuff.typeln("Thoughyou aren't in the best position yourself.");
+			Stuff.typeln("Though you aren't in the best position yourself.");
 			Stuff.Wait(2000);
 			RandomHouse();
 			break;
@@ -749,12 +781,136 @@ public class GoatBranch
 	public static void EllipseOffice() {
 		Stuff.CurrentLocationNumber = 19;
 		
-		//stuff
+		Stuff.typeln("Your eyes open slowly and you find youself in a circular office.");
+		Stuff.typeln("The man has removed his helmet and you can tell he looks vaguely familiar.");
+		if (Stuff.WentToTown == true) {
+			Stuff.typeln("It's Ned!");
+			Stuff.typeln("He looks exactly like Ned on the bulletin board!");
+		}
+		else {
+			Stuff.typeln("You're not sure from where though.");
+		}
+		Stuff.typeln("\"I suppose you'll know who I am,\" the man says with a smirk.");
+		Stuff.Wait(2000);
+		Stuff.typeln("\"My name is Ned Flanders. And I'm the leader of this here nation.\"");
+		if (Stuff.NedLoreAcquired == true) {
+			Stuff.typeln("\"Ned!\" you say with feigned joy.");
+			Stuff.typeln("You know this is a man you need to respect.");
+			Stuff.typeln("\"What a great honor it is to meet you!\"");
+			Stuff.typeln("Your friendliness seems to be working, since Ned smiles warmly at you.");
+			Stuff.typeln("\"Well, since you're so polite, I almost feel bad killing you!\"");
+			Stuff.typeln("Oh dear.");
+			Stuff.Wait(1500);
+			Stuff.typeln("All of a sudden, the phone rings.");
+			Stuff.typeln("Ned picks it up and nods a few times, with a few 'okay's thrown in, and then hang it up.");
+			if (Stuff.HasLuckyGauntlet == true) {
+				Stuff.typeln("\"That was Apu.\" Ned says with a hint of relief.");
+				Stuff.typeln("\"He says you appeared out of nowhere outside his store, but that you seemed harmless.\"");
+				Stuff.typeln("\"I was worried,\" Ned laughs, \"That you might have been a spy planted by enemies!\"");
+				Stuff.typeln("\"Well, since you're not, I suppose I can let you be on your way.\"");
+				Stuff.typeln("He gets up and opens another door.");
+				Stuff.typeln("\"In there is a time machine,\" Ned says. \"It should bring you back to your friends.\"");
+				Stuff.typeln("You walk into the room and Ned goes to shut the door behind you.");
+				Stuff.typeln("\"Just...\" Ned looks behind him. \"Don't tell anyone you were here, okay?\"");
+				Stuff.typeln("You nod and enter the machine.");
+				Stuff.typeln("You wonder if you should try exploring somewhere else?");
+				Stuff.typeln("Or maybe you've done enough for today. Up to you.");
+				switch (Stuff.PlayerChoice("go to 2030", "go home"))
+				{
+				case "go to 2030":
+					Stuff.typeln("Why not?");
+					Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
+					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
+					Stuff.typeln("You brace yourself for the adventure ahead...");
+					SpaceBranch.GoToSpaceBranch("LaunchPad1");
+					break;
+				case "go home":
+					Stuff.typeln("You decide you've had enough for today.");
+					//insert dramatic and emotion ending here (i dont feel like it today lol)
+					Stuff.StoryEnding();
+					break;
+			}
+			}
+			else {
+				//bad things (you perish)
+			}
+		}
+		else {
+			//you are rude and perish because you don't know to respect him
+			//unless you have the shirt. then he lets you go
+		}
 	}
 	
 	public static void RandomHouse() {
 		Stuff.CurrentLocationNumber = 20;
 		
-		//stuff
+		Stuff.typeln("After a few minutes of chilling in the grate, water rushing past you and flooding the room below...");
+		Stuff.typeln("You hear a voice.");
+		Stuff.typeln("\"What's all this water? Why is the family room - honey!\"");
+		Stuff.typeln("A fellow enters the room and his wife follows.");
+		Stuff.typeln("They look down at their drenched feet with dissatisfaction before noticing you in the wall.");
+		Stuff.typeln("\"Woah,\" the woman remarks, \"there's a goat in the wall.\"");
+		Stuff.typeln("Her husband looks up.");
+		Stuff.typeln("\"So there is\"");
+		Stuff.Wait(1000);
+		Stuff.typeln("They contemplate the situation for a few seconds before addressing you.");
+		Stuff.typeln("\"Mr. Goat? We know you can hear us.\"");
+		Stuff.typeln("You decide to reply, remembering what happened five minutes ago when you ignored that other guy.");
+		Stuff.typeln("Also, they might have some idea what's going on.");
+		Stuff.typeln("\"Yes?\" you say politely.");
+		Stuff.typeln("\"We can get you out of there,\" the woman says.");
+		Stuff.typeln("\"But you need to trust us.\"");
+		Stuff.typeln("It seems like you either trust them or die here.");
+		Stuff.typeln("Still, it is a choice.");
+		switch (Stuff.PlayerChoice("trust them", "don't"))
+		{
+		case "trust them":
+			Stuff.typeln("You give them a nod and they approach the grate.");
+			Stuff.typeln("The man picks up a screwdriver and begins to remove the grate.");
+			Stuff.Wait(1000);
+			Stuff.typeln("After a minute or two it's off and the couple grabs you and set you down.");
+			Stuff.typeln("The water is beginning to rise and fill the home.");
+			Stuff.typeln("\"We should probably take this outside,\" the wife says.");
+			Stuff.typeln("They carry you down a hall and soon, you find yourself outside.");
+			RightOutsideHouse();
+			break;
+		case "don't":
+			Stuff.typeln("You shake your head.");
+			Stuff.typeln("\"Why should I trust you?\" you demand.");
+			Stuff.typeln("\"You knew I could talk. Where did you get that info?\"");
+			Stuff.typeln("You need to escape. You start to climb back up the tunnel, but it's challenging with the water rushing at you.");
+			Stuff.typeln("You're beginning to think escape is hopeless when you notice another hatch in the wall.");
+			Stuff.typeln("Perhaps that will dump out somewhere without a grate.");
+			Stuff.typeln("You pull it open and are suddenly and violently sucked in.");
+			Stuff.typeln("You hit your head on the wall and everything goes to black.");
+			MountainHatch();
+			break;
+		}
+	}
+	
+	public static void RightOutsideHouse() {
+		Stuff.CurrentLocationNumber = 21;
+		
+		Stuff.Wait(1500);
+		Stuff.typeln("\"Look, we can put you down,\" the man says,");
+		Stuff.typeln("\"But you have to promise not to run away.\"");
+		Stuff.typeln("\"Okay,\" you promise halfheartedly.");
+		Stuff.typeln("They place you on the ground and you weigh your options.");
+		Stuff.typeln("You could just stay.");
+		Stuff.typeln("After all, if one thing in this world is sacred, it's a goat's word, and you wouldn't want to hurt that reputation.");
+		Stuff.typeln("But also, you could make an escape!");
+		switch (Stuff.PlayerChoice("run", "stay"))
+		{
+		case "run":
+			Stuff.typeln("You decide to dip.");
+			Stuff.typeln("You jump suddenly to the left and they rush to snatch you.");
+			Stuff.typeln("But you then dash right and they fall onto the ground.");
+			Stuff.typeln("You disappear between two houses and come out in the street. It seems you're back at the crossroads.");
+			Crossroads();
+			break;
+		case "stay":
+			//i d k
+			break;
+		}
 	}
 }
