@@ -106,10 +106,10 @@ public class OldTimeBranch
 		Stuff.HitEnter(1);
 		Stuff.Wait(1000);
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
-		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is\"");
-		Stuff.TypeLine("\" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
-		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5,\"");
-		Stuff.TypeLine("\" you get the \"Lucky Gauntlet\", sounds fair? Well it doesn't matter because I make the rules!\"");
+		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is");
+		Stuff.TypeLine(" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
+		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5,");
+		Stuff.TypeLine(" you get the \"Lucky Gauntlet\", sounds fair? Well it doesn't matter because I make the rules!\"");
 		switch (Stuff.PlayerChoice("spin", "don't spin"))
 		{
 			case "spin":
@@ -127,7 +127,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("\"Ohh so close my friend: you got a 6! But no cigar, still, take this.\"");
 						Stuff.TypeLine("The shop keeper hands you an emerald sword which reflects the light off it making a fantastic light show under it.");
 						Stuff.TypeLine("\"Everyone is overjoyed that someone has taken the deed of locating this assassin. Our poor king must have been shook after the attack!\"");
-						Stuff.TypeLine("As you wish each other good bye, you still marvel at the sword in all its beautiful splendor.");
+						Stuff.TypeLine("As you wish each other goodbye, you still marvel at the sword in all its beautiful splendor.");
 						Stuff.HasEmeraldSword = true;
 						Bazar();
 						break;
@@ -140,8 +140,8 @@ public class OldTimeBranch
 						Bazar();
 						break;
 					default:
-						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.\"");
-						Stuff.TypeLine("\"You are gonna need it on your quest for that assassin! Yes word spreads fast doesn't it.\"");
+						Stuff.TypeLine("\"Oh not your lucky day is it. Well move along now, nothing else you can do here, well besides taking this sword for your troubles.");
+						Stuff.TypeLine("You are gonna need it on your quest for that assassin! Yes word spreads fast doesn't it.\"");
 						Stuff.TypeLine("The sword is made of emeralds which gives it a magnificent green glow in the sun.");
 						Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
 						Stuff.HasEmeraldSword = true;
@@ -151,9 +151,9 @@ public class OldTimeBranch
 				break;
 				
 			case "don't spin":
-				Stuff.TypeLine("\"Well then, here take this sword, it's made of emeralds and will help you on your journey.\"");
-				Stuff.TypeLine("\"Most people around here know about it and boy are we thankful. Our king is a good one so I don't know why anyone would attempt to murder him.\"");
-				Stuff.TypeLine("\"Good luck traveler.\" With these words you leave the shop and continue your search.");
+				Stuff.TypeLine("\"Well then, here take this sword, it's made of emeralds and will help you on your journey.");
+				Stuff.TypeLine("Most people around here know about it and boy are we thankful. Our king is a good one so I don't know why anyone would attempt to murder him.");
+				Stuff.TypeLine("Good luck traveler.\" With these words you leave the shop and continue your search.");
 				Stuff.HasEmeraldSword = true;
 				Bazar();
 				break;
@@ -242,7 +242,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("Although you do not have a sword, you still feel like you are going to win against whoever you spar against.");
 						Stuff.TypeLine("One of the knights (whose name is Harold you hear someone murmur in the silence) approaches you from within the crowd.");
 						Stuff.MetHarold = true;
-						Stuff.TypeLine("\'Good luck and may the best fighter win!\" he states looking confident in himself, but you feel more confident.");
+						Stuff.TypeLine("\"Good luck and may the best fighter win!\" he states looking confident in himself, but you feel more confident.");
 						Stuff.TypeLine("One of the other knights starts to count down.");
 						Stuff.TypeLine("Five.");
 						Stuff.Wait(650);
@@ -299,8 +299,8 @@ public class OldTimeBranch
 						Stuff.TypeLine("He quickly runs at you, eyes crying and reddened because of the itchyness and takes a swing,");
 						Stuff.TypeLine(" but misses because of his clowdy vision. You throw the rock at his arm and he drops the sword.");
 						Stuff.TypeLine("You run to pick it up but he grabs it in time and points it at your stomach.");
-						Stuff.TypeLine("\"It seems as if I have won. That was indeed a good match. You were able to hold me off even without a weapon.\"");
-						Stuff.TypeLine("\"Come, join us, it is almost dinner and our little scurmish has made me hungry.\"");
+						Stuff.TypeLine("\"It seems as if I have won. That was indeed a good match. You were able to hold me off even without a weapon.");
+						Stuff.TypeLine("Come, join us, it is almost dinner and our little scurmish has made me hungry.\"");
 						Stuff.TypeLine("You realize that you are hungry too. That chocolate bar, although not filling, did taste good.");
 						Stuff.TypeLine("After dinner and some wandering, you come across a dimly lit room.");
 						Stuff.HitEnter(2);

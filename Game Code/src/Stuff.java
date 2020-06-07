@@ -13,7 +13,7 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.3.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 8;
+	public static final int SaveVersion = 9;
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
@@ -41,8 +41,9 @@ public class Stuff
 	public static boolean WentToTown = false;
 	public static boolean SeenHatch = false;
 	public static boolean GotShirt = false;
-	/* Add to SaveVersion 9 */ public static boolean HasChicken = false;
-	/* Add to SaveVersion 9 */ public static boolean WentInTreeHatch = false;
+	public static boolean HasChicken = false;
+	public static boolean WentInTreeHatch = false;
+	public static boolean TrustsElon = true;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -671,6 +672,9 @@ public class Stuff
 			/* Line 24 */ SaveFileWriter.write(BooleanToInt(WentToTown) + "\n");
 			/* Line 25 */ SaveFileWriter.write(BooleanToInt(SeenHatch) + "\n");
 			/* Line 26 */ SaveFileWriter.write(BooleanToInt(GotShirt) + "\n");
+			/* Line 27 */ SaveFileWriter.write(BooleanToInt(HasChicken) + "\n");
+			/* Line 28 */ SaveFileWriter.write(BooleanToInt(WentInTreeHatch) + "\n");
+			/* Line 29 */ SaveFileWriter.write(BooleanToInt(TrustsElon) + "\n");
 			
 			SaveFileWriter.close();
 			if (BeKindaQuiet == false)
@@ -881,9 +885,27 @@ public class Stuff
 						}
 						else
 						{
-							FavoriteGame = 0;
-							FoundTrapdoor = false;
-							ApuNerfedYou = false;
+							SeenRuins = false;
+							RoulletteSpin = false;
+							HasEmeraldSword = false;
+							NedLoreAcquired = false;
+							HelpingHand = false;
+							MetHarold = false;
+							WentToTown = false;
+							SeenHatch = false;
+							GotShirt = false;
+						}
+						if (FileSaveVersion >= 9)
+						{
+							/* File Line          | 24 */ HasChicken = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 25 */ WentInTreeHatch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 26 */ TrustsElon = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							HasChicken = false;
+							WentInTreeHatch = false;
+							TrustsElon = true;
 						}
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))

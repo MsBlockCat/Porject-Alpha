@@ -59,21 +59,17 @@ public class SpaceBranch
 		{
 			Stuff.TypeLine("You travel to the year 2030.");
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
-		}
-		
-		if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
-		{
-			Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
-			Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
-			Stuff.TimeinatorWorks = false;
-		}
-		else
-		{
-			Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
-		}
-		
-		if (Stuff.StoryBeginning == true)
-		{
+			
+			if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
+			{
+				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
+				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");
+				Stuff.TimeinatorWorks = false;
+			}
+			else
+			{
+				Stuff.TypeLine("Time slows back down to normal, and details of your surroundings come into view.");
+			}
 			Stuff.TypeLine("A massive launchpad is nearby with a rocket preparing to launch on it, a giant stylized X on both.");
 			Stuff.TypeLine("You see Elon Musk watching over its fueling.");
 			Stuff.TypeLine("Walking up to him, he greets you first.");
@@ -493,11 +489,13 @@ public class SpaceBranch
 			case "trust":
 				Stuff.TypeLine("Deciding to trust Elon, you head back upstairs.");
 				Stuff.TypeLine("Dumb newspaper was probably just fake news anyway.");
+				Stuff.TrustsElon = true;
 				SpoopyBuilding();
 				break;
 			case "don't trust":
 				Stuff.TypeLine("Realizing Elon is not to be trusted and understanding the shocking truth,");
 				Stuff.TypeLine(" you use the Timeinator to travel to that time and area.");
+				Stuff.TrustsElon = false;
 				if (Stuff.TimeinatorWorks == false)
 				{
 					Stuff.Wait(1000);
