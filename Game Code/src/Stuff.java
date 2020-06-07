@@ -43,6 +43,7 @@ public class Stuff
 	public static boolean GotShirt = false;
 	/* Add to SaveVersion 9 */ public static boolean HasChicken = false;
 	/* Add to SaveVersion 9 */ public static boolean WentInTreeHatch = false;
+	/* Add to SaveVersion 9 */ public static boolean Criminal = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
