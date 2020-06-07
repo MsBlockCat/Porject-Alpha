@@ -414,7 +414,7 @@ public class OldTimeBranch
 				{
 					if(Stuff.HasEmeraldSword = true)
 					{
-						Stuff.TypeLine("It takes you a while to understand it but you finaly get it.");
+						Stuff.TypeLine("It takes you a while to understand it but you finally get it.");
 						Stuff.TypeLine("You think.");
 						Stuff.TypeLine("You have no idea. You hear a clink behind you and you swing around with your sword.");
 						Stuff.TypeLine("It hits another. One exactly the same.");
@@ -614,7 +614,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("They seem friendly so you ask if you can hitch a ride with them.");
 		Stuff.TypeLine("They say no.");
 		Stuff.HitEnter(2);
-		Stuff.TypeLine("You keep on walking and finaly you make it to the castle gate.");
+		Stuff.TypeLine("You keep on walking and finally you make it to the castle gate.");
 		Stuff.TypeLine("The drawbridge is down so that was convenient.");
 		Stuff.TypeLine("As you enter you take one last look at the wanted poster with the map on it to remember the man you are hunting for.");
 		Stuff.TypeLine("You think they look familiar.");
