@@ -1188,7 +1188,16 @@ public class Stuff
 			default:
 				Type("That's it for this tale!");
 		}
-		TypeLine(" You made " + TurnCount + " choices. Return to the main menu whenever you're ready.");
+		if (TurnCount == 1)
+		{
+			 Type("You made one choice... That's a pretty short adventure! ");
+		}
+		else
+		{
+			Type("You made " + TurnCount + " choices. ");
+		}
+		
+		TypeLine("Return to the main menu whenever you're ready.");
 		HitEnter(1);
 		AwesomeScanner.nextLine();
 		PorjectAlpha.TitleScreen();
