@@ -562,7 +562,7 @@ public class OldTimeBranch
 			{
 				case "look up":
 					Stuff.TypeLine("You look up and see a grumpy old lady.");
-					Stuff.TypeLine("\"QUITE DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+					Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
 					Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
 					Stuff.TypeLine("The reinforcements you called just arrived.");
 					Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled him away.");
@@ -572,7 +572,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("You take a break in the \"royal potty\" and activate the Timeinator.");
 					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
 					Stuff.TypeLine("In an instant, you make it back to the lab.");
-					Stuff.TypeLine("You caught the assassin and even aquired the Porject Alpha what Doof wanted.");
+					Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
 					Stuff.Wait(1000);
 					Stuff.HitEnter(2);
 					Stuff.TypeLine("The Flower Pot Ending");
@@ -581,7 +581,7 @@ public class OldTimeBranch
 					Stuff.StoryEnding();
 					break;
 				case "don't look up":
-					Stuff.TypeLine("To you it doesn't really matter howw that hit him, just that you got the assassin.");
+					Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
 					Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
 					Stuff.TypeLine("Probably went to a prison though.");
 					Stuff.TypeLine("You also never got to see his face.");
@@ -590,7 +590,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
 					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
 					Stuff.TypeLine("In an instant, you make it back to the lab.");
-					Stuff.TypeLine("You caught the assassin and even aquired the Porject Alpha what Doof wanted.");
+					Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
 					Stuff.Wait(1000);
 					Stuff.HitEnter(2);
 					Stuff.TypeLine("The Hero of the Kingdom Ending");
@@ -617,15 +617,15 @@ public class OldTimeBranch
 		Stuff.TypeLine("You keep on walking and finaly you make it to the castle gate.");
 		Stuff.TypeLine("The drawbridge is down so that was convenient.");
 		Stuff.TypeLine("As you enter you take one last look at the wanted poster with the map on it to remember the man you are hunting for.");
-		Stuff.TypeLine("You think they look familliar.");
+		Stuff.TypeLine("You think they look familiar.");
 		Stuff.TypeLine("Either way you want to capture them because of the reward.");
 		Stuff.TypeLine("You start to get hungry and want to go to a food shop.");
-		Stuff.TypeLine("There are two near by.");
+		Stuff.TypeLine("There are two nearby.");
 		switch (Stuff.PlayerChoice("vegetarian", "chicken"))
 		{
 			case "vegetarin":
 				Stuff.TypeLine("At the vegetarian shop, there isn't much on the menu.");
-				Stuff.TypeLine("\"Kale\"");
+				Stuff.TypeLine("\"Kale.\"");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("\"Boiled Kale.\"");
 				Stuff.HitEnter(2);
@@ -633,33 +633,33 @@ public class OldTimeBranch
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("\"Carrot.\"");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("It seems like vegetarian cuisine has not yet made its debu.");
-				Stuff.TypeLine("You choose to go to the ckicken shop instead.");
+				Stuff.TypeLine("It seems like vegetarian cuisine has not yet made its debut.");
+				Stuff.TypeLine("You choose to go to the chicken shop instead.");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Wow, there is a lot of different ways to eat chicken here.");
-				Stuff.TypeLine("Raw. Sounds disgusting");
+				Stuff.TypeLine("Wow, there are a lot of different ways to eat chicken here.");
+				Stuff.TypeLine("Raw. Sounds disgusting!");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked");
+				Stuff.TypeLine("Baked.");
 				Stuff.HasChicken = true;
 				break;
 			case "chicken":
-				Stuff.TypeLine("Wow, there is a lot of different ways to eat chicken here.");
-				Stuff.TypeLine("Raw. Sounds disgusting");
+				Stuff.TypeLine("Wow, there are a lot of different ways to eat chicken here.");
+				Stuff.TypeLine("Raw. Sounds disgusting!");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked");
+				Stuff.TypeLine("Baked.");
 				Stuff.HasChicken = true;
 				break;
 		}
 		Stuff.TypeLine("You eat half of the chicken and save the rest for later in your pocket.");
-		Stuff.TypeLine("You are now full and ready to look for assassin person, untill some hooded figure comes and asks for your help.");
+		Stuff.TypeLine("You are now full and ready to look for this assassin person, until some hooded figure comes and asks for your help.");
 		Stuff.TypeLine("You feel obligated to help for no reason.");
 		Stuff.TypeLine("\"Come with me.\"");
 		Stuff.TypeLine("You follow.");
@@ -675,7 +675,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("run", "don't run"))
 		{
 			case "run":
-				Stuff.TypeLine("You sprint in a direction, thinking to your self how dumb you were to trust a hooded man.");
+				Stuff.TypeLine("You sprint in a direction, thinking to yourself how dumb you were to trust a hooded man.");
 				Stuff.TypeLine("Everywhere you look there are knights emerging from their posts, running after you.");
 				Stuff.TypeLine("");
 				Stuff.TypeLine("");
