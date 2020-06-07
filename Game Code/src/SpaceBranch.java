@@ -388,16 +388,16 @@ public class SpaceBranch
 			case 2:
 				if (Stuff.HasLuckyGauntlet == true)
 				{
+					Stuff.TypeLine("You see an animatronic that looks like a red fox, with a patch over one eye.");
+					Stuff.TypeLine("It smiles (to the extent an animatronic can) at you and waves. You wave back.");
+				}
+				else
+				{
 					Stuff.Wait(3000);
 					System.out.println("Suddenly, a red blur starts running at you and screams!");
 					Stuff.Wait(1000);
 					Stuff.TypeLine("You dodge the blur just in time, and it keeps running, off into the distance.");
 					Stuff.TypeLine("You made out an animatronic that looks like a red fox, with a patch over one eye.");
-				}
-				else
-				{
-					Stuff.TypeLine("You see an animatronic that looks like a red fox, with a patch over one eye.");
-					Stuff.TypeLine("It smiles (to the extent an animatronic can) at you and waves. You wave back.");
 				}
 				break;
 			case 3:
