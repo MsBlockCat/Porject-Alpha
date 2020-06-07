@@ -389,7 +389,7 @@ public class SpaceBranch
 				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("You see an animatronic that looks like a red fox, with a patch over one eye.");
-					Stuff.TypeLine("It smiles (to the extent an animatronic can) at you and waves. You wave back.");
+					Stuff.TypeLine("It smiles (to the extent an animatronic can) at you and waves. You happily smile and wave back.");
 				}
 				else
 				{
