@@ -53,6 +53,10 @@ public class OldTimeBranch
 			case "TigerCage":
 				TigerCage();
 				break;
+			case "13":
+			case "TigerEvent":
+				TigerEvent();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -737,9 +741,59 @@ public class OldTimeBranch
 		Stuff.TypeLine("You stand in a line with other criminals although you yourself are not one.");
 		Stuff.TypeLine("Your complaints to the guards don't work either.");
 		Stuff.TypeLine("Since the mood is grim you come up with some ideas to try and stay positive.");
-		switch (Stuff.PlayerChoice("Make a joke", "blah blah place holder", "Some other place holder"))
+		switch (Stuff.PlayerChoice("make a joke", "blah blah blah", "revolt"))
 		{
+			case "make a joke":
+				Stuff.TypeLine("You lean up nice and close to one of the big burly men next to you and tell him a joke.");
+				Stuff.TypeLine("He did not find it amusing.");
+				Stuff.TypeLine("Infact he swung at your head but yuo dodged right in time.");
+				Stuff.TypeLine("\"Hey are you trying to cause a fight here?\"");
+				Stuff.TypeLine("The knight said this to the man you told the joke to.");
+				Stuff.TypeLine("He then gets pulled away and you stick your tongue at him.");
+				Stuff.TypeLine("Who doesnt like a knock knock joke?");
+				TigerEvent();
+				break;
+			case "blah blah blah":
+				Stuff.TypeLine("blah blah blah. You start mocking one of the knights.");
+				Stuff.TypeLine("He did not like that. He actually walked over and said that you would be the first one fed to the tiger if yuo kept it up");
+				Stuff.TypeLine("Seems like a good time to stop mocking him.");
+				Stuff.TypeLine("It was fun while it lasted.");
+				TigerEvent();
+				break;
+			case "revolt":
+				Stuff.TypeLine("You spread the idea of revolting to the criminals around you and it seems they like it.");
+				Stuff.TypeLine("One of them yells \"REVOLT!!\" and the rest jump into action, doing criminal things that is.");
+				Stuff.TypeLine("You use this oportunity to try to sneak out during the chaos but you back into a knight and they restrain you.");
+				Stuff.TypeLine("All of the criminals are also restrained and put back into line, this time closer to the tiger.");
+				Stuff.TypeLine("Looks like this was a pretty bad idea.");
+				Stuff.TypeLine("It was worth a try though.");
+				TigerEvent();
+				break;
+		}
+	}
+	
+	public static void TigerEvent()
+	{
+		Stuff.CurrentLocationNumber = 13;
 		
+		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time fot the main event.");
+		Stuff.TypeLine("The tiger is un chained and starts to stalk its prey.");
+		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not mutch else you can do.");
+		if (Stuff.HasChicken = true)
+		{
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+		}
+		else
+		{
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
+			Stuff.TypeLine("");
 		}
 	}
 }
