@@ -78,40 +78,36 @@ public class OldTimeBranch
 		if (Stuff.StoryBeginning == true)
 		{
 			Stuff.TypeLine("You travel back to the year 1253.");
-			Stuff.TypeLine("It seems you are in the middle of a bazar. There are women and children begging for food,");
-			Stuff.TypeLine(" others yelling out prices for food and goods (much lower than modern day you notice),");
-			Stuff.TypeLine(" and some old man who seems to be dead?");
-			Stuff.Wait(3000);
-			Stuff.TypeLine("Ooap, never mind he just coughed up a small bone, probably his lunch.");
-			Stuff.TypeLine("While walking through the streets, you stumble upon a wanted poster of a criminal,");
-			Stuff.TypeLine(" one who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
-			Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
-			Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
-			Stuff.HitEnter(1);
-			ASCII.OldTimeMapBazar();
-			Stuff.HitEnter(2);
-			Stuff.Wait(2000);
-			Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
-			switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
-			{
-				case "explore the bazar":
-					Stuff.StoryBeginning = false;
-					RoulletteShop();
-					break;
-				case "check out the barracks":
-					Stuff.StoryBeginning = false;
-					Barracks2();
-					break;
-				case "search the castle":
-					Stuff.StoryBeginning = false;
-					Castle();
-					break;
-			}
 		}
-		else
+		Stuff.TypeLine("It seems you are in the middle of a bazar. There are women and children begging for food,");
+		Stuff.TypeLine(" others yelling out prices for food and goods (much lower than modern day you notice),");
+		Stuff.TypeLine(" and some old man who seems to be dead?");
+		Stuff.Wait(3000);
+		Stuff.TypeLine("Ooap, never mind he just coughed up a small bone, probably his lunch.");
+		Stuff.TypeLine("While walking through the streets, you stumble upon a wanted poster of a criminal,");
+		Stuff.TypeLine(" one who had attempted to assassinate the king of this land. The prize, Porject Alpha.");
+		Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
+		Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
+		Stuff.HitEnter(1);
+		ASCII.OldTimeMapBazar();
+		Stuff.HitEnter(2);
+		Stuff.Wait(2000);
+		Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
+		switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
 		{
-			//Digo if you ever wanna add stuff to do when you go to this location and the story's already begun (when Stuff.StoryBeginning == false), this'd be where you do it
-		}	
+			case "explore the bazar":
+				Stuff.StoryBeginning = false;
+				RoulletteShop();
+				break;
+			case "check out the barracks":
+				Stuff.StoryBeginning = false;
+				Barracks2();
+				break;
+			case "search the castle":
+				Stuff.StoryBeginning = false;
+				Castle();
+				break;
+		}
 	}
 	
 	public static void RoulletteShop()
@@ -511,6 +507,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("sit and wait", "give up"))
 		{
 			case "sit and wait":
+				//Add something here please Digo
 				break;
 			case "give up":
 				if(Stuff.HasLuckyGauntlet = true)
@@ -730,7 +727,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("There are two nearby.");
 		switch (Stuff.PlayerChoice("vegetarian", "chicken"))
 		{
-			case "vegetarin":
+			case "vegetarian":
 				Stuff.TypeLine("At the vegetarian shop, there isn't much on the menu.");
 				Stuff.TypeLine("\"Kale.\"");
 				Stuff.HitEnter(2);
