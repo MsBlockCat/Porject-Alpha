@@ -438,7 +438,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("There are some runes on the stand and you try to decipher them.");
 				if (Stuff.HasLuckyGauntlet = true)
 				{
-					Stuff.TypeLine("Luckily you have the lucky gauntlet.");
+					Stuff.TypeLine("Luckily you have the Lucky Gauntlet.");
 					Stuff.TypeLine("You know what the runes say.");
 					Stuff.TypeLine("Porject Alpha.");
 					Stuff.TypeLine("This is the stuff that Doof talks about and this was the reward for capturing the assassin.");

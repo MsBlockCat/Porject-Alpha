@@ -450,7 +450,7 @@ public class GoatBranch
 			Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 			Stuff.typeln(". . .well, you're a goat.");
 			Stuff.typeln("A dog runs over barks at you, and you hear it's owner call it back.");
-			Stuff.typeln("\"Winnie!\" it calls as you continue onward, still whistling.");
+			Stuff.typeln("\"Winnie!\" they call as you continue onward, still whistling.");
 			Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
 			Stuff.HitEnter(2);
 			ASCII.BulletinBoard();
@@ -920,7 +920,7 @@ public class GoatBranch
 			Stuff.typeln("So you do.");
 			Stuff.typeln("You walk over and start flipping some switches.");
 			Stuff.typeln("On the third one, an alarm sounds, and you hear a loud crash somewhere.");
-			Stuff.typeln("\"Citywide destruction initialized,\" a computerizeded voice somewhere announces.");
+			Stuff.typeln("\"Citywide destruction initialized,\" a computerized voice somewhere announces.");
 			Stuff.typeln("That sounds ominous.");
 			Stuff.typeln("\"The Ned Flanders Organization of Cool has decided that this town is no longer fit for existence,\"");
 			Stuff.typeln("the voice continues.");
@@ -1022,7 +1022,7 @@ public class GoatBranch
 					Stuff.typeln("\"Awesome and cool,\" you reply, \"awesome and cool.\"");
 					Stuff.Wait(1000);
 					Stuff.typeln("(By the way:");
-					Stuff.typeln("The only reason you didn't die there was the lucky gauntlet.");
+					Stuff.typeln("The only reason you didn't die there was the Lucky Gauntlet.");
 					Stuff.typeln("Just FYI).");
 					Stuff.StoryEnding();
 					break;
