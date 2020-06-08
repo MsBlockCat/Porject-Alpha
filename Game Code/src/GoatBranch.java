@@ -88,6 +88,10 @@ public class GoatBranch
 			case "RightOutsideHouse":
 				RightOutsideHouse();
 				break;
+			case "22":
+			case "ArrestScene":
+				ArrestScene();
+				break;
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -349,59 +353,69 @@ public class GoatBranch
 	
 	public static void TreeHatch() {
 		Stuff.CurrentLocationNumber = 8;
-		
-		Stuff.typeln("When you do, you realize that it is pitch-black dark.");
-		Stuff.typeln("You can't see or hear anything.");
-		Stuff.typeln("I guess your best bet is just going to be to walk in a random direction and see what you find.");
-		Stuff.typeln("So, what direction do you walk?");
-		switch (Stuff.PlayerChoice("forward", "left", "right", "back"))
-		{
-		case "forward":
-			Stuff.typeln("You advance forward carefully...");
-			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
-			Stuff.typeln("You fall for a short while...");
-			Stuff.Wait(1000);
-			Stuff.typeln("And splash down into cold water.");
-			Stuff.typeln("It seems you have walked off a ledge into some water.");
-			Stuff.typeln("But why is there water in this hatch?");
-			WaterHole();
-			break;
-		case "left":
-			Stuff.typeln("You walk left and quickly find a wall.");
-			Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
-			Stuff.typeln("Forward it is, you suppose.");
-			Stuff.typeln("You advance forward carefully...");
-			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
-			Stuff.typeln("You fall for a short while...");
-			Stuff.Wait(1000);
-			Stuff.typeln("And splash down into cold water.");
-			Stuff.typeln("It seems you have walked off a ledge into some water.");
-			Stuff.typeln("But why is there water in this hatch?");
-			WaterHole();
-			break;
-		case "right":
-			Stuff.typeln("You walk right and quickly find a wall.");
-			Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
-			Stuff.typeln("Forward it is, you suppose.");
-			Stuff.typeln("You advance forward carefully...");
-			Stuff.typeln("All of a sudden, the ground is gone beneath you.");
-			Stuff.typeln("You fall for a short while...");
-			Stuff.Wait(1000);
-			Stuff.typeln("And splash down into cold water.");
-			Stuff.typeln("It seems you have walked off a ledge into some water.");
-			Stuff.typeln("But why is there water in this hatch?");
-			WaterHole();
-			break;
-		case "back":
-			Stuff.typeln("You turn around and walk back from where you landed.");
+		if (Stuff.Arrested == false) {
+			Stuff.typeln("When you do, you realize that it is pitch-black dark.");
+			Stuff.typeln("You can't see or hear anything.");
+			Stuff.typeln("I guess your best bet is just going to be to walk in a random direction and see what you find.");
+			Stuff.typeln("So, what direction do you walk?");
+			switch (Stuff.PlayerChoice("forward", "left", "right", "back"))
+			{
+			case "forward":
+				Stuff.typeln("You advance forward carefully...");
+				Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+				Stuff.typeln("You fall for a short while...");
+				Stuff.Wait(1000);
+				Stuff.typeln("And splash down into cold water.");
+				Stuff.typeln("It seems you have walked off a ledge into some water.");
+				Stuff.typeln("But why is there water in this hatch?");
+				WaterHole();
+				break;
+			case "left":
+				Stuff.typeln("You walk left and quickly find a wall.");
+				Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
+				Stuff.typeln("Forward it is, you suppose.");
+				Stuff.typeln("You advance forward carefully...");
+				Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+				Stuff.typeln("You fall for a short while...");
+				Stuff.Wait(1000);
+				Stuff.typeln("And splash down into cold water.");
+				Stuff.typeln("It seems you have walked off a ledge into some water.");
+				Stuff.typeln("But why is there water in this hatch?");
+				WaterHole();
+				break;
+			case "right":
+				Stuff.typeln("You walk right and quickly find a wall.");
+				Stuff.typeln("You turn around and head the other direction, but find a wall there too.");
+				Stuff.typeln("Forward it is, you suppose.");
+				Stuff.typeln("You advance forward carefully...");
+				Stuff.typeln("All of a sudden, the ground is gone beneath you.");
+				Stuff.typeln("You fall for a short while...");
+				Stuff.Wait(1000);
+				Stuff.typeln("And splash down into cold water.");
+				Stuff.typeln("It seems you have walked off a ledge into some water.");
+				Stuff.typeln("But why is there water in this hatch?");
+				WaterHole();
+				break;
+			case "back":
+				Stuff.typeln("You turn around and walk back from where you landed.");
+				Stuff.typeln("It seems this room is either very large or a very long corridor...");
+				Stuff.Wait(2000);
+				Stuff.typeln("Eventually, you crash into a wall of sorts.");
+				Stuff.typeln("Except it's not a wall, it's a door! There's a handle. Poking at it with your nose, you find it's unlocked.");
+				Office();
+				break;
+			}
+		}
+		else {
+			Stuff.typeln("You already know what happens if you go forward.");
+			Stuff.typeln("That is, you end up in the water.");
+			Stuff.typeln("So you decide to turn around and walk backwards.");
 			Stuff.typeln("It seems this room is either very large or a very long corridor...");
 			Stuff.Wait(2000);
 			Stuff.typeln("Eventually, you crash into a wall of sorts.");
 			Stuff.typeln("Except it's not a wall, it's a door! There's a handle. Poking at it with your nose, you find it's unlocked.");
 			Office();
-			break;
 		}
-		
 	}
 	
 	public static void Town() {
@@ -419,7 +433,7 @@ public class GoatBranch
 		Stuff.typeln("You'll have to be sure to report any anti-Ned activity, I suppose.");
 		}
 		else {
-			Stuff.typeln("It's the same town as before. Nothing interesting to see. There is that bulliten board again.");
+			Stuff.typeln("It's the same town as before. Nothing interesting to see. There is that bulletin board again.");
 			Stuff.HitEnter(2);
 			ASCII.BulletinBoard();
 			Stuff.HitEnter(2);
@@ -513,43 +527,49 @@ public class GoatBranch
 	
 	public static void RightOutsideHatch() {
 		Stuff.CurrentLocationNumber = 12;
-		
-		Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
-		Stuff.typeln("The tree starts to make grinding, metallic sounds, and the bark begins to shift.");
-		Stuff.typeln("The sounds are defeaning!");
-		Stuff.typeln("Apparently they drew the attention of the nearby town, since a man suddenly runs up.");
-		Stuff.typeln("He is masked and wears sunglasses, so it's hard to discern his identity, but he looks upset.");
-		Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
-		Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
-		Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
-		switch (Stuff.PlayerChoice("go in hatch", "stay"))
-		{
-		case "go in hatch":
-			Stuff.WentInTreeHatch = true;
-			Stuff.typeln("Into the hatch you go.");
-			Stuff.typeln("You fall for a while.");
-			Stuff.Wait(3000);
-			Stuff.typeln("Luckily, you eventually land.");
+		if (Stuff.WentInTreeHatch == false) {
+			Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
+			Stuff.typeln("The tree starts to make grinding, metallic sounds, and the bark begins to shift.");
+			Stuff.typeln("The sounds are defeaning!");
+			Stuff.typeln("Apparently they drew the attention of the nearby town, since a man suddenly runs up.");
+			Stuff.typeln("He is masked and wears sunglasses, so it's hard to discern his identity, but he looks upset.");
+			Stuff.typeln("\"Ay!\" he calls out to someone else you can't see. \"There's a goat here!\"");
+			Stuff.typeln("\"Hold on, I'll shoot it. Darned animals always messing with the hatch.\"");
+			Stuff.typeln("You probably don't want to stick around for that. But in case you want to:");
+			switch (Stuff.PlayerChoice("go in hatch", "stay"))
+			{
+			case "go in hatch":
+				Stuff.WentInTreeHatch = true;
+				Stuff.typeln("Into the hatch you go.");
+				Stuff.typeln("You fall for a while.");
+				Stuff.Wait(3000);
+				Stuff.typeln("Luckily, you eventually land.");
+				TreeHatch();
+				break;
+			case "stay":
+				Stuff.typeln("Not a very bright choice, but a choice nonetheless.");
+				Stuff.typeln("A few seconds pass.");
+				Stuff.Wait(1000);
+				Stuff.typeln("The man returns with another. He is holding a NERF gun (registered trademark, NERF or nothing).");
+				Stuff.typeln("\"Bye bye, goat,\" the man says...");
+				Stuff.typeln("But you fight back!");
+				Stuff.typeln("Pow!");
+				Stuff.Wait(500);
+				Stuff.typeln("Slam!");
+				Stuff.Wait(500);
+				Stuff.typeln("Boom!");
+				Stuff.Wait(500);
+				Stuff.typeln("The NERF gun is no match for your horns.");
+				Stuff.typeln("With that out of the way, it's time to go see where they came from...");
+				Stuff.Wait(1000);
+				Town();
+				break;
+			}
+		}
+		else {
+			Stuff.typeln("You already know what happens.");
+			Stuff.typeln("Down the tree hatch with you.");
 			TreeHatch();
-			break;
-		case "stay":
-			Stuff.typeln("Not a very bright choice, but a choice nonetheless.");
-			Stuff.typeln("A few seconds pass.");
-			Stuff.Wait(1000);
-			Stuff.typeln("The man returns with another. He is holding a NERF gun (registered trademark, NERF or nothing).");
-			Stuff.typeln("\"Bye bye, goat,\" the man says...");
-			Stuff.typeln("But you fight back!");
-			Stuff.typeln("Pow!");
-			Stuff.Wait(500);
-			Stuff.typeln("Slam!");
-			Stuff.Wait(500);
-			Stuff.typeln("Boom!");
-			Stuff.Wait(500);
-			Stuff.typeln("The NERF gun is no match for your horns.");
-			Stuff.typeln("With that out of the way, it's time to go see where they came from...");
-			Stuff.Wait(1000);
-			Town();
-			break;
 		}
 	}
 	
@@ -802,7 +822,7 @@ public class GoatBranch
 			Stuff.typeln("Oh dear.");
 			Stuff.Wait(1500);
 			Stuff.typeln("All of a sudden, the phone rings.");
-			Stuff.typeln("Ned picks it up and nods a few times, with a few 'okay's thrown in, and then hang it up.");
+			Stuff.typeln("Ned picks it up and nods a few times, with a few 'okily-dokily's thrown in, and then hang it up.");
 			if (Stuff.HasLuckyGauntlet == true) {
 				Stuff.typeln("\"That was Apu.\" Ned says with a hint of relief.");
 				Stuff.typeln("\"He says you appeared out of nowhere outside his store, but that you seemed harmless.\"");
@@ -822,22 +842,112 @@ public class GoatBranch
 					Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
 					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 					Stuff.typeln("You brace yourself for the adventure ahead...");
-					SpaceBranch.GoToSpaceBranch("LaunchPad1");
+					//add intro tomorrow since I hit my lines for today (plus like 15 wow)
+					SpaceBranch.GoToSpaceBranch("Launchpad1");
 					break;
 				case "go home":
 					Stuff.typeln("You decide you've had enough for today.");
-					//insert dramatic and emotion ending here (i dont feel like it today lol)
+					Stuff.Wait(1000);
+					Stuff.typeln("As you turn the dial, you reflect on your time in 1954.");
+					Stuff.typeln("It was eventful, that's for sure.");
+					Stuff.Wait(1000);
+					Stuff.typeln("...or maybe it wasn't.");
+					Stuff.typeln("The story might have led you here in two choices and now you're already done.");
+					Stuff.typeln("Ah well. At least you got a good ending, right?");
+					Stuff.typeln("No more being a goat. No more crazy Ned.");
+					Stuff.typeln("Just you, returning to Doofenshmirtz with the news that his time machine worked.");
+					if (Stuff.TimeinatorWorks == false) {
+						Stuff.Wait(1000);
+						Stuff.typeln("Just kidding. No it doesn't.");
+						Stuff.Wait(500);
+						Stuff.typeln("Anyway...");
+					}
+					Stuff.typeln("You click a button, the machine whirs...");
+					Stuff.typeln("And just like nothing happened, you're standing there with Doofenshmirtz.");
+					Stuff.typeln("\"Hey,\" he says.");
+					Stuff.typeln("\"How was your awesome and cool journey?\"");
+					Stuff.typeln("\"Awesome and cool,\" you reply, \"awesome and cool.\"");
+					Stuff.Wait(1000);
+					Stuff.typeln("(By the way:");
+					Stuff.typeln("The only reason you didn't die there was the lucky gauntlet.");
+					Stuff.typeln("Just FYI).");
 					Stuff.StoryEnding();
 					break;
-			}
+				}
 			}
 			else {
-				//bad things (you perish)
+				Stuff.typeln("\"That was Apu.\" Ned looks dissapointed.");
+				Stuff.typeln("\"He says you appeared out of nowhere outside his store.\"");
+				Stuff.typeln("\"I'm afraid that that's a little suspicious.\"");
+				Stuff.typeln("You begin to protest but Ned hushes you.");
+				Stuff.typeln("\"Now, my friend, we like to banish people here rather than execute them.\"");
+				Stuff.typeln("\"So, I'm going to set that machine to the year -11 million.");
+				Stuff.typeln("There'll probably be dinosaurs there. I don't know.");
+				Stuff.typeln("All I know is that you'll have absolutely no way to communicate with whoever you're spying for.\"");
+				Stuff.typeln("You want to tell him you're not a spy - that he's wrong! - but he's already opening a door.");
+				Stuff.typeln("He re-emerges a few seconds later.");
+				Stuff.typeln("\"I recommend you make this easy on the both of us,\" he says.");
+				Stuff.typeln("\"Just get in that machine and live a peaceful life - 11 million years ago.\"");
+				Stuff.typeln("You suppose it's better than death.");
+				Stuff.Wait(1500);
+				Stuff.typeln("As he shuts the door behind you and the machine begins to whir, you reflect on what's happened.");
+				Stuff.typeln("You reflect on your time in 1954.");
+				Stuff.typeln("It was eventful, that's for sure.");
+				Stuff.Wait(1000);
+				Stuff.typeln("...or maybe it wasn't.");
+				Stuff.typeln("The story might have led you here in two choices and now you're already done.");
+				Stuff.typeln("Ah well. Too bad you're being banished.");
+				Stuff.typeln("At least no more Ned.");
+				Stuff.Wait(2000);
+				Stuff.typeln("The machine suddenly stops and you open your eyes to an empty and quiet countryside.");
+				Stuff.Wait(800);
+				Stuff.typeln("Well... you suppose Doof's machine worked.");
+				Stuff.StoryEnding();
 			}
 		}
 		else {
-			//you are rude and perish because you don't know to respect him
-			//unless you have the shirt. then he lets you go
+			Stuff.typeln("\"Ned Flanders!\" you say. \"You're leading a nation?!");
+			Stuff.typeln("You're such a goofy and wacky guy!\"");
+			Stuff.Wait(1000);
+			Stuff.typeln("Ned looks at you. He doesn't look upset, per say. Just dissapointed.");
+			Stuff.typeln("\"Goofy and wacky. Glad to see that's how I'm seen.\"");
+			Stuff.typeln("The leader sits down at his desk and sighs heavily.");
+			Stuff.typeln("\"I'm not exactly sure what to do with you,\" he says solemnly.");
+			Stuff.typeln("\"I've never had to deal with such dissent before.\"");
+			Stuff.typeln("\"I'm sorry!\" you say.");
+			Stuff.typeln("\"I won't say it again!\"");
+			Stuff.typeln("\"No,\" Ned says, \"we certainly can't have you spreading the notion that I'm a goofy and wacky guy.");
+			Stuff.typeln("How would anyone respect me then?\"");
+			Stuff.Wait(500);
+			if (Stuff.GotShirt == false) {
+				Stuff.typeln("\"Yes,\" he continues, \"I suppose your time here is finished.\"");
+				Stuff.typeln("\"But, my friend, we like to banish people here rather than execute them.\"");
+				Stuff.typeln("\"So, I'm going to set that machine to the year -11 million.");
+				Stuff.typeln("There'll probably be dinosaurs there. I don't know.");
+				Stuff.typeln("All I know is that you'll have absolutely no way to communicate with whoever you're spying for.\"");
+				Stuff.typeln("You want to tell him you're not a spy - that he's wrong! - but he's already opening a door.");
+				Stuff.typeln("He re-emerges a few seconds later.");
+				Stuff.typeln("\"I recommend you make this easy on the both of us,\" he says.");
+				Stuff.typeln("\"Just get in that machine and live a peaceful life - 11 million years ago.\"");
+				Stuff.typeln("You suppose it's better than death.");
+				Stuff.Wait(1500);
+				Stuff.typeln("As he shuts the door behind you and the machine begins to whir, you reflect on what's happened.");
+				Stuff.typeln("You reflect on your time in 1954.");
+				Stuff.typeln("It was eventful, that's for sure.");
+				Stuff.Wait(1000);
+				Stuff.typeln("...or maybe it wasn't.");
+				Stuff.typeln("The story might have led you here in two choices and now you're already done.");
+				Stuff.typeln("Ah well. Too bad you're being banished.");
+				Stuff.typeln("At least no more Ned.");
+				Stuff.Wait(2000);
+				Stuff.typeln("The machine suddenly stops and you open your eyes to an empty and quiet countryside.");
+				Stuff.Wait(800);
+				Stuff.typeln("Well... you suppose Doof's machine worked.");
+				Stuff.StoryEnding();
+			}
+			else {
+				//bad stuff
+			}
 		}
 	}
 	
@@ -851,7 +961,7 @@ public class GoatBranch
 		Stuff.typeln("They look down at their drenched feet with dissatisfaction before noticing you in the wall.");
 		Stuff.typeln("\"Woah,\" the woman remarks, \"there's a goat in the wall.\"");
 		Stuff.typeln("Her husband looks up.");
-		Stuff.typeln("\"So there is\"");
+		Stuff.typeln("\"So there is.\"");
 		Stuff.Wait(1000);
 		Stuff.typeln("They contemplate the situation for a few seconds before addressing you.");
 		Stuff.typeln("\"Mr. Goat? We know you can hear us.\"");
@@ -909,7 +1019,65 @@ public class GoatBranch
 			Crossroads();
 			break;
 		case "stay":
-			//i d k
+			Stuff.typeln("You sit down and wait for them to explain themselves.");
+			Stuff.typeln("\"This is risky. We have to be quick.\" The man looks around behind him.");
+			Stuff.typeln("\"Ned is always listening. Somehow.\"");
+			Stuff.typeln("\"Anyway,\" his wife says, \"The man in charge here, if you hadn't figured it out yet...");
+			Stuff.Wait(800);
+			Stuff.typeln("\"is Ned.\"");
+			Stuff.typeln("\"And,\" the husband says, \"He's...\"");
+			Stuff.typeln("He looks around nervously.");
+			Stuff.typeln("\"... a terrible leader. Very bad. Not good.\"");
+			Stuff.typeln("\"That's why some of us are planning to overthrow him,\" the wife adds.");
+			Stuff.typeln("\"He's got an interconnected tunnel system.\" The man looks around agian before continuing.");
+			Stuff.typeln("\"He's rigged all the houses to a water holding station at the top of the mountain.");
+			Stuff.typeln("That way, if anyone is a suspected traitor, he can just flood their house and no one will know.\"");
+			Stuff.typeln("\"Of course,\" the woman adds, \"the whole beauty of it is no one is supposed to know that's what the tunnels do.\"");
+			Stuff.typeln("\"But again,\" the man continues, \"We're part of the group planning to overthrow him.");
+			Stuff.typeln("That's where we get cool intel like that.");
+			Stuff.typeln("Anyway,\" he concludes, \"you've certainly been wronged by Ned.\"");
+			Stuff.typeln("\"So,\" the woman says to you, \"We want you to join us.\"");
+			Stuff.typeln("You can see where the value might be in a goat spy.");
+			Stuff.typeln("But it's risky. You aren't even from this time period!");
+			Stuff.Wait(2000);
+			Stuff.Arrested = true;
+			ArrestScene();
+			break;
+		}
+	}
+	
+	public static void ArrestScene() {
+		Stuff.CurrentLocationNumber = 22;
+		
+		Stuff.typeln("So, do you trust them?");
+		switch (Stuff.PlayerChoice("trust", "don't"))
+		{
+		case "trust":
+			Stuff.typeln("You decide that you want to help this town.");
+			Stuff.typeln("\"I'd be honored to help,\" you say.");
+			Stuff.Wait(2000);
+			Stuff.typeln("With that, there is a clatter behind you and three guards or police of some sort appear.");
+			Stuff.typeln("\"Hands up!\" one yells.");
+			Stuff.typeln("\"And hooves,\" another chuckles");
+			Stuff.typeln("You lift your hooves up and watch as they cuff you and your new friends.");
+			Stuff.typeln("\"Okay, fellas, you're going to have to go see Mr. Ned,\" one of the officers informs you.");
+			Stuff.typeln("\"One at a time,\" one of the others adds, \"and you're not going to get to see how to get there!\"");
+			Stuff.typeln("One of them hits you with the back of his NERF (registed trademark) gun and the world goes dark.");
+			Stuff.Wait(1500);
+			EllipseOffice();
+			break;
+		case "don't":
+			Stuff.typeln("You decide that it might be best not to get involved in the local politics.");
+			Stuff.typeln("\"You know what,\" you say, \"I think I'm going to just stay out of it.\"");
+			Stuff.typeln("\"Good choice,\" a voice behind you says, and three guards or police of some sort appear.");
+			Stuff.typeln("\"Hands up!\" one yells.");
+			Stuff.typeln("The couple puts up their hands.");
+			Stuff.typeln("You look expectantly at the officers, wondering your fate.");
+			Stuff.typeln("\"Get out of here, talking goat,\" says one of them.");
+			Stuff.typeln("\"As long as you respect Ned, we've got no problem here.\"");
+			Stuff.typeln("You disspear around a corner before they can change their mind.");
+			Stuff.Wait(2000);
+			Crossroads();
 			break;
 		}
 	}
