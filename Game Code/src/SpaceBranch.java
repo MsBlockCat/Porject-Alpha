@@ -286,26 +286,26 @@ public class SpaceBranch
 			Stuff.TypeLine("\"We were just talking about what the best video game is.\"");
 			Stuff.TypeLine("\"We've narrowed it down to four games now.\"");
 			Stuff.TypeLine("\"They're so commonly known I'm sure I don't have to tell you their names, but");
-			Stuff.TypeLine(" there's the game with animatronic animals, the one made of pixelates blocks,");
+			Stuff.TypeLine(" there's the game with animatronic animals, the one made of pixelated blocks,");
 			Stuff.TypeLine(" the one with an Italian plumber who loves to wear red, and");
 			Stuff.TypeLine(" the one where a green-clad hero saves a princess from some weird demonic thing.\"");
 			Stuff.TypeLine("\"Maybe you could help us figure out the winner! Which of those do you think is the best?\"");
 			switch (Stuff.PlayerChoice("animatronics", "blocks", "plumber", "green hero"))
 			{
 				case "animatronics":
-					Stuff.TypeLine("\"That's a good one! My personal favorite. Lots of spooks.\" Says one woman.");
+					Stuff.TypeLine("\"That's a good one! My personal favorite. Lots of spooks,\" says one woman.");
 					Stuff.FavoriteGame = 2;
 					break;
 				case "blocks":
-					Stuff.TypeLine("\"Yes! That was my choice too.\" Says a woman.");
+					Stuff.TypeLine("\"Yes! That was my choice too,\" says a woman.");
 					Stuff.FavoriteGame = 1;
 					break;
 				case "plumber":
-					Stuff.TypeLine("\"Oh, sweet! That's gotta be my favorite.\" Says another man, who introduces himself as Technal.");
+					Stuff.TypeLine("\"Oh, sweet! That's gotta be my favorite,\" says another man, who introduces himself as Technal.");
 					Stuff.FavoriteGame = 3;
 					break;
 				case "green hero":
-					Stuff.TypeLine("\"Oh, nice! That's my favorite.\" Says the man, who introduces himself as Vinestro.");
+					Stuff.TypeLine("\"Oh, nice! That's my favorite,\" says the man, who introduces himself as Vinestro.");
 					Stuff.FavoriteGame = 4;
 					break;
 			}
