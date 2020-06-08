@@ -783,7 +783,7 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time fot the main event.");
 		Stuff.TypeLine("The tiger is un chained and starts to stalk its prey.");
-		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not mutch else you can do.");
+		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not much else you can do.");
 		if (Stuff.HasChicken = true)
 		{
 			Stuff.TypeLine("You just remember something.");
@@ -806,7 +806,7 @@ public class OldTimeBranch
 		else
 		{
 			Stuff.TypeLine("The tiger doesnt seem very picky, but it still goes for you.");
-			Stuff.TypeLine("You stand still in shock as the tiger aproaches. There isnt mutch you can do at a time like this.");
+			Stuff.TypeLine("You stand still in shock as the tiger aproaches. There isnt much you can do at a time like this.");
 			Stuff.TypeLine("The feline slows down and looks at you strangely.");
 			Stuff.TypeLine("It then walks over and rubs against your legs like a comon house cat.");
 			Stuff.TypeLine("You must be very non threatening to make a tiger like you.");
