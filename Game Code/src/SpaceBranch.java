@@ -165,7 +165,7 @@ public class SpaceBranch
 		Stuff.HitEnter(2);
 		Stuff.TypeLine("It's very majestic.");
 		Stuff.TypeLine("You recall your mission, to get more liquid to power Elon Musk's time machines.");
-		Stuff.TypeLine("Sitting down, you think about how incredibly boring these next 24 hours will be.");
+		Stuff.TypeLine("Sitting down, you think about how incredibly boring these next few days will be.");
 		Stuff.Wait(2000);
 		Stuff.TypeLine("...But then you remember seeing the video games.");
 		Stuff.HitEnter(2);
@@ -194,7 +194,7 @@ public class SpaceBranch
 		Stuff.TypeLine("You continue playing for the whole duration of your travel, by the power of video games.");
 		Stuff.Wait(1000);
 		Stuff.HitEnter(2);
-		Stuff.TypeLine("                                             ~~~72 hours later~~~");
+		Stuff.TypeLine("                                             ~~~71 hours later~~~");
 		Stuff.TypeLine("The Full Self Flying systems safely land you on the moon.");
 		Stuff.TypeLine("You reluctantly move away from the video games, instantly fall asleep, and another 14 hours later step outside.");
 		Stuff.TypeLine("There were other people on board, but they probably already got to work at their various places around the area.");
@@ -645,7 +645,7 @@ public class SpaceBranch
 				Stuff.TypeLine(" Saving a Princess From Some Demonic Thing\" game over the next few days!");
 				break;
 		}
-		
+		Stuff.TypeLine("                                             ~~~70 hours later~~~");
 		Stuff.TypeLine("The rocket settles down on the launchpad.");
 		Stuff.TypeLine("The door lowers.");
 		Stuff.TypeLine("You, and the rest of the crew, come outside.");
