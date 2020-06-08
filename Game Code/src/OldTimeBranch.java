@@ -730,7 +730,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("There are two nearby.");
 		switch (Stuff.PlayerChoice("vegetarian", "chicken"))
 		{
-			case "vegetarin":
+			case "vegetarian":
 				Stuff.TypeLine("At the vegetarian shop, there isn't much on the menu.");
 				Stuff.TypeLine("\"Kale.\"");
 				Stuff.HitEnter(2);
