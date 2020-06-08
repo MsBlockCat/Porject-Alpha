@@ -61,6 +61,10 @@ public class OldTimeBranch
 			case "ChoiceRoom2":
 				ChoiceRoom2();
 				break;
+			case "15":
+			case "Barracks2":
+				Barracks2();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -96,6 +100,7 @@ public class OldTimeBranch
 					break;
 				case "check out the barracks":
 					Stuff.StoryBeginning = false;
+					Barracks2();
 					break;
 				case "search the castle":
 					Stuff.StoryBeginning = false;
@@ -197,7 +202,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 4;
 		
-		Stuff.TypeLine("After the walk from the bazar you sit in the shade of a tree and hear something...");
+		Stuff.TypeLine("After the walk you took, you sit in the shade of a tree and hear something...");
 		Stuff.Wait(500);
 		Stuff.TypeLine("Something loud... and close...");
 		Stuff.Wait(500);
@@ -601,42 +606,104 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("look up", "don't look up"))
 			{
 				case "look up":
-					Stuff.TypeLine("You look up and see a grumpy old lady.");
-					Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
-					Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
-					Stuff.TypeLine("The reinforcements you called just arrived.");
-					Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled him away.");
-					Stuff.TypeLine("The two of you are escorted to the main hall where you meet the King.");
-					Stuff.TypeLine("Harold gets a new sword. It is so shiny that it reflects some of the incoming light and scorches the royal rug.");
-					Stuff.TypeLine("You on the other hand get some Porject Alpha.");
-					Stuff.TypeLine("You take a break in the \"royal potty\" and activate the Timeinator.");
-					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
-					Stuff.TypeLine("In an instant, you make it back to the lab.");
-					Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
-					Stuff.Wait(1000);
-					Stuff.HitEnter(2);
-					Stuff.TypeLine("The Flower Pot Ending");
-					Stuff.Wait(500);
-					Stuff.HitEnter(5);
-					Stuff.StoryEnding();
+					if (Stuff.Criminal = true)
+					{
+						Stuff.TypeLine("You look up and see a grumpy old lady.");
+						Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+						Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
+						Stuff.TypeLine("The reinforcements you called just arrived.");
+						Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled him away.");
+						Stuff.TypeLine("Some of the knights yell \"Grab Him!\"");
+						Stuff.TypeLine("This was directed at you.");
+						Stuff.TypeLine("Mainly because of the events that took place last time you were at the castle.");
+						Stuff.TypeLine("Harold seems surprised and even vouches for you.");
+						Stuff.TypeLine("At this point, everyone is surprised.");
+						Stuff.TypeLine("One voice speaks out amongst the rest.");
+						Stuff.TypeLine("The assassin says that he was the hooded figure.");
+						Stuff.TypeLine("The one that falsely exposed you of being the assassin.");
+						Stuff.TypeLine("And getting you into that whole tiger mess.");
+						Stuff.TypeLine("Before you can ask him a question he is rolled away, never to be seen again.");
+						Stuff.TypeLine("The two of you are escorted to the main hall where you meet the King.");
+						Stuff.TypeLine("Harold gets a new sword. It is so shiny that it reflects some of the incoming light and scorches the royal rug.");
+						Stuff.TypeLine("You on the other hand get some Porject Alpha.");
+						Stuff.TypeLine("You take a break in the \"royal potty\" and activate the Timeinator.");
+						Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+						Stuff.TypeLine("In an instant, you make it back to the lab.");
+						Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The False Criminal Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
+					else
+					{
+						Stuff.TypeLine("You look up and see a grumpy old lady.");
+						Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+						Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
+						Stuff.TypeLine("The reinforcements you called just arrived.");
+						Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled him away.");
+						Stuff.TypeLine("The two of you are escorted to the main hall where you meet the King.");
+						Stuff.TypeLine("Harold gets a new sword. It is so shiny that it reflects some of the incoming light and scorches the royal rug.");
+						Stuff.TypeLine("You on the other hand get some Porject Alpha.");
+						Stuff.TypeLine("You take a break in the \"royal potty\" and activate the Timeinator.");
+						Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+						Stuff.TypeLine("In an instant, you make it back to the lab.");
+						Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The Flower Pot Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
 					break;
 				case "don't look up":
-					Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
-					Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
-					Stuff.TypeLine("Probably went to a prison though.");
-					Stuff.TypeLine("You also never got to see his face.");
-					Stuff.TypeLine("All that matters is that you got to see your bud Harold.");
-					Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
-					Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
-					Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
-					Stuff.TypeLine("In an instant, you make it back to the lab.");
-					Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
-					Stuff.Wait(1000);
-					Stuff.HitEnter(2);
-					Stuff.TypeLine("The Hero of the Kingdom Ending");
-					Stuff.Wait(500);
-					Stuff.HitEnter(5);
-					Stuff.StoryEnding();
+					if (Stuff.Criminal = true)
+					{
+						Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
+						Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
+						Stuff.TypeLine("Probably went to a prison though.");
+						Stuff.TypeLine("You also never got to see his face.");
+						Stuff.TypeLine("One of the guards grabs a hold on you and Harold pushes him away.");
+						Stuff.TypeLine("\"This person is a wanted criminal\" one of the knights says.");
+						Stuff.TypeLine("Harold defends you but it seems like you are going back to the tiger arena.");
+						Stuff.TypeLine("From out of nowhere, another knight walks over and whispers something to the one that is pestering you and he lets go.");
+						Stuff.TypeLine("\"Seems like you are good to go.");
+						Stuff.TypeLine("How strange.");
+						Stuff.TypeLine("All that matters is that you got to see your bud Harold.");
+						Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
+						Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
+						Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+						Stuff.TypeLine("In an instant, you make it back to the lab.");
+						Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The Kingdom Hero Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
+					else
+					{
+						Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
+						Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
+						Stuff.TypeLine("Probably went to a prison though.");
+						Stuff.TypeLine("You also never got to see his face.");
+						Stuff.TypeLine("All that matters is that you got to see your bud Harold.");
+						Stuff.TypeLine("And get that sweet sweet Porject Alpha reward.");
+						Stuff.TypeLine("You take a break in the \"royal loo\" and activate the Timeinator.");
+						Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+						Stuff.TypeLine("In an instant, you make it back to the lab.");
+						Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The Hero of the Kingdom Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
 					break;
 			}
 		}
@@ -824,9 +891,38 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 14;
 		
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
+		Stuff.TypeLine("You want to keep searching for Porject Alpha.");
+		Stuff.TypeLine("Although you are now considered a futigive, Doof would not be happy if you came back empty handed.");
 		ASCII.OldTimeMapCastle();
+		Stuff.TypeLine("There are two more places to check out.");
+		switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
+		{
+			case "check out the barracks":
+				Barracks();
+				break;
+			case "roam the bazar":
+				RoulletteShop();
+				break;
+		}
+	}
+	
+	public static void Barracks2()
+	{
+		Stuff.CurrentLocationNumber = 15;
+		
+		Stuff.TypeLine("This is a bad place to start");
+		Stuff.TypeLine("You shouldn't start here");
+		Stuff.TypeLine("Chose a different place to start");
+		switch (Stuff.PlayerChoice("explore the bazar", "search the castle"))
+		{
+			case "explore the bazar":
+				Stuff.StoryBeginning = false;
+				RoulletteShop();
+				break;
+			case "search the castle":
+				Stuff.StoryBeginning = false;
+				Castle();
+				break;
+		}
 	}
 }
