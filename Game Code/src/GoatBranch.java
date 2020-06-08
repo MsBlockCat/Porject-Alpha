@@ -678,7 +678,23 @@ public class GoatBranch
 			OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
 			break;
 		case "break future":
-			//idk yet
+			Stuff.typeln("\"Hello, Dr. Doofenshmirtz,\" you say.");
+			Stuff.typeln("\"How do you know who I am?\" he demands.");
+			Stuff.typeln("You contemplate how to explain it to him.");
+			Stuff.typeln("\"I came from the future. 2020, that is.\"");
+			Stuff.typeln("Doofenshmirtz surveys you with confusion.");
+			Stuff.typeln("\"And...I was sent here by one of your time machines.\"");
+			Stuff.typeln("\"Why am I alive in 2020?\" the scientist asks. \"How old am I?\"");
+			Stuff.typeln("\"I don't know. Not old. The same as you are right now, I'd reckon.\"");
+			Stuff.typeln("Doof stares at you for a few seconds.");
+			Stuff.Wait(1000);
+			Stuff.typeln("\"Why are you a goat?\" he suddenly asks.");
+			Stuff.typeln("\"Not sure,\" you tell him, \"Must have been a side effect of your machine.\"");
+			Stuff.typeln("\"Well... I suppose I must use one of these machine to go the future eventually,\" Doof says.");
+			Stuff.typeln("\"I'm not sure what to do with that info but..thanks, I guess.");
+			Stuff.typeln("Anyway - want to use one of the machines yourself? Or just be on your way?");
+			Stuff.Wait(1000);
+			ManufacturingCenter2();
 			break;
 		}
 	}
@@ -708,7 +724,9 @@ public class GoatBranch
 			Stuff.typeln("As you lift up your front hooves and lean your weight onto it, the panel suddenly falls out from under you.");
 			Stuff.typeln("The hill starts to make grinding, metallic sounds, and the rock begins to shift.");
 			Stuff.typeln("The sounds are defeaning!");
-			//add things
+			Stuff.Wait(800);
+			Stuff.typeln("Eventually, the sounds stop and there is a hole in the tree for you to enter.");
+			Stuff.typeln("You suppose that you should probably go in. After all, you did all that work to come up here.");
 			MountainHatch();
 			break;
 		case "ignore it":
@@ -728,7 +746,30 @@ public class GoatBranch
 	public static void MountainHatch() {
 		Stuff.CurrentLocationNumber = 16;
 		
-		//add things (make it go to the same place as that tree one)
+		if (Stuff.WentInMountainHatch == false) {
+			Stuff.typeln("You fall about five feet and land in a small, dimly lit room.");
+			Stuff.typeln("It seems like there's nowhere to go from here when you notice another labelled panel on the wall.");
+			Stuff.typeln("You push that one, too, and it falls away.");
+			Stuff.typeln("You climb into this hole and fall, once again.");
+			Stuff.typeln("This time, you land on a sloped, slippery floor.");
+			Stuff.typeln("You try to cling to it but it's no use.");
+			Stuff.typeln("You slide, and the corridor narrows.");
+			Stuff.typeln("Eventually, you're sliding down a slide, almost.");
+			Stuff.typeln("And just like that, the floor is gone and you're falling.");
+			Stuff.Wait(800);
+			Stuff.typeln("But luckily, you eventually land.");
+			Stuff.WentInMountainHatch = true;
+			if (Stuff.WentInTreeHatch == true) {
+				Stuff.typeln("You're back in the tree hatch again!");
+			}
+			TreeHatch();
+		}
+		else {
+			Stuff.typeln("You already know the routine.");
+			Stuff.typeln("You walk over to the other hatch, open that one, and slide down the slide.");
+			Stuff.Wait(800);
+			Stuff.typeln("And then, you're back in the tree hatch.");
+		}
 	}
 	
 	public static void WaterHole() {
@@ -795,7 +836,77 @@ public class GoatBranch
 	public static void Office() {
 		Stuff.CurrentLocationNumber = 18;
 		
-		//stuff
+		Stuff.typeln("You walk into a dimly lit room and find a bunch of filing cabinets and switches.");
+		Stuff.HitEnter(2);
+		ASCII.Office();
+		Stuff.HitEnter(2);
+		Stuff.Wait(3000);
+		Stuff.typeln("What an odd place.");
+		Stuff.typeln("You wonder if you should open the cabinet and see what the files inside are.");
+		Stuff.typeln("Or maybe you should flip a switch?");
+		Stuff.typeln("Hmmm....");
+		Stuff.WentInOffice = true;
+		switch (Stuff.PlayerChoice("leave it alone", "open cabinets", "flip switches"))
+		{
+		case "leave it alone":
+			Stuff.typeln("You decide that you shouldn't touch any of it.");
+			Stuff.typeln("You aren't even from this time and don't want to mess anything up.");
+			Stuff.typeln("\"Yes, better just head out now,\" you say aloud.");
+			Stuff.Wait(800);
+			Stuff.typeln("There is a clatter behind you and the door opens.");
+			Stuff.typeln("A man with round glasses enters.");
+			Stuff.typeln("\"Good idea,\" he says with a smirk.");
+			Stuff.typeln("\"You just saved your own life.\"");
+			Stuff.typeln("\"How's that?\" you ask.");
+			Stuff.typeln("\"Well,\" the man says, \"If you'd read any of those files...");
+			Stuff.typeln("You'd have found some infomation we don't really want anyone to see.\"");
+			Stuff.typeln("\"But you didn't,\" he says with relief, \"so I'd be on my way before I change my mind.\"");
+			Stuff.typeln("\"How?\" you ask.");
+			Stuff.typeln("\"Oh, I'll bring you out.\"");
+			Stuff.typeln("The guy approaches with a needle.");
+			Stuff.typeln("\"Can't have you seeing any more,\" he remarks as he injects you.");
+			Stuff.Wait(2000);
+			Stuff.typeln("You wake up in the dirt.");
+			Stuff.typeln("As you rise to your feet, you find yourself at a crossroads.");
+			Crossroads();
+			break;
+		case "open cabinets":
+			Stuff.typeln("You decide to open some cabinets.");
+			Stuff.typeln("May as well gain some intel.");
+			Stuff.typeln("You only get one drawer open when there is a clatter behind you and the door opens.");
+			Stuff.typeln("A man with round glasses enters.");
+			Stuff.typeln("\"Bad idea,\" he says with a smirk.");
+			Stuff.typeln("\"You just doomed yourself.\"");
+			Stuff.typeln("\"How's that?\" you ask.");
+			Stuff.typeln("\"Well,\" the man says, \"If you'd read any of those files...");
+			Stuff.typeln("You'd have found some infomation we don't really want anyone to see.\"");
+			Stuff.typeln("\"But I didn't!\" you protest.");
+			Stuff.typeln("\"But you know where they are,\" the man says.");
+			Stuff.typeln("\"Look, let's just have a little chat, okay?\"");
+			Stuff.typeln("He approaches with a needle.");
+			Stuff.typeln("\"Can't have you seeing any more,\" he remarks as he injects you.");
+			EllipseOffice();
+			break;
+		case "flip switches":
+			Stuff.typeln("You're not even from this time, you recall.");
+			Stuff.typeln("May as well walk over and start flipping some switches.");
+			Stuff.typeln("So you do.");
+			Stuff.typeln("You walk over and start flipping some switches.");
+			Stuff.typeln("On the third one, an alarm sounds, and you hear a loud crash somewhere.");
+			Stuff.typeln("\"Citywide destruction initialized,\" a computerizeded voice somewhere announces.");
+			Stuff.typeln("That sounds ominous.");
+			Stuff.typeln("\"The Ned Flanders Organization of Cool has decided that this town is no longer fit for existence,\"");
+			Stuff.typeln("the voice continues.");
+			Stuff.typeln("The Ned Flanders Organization of Cool! That must be what those letters on the hatch stood for!");
+			Stuff.typeln("Suddenly, a grate in the wall suddenly makes a mechanical sound and water begins to pour out.");
+			Stuff.typeln("\"Do not resist,\" the voice continues calmly. \"The doors are locked.\"");
+			Stuff.typeln("As you run for the door to the office, you are proven correct.");
+			Stuff.typeln("Luckily, you have horns, and you smash through the door.");
+			Stuff.typeln("Emergency lights have come on inside the original room, revealing another concealed door along the right wall.");
+			Stuff.typeln("You smash this one too and dash inside.");
+			EllipseOffice2();
+			break;
+		}
 	}
 	
 	public static void EllipseOffice() {
@@ -826,10 +937,13 @@ public class GoatBranch
 			if (Stuff.HasLuckyGauntlet == true) {
 				Stuff.typeln("\"That was Apu.\" Ned says with a hint of relief.");
 				Stuff.typeln("\"He says you appeared out of nowhere outside his store, but that you seemed harmless.\"");
-				Stuff.typeln("\"I was worried,\" Ned laughs, \"That you might have been a spy planted by enemies!\"");
+				Stuff.typeln("\"I was worried,\" Ned laughs, \"That you might have been a spy planted by enemies! of the NFOOC!\"");
 				Stuff.typeln("\"Well, since you're not, I suppose I can let you be on your way.\"");
 				Stuff.typeln("He gets up and opens another door.");
-				Stuff.typeln("\"In there is a time machine,\" Ned says. \"It should bring you back to your friends.\"");
+				Stuff.typeln("\"Wait,\" you interrupt. \"What is the NFOOC?\"");
+				Stuff.typeln("\"That would be my governing body,\" Ned replies.");
+				Stuff.typeln("\"The Ned Flanders Organization of Cool.\"");
+				Stuff.typeln("\"Anyway - in there is a time machine,\" Ned continues. \"It should bring you back to your friends.\"");
 				Stuff.typeln("You walk into the room and Ned goes to shut the door behind you.");
 				Stuff.typeln("\"Just...\" Ned looks behind him. \"Don't tell anyone you were here, okay?\"");
 				Stuff.typeln("You nod and enter the machine.");
@@ -858,7 +972,7 @@ public class GoatBranch
 					Stuff.typeln("Just you, returning to Doofenshmirtz with the news that his time machine worked.");
 					if (Stuff.TimeinatorWorks == false) {
 						Stuff.Wait(1000);
-						Stuff.typeln("Just kidding. No it doesn't.");
+						Stuff.typeln("Just kidding. It's broken now.");
 						Stuff.Wait(500);
 						Stuff.typeln("Anyway...");
 					}
@@ -921,8 +1035,11 @@ public class GoatBranch
 			Stuff.Wait(500);
 			if (Stuff.GotShirt == false) {
 				Stuff.typeln("\"Yes,\" he continues, \"I suppose your time here is finished.\"");
-				Stuff.typeln("\"But, my friend, we like to banish people here rather than execute them.\"");
-				Stuff.typeln("\"So, I'm going to set that machine to the year -11 million.");
+				Stuff.typeln("\"But, my friend, here in the NFOOC we like to banish people here rather than execute them.\"");
+				Stuff.typeln("\"Wait,\" you interrupt, \"what does that stand for?\"");
+				Stuff.typeln("\"That would be my governing body,\" Ned replies.");
+				Stuff.typeln("\"The Ned Flanders Organization of Cool.\"");
+				Stuff.typeln("\"Anyway - I'm going to set that time machine to the year -11 million.");
 				Stuff.typeln("There'll probably be dinosaurs there. I don't know.");
 				Stuff.typeln("All I know is that you'll have absolutely no way to communicate with whoever you're spying for.\"");
 				Stuff.typeln("You want to tell him you're not a spy - that he's wrong! - but he's already opening a door.");
@@ -946,7 +1063,76 @@ public class GoatBranch
 				Stuff.StoryEnding();
 			}
 			else {
-				//bad stuff
+				Stuff.typeln("\"Yes,\" he continues, \"I suppose your time here is finished.\"");
+				Stuff.typeln("But then he stops. He is looking at your shirt.");
+				Stuff.typeln("\"Well... if that isn't a Ned Fan Club Shirt!\"");
+				Stuff.typeln("He smiles at you.");
+				Stuff.typeln("\"I suppose I can't kill you now,\" he says.");
+				Stuff.typeln("\"I always love to see a fan of the NFOOC!\"");
+				Stuff.typeln("\"Wait,\" you interrupt, \"what does that stand for?\"");
+				Stuff.typeln("\"That would be my governing body,\" Ned replies.");
+				Stuff.typeln("\"The Ned Flanders Organization of Cool.");
+				Stuff.typeln("But anyway, I can't really have you sticking arund, you know?");
+				Stuff.typeln("I've got a time machine here. I want you to get inside -\"");
+				Stuff.typeln("He points to a closet door.");
+				Stuff.typeln("\"And go somewhere else.\"");
+				Stuff.Wait(800);
+				Stuff.typeln("You walk over and open the door and find a few machines inside.");
+				Stuff.typeln("Based on their labelling (they say \"Time Machine\") you figure that they must be time machines.");
+				Stuff.typeln("How convenient.");
+				Stuff.typeln("You enter one and shut the door behind you.");
+				Stuff.Wait(1000);
+				Stuff.typeln("You wonder if you should try exploring somewhere else?");
+				Stuff.typeln("Or maybe you've done enough for today. Up to you.");
+				switch (Stuff.PlayerChoice("go to 2030", "go home"))
+				{
+				case "go to 2030":
+					Stuff.typeln("Why not?");
+					Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
+					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
+					Stuff.typeln("You brace yourself for the adventure ahead...");
+					Stuff.Wait(1000);
+					Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
+					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+					Stuff.TypeLine("You also see Elon Musk nearby.");
+					Stuff.TypeLine("He greets you as you approach.");
+					Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
+					Stuff.TypeLine("\"What, you thought I didn't invent a time machine? I'm Elon Musk!\"");
+					Stuff.TypeLine("He gestures to a sleek looking time machine about the size of a phone booth - definitely able to fit a person inside.");
+					Stuff.typeln("Speaking of people, it seems you aren't a goat anymore!");
+					Stuff.TypeLine("Anyway, the style of the machine is reminiscent of an airplane's, with flowing, glossy sides.");
+					Stuff.TypeLine("\"It runs entirely on solar power, of course,\" Elon continues.");
+					Stuff.TypeLine("\"Well, besides the space/time-altering liquid, Porject Alpha, but that doesn't pollute either.\"");
+					Stuff.TypeLine("\"Anyway, you can be an astronaut on this spaceship of mine if you'd like. I saved you a spot!\"");
+					Stuff.TypeLine("\"Its mission is actually to get more juice for these time machines from the moon. I bet yours runs on it, too.\"");
+					SpaceBranch.GoToSpaceBranch("Launchpad1");
+					break;
+				case "go home":
+					Stuff.typeln("You decide you've had enough for today.");
+					Stuff.Wait(1000);
+					Stuff.typeln("As you turn the dial, you reflect on your time in 1954.");
+					Stuff.typeln("It was eventful, that's for sure.");
+					Stuff.Wait(1000);
+					Stuff.typeln("...or maybe it wasn't.");
+					Stuff.typeln("The story might have led you here in two choices and now you're already done.");
+					Stuff.typeln("Ah well. At least you got a good ending, right?");
+					Stuff.typeln("No more being a goat. No more crazy Ned.");
+					Stuff.typeln("Just you, returning to Doofenshmirtz with the news that his time machine worked.");
+					if (Stuff.TimeinatorWorks == false) {
+						Stuff.Wait(1000);
+						Stuff.typeln("Just kidding. It's broken now.");
+						Stuff.Wait(500);
+						Stuff.typeln("Anyway...");
+					}
+					Stuff.typeln("You click a button, the machine whirs...");
+					Stuff.typeln("And just like nothing happened, you're standing there with Doofenshmirtz.");
+					Stuff.typeln("\"Hey,\" he says.");
+					Stuff.typeln("\"How was your awesome and cool journey?\"");
+					Stuff.typeln("\"Awesome and cool,\" you reply, \"awesome and cool.\"");
+					Stuff.Wait(1000);
+					Stuff.StoryEnding();
+					break;
+				}
 			}
 		}
 	}
@@ -1078,6 +1264,101 @@ public class GoatBranch
 			Stuff.typeln("You disappear around a corner before they can change their mind.");
 			Stuff.Wait(2000);
 			Crossroads();
+			break;
+		}
+	}
+	
+	public static void ManufacturingCenter2() {
+		Stuff.CurrentLocationNumber = 23;
+		
+		switch (Stuff.PlayerChoice("say no", "use machine", "break future"))
+		{
+		case "say no":
+			Stuff.typeln("\"Nah,\" you say. You turn towards the door and walk out.");
+			RightOutsideMountainHatch();
+			break;
+		case "use machine":
+			Stuff.typeln("\"Hey,\" you inquire.");
+			Stuff.typeln("\"Hey, what?\"");
+			Stuff.typeln("\"May I use one of the machines?\"");
+			Stuff.typeln("\"Well, I guess so.\" The doctor shrugs and steps out of the way.");
+			Stuff.typeln("\"Just FYI, if you get hurt, it's not my fault or my problem.\"");
+			Stuff.typeln("You nod. You are a goat, so no one should notice you're gone anyway.");
+			Stuff.typeln("Into the machine you go.");
+			Stuff.typeln("For 1954, it's pretty advanced.");
+			Stuff.typeln("You start to turn a dial, but because you have hooves, it's quite difficult.");
+			Stuff.typeln("\"Oopsies,\" you remark.");
+			Stuff.Wait(1000);
+			Stuff.typeln("You have accidentally broken the dial with your hoof.");
+			Stuff.typeln("Not wanting to concern Doofenshmirtz or have him ask too many questions, you decide to just wing it.");
+			Stuff.typeln("Off you go to whatever year it was set on...");
+			Stuff.Wait(3000);
+			OldTimeBranch.GoToOldTimeBranch("OuterVillage1");
+			break;
+		}
+	}
+	
+	public static void EllipseOffice2() {
+		Stuff.CurrentLocationNumber = 24;
+		
+		Stuff.Wait(1000);
+		Stuff.typeln("You find yourself in another office.");
+		Stuff.typeln("This one is more grand, and there's no water coming in.");
+		Stuff.typeln("Either way, the water is pouring through the hole you made in the door.");
+		Stuff.typeln("You have definitely compromised this room's properties as a bunker.");
+		Stuff.typeln("As you look around for somewhere to go, a man stumbles through the hole in the door.");
+		Stuff.typeln("\"My office!\" he cries out.");
+		Stuff.typeln("\"How am I going to not drown now?\"");
+		Stuff.typeln("You ignore him. He has no idea that you're an unusually intellignet goat, you reckon.");
+		Stuff.typeln("The man sighs and pulls out a walkie talkie.");
+		Stuff.typeln("(which were invented in 1937! So they did exist in 1954)");
+		Stuff.typeln("\"Hey, this is Ned,\" he says. \"I need a helicopter outside my office. Quickly.");
+		Stuff.Wait(700);
+		Stuff.typeln("..Yeah, a goat took out the door, my office isn't safe anymore.\"");
+		Stuff.typeln("He the turns around and dashes out the door, leaving you to die.");
+		Stuff.typeln("Or does he? You notice what looks like a closet in one of the walls.");
+		Stuff.typeln("You walk over and open the door, which luckily isn't locked, and find a few machines inside!");
+		Stuff.typeln("Based on their labelling (they say \"Time Machine\") you figure that they must be time machines.");
+		Stuff.typeln("A perfect escape.");
+		Stuff.typeln("But you have to act fast. The water is flooding in behind you.");
+		Stuff.typeln("You enter one and shut the door behind you.");
+		Stuff.Wait(1000);
+		Stuff.typeln("You wonder if you should try exploring somewhere else?");
+		Stuff.typeln("Or maybe you've done enough for today. Up to you.");
+		switch (Stuff.PlayerChoice("go to 2030", "go home"))
+		{
+		case "go to 2030":
+			Stuff.typeln("Why not?");
+			Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
+			Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
+			Stuff.typeln("You brace yourself for the adventure ahead...");
+			//add intro tomorrow since I hit my lines for today (plus like 15 wow)
+			SpaceBranch.GoToSpaceBranch("Launchpad1");
+			break;
+		case "go home":
+			Stuff.typeln("You decide you've had enough for today.");
+			Stuff.Wait(1000);
+			Stuff.typeln("As you turn the dial, you reflect on your time in 1954.");
+			Stuff.typeln("It was eventful, that's for sure.");
+			Stuff.Wait(1000);
+			Stuff.typeln("...or maybe it wasn't.");
+			Stuff.typeln("The story might have led you here in two choices and now you're already done.");
+			Stuff.typeln("Ah well. At least you got a good ending, right?");
+			Stuff.typeln("No more being a goat. No more crazy Ned.");
+			Stuff.typeln("Just you, returning to Doofenshmirtz with the news that his time machine worked.");
+			if (Stuff.TimeinatorWorks == false) {
+				Stuff.Wait(1000);
+				Stuff.typeln("Just kidding. It's broken now.");
+				Stuff.Wait(500);
+				Stuff.typeln("Anyway...");
+			}
+			Stuff.typeln("You click a button, the machine whirs...");
+			Stuff.typeln("And just like nothing happened, you're standing there with Doofenshmirtz.");
+			Stuff.typeln("\"Hey,\" he says.");
+			Stuff.typeln("\"How was your awesome and cool journey?\"");
+			Stuff.typeln("\"Awesome and cool,\" you reply, \"awesome and cool.\"");
+			Stuff.Wait(1000);
+			Stuff.StoryEnding();
 			break;
 		}
 	}

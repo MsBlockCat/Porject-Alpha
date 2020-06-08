@@ -2466,4 +2466,29 @@ public class ASCII
 		System.out.println("               |      ~             ~          ~          ~          |            ");
 		System.out.println("               |                                                     |           ");
 	}
+	
+	public static void Office()
+	{
+		System.out.println("                                                                         ");
+		System.out.println("                                                                         ");
+		System.out.println("                                                                         ");
+		System.out.println("                                                                         ");
+		System.out.println("                                                                         ");
+		System.out.println("                                                                         ");
+		System.out.println("    _________                                                                     ");
+		System.out.println("   /________/|                                                                      ");
+		System.out.println("   |        ||                                                             ");
+		System.out.println("   |        ||        ___     ___                                                 ");
+		System.out.println("   |   ==   ||       /   \\   /   \\                                                   ");
+		System.out.println("   |   --   ||       | I |   | I |                                                 ");
+		System.out.println("   |________||       |___|   |___|                                                    ");
+		System.out.println("   |        ||                                         hmmm a weird office                    ");
+		System.out.println("   |   ==   ||                                         /                     ");
+		System.out.println("   |   --   ||    ___________________           ____                                           ");
+		System.out.println("   |________||   /__________________/          /__  \\                                            ");
+		System.out.println("   |        ||   | |             | |              \\  \\________                          ");
+		System.out.println("   |   ==   ||   | |             | |               \\  \\       |\\                   ");
+		System.out.println("   |   --   ||   | |             | |               |__________| \\                              ");
+		System.out.println("   |        |/   | |             | |                 | |  | |                             ");
+	}
 }
