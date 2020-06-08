@@ -667,7 +667,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("Probably went to a prison though.");
 						Stuff.TypeLine("You also never got to see his face.");
 						Stuff.TypeLine("One of the guards grabs a hold on you and Harold pushes him away.");
-						Stuff.TypeLine("\"This person is a wanted criminal\" one of the knights says.");
+						Stuff.TypeLine("\"This person is a wanted criminal,\" one of the knights says.");
 						Stuff.TypeLine("Harold defends you but it seems like you are going back to the tiger arena.");
 						Stuff.TypeLine("From out of nowhere, another knight walks over and whispers something to the one that is pestering you and he lets go.");
 						Stuff.TypeLine("\"Seems like you are good to go.");
