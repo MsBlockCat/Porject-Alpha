@@ -46,3 +46,6 @@ stackoverflow.com/questions/93976/how-to-determine-whether-a-character-is-a-lett
 
 How to Stop Java
 stackoverflow.com/questions/22452930/terminating-a-java-program
+
+Warningless Infinite Loops
+baeldung.com/infinite-loops-java

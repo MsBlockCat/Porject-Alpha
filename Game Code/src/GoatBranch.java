@@ -456,7 +456,7 @@ public class GoatBranch
 		Stuff.typeln("It even directs you to seemingly pointless (but actually sinister) locations!"); 
 		Stuff.Wait(2500);
 		Stuff.typeln("Where to go...");
-		while (5 == 2 + 3) {
+		while (true) {
 			switch (Stuff.PlayerChoice("grocery store", "rock", "tree", "mountain"))
 			{
 			case "grocery store":
