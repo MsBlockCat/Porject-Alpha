@@ -43,3 +43,6 @@ asciiart.eu/buildings-and-places/castles
 
 Check for if char is letter
 stackoverflow.com/questions/93976/how-to-determine-whether-a-character-is-a-letter-in-java
+
+How to Stop Java
+stackoverflow.com/questions/22452930/terminating-a-java-program

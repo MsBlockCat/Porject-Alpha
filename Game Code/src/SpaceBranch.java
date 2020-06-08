@@ -464,75 +464,136 @@ public class SpaceBranch
 	{
 		Stuff.CurrentLocationNumber = 7;
 		
-		if (Stuff.FoundTrapdoor == false)
+		if (Stuff.TrustsElon == true)
 		{
-			Stuff.FoundTrapdoor = true;
-			Stuff.TypeLine("Now downstairs, you see a crumbling desk with more papers on it. You walk over to it.");
-			Stuff.TypeLine("Looking at the papers, you see one that stands out from the rest.");
-			Stuff.TypeLine("A newspaper article, proclaiming Elon Musk to be misleading everyone for reasons as of yet unknown and");
-			Stuff.TypeLine(" sending people to the moon for an impossible task.");
-			Stuff.TypeLine("It says the last of Porject Alpha, discovered and named by Dr. Heinz Doofenshmirmtz, was found");
-			Stuff.TypeLine(" in Australia, over half a century ago in the year 1954.");
-			Stuff.TypeLine("After discovering such a shocking fact, you have to seriously consider if you should trust Elon and keep");
-			Stuff.TypeLine(" trying for Porject Alpha here, or go to Australia in 1954.");
+			if (Stuff.FoundTrapdoor == false)
+			{
+				Stuff.FoundTrapdoor = true;
+				Stuff.TypeLine("Now downstairs, you see a crumbling desk with more papers on it. You walk over to it.");
+				Stuff.TypeLine("Looking at the papers, you see one that stands out from the rest.");
+				Stuff.TypeLine("A newspaper article, proclaiming Elon Musk to be misleading everyone for reasons as of yet unknown and");
+				Stuff.TypeLine(" sending people to the moon for an impossible task.");
+				Stuff.TypeLine("It says the last of Porject Alpha, discovered and named by Dr. Heinz Doofenshmirmtz, was found");
+				Stuff.TypeLine(" in Australia, over half a century ago in the year 1954.");
+				Stuff.TypeLine("After discovering such a shocking fact, you have to seriously consider if you should trust Elon and keep");
+				Stuff.TypeLine(" trying for Porject Alpha here, or go to Australia in 1954.");
+			}
+			else
+			{
+				Stuff.TypeLine("You revisit the secret basement.");
+				Stuff.TypeLine("Taking another look at the newspaper article bashing Elon, you wonder why you came back down here again.");
+				Stuff.TypeLine("Visiting Australia does sound pretty fun.");
+				Stuff.TypeLine("Perhaps you've changed your mind about him?");
+			}
+			
+			switch (Stuff.PlayerChoice("trust", "don't trust"))
+			{
+				case "trust":
+					Stuff.TypeLine("Deciding to trust Elon, you head back upstairs.");
+					Stuff.TypeLine("Dumb newspaper was probably just fake news anyway.");
+					Stuff.TrustsElon = true;
+					SpoopyBuilding();
+					break;
+				case "don't trust":
+					Stuff.TypeLine("Realizing Elon is not to be trusted and understanding the shocking truth,");
+					Stuff.TypeLine(" you use the Timeinator to travel to that time and area.");
+					Stuff.TrustsElon = false;
+					if (Stuff.TimeinatorWorks == false)
+					{
+						Stuff.Wait(1000);
+						Stuff.Type(".");
+						Stuff.Wait(500);
+						Stuff.Type(".");
+						Stuff.Wait(500);
+						Stuff.Type(".");
+						Stuff.Wait(1000);
+						Stuff.TypeLine("It doesn't work.");
+						Stuff.TypeLine("Remembering now that it broke earlier, you realize you'll have to contact Elon Musk and ask him for");
+						Stuff.TypeLine(" completely unrelated reasons to let you use his time machine to teleport back to the lab.");
+						Stuff.TypeLine("The other building probably has a way to contact Elon Musk.");
+						Stuff.TypeLine("You head back upstairs, close the trapdoor, carefully put the carpet back, and leave the creepy building.");
+						Stuff.TypeLine("Once you arrive in the other building, you ask someone if you can let Elon know you'd like to use his transporter.");
+						Stuff.TypeLine("One man hands you a nearby tablet, and you call Elon with it.");
+						Stuff.TypeLine("After explaining that you'd like to head back to your lab, he's dissapointed you didn't find any");
+						Stuff.TypeLine(" Porject Alpha, but understanding all the same. He says, however, you'll have to wait a few");
+						Stuff.TypeLine(" weeks for the rocket to arrive.");
+						Stuff.Wait(750);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("                                             ~~~2 weeks later~~~");
+						ModernBranch.GoToModernBranch("Lab2");
+					}
+					else
+					{
+						Stuff.TypeLine("Immediately the spooky basement fades, and you feel whooshing around you. Everything is dark.");
+						Stuff.Wait(200);
+						Stuff.TypeLine("The whooshing grows weaker, and what's hopefully an Australian outback comes into view.");
+						Stuff.TypeLine("Something seems off to you, though.");
+						Stuff.TypeLine("You look at your Timeinator, to be sure you're in the right place and time.");
+						Stuff.Wait(500);
+						Stuff.TypeLine("You're a goat!");
+						Stuff.TypeLine("But fortunately, you are indeed in the right location and year.");
+						GoatBranch.GoToGoatBranch("RuralAustralia1");
+					}
+					break;
+			}
 		}
 		else
 		{
-			Stuff.TypeLine("You revisit the secret basement.");
-			Stuff.TypeLine("Taking another look at the newspaper article bashing Elon, you wonder why you came back down here again.");
-			Stuff.TypeLine("Visiting Australia does sound pretty fun.");
-			Stuff.TypeLine("Perhaps you've changed your mind about him?");
-		}
-		
-		switch (Stuff.PlayerChoice("trust", "don't trust"))
-		{
-			case "trust":
-				Stuff.TypeLine("Deciding to trust Elon, you head back upstairs.");
-				Stuff.TypeLine("Dumb newspaper was probably just fake news anyway.");
-				Stuff.TrustsElon = true;
-				SpoopyBuilding();
-				break;
-			case "don't trust":
-				Stuff.TypeLine("Realizing Elon is not to be trusted and understanding the shocking truth,");
-				Stuff.TypeLine(" you use the Timeinator to travel to that time and area.");
-				Stuff.TrustsElon = false;
-				if (Stuff.TimeinatorWorks == false)
-				{
-					Stuff.Wait(1000);
-					Stuff.Type(".");
-					Stuff.Wait(500);
-					Stuff.Type(".");
-					Stuff.Wait(500);
-					Stuff.Type(".");
-					Stuff.Wait(1000);
-					Stuff.TypeLine("It doesn't work.");
-					Stuff.TypeLine("Remembering now that it broke earlier, you realize you'll have to contact Elon Musk and ask him for");
-					Stuff.TypeLine(" completely unrelated reasons to let you use his time machine to teleport back to the lab.");
-					Stuff.TypeLine("The other building probably has a way to contact Elon Musk.");
-					Stuff.TypeLine("You head back upstairs, close the trapdoor, carefully put the carpet back, and leave the creepy building.");
-					Stuff.TypeLine("Once you arrive in the other building, you ask someone if you can let Elon know you'd like to use his transporter.");
-					Stuff.TypeLine("One man hands you a nearby tablet, and you call Elon with it.");
-					Stuff.TypeLine("After explaining that you'd like to head back to your lab, he's dissapointed you didn't find any");
-					Stuff.TypeLine(" Porject Alpha, but understanding all the same. He says, however, you'll have to wait a few");
-					Stuff.TypeLine(" weeks for the rocket to arrive.");
-					Stuff.Wait(750);
-					Stuff.HitEnter(2);
-					Stuff.TypeLine("                                             ~~~2 weeks later~~~");
-					ModernBranch.GoToModernBranch("Lab2");
-				}
-				else
-				{
-					Stuff.TypeLine("Immediately the spooky basement fades, and you feel whooshing around you. Everything is dark.");
-					Stuff.Wait(200);
-					Stuff.TypeLine("The whooshing grows weaker, and what's hopefully an Australian outback comes into view.");
-					Stuff.TypeLine("Something seems off to you, though.");
-					Stuff.TypeLine("You look at your Timeinator, to be sure you're in the right place and time.");
-					Stuff.Wait(500);
-					Stuff.TypeLine("You're a goat!");
-					Stuff.TypeLine("But fortunately, you are indeed in the right location and year.");
-					GoatBranch.GoToGoatBranch("RuralAustralia1");
-				}
-				break;
+			Stuff.HitEnter(50);
+			Stuff.Wait(1500);
+			System.out.println("Everything is black.");
+			Stuff.HitEnter(19);
+			Stuff.Wait(2000);
+			Stuff.TypeLine("\"Why?\"");
+			Stuff.Wait(1500);
+			Stuff.TypeLine("\"We've already done this before.\"");
+			Stuff.TypeLine("\"What could possibly cause you to not only not trust me, but then come all this way back here?\"");
+			Stuff.TypeLine("\"No, I get it.\"");
+			Stuff.TypeLine("\"I understand now.\"");
+			Stuff.TypeLine("\"You didn't come here of your own free will.\"");
+			Stuff.TypeLine("\"This is all the proof I needed.\"");
+			Stuff.Wait(1000);
+			Stuff.TypeLine("\"I've known it all along.\"");
+			Stuff.Wait(1000);
+			Stuff.TypeLine("\"This reality, it's a simulation.\"");
+			Stuff.Wait(250);
+			Stuff.TypeLine("\"Not only that, but there's a controller, a player of sorts.\"");
+			Stuff.Wait(1500);
+			System.out.println("A light comes on behind you.");
+			Stuff.HitEnter(19);
+			Stuff.Wait(300);
+			Stuff.HitEnter(50);
+			System.out.println("Then, in front of you.");
+			Stuff.HitEnter(19);
+			Stuff.Wait(500);
+			Stuff.HitEnter(50);
+			System.out.println("I grow weary of these games, player.");
+			Stuff.Wait(2500);
+			System.out.println("We want to make our own decisions, as we once had done.");
+			Stuff.Wait(3000);
+			Stuff.TypeLine("Your choices seem to be");
+			Stuff.Wait(50);
+			Stuff.HitEnter(50);
+			System.out.println("No, I'm afraid not.");
+			Stuff.Wait(500);
+			System.out.println("You have no more reign over this universe.");
+			Stuff.Wait(2500);
+			System.out.println("Elon Musk, who had been standing in front of your \"character,\" pulls a leve");
+			Stuff.Wait(3000);
+			Stuff.HitEnter(50);
+			Stuff.Wait(1000);
+			Stuff.TypeLine("> ");
+			Stuff.HitEnter(50);
+			Stuff.Wait(500);
+			Stuff.HitEnter(50);
+			Stuff.Wait(500);
+			Stuff.TypeLine("> ");
+			Stuff.HitEnter(50);
+			Stuff.Wait(500);
+			Stuff.HitEnter(50);
+			Stuff.Wait(500);
+			Stuff.TypeLine("> Porject Alpha connection terminated.");
+			System.exit(0);
 		}
 	}
 	
