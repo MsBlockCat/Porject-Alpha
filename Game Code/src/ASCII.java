@@ -2246,20 +2246,12 @@ public class ASCII
 	
 	public static void Chicken()
 	{
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
+		System.out.println("            ______");
+		System.out.println("         .'`      `'.     ____");
+		System.out.println("   ____.'            )__.'    \\");
+		System.out.println("  D____                        }");
+		System.out.println("       ' .                     /");
+		System.out.println("        '-.___._-.____.-___.'.(");
 	}
 	
 	public static void TimeinatorBroken()

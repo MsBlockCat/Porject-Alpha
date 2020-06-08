@@ -784,6 +784,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				ASCII.Chicken();
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Baked.");
 				Stuff.HasChicken = true;
@@ -795,6 +796,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				ASCII.Chicken();
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Baked.");
 				Stuff.HasChicken = true;
@@ -890,6 +892,8 @@ public class OldTimeBranch
 		{
 			Stuff.TypeLine("You just remember something.");
 			Stuff.TypeLine("You reach into your pocket and take out the other half of the chicken you had for lunch.");
+			ASCII.Chicken();
+			Stuff.TypeLine("Disgusting.");
 			Stuff.TypeLine("You take a bite and keep running.");
 			Stuff.TypeLine("Then you have an idea.");
 			Stuff.Wait(200);
