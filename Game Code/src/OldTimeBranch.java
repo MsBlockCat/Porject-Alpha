@@ -49,6 +49,18 @@ public class OldTimeBranch
 			case "Run":
 				Run();
 				break;
+			case "12":
+			case "TigerCage":
+				TigerCage();
+				break;
+			case "13":
+			case "TigerEvent":
+				TigerEvent();
+				break;
+			case "14":
+			case "ChoiceRoom2":
+				ChoiceRoom2();
+				break;
 			default:
 				System.out.println("(Enter) Error 4: The starting area of the old time branch of the story, method GoToOldTimeBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -87,6 +99,7 @@ public class OldTimeBranch
 					break;
 				case "search the castle":
 					Stuff.StoryBeginning = false;
+					Castle();
 					break;
 			}
 		}
@@ -324,26 +337,53 @@ public class OldTimeBranch
 				Stuff.TypeLine("You claim to not be the assassin and you pull out your wanted poster with the map on it and show it to the knights.");
 				Stuff.TypeLine("Now that you see it, the assassin does look like you. Just... older.");
 				Stuff.TypeLine("\"You are coming with us!\"");
-				Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
-				Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
-				Stuff.TypeLine("As you are shoved into a cage, you ask how long you are going to be locked down there for.");
-				Stuff.TypeLine("\"You won't ever be getting out of there.\"");
-				Stuff.TypeLine("You aren't scared though, you can just leave with the Timeinato-");
-				Stuff.Wait(300);
-				Stuff.TypeLine(".");
-				Stuff.Wait(300);
-				Stuff.TypeLine("..");
-				Stuff.Wait(300);
-				Stuff.TypeLine("...");
-				Stuff.Wait(300);
-				Stuff.HitEnter(2);
-				ASCII.TimeinatorBroken();
-				Stuff.Wait(1000);
-				Stuff.HitEnter(2);
-				Stuff.TypeLine("Cut Short Ending");
-				Stuff.Wait(500);
-				Stuff.HitEnter(5);
-				Stuff.StoryEnding();
+				if (Stuff.HasLuckyGauntlet = true)
+				{
+					Stuff.TypeLine("They take gauntlet from your hand, rendering you un-lucky.");
+					Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
+					Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
+					Stuff.TypeLine("As you are shoved into a cage, you ask how long you are going to be locked down there for.");
+					Stuff.TypeLine("\"You won't ever be getting out of there.\"");
+					Stuff.TypeLine("You aren't scared though, you can just leave with the Timeinato-");
+					Stuff.Wait(300);
+					Stuff.TypeLine(".");
+					Stuff.Wait(300);
+					Stuff.TypeLine("..");
+					Stuff.Wait(300);
+					Stuff.TypeLine("...");
+					Stuff.Wait(300);
+					Stuff.HitEnter(2);
+					ASCII.TimeinatorBroken();
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("The Un-Lucky Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
+				}
+				else
+				{
+					Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
+					Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
+					Stuff.TypeLine("As you are shoved into a cage, you ask how long you are going to be locked down there for.");
+					Stuff.TypeLine("\"You won't ever be getting out of there.\"");
+					Stuff.TypeLine("You aren't scared though, you can just leave with the Timeinato-");
+					Stuff.Wait(300);
+					Stuff.TypeLine(".");
+					Stuff.Wait(300);
+					Stuff.TypeLine("..");
+					Stuff.Wait(300);
+					Stuff.TypeLine("...");
+					Stuff.Wait(300);
+					Stuff.HitEnter(2);
+					ASCII.TimeinatorBroken();
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("Cut Short Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
+				}
 				break;
 		}
 	}
@@ -672,26 +712,121 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 11;
 		
 		Stuff.TypeLine("The knight starts to chase after you calling for reinforcements.");
+		Stuff.Criminal = true;
 		switch (Stuff.PlayerChoice("run", "don't run"))
 		{
 			case "run":
 				Stuff.TypeLine("You sprint in a direction, thinking to yourself how dumb you were to trust a hooded man.");
 				Stuff.TypeLine("Everywhere you look there are knights emerging from their posts, running after you.");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
+				Stuff.TypeLine("Even the vegetarian food shop lady is chasing you with some celery in her hand, complaining that you don't \"appreciate fine cuisine\"");
+				Stuff.TypeLine("She gets tackled and imprisoned due to her lies.");
+				Stuff.TypeLine("It seems that people really don't like vegetarian food.");
+				Stuff.TypeLine("Either way you keep running untill you trip.");
+				Stuff.TypeLine("You get picked up and rolled into a prison cart.");
+				Stuff.TypeLine("\"Into the tiger cage you go.\"");
+				TigerCage();
 				break;
 			case "don't run":
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
+				Stuff.TypeLine("Why you don't run, even you are not sure.");
+				Stuff.TypeLine("The knight grabs a hold of your arm and drags you into a prison cart.");
+				Stuff.TypeLine("\"Into the tiger cage you go.\"");
+				Stuff.TypeLine("That sounds everything but good, unless you like tigers.");
+				TigerCage();
 				break;
 		}
+	}
+	
+	public static void TigerCage()
+	{
+		Stuff.CurrentLocationNumber = 12;
+		
+		Stuff.TypeLine("How cool, you are in an crowded arena with a large pole in the middle.");
+		Stuff.TypeLine("There is a chain on that pole and on the chain is a tiger.");
+		Stuff.TypeLine("Fantastic.");
+		Stuff.TypeLine("You stand in a line with other criminals although you yourself are not one.");
+		Stuff.TypeLine("Your complaints to the guards don't work either.");
+		Stuff.TypeLine("Since the mood is grim you come up with some ideas to try and stay positive.");
+		switch (Stuff.PlayerChoice("make a joke", "blah blah blah", "revolt"))
+		{
+			case "make a joke":
+				Stuff.TypeLine("You lean up nice and close to one of the big burly men next to you and tell him a joke.");
+				Stuff.TypeLine("He did not find it amusing.");
+				Stuff.TypeLine("Infact he swung at your head but yuo dodged right in time.");
+				Stuff.TypeLine("\"Hey are you trying to cause a fight here?\"");
+				Stuff.TypeLine("The knight said this to the man you told the joke to.");
+				Stuff.TypeLine("He then gets pulled away and you stick your tongue at him.");
+				Stuff.TypeLine("Who doesnt like a knock knock joke?");
+				TigerEvent();
+				break;
+			case "blah blah blah":
+				Stuff.TypeLine("blah blah blah. You start mocking one of the knights.");
+				Stuff.TypeLine("He did not like that. He actually walked over and said that you would be the first one fed to the tiger if yuo kept it up");
+				Stuff.TypeLine("Seems like a good time to stop mocking him.");
+				Stuff.TypeLine("It was fun while it lasted.");
+				TigerEvent();
+				break;
+			case "revolt":
+				Stuff.TypeLine("You spread the idea of revolting to the criminals around you and it seems they like it.");
+				Stuff.TypeLine("One of them yells \"REVOLT!!\" and the rest jump into action, doing criminal things that is.");
+				Stuff.TypeLine("You use this oportunity to try to sneak out during the chaos but you back into a knight and they restrain you.");
+				Stuff.TypeLine("All of the criminals are also restrained and put back into line, this time closer to the tiger.");
+				Stuff.TypeLine("Looks like this was a pretty bad idea.");
+				Stuff.TypeLine("It was worth a try though.");
+				TigerEvent();
+				break;
+		}
+	}
+	
+	public static void TigerEvent()
+	{
+		Stuff.CurrentLocationNumber = 13;
+		
+		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time fot the main event.");
+		Stuff.TypeLine("The tiger is un chained and starts to stalk its prey.");
+		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not mutch else you can do.");
+		if (Stuff.HasChicken = true)
+		{
+			Stuff.TypeLine("You just remember something.");
+			Stuff.TypeLine("You reach into your pocket and take out the other half of the chicken you had for lunch.");
+			Stuff.TypeLine("You take a bite and keep running.");
+			Stuff.TypeLine("Then you have an idea.");
+			Stuff.Wait(200);
+			Stuff.TypeLine("You take another bite.");
+			Stuff.TypeLine("Than you throw it at the tiger.");
+			Stuff.TypeLine("It takes a bite and passes out because it is so spicy.");
+			Stuff.TypeLine("There is actual smoke coming out of the tigers ears and nose.");
+			Stuff.TypeLine("Some knights come out to check on the tiger and they leave one of the entrance doors open.");
+			Stuff.TypeLine("You and the criminals run out through that door and lock it behind you.");
+			Stuff.TypeLine("It also seems like the tiger is starting to regain consiousness.");
+			Stuff.TypeLine("Welp now its the knights problem and not yours.");
+			Stuff.TypeLine("You keep on running to the castle exit and you finally make it out.");
+			Stuff.TypeLine("You have to find some other place to go now.");
+			ChoiceRoom2();
+		}
+		else
+		{
+			Stuff.TypeLine("The tiger doesnt seem very picky, but it still goes for you.");
+			Stuff.TypeLine("You stand still in shock as the tiger aproaches. There isnt mutch you can do at a time like this.");
+			Stuff.TypeLine("The feline slows down and looks at you strangely.");
+			Stuff.TypeLine("It then walks over and rubs against your legs like a comon house cat.");
+			Stuff.TypeLine("You must be very non threatening to make a tiger like you.");
+			Stuff.TypeLine("It then goes under your legs and you end up riging on top of it.");
+			Stuff.TypeLine("It leaps through the arena and even knocks down some knights on they way but you make it to the castle gate.");
+			Stuff.TypeLine("The drawbridge is being lifted and you try to get the tiger to stop but it seems like it wwants freedom more than you.");
+			Stuff.TypeLine("It leaps over the gap between the bridge and the land in front of it.");
+			Stuff.TypeLine("You hop off and send it on its way. Maybe it will join the circus, who knows.");
+			Stuff.TypeLine("You have to find some other place to go now.");
+			ChoiceRoom2();
+		}
+	}
+	
+	public static void ChoiceRoom2()
+	{
+		Stuff.CurrentLocationNumber = 14;
+		
 		Stuff.TypeLine("");
 		Stuff.TypeLine("");
 		Stuff.TypeLine("");
-		Stuff.TypeLine("");
-		Stuff.TypeLine("");
+		ASCII.OldTimeMapCastle();
 	}
 }
