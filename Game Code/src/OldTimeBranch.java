@@ -532,10 +532,10 @@ public class OldTimeBranch
 					Stuff.TypeLine("And nothing is happening.");
 					Stuff.TypeLine("OH the drawbridge is opening.");
 					Stuff.TypeLine("Aaaaand it stops.");
-					Stuff.TypeLine("You wait a little longer but it doesnt seem like it will go down any lower.");
+					Stuff.TypeLine("You wait a little longer but it doesn't seem like it will go down any lower.");
 					Stuff.TypeLine("You hear some music and look behind you.");
 					Stuff.TypeLine("You see the traveling circus making its rounds.");
-					Stuff.TypeLine("Well there isnt anything else you can do.");
+					Stuff.TypeLine("Well there isn't anything else you can do.");
 					Stuff.TypeLine("No assassin or Porject Alpha.");
 					Stuff.TypeLine("Looks like Doof will be one unhappy camper.");
 					Stuff.TypeLine("But at least you will have learned juggling.");
