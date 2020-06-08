@@ -45,6 +45,7 @@ public class Stuff
 	public static boolean WentInTreeHatch = false;
 	public static boolean TrustsElon = true;
 	/* Add to SaveVersion 10 */ public static boolean Criminal = false;
+	/* Add to SaveVersion 10 */ public static boolean Arrested = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
