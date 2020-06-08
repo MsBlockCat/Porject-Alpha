@@ -784,9 +784,10 @@ public class OldTimeBranch
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				Stuff.HitEnter(2);
 				ASCII.Chicken();
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked.");
+				Stuff.TypeLine("Baked was also there.");
 				Stuff.HasChicken = true;
 				break;
 			case "chicken":
@@ -796,9 +797,10 @@ public class OldTimeBranch
 				Stuff.TypeLine("Boiled.");
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
+				Stuff.HitEnter(2);
 				ASCII.Chicken();
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked.");
+				Stuff.TypeLine("Baked was there, too.");
 				Stuff.HasChicken = true;
 				break;
 		}
@@ -892,7 +894,9 @@ public class OldTimeBranch
 		{
 			Stuff.TypeLine("You just remember something.");
 			Stuff.TypeLine("You reach into your pocket and take out the other half of the chicken you had for lunch.");
+			Stuff.HitEnter(2);
 			ASCII.Chicken();
+			Stuff.HitEnter(2);
 			Stuff.TypeLine("Disgusting.");
 			Stuff.TypeLine("You take a bite and keep running.");
 			Stuff.TypeLine("Then you have an idea.");
