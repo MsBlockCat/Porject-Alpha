@@ -75,8 +75,10 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 1;
 		
-		Stuff.StoryBeginning = false;
-		Stuff.TypeLine("You travel back to the year 1253.");
+		if (Stuff.StoryBeginning == true)
+		{
+			Stuff.TypeLine("You travel back to the year 1253.");
+		}
 		Stuff.TypeLine("It seems you are in the middle of a bazar. There are women and children begging for food,");
 		Stuff.TypeLine(" others yelling out prices for food and goods (much lower than modern day you notice),");
 		Stuff.TypeLine(" and some old man who seems to be dead?");
@@ -94,6 +96,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
 		{
 			case "explore the bazar":
+				Stuff.StoryBeginning = false;
 				RoulletteShop();
 				break;
 			case "check out the barracks":
