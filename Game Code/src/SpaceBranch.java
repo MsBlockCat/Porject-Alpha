@@ -163,19 +163,42 @@ public class SpaceBranch
 		Stuff.HitEnter(2);
 		ASCII.Earth();
 		Stuff.HitEnter(2);
-		Stuff.TypeLine("It's very majestic.");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.TypeLine("It gets more and more majestic each time.");
+		}
+		else
+		{
+			Stuff.TypeLine("It's very majestic.");
+		}
 		Stuff.TypeLine("You recall your mission, to get more liquid to power Elon Musk's time machines.");
-		Stuff.TypeLine("Sitting down, you think about how incredibly boring these next few days will be.");
-		Stuff.Wait(2000);
-		Stuff.TypeLine("...But then you remember seeing the video games.");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.TypeLine("You head downstairs to the video games. Based off firsthand experience that's");
+			Stuff.TypeLine(" by far the funnest thing on this ship. Not like you're on a spaceship or anything.");
+		}
+		else
+		{
+			Stuff.TypeLine("Sitting down, you think about how incredibly boring these next few days will be.");
+			Stuff.Wait(2000);
+			Stuff.TypeLine("...But then you remember seeing the video games.");
+		}
 		Stuff.HitEnter(2);
 		ASCII.GamingSystem();
 		Stuff.HitEnter(2);
 		Stuff.Wait(2000);
 		Stuff.TypeLine("You see four game icons: A blocky piece of grass, an animatronic pirate fox's head,");
 		Stuff.TypeLine(" a red cap with an M on it, and 3 golden triangles.");
-		Stuff.TypeLine("Plenty of time to play all four of these games that were definitely custom made for the expedition!");
-		Stuff.TypeLine("Which one would you like to play first, though?");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.TypeLine("Plenty of time to play all four of these games that were definitely custom made for the expedition!");
+			Stuff.TypeLine("Which one would you like to play first, though?");
+		}
+		else
+		{
+			Stuff.TypeLine("You've already done this before, but just in case you wanna choose a different game to");
+			Stuff.TypeLine(" get addicted to, which would you like to play?");
+		}
 		switch(Stuff.PlayerChoice("grass", "fox", "cap", "triangles"))
 		{
 			case "grass":
@@ -191,12 +214,31 @@ public class SpaceBranch
 				Stuff.FavoriteGame = 4;
 				break;
 		}
-		Stuff.TypeLine("You continue playing for the whole duration of your travel, by the power of video games.");
+		Stuff.Type("You ");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.Type(", just like last time, ");
+		}
+		Stuff.TypeLine("continue playing for the whole duration of your travel, by the power of video games.");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.TypeLine("Some things never change, for better or for worse. In this case, definitely for better!");
+		}
 		Stuff.Wait(1000);
 		Stuff.HitEnter(2);
 		Stuff.TypeLine("                                             ~~~71 hours later~~~");
-		Stuff.TypeLine("The Full Self Flying systems safely land you on the moon.");
-		Stuff.TypeLine("You reluctantly move away from the video games, instantly fall asleep, and another 14 hours later step outside.");
+		Stuff.Type("The Full Self Flying systems ");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.Type("once more ");
+		}
+		Stuff.TypeLine("safely land you on the moon.");
+		Stuff.Type("You reluctantly move away from the video games, instantly fall asleep");
+		if (Stuff.DoneRocketLaunch == true)
+		{
+			Stuff.Type(" just like last time");
+		}
+		Stuff.TypeLine(", and another 14 hours later step outside.");
 		Stuff.TypeLine("There were other people on board, but they probably already got to work at their various places around the area.");
 		Stuff.TypeLine("You certainly hope so, as the ship begins taking off back to Earth, to restock and come back in about two weeks when");
 		Stuff.TypeLine(" it's needed by the others.");
@@ -204,6 +246,7 @@ public class SpaceBranch
 	    ASCII.Rocket();
 	    Stuff.HitEnter(1);
 		Stuff.TypeLine("Taking one last look at the ship as it flies off, you see the X on its side fade into a speck in the distance.");
+		Stuff.DoneRocketLaunch = true;
 		MoonLanding();
 	}
 	

@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("0.4.0a (6/7/2020)");
+		Stuff.TypeLine(" Tons more story and some more bug fixes!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.3.0a (6/5/2020)");
 		Stuff.TypeLine(" Bug fixes, such as having randomization at the current location save if needed, and lots more story!");
 		Stuff.Divider();

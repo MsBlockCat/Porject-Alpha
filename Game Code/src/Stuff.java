@@ -11,7 +11,7 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.3.0a";
+	public static final String GameVersion = "0.4.0a";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 9;
 	public static boolean DebugMode = false;
@@ -46,6 +46,7 @@ public class Stuff
 	public static boolean TrustsElon = true;
 	/* Add to SaveVersion 10 */ public static boolean Criminal = false;
 	/* Add to SaveVersion 10 */ public static boolean Arrested = false;
+	/* Add to SaveVersion 10 */ public static boolean DoneRocketLaunch = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
