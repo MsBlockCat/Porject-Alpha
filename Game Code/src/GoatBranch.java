@@ -449,7 +449,7 @@ public class GoatBranch
 			Stuff.typeln("You wander into town, trying to act nonchalant.");
 			Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 			Stuff.typeln(". . .well, you're a goat.");
-			Stuff.typeln("A dog runs over barks at you, and you hear it's owner call it back.");
+			Stuff.typeln("A dog runs over and barks at you; you hear its owner call it back.");
 			Stuff.typeln("\"Winnie!\" they call as you continue onward, still whistling.");
 			Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
 			Stuff.HitEnter(2);
@@ -759,7 +759,7 @@ public class GoatBranch
 			Stuff.typeln("The hill starts to make grinding, metallic sounds, and the rock begins to shift.");
 			Stuff.typeln("The sounds are defeaning!");
 			Stuff.Wait(800);
-			Stuff.typeln("Eventually, the sounds stop and there is a hole in the tree for you to enter.");
+			Stuff.typeln("Eventually, the sounds stop and there is a hole in the rock for you to enter.");
 			Stuff.typeln("You suppose that you should probably go in. After all, you did all that work to come up here.");
 			MountainHatch();
 			break;
@@ -892,7 +892,7 @@ public class GoatBranch
 			Stuff.typeln("\"You just saved your own life.\"");
 			Stuff.typeln("\"How's that?\" you ask.");
 			Stuff.typeln("\"Well,\" the man says, \"If you'd read any of those files...");
-			Stuff.typeln("You'd have found some infomation we don't really want anyone to see.\"");
+			Stuff.typeln("You'd have found some information we don't really want anyone to see.\"");
 			Stuff.typeln("\"But you didn't,\" he says with relief, \"so I'd be on my way before I change my mind.\"");
 			Stuff.typeln("\"How?\" you ask.");
 			Stuff.typeln("\"Oh, I'll bring you out.\"");
@@ -912,7 +912,7 @@ public class GoatBranch
 			Stuff.typeln("\"You just doomed yourself.\"");
 			Stuff.typeln("\"How's that?\" you ask.");
 			Stuff.typeln("\"Well,\" the man says, \"Reading those files...");
-			Stuff.typeln("You've found some infomation we don't really want anyone to see.\"");
+			Stuff.typeln("You've found some information we don't really want anyone to see.\"");
 			Stuff.typeln("\"But I didn't!\" you protest.");
 			Stuff.typeln("\"But you know where they are,\" the man says.");
 			Stuff.typeln("\"Look, let's just have a little chat, okay?\"");
@@ -989,8 +989,8 @@ public class GoatBranch
 					Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
 					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 					Stuff.typeln("You brace yourself for the adventure ahead...");
-					Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
-					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+					Stuff.typeln("You open your eyes and find yourself at a launchpad.");
+					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X.");
 					Stuff.TypeLine("You also see Elon Musk nearby.");
 					Stuff.TypeLine("He greets you as you approach.");
 					Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
@@ -1137,8 +1137,8 @@ public class GoatBranch
 					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 					Stuff.typeln("You brace yourself for the adventure ahead...");
 					Stuff.Wait(1000);
-					Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
-					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+					Stuff.typeln("You open your eyes and find yourself at a launchpad.");
+					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X.");
 					Stuff.TypeLine("You also see Elon Musk nearby.");
 					Stuff.TypeLine("He greets you as you approach.");
 					Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
@@ -1377,8 +1377,8 @@ public class GoatBranch
 			Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
 			Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 			Stuff.typeln("You brace yourself for the adventure ahead...");
-			Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
-			Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+			Stuff.typeln("You open your eyes and find yourself at a launchpad.");
+			Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X.");
 			Stuff.TypeLine("You also see Elon Musk nearby.");
 			Stuff.TypeLine("He greets you as you approach.");
 			Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
