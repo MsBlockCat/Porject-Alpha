@@ -339,7 +339,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("\"You are coming with us!\"");
 				if (Stuff.HasLuckyGauntlet = true)
 				{
-					Stuff.TypeLine("They take gauntlet from your hand, rendering you un-lucky.");
+					Stuff.TypeLine("They take the gauntlet from your hand, rendering you unlucky.");
 					Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
 					Stuff.TypeLine("You are led down some musty and mold covered stairs and into a prison room.");
 					Stuff.TypeLine("As you are shoved into a cage, you ask how long you are going to be locked down there for.");
@@ -356,7 +356,7 @@ public class OldTimeBranch
 					ASCII.TimeinatorBroken();
 					Stuff.Wait(1000);
 					Stuff.HitEnter(2);
-					Stuff.TypeLine("The Un-Lucky Ending");
+					Stuff.TypeLine("The Unlucky Ending");
 					Stuff.Wait(500);
 					Stuff.HitEnter(5);
 					Stuff.StoryEnding();
@@ -721,7 +721,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("Even the vegetarian food shop lady is chasing you with some celery in her hand, complaining that you don't \"appreciate fine cuisine\"");
 				Stuff.TypeLine("She gets tackled and imprisoned due to her lies.");
 				Stuff.TypeLine("It seems that people really don't like vegetarian food.");
-				Stuff.TypeLine("Either way you keep running untill you trip.");
+				Stuff.TypeLine("Either way you keep running until you trip.");
 				Stuff.TypeLine("You get picked up and rolled into a prison cart.");
 				Stuff.TypeLine("\"Into the tiger cage you go.\"");
 				TigerCage();
@@ -751,16 +751,16 @@ public class OldTimeBranch
 			case "make a joke":
 				Stuff.TypeLine("You lean up nice and close to one of the big burly men next to you and tell him a joke.");
 				Stuff.TypeLine("He did not find it amusing.");
-				Stuff.TypeLine("Infact he swung at your head but yuo dodged right in time.");
+				Stuff.TypeLine("Infact he swung at your head but you dodged right in time.");
 				Stuff.TypeLine("\"Hey are you trying to cause a fight here?\"");
 				Stuff.TypeLine("The knight said this to the man you told the joke to.");
 				Stuff.TypeLine("He then gets pulled away and you stick your tongue at him.");
-				Stuff.TypeLine("Who doesnt like a knock knock joke?");
+				Stuff.TypeLine("Who doesn't like a knock knock joke?");
 				TigerEvent();
 				break;
 			case "blah blah blah":
-				Stuff.TypeLine("blah blah blah. You start mocking one of the knights.");
-				Stuff.TypeLine("He did not like that. He actually walked over and said that you would be the first one fed to the tiger if yuo kept it up");
+				Stuff.TypeLine("Blah blah blah. You start mocking one of the knights.");
+				Stuff.TypeLine("He did not like that. He actually walked over and said that you would be the first one fed to the tiger if you kept it up.");
 				Stuff.TypeLine("Seems like a good time to stop mocking him.");
 				Stuff.TypeLine("It was fun while it lasted.");
 				TigerEvent();
@@ -781,8 +781,8 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 13;
 		
-		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time fot the main event.");
-		Stuff.TypeLine("The tiger is un chained and starts to stalk its prey.");
+		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time for the main event.");
+		Stuff.TypeLine("The tiger is unchained and starts to stalk its prey.");
 		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not much else you can do.");
 		if (Stuff.HasChicken = true)
 		{
@@ -792,9 +792,9 @@ public class OldTimeBranch
 			Stuff.TypeLine("Then you have an idea.");
 			Stuff.Wait(200);
 			Stuff.TypeLine("You take another bite.");
-			Stuff.TypeLine("Than you throw it at the tiger.");
+			Stuff.TypeLine("Then you throw it at the tiger.");
 			Stuff.TypeLine("It takes a bite and passes out because it is so spicy.");
-			Stuff.TypeLine("There is actual smoke coming out of the tigers ears and nose.");
+			Stuff.TypeLine("There is actual smoke coming out of the tiger's ears and nose.");
 			Stuff.TypeLine("Some knights come out to check on the tiger and they leave one of the entrance doors open.");
 			Stuff.TypeLine("You and the criminals run out through that door and lock it behind you.");
 			Stuff.TypeLine("It also seems like the tiger is starting to regain consiousness.");
@@ -805,13 +805,13 @@ public class OldTimeBranch
 		}
 		else
 		{
-			Stuff.TypeLine("The tiger doesnt seem very picky, but it still goes for you.");
-			Stuff.TypeLine("You stand still in shock as the tiger aproaches. There isnt much you can do at a time like this.");
+			Stuff.TypeLine("The tiger doesn't seem very picky, but it still goes for you.");
+			Stuff.TypeLine("You stand still in shock as the tiger approaches. There isn't much you can do at a time like this.");
 			Stuff.TypeLine("The feline slows down and looks at you strangely.");
-			Stuff.TypeLine("It then walks over and rubs against your legs like a comon house cat.");
-			Stuff.TypeLine("You must be very non threatening to make a tiger like you.");
-			Stuff.TypeLine("It then goes under your legs and you end up riging on top of it.");
-			Stuff.TypeLine("It leaps through the arena and even knocks down some knights on they way but you make it to the castle gate.");
+			Stuff.TypeLine("It then walks over and rubs against your legs like a common house cat.");
+			Stuff.TypeLine("You must be very nonthreatening to make a tiger like you.");
+			Stuff.TypeLine("It then goes under your legs and you end up riding on top of it.");
+			Stuff.TypeLine("It leaps through the arena and even knocks down some knights on the way but you make it to the castle gate.");
 			Stuff.TypeLine("The drawbridge is being lifted and you try to get the tiger to stop but it seems like it wwants freedom more than you.");
 			Stuff.TypeLine("It leaps over the gap between the bridge and the land in front of it.");
 			Stuff.TypeLine("You hop off and send it on its way. Maybe it will join the circus, who knows.");
