@@ -2244,6 +2244,24 @@ public class ASCII
 		System.out.println("       /         /         ______/________        ______                       ");
 	}
 	
+	public static void Chicken()
+	{
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
+	
 	public static void TimeinatorBroken()
 	{
 		//Totally not a broken Apple Watch
