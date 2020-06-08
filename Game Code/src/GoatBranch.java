@@ -905,8 +905,8 @@ public class GoatBranch
 			Stuff.typeln("\"Bad idea,\" he says with a smirk.");
 			Stuff.typeln("\"You just doomed yourself.\"");
 			Stuff.typeln("\"How's that?\" you ask.");
-			Stuff.typeln("\"Well,\" the man says, \"If you'd read any of those files...");
-			Stuff.typeln("You'd have found some infomation we don't really want anyone to see.\"");
+			Stuff.typeln("\"Well,\" the man says, \"Reading those files...");
+			Stuff.typeln("You've found some infomation we don't really want anyone to see.\"");
 			Stuff.typeln("\"But I didn't!\" you protest.");
 			Stuff.typeln("\"But you know where they are,\" the man says.");
 			Stuff.typeln("\"Look, let's just have a little chat, okay?\"");
