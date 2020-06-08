@@ -301,11 +301,11 @@ public class SpaceBranch
 					Stuff.FavoriteGame = 1;
 					break;
 				case "plumber":
-					Stuff.TypeLine("\"Oh, sweet! That's gotta be my favorite.\" Says another man.");
+					Stuff.TypeLine("\"Oh, sweet! That's gotta be my favorite.\" Says another man, who introduces himself as Technal.");
 					Stuff.FavoriteGame = 3;
 					break;
 				case "green hero":
-					Stuff.TypeLine("\"Oh, nice! That's my favorite.\" Says the man.");
+					Stuff.TypeLine("\"Oh, nice! That's my favorite.\" Says the man, who introduces himself as Vinestro.");
 					Stuff.FavoriteGame = 4;
 					break;
 			}
