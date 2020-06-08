@@ -92,6 +92,12 @@ public class GoatBranch
 			case "ArrestScene":
 				ArrestScene();
 				break;
+			case "23":
+			case "ManufacturingCenter2":
+				ManufacturingCenter2();
+			case "24":
+			case "EllipseOffice2":
+				EllipseOffice2();
 			default:
 				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
@@ -288,7 +294,26 @@ public class GoatBranch
 		Stuff.CurrentLocationNumber = 4;
 		
 		Stuff.typeln("Lucky for you, there was a sick looking rock nearby that should be good for self-reflection.");
-		
+		Stuff.typeln("After sitting on it for a few minutes, you hear voices and notice a town on the horizon.");
+		Stuff.typeln("You suppose that you should probably go visit it.");
+		Stuff.typeln("Or, you could just walk down the road the other way and see where you end up.");
+		switch (Stuff.PlayerChoice("go to town", "follow road"))
+		{
+		case "go to town":
+			Stuff.typeln("You start your walk towards the town.");
+			Stuff.Wait(1000);
+			Stuff.typeln("A few minutes later, you arrive.");
+			Town();
+			break;
+		case "follow road":
+			Stuff.typeln("You decide that there is no point going to town.");
+			Stuff.typeln("You want to find somewhere more interesting.");
+			Stuff.typeln("So you begin your hike down the road.");
+			Stuff.Wait(1000);
+			Stuff.typeln("Eventually...");
+			Crossroads();
+			break;
+		}
 	}
 	
 	public static void Tree() {
@@ -424,6 +449,8 @@ public class GoatBranch
 			Stuff.typeln("You wander into town, trying to act nonchalant.");
 			Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
 			Stuff.typeln(". . .well, you're a goat.");
+			Stuff.typeln("A dog runs over barks at you, and you hear it's owner call it back.");
+			Stuff.typeln("\"Winnie!\" it calls as you continue onward, still whistling.");
 			Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
 			Stuff.HitEnter(2);
 			ASCII.BulletinBoard();
@@ -683,15 +710,15 @@ public class GoatBranch
 			Stuff.typeln("You contemplate how to explain it to him.");
 			Stuff.typeln("\"I came from the future. 2020, that is.\"");
 			Stuff.typeln("Doofenshmirtz surveys you with confusion.");
-			Stuff.typeln("\"And...I was sent here by one of your time machines.\"");
+			Stuff.typeln("\"And... I was sent here by one of your time machines.\"");
 			Stuff.typeln("\"Why am I alive in 2020?\" the scientist asks. \"How old am I?\"");
 			Stuff.typeln("\"I don't know. Not old. The same as you are right now, I'd reckon.\"");
 			Stuff.typeln("Doof stares at you for a few seconds.");
 			Stuff.Wait(1000);
 			Stuff.typeln("\"Why are you a goat?\" he suddenly asks.");
 			Stuff.typeln("\"Not sure,\" you tell him, \"Must have been a side effect of your machine.\"");
-			Stuff.typeln("\"Well... I suppose I must use one of these machine to go the future eventually,\" Doof says.");
-			Stuff.typeln("\"I'm not sure what to do with that info but..thanks, I guess.");
+			Stuff.typeln("\"Well... I suppose I must use one of these machines to go the future eventually,\" Doof says.");
+			Stuff.typeln("\"I'm not sure what to do with that info but... thanks, I guess.");
 			Stuff.typeln("Anyway - want to use one of the machines yourself? Or just be on your way?");
 			Stuff.Wait(1000);
 			ManufacturingCenter2();
@@ -956,7 +983,19 @@ public class GoatBranch
 					Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
 					Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 					Stuff.typeln("You brace yourself for the adventure ahead...");
-					//add intro tomorrow since I hit my lines for today (plus like 15 wow)
+					Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
+					Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+					Stuff.TypeLine("You also see Elon Musk nearby.");
+					Stuff.TypeLine("He greets you as you approach.");
+					Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
+					Stuff.TypeLine("\"What, you thought I didn't invent a time machine? I'm Elon Musk!\"");
+					Stuff.TypeLine("He gestures to a sleek looking time machine about the size of a phone booth - definitely able to fit a person inside.");
+					Stuff.typeln("Speaking of people, it seems you aren't a goat anymore!");
+					Stuff.TypeLine("Anyway, the style of the machine is reminiscent of an airplane's, with flowing, glossy sides.");
+					Stuff.TypeLine("\"It runs entirely on solar power, of course,\" Elon continues.");
+					Stuff.TypeLine("\"Well, besides the space/time-altering liquid, Porject Alpha, but that doesn't pollute either.\"");
+					Stuff.TypeLine("\"Anyway, you can be an astronaut on this spaceship of mine if you'd like. I saved you a spot!\"");
+					Stuff.TypeLine("\"Its mission is actually to get more juice for these time machines from the moon. I bet yours runs on it, too.\"");
 					SpaceBranch.GoToSpaceBranch("Launchpad1");
 					break;
 				case "go home":
@@ -1332,7 +1371,19 @@ public class GoatBranch
 			Stuff.typeln("Maybe you won't be a goat in 2030. Who knows?");
 			Stuff.typeln("Either way, you turn the dial to 2030 and close your eyes as the machine begins to whir.");
 			Stuff.typeln("You brace yourself for the adventure ahead...");
-			//add intro tomorrow since I hit my lines for today (plus like 15 wow)
+			Stuff.typeln("You open your eyes and find yourself at a lauchpad.");
+			Stuff.TypeLine("There's a rocket on it, and the rocket is labelled with an X");
+			Stuff.TypeLine("You also see Elon Musk nearby.");
+			Stuff.TypeLine("He greets you as you approach.");
+			Stuff.TypeLine("\"Oh, hello! I expected you'd travel here about now.\"");
+			Stuff.TypeLine("\"What, you thought I didn't invent a time machine? I'm Elon Musk!\"");
+			Stuff.TypeLine("He gestures to a sleek looking time machine about the size of a phone booth - definitely able to fit a person inside.");
+			Stuff.typeln("Speaking of people, it seems you aren't a goat anymore!");
+			Stuff.TypeLine("Anyway, the style of the machine is reminiscent of an airplane's, with flowing, glossy sides.");
+			Stuff.TypeLine("\"It runs entirely on solar power, of course,\" Elon continues.");
+			Stuff.TypeLine("\"Well, besides the space/time-altering liquid, Porject Alpha, but that doesn't pollute either.\"");
+			Stuff.TypeLine("\"Anyway, you can be an astronaut on this spaceship of mine if you'd like. I saved you a spot!\"");
+			Stuff.TypeLine("\"Its mission is actually to get more juice for these time machines from the moon. I bet yours runs on it, too.\"");
 			SpaceBranch.GoToSpaceBranch("Launchpad1");
 			break;
 		case "go home":
