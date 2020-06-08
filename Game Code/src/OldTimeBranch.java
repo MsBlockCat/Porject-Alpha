@@ -892,7 +892,7 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 14;
 		
 		Stuff.TypeLine("You want to keep searching for Porject Alpha.");
-		Stuff.TypeLine("Although you are now considered a futigive, Doof would not be happy if you came back empty handed.");
+		Stuff.TypeLine("Although you are now considered a fugitive, Doof would not be happy if you came back empty handed.");
 		ASCII.OldTimeMapCastle();
 		Stuff.TypeLine("There are two more places to check out.");
 		switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
