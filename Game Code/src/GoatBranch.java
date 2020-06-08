@@ -421,16 +421,16 @@ public class GoatBranch
 	public static void Town() {
 		Stuff.CurrentLocationNumber = 9;
 		if (Stuff.WentToTown == false) {
-		Stuff.typeln("You wander into town, trying to act nonchalant.");
-		Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
-		Stuff.typeln(". . .well, you're a goat.");
-		Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
-		Stuff.HitEnter(2);
-		ASCII.BulletinBoard();
-		Stuff.HitEnter(2);
-		Stuff.Wait(5000);
-		Stuff.typeln("That is quite perculiar. Yes, indeed, very weird.");
-		Stuff.typeln("You'll have to be sure to report any anti-Ned activity, I suppose.");
+			Stuff.typeln("You wander into town, trying to act nonchalant.");
+			Stuff.typeln("You whistle a tune, but unfortunately that isn't quite as effective in terms of blending in when. . .");
+			Stuff.typeln(". . .well, you're a goat.");
+			Stuff.typeln("Several odd stares later, you arrive at the town center where you find a bulletin board.");
+			Stuff.HitEnter(2);
+			ASCII.BulletinBoard();
+			Stuff.HitEnter(2);
+			Stuff.Wait(5000);
+			Stuff.typeln("That is quite perculiar. Yes, indeed, very weird.");
+			Stuff.typeln("You'll have to be sure to report any anti-Ned activity, I suppose.");
 		}
 		else {
 			Stuff.typeln("It's the same town as before. Nothing interesting to see. There is that bulletin board again.");
@@ -457,36 +457,36 @@ public class GoatBranch
 		Stuff.Wait(2500);
 		Stuff.typeln("Where to go...");
 		while (5 == 2 + 3) {
-		switch (Stuff.PlayerChoice("grocery store", "rock", "tree", "mountain"))
-		{
-		case "grocery store":
-			if (Stuff.NedLoreAcquired == false) {
-				Stuff.typeln ("Yim yum.");
+			switch (Stuff.PlayerChoice("grocery store", "rock", "tree", "mountain"))
+			{
+			case "grocery store":
+				if (Stuff.NedLoreAcquired == false) {
+					Stuff.typeln ("Yim yum.");
+					Stuff.Wait(1000);
+					GroceryStore();
+				}
+				else {
+					Stuff.typeln("Too bad.");
+					Stuff.typeln("You already went there.");
+					Stuff.typeln("Pick somewhere else.");
+				}
+				break;
+			case "rock":
+				Stuff.typeln ("Yes, perhaps the rock will hold some answers...");
 				Stuff.Wait(1000);
-				GroceryStore();
+				RockOfSelfReflection();
+				break;
+			case "tree":
+				Stuff.typeln ("Good choice. It is a cool tree, after all.");
+				Stuff.Wait(1000);
+				Tree();
+				break;
+			case "mountain":
+				Stuff.typeln ("Exercise your goat abilities. Good idea.");
+				Stuff.Wait(1000);
+				Mountain();
+				break;
 			}
-			else {
-				Stuff.typeln("Too bad.");
-				Stuff.typeln("You already went there.");
-				Stuff.typeln("Pick somewhere else.");
-			}
-			break;
-		case "rock":
-			Stuff.typeln ("Yes, perhaps the rock will hold some answers...");
-			Stuff.Wait(1000);
-			RockOfSelfReflection();
-			break;
-		case "tree":
-			Stuff.typeln ("Good choice. It is a cool tree, after all.");
-			Stuff.Wait(1000);
-			Tree();
-			break;
-		case "mountain":
-			Stuff.typeln ("Exercise your goat abilities. Good idea.");
-			Stuff.Wait(1000);
-			Mountain();
-			break;
-		}
 		}
 	}
 	
@@ -582,37 +582,37 @@ public class GoatBranch
 			Stuff.typeln("Now what...");
 		}
 		else {
-		Stuff.typeln("And so, you begin your climb.");
-		Stuff.HitEnter(2);
-		ASCII.MountainScene();
-		Stuff.HitEnter(2);
-		Stuff.Wait(2000);
-		Stuff.typeln("And you continue your climb...");
-		Stuff.typeln("After 20 grueling days, you reach the top, where there is a gift shop.");
-		Stuff.typeln("You walk to the door and enter...");
-		Stuff.Wait(500);
-		Stuff.typeln("\"Welcome to the gift shop,\" says the woman at the counter.");
-		Stuff.typeln("\"We have refreshments and stylish fits.\"");
-		Stuff.typeln("\"Anything that will fit someone of my... body type?\" you ask.");
-		Stuff.typeln("The woman points you to the goat section.");
-		Stuff.Wait(1000);
-		Stuff.typeln("...Unfortunately, you realize you have forgotton your wallet.");
-		Stuff.Wait(3000);
-		Stuff.HitEnter(2);
-		ASCII.MountainScene2();
-		Stuff.HitEnter(2);
-		Stuff.typeln("You are quite displeased with your forgetfulness.");
-		Stuff.Wait(2000);
-		Stuff.HitEnter(2);
-		ASCII.MountainScene();
-		Stuff.HitEnter(2);
-		Stuff.typeln("And back up you go.");
-		Stuff.Wait(2000);
-		Stuff.typeln("40 days later, you return to the gift shop.");
-		Stuff.typeln("Luckily, you are able to buy yourself a cool Ned-themed shirt.");
-		Stuff.GotShirt = true;
-		Stuff.Wait(3000);
-		Stuff.typeln("With the important things out of the way, it's time to do some pointless lame things.");
+			Stuff.typeln("And so, you begin your climb.");
+			Stuff.HitEnter(2);
+			ASCII.MountainScene();
+			Stuff.HitEnter(2);
+			Stuff.Wait(2000);
+			Stuff.typeln("And you continue your climb...");
+			Stuff.typeln("After 20 grueling days, you reach the top, where there is a gift shop.");
+			Stuff.typeln("You walk to the door and enter...");
+			Stuff.Wait(500);
+			Stuff.typeln("\"Welcome to the gift shop,\" says the woman at the counter.");
+			Stuff.typeln("\"We have refreshments and stylish fits.\"");
+			Stuff.typeln("\"Anything that will fit someone of my... body type?\" you ask.");
+			Stuff.typeln("The woman points you to the goat section.");
+			Stuff.Wait(1000);
+			Stuff.typeln("...Unfortunately, you realize you have forgotton your wallet.");
+			Stuff.Wait(3000);
+			Stuff.HitEnter(2);
+			ASCII.MountainScene2();
+			Stuff.HitEnter(2);
+			Stuff.typeln("You are quite displeased with your forgetfulness.");
+			Stuff.Wait(2000);
+			Stuff.HitEnter(2);
+			ASCII.MountainScene();
+			Stuff.HitEnter(2);
+			Stuff.typeln("And back up you go.");
+			Stuff.Wait(2000);
+			Stuff.typeln("40 days later, you return to the gift shop.");
+			Stuff.typeln("Luckily, you are able to buy yourself a cool Ned-themed shirt.");
+			Stuff.GotShirt = true;
+			Stuff.Wait(3000);
+			Stuff.typeln("With the important things out of the way, it's time to do some pointless lame things.");
 		}
 		Stuff.typeln("You notice that there is another building that says \"Time Machine Manufacturing Center\" on the door.");
 		Stuff.typeln("\"Wow,\" you remark, \"that is quite boring compared to the gift shop.\"");
@@ -876,7 +876,7 @@ public class GoatBranch
 				}
 			}
 			else {
-				Stuff.typeln("\"That was Apu.\" Ned looks dissapointed.");
+				Stuff.typeln("\"That was Apu.\" Ned looks disappointed.");
 				Stuff.typeln("\"He says you appeared out of nowhere outside his store.\"");
 				Stuff.typeln("\"I'm afraid that that's a little suspicious.\"");
 				Stuff.typeln("You begin to protest but Ned hushes you.");
@@ -909,7 +909,7 @@ public class GoatBranch
 			Stuff.typeln("\"Ned Flanders!\" you say. \"You're leading a nation?!");
 			Stuff.typeln("You're such a goofy and wacky guy!\"");
 			Stuff.Wait(1000);
-			Stuff.typeln("Ned looks at you. He doesn't look upset, per say. Just dissapointed.");
+			Stuff.typeln("Ned looks at you. He doesn't look upset, per say. Just disappointed.");
 			Stuff.typeln("\"Goofy and wacky. Glad to see that's how I'm seen.\"");
 			Stuff.typeln("The leader sits down at his desk and sighs heavily.");
 			Stuff.typeln("\"I'm not exactly sure what to do with you,\" he says solemnly.");
@@ -1029,7 +1029,7 @@ public class GoatBranch
 			Stuff.typeln("He looks around nervously.");
 			Stuff.typeln("\"... a terrible leader. Very bad. Not good.\"");
 			Stuff.typeln("\"That's why some of us are planning to overthrow him,\" the wife adds.");
-			Stuff.typeln("\"He's got an interconnected tunnel system.\" The man looks around agian before continuing.");
+			Stuff.typeln("\"He's got an interconnected tunnel system.\" The man looks around again before continuing.");
 			Stuff.typeln("\"He's rigged all the houses to a water holding station at the top of the mountain.");
 			Stuff.typeln("That way, if anyone is a suspected traitor, he can just flood their house and no one will know.\"");
 			Stuff.typeln("\"Of course,\" the woman adds, \"the whole beauty of it is no one is supposed to know that's what the tunnels do.\"");
@@ -1058,7 +1058,7 @@ public class GoatBranch
 			Stuff.Wait(2000);
 			Stuff.typeln("With that, there is a clatter behind you and three guards or police of some sort appear.");
 			Stuff.typeln("\"Hands up!\" one yells.");
-			Stuff.typeln("\"And hooves,\" another chuckles");
+			Stuff.typeln("\"And hooves,\" another chuckles.");
 			Stuff.typeln("You lift your hooves up and watch as they cuff you and your new friends.");
 			Stuff.typeln("\"Okay, fellas, you're going to have to go see Mr. Ned,\" one of the officers informs you.");
 			Stuff.typeln("\"One at a time,\" one of the others adds, \"and you're not going to get to see how to get there!\"");
@@ -1075,7 +1075,7 @@ public class GoatBranch
 			Stuff.typeln("You look expectantly at the officers, wondering your fate.");
 			Stuff.typeln("\"Get out of here, talking goat,\" says one of them.");
 			Stuff.typeln("\"As long as you respect Ned, we've got no problem here.\"");
-			Stuff.typeln("You disspear around a corner before they can change their mind.");
+			Stuff.typeln("You disappear around a corner before they can change their mind.");
 			Stuff.Wait(2000);
 			Crossroads();
 			break;
