@@ -910,9 +910,9 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 15;
 		
-		Stuff.TypeLine("This is a bad place to start");
-		Stuff.TypeLine("You shouldn't start here");
-		Stuff.TypeLine("Chose a different place to start");
+		Stuff.TypeLine("This is a bad place to start.");
+		Stuff.TypeLine("You shouldn't start here.");
+		Stuff.TypeLine("Choose a different place to start.");
 		switch (Stuff.PlayerChoice("explore the bazar", "search the castle"))
 		{
 			case "explore the bazar":
