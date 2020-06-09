@@ -234,7 +234,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("spar", "don't spar"))
 		{
 			case "spar":
-				if (Stuff.HasEmeraldSword = true)
+				if (Stuff.HasEmeraldSword == true)
 				{
 					Stuff.TypeLine("Some knight named Harold walked out of the crowd and all the others made a big ring around the two of you.");
 					Stuff.MetHarold = true;
@@ -253,9 +253,9 @@ public class OldTimeBranch
 					Stuff.HitEnter(2);
 					ASCII.CartographyRoom();
 					Stuff.HitEnter(2);
-					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
+					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar to yours...");
 					Stuff.Wait(100);
-					Stuff.TypeLine("But with an addition");
+					Stuff.TypeLine("But with an addition.");
 					Stuff.TypeLine("You ask him what he is adding and he says something about ruins, in the middle of the kingdom at that.");
 					Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 					Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
@@ -266,7 +266,7 @@ public class OldTimeBranch
 				}
 				else 
 				{
-					if (Stuff.HasLuckyGauntlet = true)
+					if (Stuff.HasLuckyGauntlet == true)
 					{
 						Stuff.TypeLine("Although you do not have a sword, you still feel like you are going to win against whoever you spar against.");
 						Stuff.TypeLine("One of the knights (whose name is Harold you hear someone murmur in the silence) approaches you from within the crowd.");
@@ -336,7 +336,7 @@ public class OldTimeBranch
 						Stuff.HitEnter(2);
 						ASCII.CartographyRoom();
 						Stuff.HitEnter(2);
-						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
+						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar to yours...");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition.");
 						Stuff.TypeLine("You ask him what he is adding and he says something about ruins, in the middle of the kingdom at that.");
@@ -355,7 +355,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("You claim to not be the assassin and you pull out your wanted poster with the map on it and show it to the knights.");
 				Stuff.TypeLine("Now that you see it, the assassin does look like you. Just... older.");
 				Stuff.TypeLine("\"You are coming with us!\"");
-				if (Stuff.HasLuckyGauntlet = true)
+				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("They take the gauntlet from your hand, rendering you unlucky.");
 					Stuff.TypeLine("You get swarmed by the knights and they take you in to the barracks.");
@@ -456,7 +456,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("As the glow gets brighter, the hallway starts to widen and finally it opens into a massive room with one thing in the middle.");
 				Stuff.TypeLine("The glow was coming from an object on a stand.");
 				Stuff.TypeLine("There are some runes on the stand and you try to decipher them.");
-				if (Stuff.HasLuckyGauntlet = true)
+				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("Luckily you have the Lucky Gauntlet.");
 					Stuff.TypeLine("You know what the runes say.");
@@ -477,7 +477,7 @@ public class OldTimeBranch
 				}
 				else
 				{
-					if(Stuff.HasEmeraldSword = true)
+					if(Stuff.HasEmeraldSword == true)
 					{
 						Stuff.TypeLine("It takes you a while to understand it but you finally get it.");
 						Stuff.TypeLine("You think.");
@@ -531,7 +531,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("sit and wait", "give up"))
 		{
 			case "sit and wait":
-				if(Stuff.HasLuckyGauntlet = true)
+				if(Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("You sit.");
 					Stuff.Wait(200);
@@ -572,7 +572,7 @@ public class OldTimeBranch
 				}
 				break;
 			case "give up":
-				if(Stuff.HasLuckyGauntlet = true)
+				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("Luckily all is not lost.");
 					Stuff.TypeLine("You hear some cranking and chains moving.");
@@ -599,7 +599,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 8;
 		
-		if (Stuff.HasEmeraldSword = true)
+		if (Stuff.HasEmeraldSword == true)
 		{
 			Stuff.TypeLine("As you run down the crowded aisles of the bazar, you notice one very packed shop.");
 			switch (Stuff.PlayerChoice("go to it", "don't"))
@@ -649,7 +649,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 9;
 		
-		if (Stuff.MetHarold = true)
+		if (Stuff.MetHarold == true)
 		{
 			Stuff.TypeLine("What was even luckier was seeing who opened the drawbridge.");
 			Stuff.TypeLine("The man you sparred.");
@@ -665,7 +665,7 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("look up", "don't look up"))
 			{
 				case "look up":
-					if (Stuff.Criminal = true)
+					if (Stuff.Criminal == true)
 					{
 						Stuff.TypeLine("You look up and see a grumpy old lady.");
 						Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
@@ -719,7 +719,7 @@ public class OldTimeBranch
 					}
 					break;
 				case "don't look up":
-					if (Stuff.Criminal = true)
+					if (Stuff.Criminal == true)
 					{
 						Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
 						Stuff.TypeLine("You and Harold hand him over to the incoming security knights and where he went from there is unknown to you.");
@@ -914,7 +914,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("After the failed attempt at lightening the mood, it is time for the main event.");
 		Stuff.TypeLine("The tiger is unchained and starts to stalk its prey.");
 		Stuff.TypeLine("All of the criminals and yourself run around in circles because there is not much else you can do.");
-		if (Stuff.HasChicken = true)
+		if (Stuff.HasChicken == true)
 		{
 			Stuff.TypeLine("You just remember something.");
 			Stuff.TypeLine("You reach into your pocket and take out the other half of the chicken you had for lunch.");
