@@ -237,12 +237,12 @@ public class GoatBranch
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedToTree == true) {
-			switch (Stuff.PlayerChoice("ask about Ned", "ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask about Ned", "ask anything literally", "ask to leave"))
 			{
 			case "ask about ned":
 				Stuff.typeln("\"Who is Ned?\" you ask politely.");
 				Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
-				Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
+				Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.\"");
 				Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
 				Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
 				Stuff.typeln("You back towards the door.");
@@ -253,12 +253,13 @@ public class GoatBranch
 				Stuff.Wait(2000);
 				Crossroads();
 				break;
-			case "ask anything hehe":
+			case "ask anything literally":
+				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
 				Stuff.Wait(1500);
-				ModernBranch.GoToModernBranch("Lab2");
+				ApuRevenge();
 				break;
 			case "ask to leave":
 				Stuff.typeln("\"Mr. Apu, sir?\" you ask.\"");
@@ -271,9 +272,10 @@ public class GoatBranch
 			}
 		}
 		else {
-			switch (Stuff.PlayerChoice("ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask anything literally", "ask to leave"))
 			{
-			case "ask anything hehe":
+			case "ask anything literally":
+				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
@@ -673,7 +675,7 @@ public class GoatBranch
 		
 		Stuff.typeln("\"Welcome!\" a voice calls out.");
 		Stuff.typeln("You look over and are taken by surprise.");
-		Stuff.typeln("The man is front of you is...");
+		Stuff.typeln("The man in front of you is...");
 		Stuff.Wait(2000);
 		Stuff.typeln("Dr. Doofenshmirtz.");
 		Stuff.typeln("You stare at him for a few seconds.");
@@ -1237,20 +1239,14 @@ public class GoatBranch
 	public static void RightOutsideHouse() {
 		Stuff.CurrentLocationNumber = 21;
 		
-		if (Stuff.TalkedToCouple == false) {
-			Stuff.Wait(1500);
-			Stuff.typeln("\"Look, we can put you down,\" the man says,");
-			Stuff.typeln("\"But you have to promise not to run away.\"");
-			Stuff.typeln("\"Okay,\" you promise halfheartedly.");
-			Stuff.typeln("They place you on the ground and you weigh your options.");
-			Stuff.typeln("You could just stay.");
-			Stuff.typeln("After all, if one thing in this world is sacred, it's a goat's word, and you wouldn't want to hurt that reputation.");
-			Stuff.typeln("But also, you could make an escape!");
-		}
-		else {
-			Stuff.typeln("They warn against any funny business this time, and put you down again.");
-			Stuff.typeln("Do you want to engage in funny business, though? Because you could...");
-		}
+		Stuff.Wait(1500);
+		Stuff.typeln("\"Look, we can put you down,\" the man says,");
+		Stuff.typeln("\"But you have to promise not to run away.\"");
+		Stuff.typeln("\"Okay,\" you promise halfheartedly.");
+		Stuff.typeln("They place you on the ground and you weigh your options.");
+		Stuff.typeln("You could just stay.");
+		Stuff.typeln("After all, if one thing in this world is sacred, it's a goat's word, and you wouldn't want to hurt that reputation.");
+		Stuff.typeln("But also, you could make an escape!");
 		switch (Stuff.PlayerChoice("run", "stay"))
 		{
 		case "run":
