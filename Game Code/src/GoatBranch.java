@@ -217,7 +217,6 @@ public class GoatBranch
 		}
 		Stuff.Wait(1000);
 		UpperMountain();
-		
 	}
 	
 	public static void GroceryStore() {
