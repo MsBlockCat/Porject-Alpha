@@ -237,7 +237,7 @@ public class GoatBranch
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedToTree == true) {
-			switch (Stuff.PlayerChoice("ask about Ned", "ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask about Ned", "ask anything literally", "ask to leave"))
 			{
 			case "ask about ned":
 				Stuff.typeln("\"Who is Ned?\" you ask politely.");
@@ -253,7 +253,8 @@ public class GoatBranch
 				Stuff.Wait(2000);
 				Crossroads();
 				break;
-			case "ask anything hehe":
+			case "ask anything literally":
+				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
@@ -271,9 +272,10 @@ public class GoatBranch
 			}
 		}
 		else {
-			switch (Stuff.PlayerChoice("ask anything hehe", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask anything literally", "ask to leave"))
 			{
-			case "ask anything hehe":
+			case "ask anything literally":
+				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
