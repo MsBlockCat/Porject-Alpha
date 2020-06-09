@@ -240,7 +240,7 @@ public class GoatBranch
 			case "ask about ned":
 				Stuff.typeln("\"Who is Ned?\" you ask politely.");
 				Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
-				Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");
+				Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.\"");
 				Stuff.typeln("\"I'm not joking,\" you tell him, but it's no use.");
 				Stuff.typeln("Get out of my store! I won't tolerate ignoring our leader! Our hero! NED!\"");
 				Stuff.typeln("You back towards the door.");
@@ -256,7 +256,7 @@ public class GoatBranch
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
 				Stuff.Wait(1500);
-				ModernBranch.GoToModernBranch("Lab2");
+				ApuRevenge();
 				break;
 			case "ask to leave":
 				Stuff.typeln("\"Mr. Apu, sir?\" you ask.\"");
@@ -671,7 +671,7 @@ public class GoatBranch
 		
 		Stuff.typeln("\"Welcome!\" a voice calls out.");
 		Stuff.typeln("You look over and are taken by surprise.");
-		Stuff.typeln("The man is front of you is...");
+		Stuff.typeln("The man in front of you is...");
 		Stuff.Wait(2000);
 		Stuff.typeln("Dr. Doofenshmirtz.");
 		Stuff.typeln("You stare at him for a few seconds.");
