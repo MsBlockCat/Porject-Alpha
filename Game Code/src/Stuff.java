@@ -13,7 +13,7 @@ public class Stuff
 	//Variables
 	public static final String GameVersion = "0.4.0a";
 	public static final int CopyrightYear = 2020;
-	public static final int SaveVersion = 9;
+	public static final int SaveVersion = 10;
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
 	public static int FancyTypingSpeed = 1;
@@ -48,7 +48,6 @@ public class Stuff
 	/* Add to SaveVersion 10 */ public static boolean WentInWater = false;
 	/* Add to SaveVersion 10 */ public static boolean DoneRocketLaunch = false;
 	/* Add to SaveVersion 10 */ public static boolean WentInMountainHatch = false;
-	/* Add to SaveVersion 10 */ public static boolean TalkedToCouple = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -680,6 +679,10 @@ public class Stuff
 			/* Line 27 */ SaveFileWriter.write(BooleanToInt(HasChicken) + "\n");
 			/* Line 28 */ SaveFileWriter.write(BooleanToInt(WentInTreeHatch) + "\n");
 			/* Line 29 */ SaveFileWriter.write(BooleanToInt(TrustsElon) + "\n");
+			/* Line 30 */ SaveFileWriter.write(BooleanToInt(Criminal) + "\n");
+			/* Line 31 */ SaveFileWriter.write(BooleanToInt(WentInWater) + "\n");
+			/* Line 32 */ SaveFileWriter.write(BooleanToInt(DoneRocketLaunch) + "\n");
+			/* Line 33 */ SaveFileWriter.write(BooleanToInt(WentInMountainHatch) + "\n");
 			
 			SaveFileWriter.close();
 			if (BeKindaQuiet == false)
@@ -902,15 +905,29 @@ public class Stuff
 						}
 						if (FileSaveVersion >= 9)
 						{
-							/* File Line          | 24 */ HasChicken = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-							/* File Line          | 25 */ WentInTreeHatch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-							/* File Line          | 26 */ TrustsElon = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 27 */ HasChicken = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 28 */ WentInTreeHatch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 29 */ TrustsElon = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						}
 						else
 						{
 							HasChicken = false;
 							WentInTreeHatch = false;
 							TrustsElon = true;
+						}
+						if (FileSaveVersion >= 10)
+						{
+							/* File Line          | 30 */ Criminal = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 31 */ WentInWater = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 32 */ DoneRocketLaunch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 33 */ WentInMountainHatch = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+						}
+						else
+						{
+							Criminal = false;
+							WentInWater = false;
+							DoneRocketLaunch = false;
+							WentInMountainHatch = false;
 						}
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
