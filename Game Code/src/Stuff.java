@@ -33,7 +33,7 @@ public class Stuff
 	public static boolean FoundTrapdoor = false;
 	public static boolean ApuNerfedYou = false;
 	public static boolean RuinsOnMap = false;
-	public static boolean RoulletteSpin = false;
+	public static boolean RouletteSpin = false;
 	public static boolean HasEmeraldSword = false;
 	public static boolean NedLoreAcquired = false;
 	public static boolean HelpingHand = false;
@@ -668,7 +668,7 @@ public class Stuff
 			/* Line 16 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
 			/* Line 17 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
 			/* Line 18 */ SaveFileWriter.write(BooleanToInt(RuinsOnMap) + "\n");
-			/* Line 19 */ SaveFileWriter.write(BooleanToInt(RoulletteSpin) + "\n");
+			/* Line 19 */ SaveFileWriter.write(BooleanToInt(RouletteSpin) + "\n");
 			/* Line 20 */ SaveFileWriter.write(BooleanToInt(HasEmeraldSword) + "\n");
 			/* Line 21 */ SaveFileWriter.write(BooleanToInt(NedLoreAcquired) + "\n");
 			/* Line 22 */ SaveFileWriter.write(BooleanToInt(HelpingHand) + "\n");
@@ -882,7 +882,7 @@ public class Stuff
 						if (FileSaveVersion >= 8)
 						{
 							/* File Line          | 18 */ RuinsOnMap = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-							/* File Line          | 19 */ RoulletteSpin = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 19 */ RouletteSpin = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 20 */ HasEmeraldSword = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 21 */ NedLoreAcquired = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 22 */ HelpingHand = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
@@ -894,7 +894,7 @@ public class Stuff
 						else
 						{
 							RuinsOnMap = false;
-							RoulletteSpin = false;
+							RouletteSpin = false;
 							HasEmeraldSword = false;
 							NedLoreAcquired = false;
 							HelpingHand = false;

@@ -10,8 +10,8 @@ public class OldTimeBranch
 				OuterVillage1();
 				break;
 			case "2":
-			case "RoulletteShop":
-				RoulletteShop();
+			case "RouletteShop":
+				RouletteShop();
 				break;
 			case "3":
 			case "Bazar":
@@ -104,7 +104,7 @@ public class OldTimeBranch
 		{
 			case "explore the bazar":
 				Stuff.StoryBeginning = false;
-				RoulletteShop();
+				RouletteShop();
 				break;
 			case "check out the barracks":
 				Stuff.StoryBeginning = false;
@@ -117,7 +117,7 @@ public class OldTimeBranch
 		}
 	}
 	
-	public static void RoulletteShop()
+	public static void RouletteShop()
 	{
 		Stuff.CurrentLocationNumber = 2;
 		
@@ -129,12 +129,12 @@ public class OldTimeBranch
 		Stuff.TypeLine("Engraved in it is three symbols. A rocket ship, the head of a goat, and a sword.");
 		Stuff.TypeLine("\"You like what you're seeing? Even I don't know how it got here or what that turnip shaped thing is");
 		Stuff.TypeLine(" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
-		Stuff.TypeLine("\"Care to play a little roullette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5,");
+		Stuff.TypeLine("\"Care to play a little roulette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5,");
 		Stuff.TypeLine(" you get the \"Lucky Gauntlet\", sound fair? Well it doesn't matter because I make the rules!\"");
 		switch (Stuff.PlayerChoice("spin", "don't spin"))
 		{
 			case "spin":
-				Stuff.RoulletteSpin = true;
+				Stuff.RouletteSpin = true;
 				
 				switch (Stuff.RandomInt(1, 6))
 				{
@@ -185,7 +185,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 3;
 		
-		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search in a different part of the kingdom.");
+		Stuff.TypeLine("After the pleasant surprise at the roulette shop, you decide to further your search in a different part of the kingdom.");
 		Stuff.Wait(500);
 		Stuff.HitEnter(1);
 		if (Stuff.RuinsOnMap == false)
@@ -248,7 +248,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("He also gets your sword for you. What a nice guy.");
 					Stuff.TypeLine("As you are being escorted into the barracks,");
 					Stuff.TypeLine("All the knights start to talk to you asking questions like \"Where are you from?\" \"Where did you get that sword?\"");
-					Stuff.TypeLine("You tell them that you got it from an old man who runs a roullette shop in the bazar.");
+					Stuff.TypeLine("You tell them that you got it from an old man who runs a roulette shop in the bazar.");
 					Stuff.HelpingHand = true;
 					Stuff.HitEnter(2);
 					ASCII.CartographyRoom();
@@ -605,11 +605,11 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("go to it", "don't"))
 			{
 				case "go to it":
-					Stuff.TypeLine("You push through the people and right in front of you is the roullette man.");
+					Stuff.TypeLine("You push through the people and right in front of you is the roulette man.");
 					Stuff.TypeLine("The one that helped you on the start of your mission.");
 					Stuff.TypeLine("You run up to him and return the emerald sword.");
 					Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
-					Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roullette man.");
+					Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
 					Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
 					Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
 					Stuff.TypeLine("In an instant, you are back in the lab.");
@@ -625,7 +625,7 @@ public class OldTimeBranch
 					Stuff.TypeLine("You don't think there is enough time.");
 					Stuff.TypeLine("There is a small break in the crowd, you two lock eyes.");
 					Stuff.TypeLine("He waves and you wave back.");
-					Stuff.TypeLine("It seems like the roullette man has become rather popular since he made you that sword.");
+					Stuff.TypeLine("It seems like the roulette man has become rather popular since he made you that sword.");
 					Stuff.TypeLine("Looks like you are going to keep it as a memento of the man that began your adventure.");
 					Stuff.TypeLine("The Timeinator activates.");
 					Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
@@ -985,10 +985,10 @@ public class OldTimeBranch
 					Stuff.TypeLine("You don't feel ready to go to the barracks.");
 					Stuff.TypeLine("You are missing... something.");
 					Stuff.TypeLine("You head to the bazar instead.");
-					RoulletteShop();
+					RouletteShop();
 					break;
 				case "roam the bazar":
-					RoulletteShop();
+					RouletteShop();
 					break;
 			}
 		}
@@ -1007,7 +1007,7 @@ public class OldTimeBranch
 		{
 			case "explore the bazar":
 				Stuff.StoryBeginning = false;
-				RoulletteShop();
+				RouletteShop();
 				break;
 			case "search the castle":
 				Stuff.StoryBeginning = false;
