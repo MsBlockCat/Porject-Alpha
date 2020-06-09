@@ -1235,11 +1235,11 @@ public class Stuff
 		}
 		if (TurnCount == 1)
 		{
-			 Type("You made one choice... That's a pretty short adventure! ");
+			 Type(" You made one choice... That's a pretty short adventure! ");
 		}
 		else
 		{
-			Type("You made " + TurnCount + " choices. ");
+			Type(" You made " + TurnCount + " choices. ");
 		}
 		
 		TypeLine("Return to the main menu whenever you're ready.");
