@@ -189,7 +189,7 @@ public class SpaceBranch
 		Stuff.Wait(2000);
 		Stuff.TypeLine("You see four game icons: A blocky piece of grass, an animatronic pirate fox's head,");
 		Stuff.TypeLine(" a red cap with an M on it, and 3 golden triangles.");
-		if (Stuff.DoneRocketLaunch == true)
+		if (Stuff.DoneRocketLaunch == false)
 		{
 			Stuff.TypeLine("Plenty of time to play all four of these games that were definitely custom made for the expedition!");
 			Stuff.TypeLine("Which one would you like to play first, though?");
@@ -214,12 +214,12 @@ public class SpaceBranch
 				Stuff.FavoriteGame = 4;
 				break;
 		}
-		Stuff.Type("You ");
+		Stuff.Type("You");
 		if (Stuff.DoneRocketLaunch == true)
 		{
-			Stuff.Type(", just like last time, ");
+			Stuff.Type(", just like last time,");
 		}
-		Stuff.TypeLine("continue playing for the whole duration of your travel, by the power of video games.");
+		Stuff.TypeLine(" continue playing for the whole duration of your travel, by the power of video games.");
 		if (Stuff.DoneRocketLaunch == true)
 		{
 			Stuff.TypeLine("Some things never change, for better or for worse. In this case, definitely for better!");

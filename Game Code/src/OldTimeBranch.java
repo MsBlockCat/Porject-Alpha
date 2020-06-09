@@ -605,7 +605,7 @@ public class OldTimeBranch
 			switch (Stuff.PlayerChoice("go to it", "don't"))
 			{
 				case "go to it":
-					Stuff.TypeLine("You push through the people and right in front of you is the roullette man. ");
+					Stuff.TypeLine("You push through the people and right in front of you is the roullette man.");
 					Stuff.TypeLine("The one that helped you on the start of your mission.");
 					Stuff.TypeLine("You run up to him and return the emerald sword.");
 					Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
@@ -970,25 +970,27 @@ public class OldTimeBranch
 			ASCII.OldTimeMapCastleR();
 		}
 		Stuff.HitEnter(2);
-		Stuff.TypeLine("There are two more places to check out.");
-		switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
+		
+		if (Stuff.HasEmeraldSword == true || Stuff.HasLuckyGauntlet == true)
 		{
-			case "check out the barracks":
-				if (Stuff.HasEmeraldSword == false && Stuff.HasLuckyGauntlet == false)
-				{
+			Stuff.TypeLine("You decide to head to the barracks. Maybe that place'll have something useful!");
+			Barracks();
+		}
+		else
+		{
+			Stuff.TypeLine("There are two more places to check out.");
+			switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
+			{
+				case "check out the barracks":
 					Stuff.TypeLine("You don't feel ready to go to the barracks.");
 					Stuff.TypeLine("You are missing... something.");
 					Stuff.TypeLine("You head to the bazar instead.");
 					RoulletteShop();
-				}
-				else
-				{
-					Barracks();
-				}
-				break;
-			case "roam the bazar":
-				RoulletteShop();
-				break;
+					break;
+				case "roam the bazar":
+					RoulletteShop();
+					break;
+			}
 		}
 	}
 	
