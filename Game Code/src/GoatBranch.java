@@ -378,7 +378,7 @@ public class GoatBranch
 	
 	public static void TreeHatch() {
 		Stuff.CurrentLocationNumber = 8;
-		if (Stuff.Arrested == false) {
+		if (Stuff.WentInWater == false) {
 			Stuff.typeln("When you do, you realize that it is pitch-black dark.");
 			Stuff.typeln("You can't see or hear anything.");
 			Stuff.typeln("I guess your best bet is just going to be to walk in a random direction and see what you find.");
@@ -782,6 +782,7 @@ public class GoatBranch
 		
 		if (Stuff.WentInMountainHatch == false) {
 			Stuff.typeln("You fall about five feet and land in a small, dimly lit room.");
+			Stuff.Wait(1000);
 			Stuff.typeln("It seems like there's nowhere to go from here when you notice another labelled panel on the wall.");
 			Stuff.typeln("You push that one, too, and it falls away.");
 			Stuff.typeln("You climb into this hole and fall, once again.");
@@ -800,36 +801,32 @@ public class GoatBranch
 		}
 		else {
 			Stuff.typeln("You already know the routine.");
+			Stuff.typeln("You are in the dim room.");
 			Stuff.typeln("You walk over to the other hatch, open that one, and slide down the slide.");
-			Stuff.Wait(800);
+			Stuff.Wait(1000);
 			Stuff.typeln("And then, you're back in the tree hatch.");
 		}
 	}
 	
 	public static void WaterHole() {
 		Stuff.CurrentLocationNumber = 17;
-		if (Stuff.WentInWater == false) {
-			Stuff.Wait(1500);
-			Stuff.typeln("Either way, you need to figure out how to get out. You can't swim forever...");
-			Stuff.typeln("All of a sudden, there is a loud clang, and a light shines from above somewhere.");
-			Stuff.typeln("You continue to tread water, listening and watching carefully...");
-			Stuff.Wait(1500);
-			Stuff.typeln("The sound of footsteps approaches and soon enough, a man steps out from behind the light.");
-			Stuff.typeln("\"Well, howdy there, goat,\" the voice says.");
-			Stuff.HitEnter(2);
-			ASCII.WaterScene();
-			Stuff.HitEnter(2);
-			Stuff.Wait(3000);
-			Stuff.typeln("You debate whether it would be better to play dumb - that is, like a normal goat,");
-			Stuff.typeln("Or whether he's less likely to hurt you if you are just honest.");
-			Stuff.Wait(1500);
-			Stuff.typeln("Then you remember you have no free will and it's all up to the player anyway.");
-			Stuff.typeln("So, player - what's it gonna be?");
-		}
-		else {
-			Stuff.typeln("A man walks up to the edge of the water again.");
-			Stuff.typeln("You wonder if you should be honest this time, or just pretend to be a normal goat again.");
-		}
+		
+		Stuff.Wait(1500);
+		Stuff.typeln("Either way, you need to figure out how to get out. You can't swim forever...");
+		Stuff.typeln("All of a sudden, there is a loud clang, and a light shines from above somewhere.");
+		Stuff.typeln("You continue to tread water, listening and watching carefully...");
+		Stuff.Wait(1500);
+		Stuff.typeln("The sound of footsteps approaches and soon enough, a man steps out from behind the light.");
+		Stuff.typeln("\"Well, howdy there, goat,\" the voice says.");
+		Stuff.HitEnter(2);
+		ASCII.WaterScene();
+		Stuff.HitEnter(2);
+		Stuff.Wait(3000);
+		Stuff.typeln("You debate whether it would be better to play dumb - that is, like a normal goat,");
+		Stuff.typeln("Or whether he's less likely to hurt you if you are just honest.");
+		Stuff.Wait(1500);
+		Stuff.typeln("Then you remember you have no free will and it's all up to the player anyway.");
+		Stuff.typeln("So, player - what's it gonna be?");
 		Stuff.WentInWater = true;
 		switch (Stuff.PlayerChoice("be honest", "play dumb"))
 		{
@@ -853,26 +850,20 @@ public class GoatBranch
 			break;
 		case "play dumb":
 			Stuff.Wait(1000);
-			if (Stuff.WentInWater == false) {
-				Stuff.typeln("You decide it's best to stay silent and let the guy figure out what to do without your input.");
-				Stuff.typeln("Unfortunately that doesn't work out so well.");
-				Stuff.typeln("He pulls out a NERF (or nothin!) gun and points it at you.");
-				Stuff.typeln("Not wanting to be shot, you swim away from him. A dart hits the water next to you and splashes your eyes.");
-				Stuff.typeln("Blinded and confused, you dive under the surface and frantically swim as deep as you can.");
-				Stuff.typeln("You encounter a door of sorts on the bottom.");
-				Stuff.Wait(1000);
-				Stuff.typeln("It's difficult with hooves and NERF darts whizzing by but you finally manage to pull it open.");
-				Stuff.typeln("The water begins to rush in and you are sucked into the door.");
-				Stuff.typeln("You crash back and forth with the current through a narrow corridor and suddenly slam against a grate.");
-				Stuff.typeln("You open your eyes and see the grate leads to a vacant room.");
-				Stuff.typeln("The water begins to pool on the floor and runs out the doorway.");
-				Stuff.typeln("You sure wouldn't want to live there, you note,");
-				Stuff.typeln("Though you aren't in the best position yourself.");
-			}
-			else {
-				Stuff.typeln("So, you pretend to be a normal goat again, and he starts shooting NERF darts again.");
-				Stuff.typeln("So, you swim to the door, open it, and fall down the tunnel until you're back at the grate in the house.");
-			}
+			Stuff.typeln("You decide it's best to stay silent and let the guy figure out what to do without your input.");
+			Stuff.typeln("Unfortunately that doesn't work out so well.");
+			Stuff.typeln("He pulls out a NERF (or nothin!) gun and points it at you.");
+			Stuff.typeln("Not wanting to be shot, you swim away from him. A dart hits the water next to you and splashes your eyes.");
+			Stuff.typeln("Blinded and confused, you dive under the surface and frantically swim as deep as you can.");
+			Stuff.typeln("You encounter a door of sorts on the bottom.");
+			Stuff.Wait(1000);
+			Stuff.typeln("It's difficult with hooves and NERF darts whizzing by but you finally manage to pull it open.");
+			Stuff.typeln("The water begins to rush in and you are sucked into the door.");
+			Stuff.typeln("You crash back and forth with the current through a narrow corridor and suddenly slam against a grate.");
+			Stuff.typeln("You open your eyes and see the grate leads to a vacant room.");
+			Stuff.typeln("The water begins to pool on the floor and runs out the doorway.");
+			Stuff.typeln("You sure wouldn't want to live there, you note,");
+			Stuff.typeln("Though you aren't in the best position yourself.");
 			Stuff.Wait(2000);
 			RandomHouse();
 			break;
@@ -1197,31 +1188,24 @@ public class GoatBranch
 	public static void RandomHouse() {
 		Stuff.CurrentLocationNumber = 20;
 		
-		if (Stuff.WentInHouse == false) {
-			Stuff.typeln("After a few minutes of chilling in the grate, water rushing past you and flooding the room below...");
-			Stuff.typeln("You hear a voice.");
-			Stuff.typeln("\"What's all this water? Why is the family room - honey!\"");
-			Stuff.typeln("A fellow enters the room and his wife follows.");
-			Stuff.typeln("They look down at their drenched feet with dissatisfaction before noticing you in the wall.");
-			Stuff.typeln("\"Woah,\" the woman remarks, \"there's a goat in the wall.\"");
-			Stuff.typeln("Her husband looks up.");
-			Stuff.typeln("\"So there is.\"");
-			Stuff.Wait(1000);
-			Stuff.typeln("They contemplate the situation for a few seconds before addressing you.");
-			Stuff.typeln("\"Mr. Goat? We know you can hear us.\"");
-			Stuff.typeln("You decide to reply, remembering what happened five minutes ago when you ignored that other guy.");
-			Stuff.typeln("Also, they might have some idea what's going on.");
-			Stuff.typeln("\"Yes?\" you say politely.");
-			Stuff.typeln("\"We can get you out of there,\" the woman says.");
-			Stuff.typeln("\"But you need to trust us.\"");
-			Stuff.typeln("It seems like you either trust them or die here.");
-			Stuff.typeln("Still, it is a choice.");
-		}
-		else {
-			Stuff.typeln("You already know who it is when the couple approaches.");
-			Stuff.typeln("\"Are you going to trust us this time?\" the husband asks.");
-		}
-		Stuff.WentInHouse = true;
+		Stuff.typeln("After a few minutes of chilling in the grate, water rushing past you and flooding the room below...");
+		Stuff.typeln("You hear a voice.");
+		Stuff.typeln("\"What's all this water? Why is the family room - honey!\"");
+		Stuff.typeln("A fellow enters the room and his wife follows.");
+		Stuff.typeln("They look down at their drenched feet with dissatisfaction before noticing you in the wall.");
+		Stuff.typeln("\"Woah,\" the woman remarks, \"there's a goat in the wall.\"");
+		Stuff.typeln("Her husband looks up.");
+		Stuff.typeln("\"So there is.\"");
+		Stuff.Wait(1000);
+		Stuff.typeln("They contemplate the situation for a few seconds before addressing you.");
+		Stuff.typeln("\"Mr. Goat? We know you can hear us.\"");
+		Stuff.typeln("You decide to reply, remembering what happened five minutes ago when you ignored that other guy.");
+		Stuff.typeln("Also, they might have some idea what's going on.");
+		Stuff.typeln("\"Yes?\" you say politely.");
+		Stuff.typeln("\"We can get you out of there,\" the woman says.");
+		Stuff.typeln("\"But you need to trust us.\"");
+		Stuff.typeln("It seems like you either trust them or die here.");
+		Stuff.typeln("Still, it is a choice.");
 		switch (Stuff.PlayerChoice("trust them", "don't"))
 		{
 		case "trust them":
@@ -1296,7 +1280,7 @@ public class GoatBranch
 			Stuff.typeln("You can see where the value might be in a goat spy.");
 			Stuff.typeln("But it's risky. You aren't even from this time period!");
 			Stuff.Wait(2000);
-			Stuff.Arrested = true;
+			Stuff.WentInWater = true;
 			ArrestScene();
 			break;
 		}
