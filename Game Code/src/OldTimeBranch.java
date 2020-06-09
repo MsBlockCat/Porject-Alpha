@@ -507,7 +507,45 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("sit and wait", "give up"))
 		{
 			case "sit and wait":
-				//Add something here please Digo
+				if(Stuff.HasLuckyGauntlet = true)
+				{
+					Stuff.TypeLine("You sit.");
+					Stuff.Wait(200);
+					Stuff.TypeLine("And you wait.");
+					Stuff.Wait(200);
+					Stuff.TypeLine("And you sit.");
+					Stuff.TypeLine("It seems like all IS lost.");
+					Stuff.Wait(100);
+					Stuff.TypeLine("But luckily all is NOT lost.");
+					Stuff.TypeLine("You hear some cranking and chains moving.");
+					Stuff.TypeLine("You turn around and the drawbridge is now open, inviting you to enter the grand castle.");
+					Stuff.TypeLine("Maybe this gauntlet actually does bring luck.");
+					Castle3();
+				}
+				else
+				{
+					Stuff.TypeLine("You sit.");
+					Stuff.Wait(200);
+					Stuff.TypeLine("And you wait.");
+					Stuff.Wait(200);
+					Stuff.TypeLine("And you sit.");
+					Stuff.TypeLine("And nothing is happening.");
+					Stuff.TypeLine("OH the drawbridge is opening.");
+					Stuff.TypeLine("Aaaaand it stops.");
+					Stuff.TypeLine("You wait a little longer but it doesn't seem like it will go down any lower.");
+					Stuff.TypeLine("You hear some music and look behind you.");
+					Stuff.TypeLine("You see the traveling circus making its rounds.");
+					Stuff.TypeLine("Well there isn't anything else you can do.");
+					Stuff.TypeLine("No assassin or Porject Alpha.");
+					Stuff.TypeLine("Looks like Doof will be one unhappy camper.");
+					Stuff.TypeLine("But at least you will have learned juggling.");
+					Stuff.Wait(1000);
+					Stuff.HitEnter(2);
+					Stuff.TypeLine("The Circus Ending");
+					Stuff.Wait(500);
+					Stuff.HitEnter(5);
+					Stuff.StoryEnding();
+				}
 				break;
 			case "give up":
 				if(Stuff.HasLuckyGauntlet = true)
@@ -747,7 +785,9 @@ public class OldTimeBranch
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked.");
+				ASCII.Chicken();
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Baked was also there.");
 				Stuff.HasChicken = true;
 				break;
 			case "chicken":
@@ -758,7 +798,9 @@ public class OldTimeBranch
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				Stuff.TypeLine("Baked.");
+				ASCII.Chicken();
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("Baked was there, too.");
 				Stuff.HasChicken = true;
 				break;
 		}
@@ -852,6 +894,10 @@ public class OldTimeBranch
 		{
 			Stuff.TypeLine("You just remember something.");
 			Stuff.TypeLine("You reach into your pocket and take out the other half of the chicken you had for lunch.");
+			Stuff.HitEnter(2);
+			ASCII.Chicken();
+			Stuff.HitEnter(2);
+			Stuff.TypeLine("Disgusting.");
 			Stuff.TypeLine("You take a bite and keep running.");
 			Stuff.TypeLine("Then you have an idea.");
 			Stuff.Wait(200);
