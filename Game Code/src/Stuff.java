@@ -818,7 +818,7 @@ public class Stuff
 					else
 					{
 						//These lines replace the variables in game with the values in Save.txt
-						//Left is save versions 5 and below, right is 6 and above
+						//More left is older save versions, more right is newer save versions
 						/* File Line 2                 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						if (FileSaveVersion >= 6)
 						{
