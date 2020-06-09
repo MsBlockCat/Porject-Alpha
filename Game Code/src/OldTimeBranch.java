@@ -987,7 +987,7 @@ public class OldTimeBranch
 		Stuff.TypeLine("You shouldn't start here.");
 		Stuff.TypeLine("Choose a different place to start.");
 		Stuff.TypeLine("You dont feel ready to go to the barracks.");
-		Stuff.TypeLine("You are missing, something.");
+		Stuff.TypeLine("You are missing... something.");
 		switch (Stuff.PlayerChoice("explore the bazar", "search the castle"))
 		{
 			case "explore the bazar":
