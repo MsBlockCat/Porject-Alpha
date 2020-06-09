@@ -89,7 +89,14 @@ public class OldTimeBranch
 		Stuff.TypeLine("Dr. Heinz Doofenshmirtz mentioned that a couple times, not that you were paying attention.");
 		Stuff.TypeLine("You take the poster off the wall and behind it is a map of the kingdom.");
 		Stuff.HitEnter(1);
-		ASCII.OldTimeMapBazar();
+		if (Stuff.RuinsOnMap == false)
+		{
+			ASCII.OldTimeMapBazar();
+		}
+		else
+		{
+			ASCII.OldTimeMapBazarR();
+		}
 		Stuff.HitEnter(2);
 		Stuff.Wait(2000);
 		Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
@@ -181,7 +188,14 @@ public class OldTimeBranch
 		Stuff.TypeLine("After the pleasant surprise at the roullette shop, you decide to further your search in a different part of the kingdom.");
 		Stuff.Wait(500);
 		Stuff.HitEnter(1);
-		ASCII.OldTimeMapBazar();
+		if (Stuff.RuinsOnMap == false)
+		{
+			ASCII.OldTimeMapBazar();
+		}
+		else
+		{
+			ASCII.OldTimeMapBazarR();
+		}
 		Stuff.HitEnter(2);
 		switch (Stuff.PlayerChoice("check out barracks", "search the castle"))
 		{
@@ -395,8 +409,15 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("It seems like the Timeinator is running out of Porject Alpha.");
 		Stuff.TypeLine("You can travel to one more location before going back home.");
-		Stuff.HitEnter(2);
-		ASCII.OldTimeMapBarracksR();
+		Stuff.HitEnter(1);
+		if (Stuff.RuinsOnMap == false)
+		{
+			ASCII.OldTimeMapBarracks();
+		}
+		else
+		{
+			ASCII.OldTimeMapBarracksR();
+		}
 		Stuff.HitEnter(2);
 		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
 		{
@@ -936,7 +957,16 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("You want to keep searching for Porject Alpha.");
 		Stuff.TypeLine("Although you are now considered a fugitive, Doof would not be happy if you came back empty handed.");
-		ASCII.OldTimeMapCastle();
+		Stuff.HitEnter(1);
+		if (Stuff.RuinsOnMap == false)
+		{
+			ASCII.OldTimeMapCastle();
+		}
+		else
+		{
+			ASCII.OldTimeMapCastleR();
+		}
+		Stuff.HitEnter(2);
 		Stuff.TypeLine("There are two more places to check out.");
 		switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
 		{
