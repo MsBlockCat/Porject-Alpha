@@ -256,9 +256,10 @@ public class OldTimeBranch
 					Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar");
 					Stuff.Wait(100);
 					Stuff.TypeLine("But with an addition");
-					Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+					Stuff.TypeLine("You ask him what he is adding and he says something about ruins, in the middle of the kingdom at that.");
 					Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 					Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
+					Stuff.RuinsOnMap = true;
 					Stuff.TypeLine("Maybe there will be something good there.");
 					Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 					ChoiceRoom();
@@ -295,9 +296,10 @@ public class OldTimeBranch
 						Stuff.TypeLine("Inside the barracks you see a cartographer making maps. Which makes sense but the one he is making looks similar to yours...");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition.");
-						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+						Stuff.TypeLine("You ask him what he is adding and he says something about ruins, in the middle of the kingdom at that.");
 						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
+						Stuff.RuinsOnMap = true;
 						Stuff.TypeLine("Maybe there will be something good there.");
 						Stuff.TypeLine("After having a feast with the knights, you leave to search elsewhere. Well you take a healthy 9 hour slumber on some hay first.");
 						ChoiceRoom();
@@ -337,9 +339,10 @@ public class OldTimeBranch
 						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
 						Stuff.Wait(100);
 						Stuff.TypeLine("But with an addition.");
-						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
+						Stuff.TypeLine("You ask him what he is adding and he says something about ruins, in the middle of the kingdom at that.");
 						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
+						Stuff.RuinsOnMap = true;
 						Stuff.TypeLine("Maybe there will be something good there.");
 						ChoiceRoom();
 					}
