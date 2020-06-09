@@ -1237,20 +1237,14 @@ public class GoatBranch
 	public static void RightOutsideHouse() {
 		Stuff.CurrentLocationNumber = 21;
 		
-		if (Stuff.TalkedToCouple == false) {
-			Stuff.Wait(1500);
-			Stuff.typeln("\"Look, we can put you down,\" the man says,");
-			Stuff.typeln("\"But you have to promise not to run away.\"");
-			Stuff.typeln("\"Okay,\" you promise halfheartedly.");
-			Stuff.typeln("They place you on the ground and you weigh your options.");
-			Stuff.typeln("You could just stay.");
-			Stuff.typeln("After all, if one thing in this world is sacred, it's a goat's word, and you wouldn't want to hurt that reputation.");
-			Stuff.typeln("But also, you could make an escape!");
-		}
-		else {
-			Stuff.typeln("They warn against any funny business this time, and put you down again.");
-			Stuff.typeln("Do you want to engage in funny business, though? Because you could...");
-		}
+		Stuff.Wait(1500);
+		Stuff.typeln("\"Look, we can put you down,\" the man says,");
+		Stuff.typeln("\"But you have to promise not to run away.\"");
+		Stuff.typeln("\"Okay,\" you promise halfheartedly.");
+		Stuff.typeln("They place you on the ground and you weigh your options.");
+		Stuff.typeln("You could just stay.");
+		Stuff.typeln("After all, if one thing in this world is sacred, it's a goat's word, and you wouldn't want to hurt that reputation.");
+		Stuff.typeln("But also, you could make an escape!");
 		switch (Stuff.PlayerChoice("run", "stay"))
 		{
 		case "run":
