@@ -801,15 +801,15 @@ public class GoatBranch
 			if (Stuff.WentInTreeHatch == true) {
 				Stuff.typeln("You're back in the tree hatch again!");
 			}
-			TreeHatch();
 		}
 		else {
 			Stuff.typeln("You already know the routine.");
 			Stuff.typeln("You are in the dim room.");
 			Stuff.typeln("You walk over to the other hatch, open that one, and slide down the slide.");
 			Stuff.Wait(1000);
-			Stuff.typeln("And then, you're back in the tree hatch.");
+			Stuff.typeln("And then, you land back in the tree hatch.");
 		}
+		TreeHatch();
 	}
 	
 	public static void WaterHole() {
