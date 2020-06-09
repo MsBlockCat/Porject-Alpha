@@ -280,6 +280,7 @@ public class SpaceBranch
 		
 		Stuff.TypeLine("It almost looks like a home, except that its surroundings are rather bleak and desolate still.");
 		Stuff.TypeLine("Entering the building, a few friendly people greet you.");
+		Stuff.TypeLine("They all wear SpaceX badges, a company owned by Elon Musk.");
 		if (Stuff.FavoriteGame == 0)
 		{
 			Stuff.TypeLine("\"Oh, hey!\" says one man.");

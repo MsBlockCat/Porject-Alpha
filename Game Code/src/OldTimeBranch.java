@@ -100,7 +100,7 @@ public class OldTimeBranch
 		Stuff.HitEnter(2);
 		Stuff.Wait(2000);
 		Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
-		switch (Stuff.PlayerChoice("explore the bazar", "check out barracks", "search the castle"))
+		switch (Stuff.PlayerChoice("explore the bazar", "check out the barracks", "search the castle"))
 		{
 			case "explore the bazar":
 				Stuff.StoryBeginning = false;
@@ -870,7 +870,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 12;
 		
-		Stuff.TypeLine("How cool, you are in an crowded arena with a large pole in the middle.");
+		Stuff.TypeLine("How cool, you are in a crowded arena with a large pole in the middle.");
 		Stuff.TypeLine("There is a chain on that pole and on the chain is a tiger.");
 		Stuff.TypeLine("Fantastic.");
 		Stuff.TypeLine("You stand in a line with other criminals although you yourself are not one.");
@@ -881,7 +881,7 @@ public class OldTimeBranch
 			case "make a joke":
 				Stuff.TypeLine("You lean up nice and close to one of the big burly men next to you and tell him a joke.");
 				Stuff.TypeLine("He did not find it amusing.");
-				Stuff.TypeLine("Infact he swung at your head but you dodged right in time.");
+				Stuff.TypeLine("In fact he swung at your head but you dodged right in time.");
 				Stuff.TypeLine("\"Hey are you trying to cause a fight here?\"");
 				Stuff.TypeLine("The knight said this to the man you told the joke to.");
 				Stuff.TypeLine("He then gets pulled away and you stick your tongue at him.");
@@ -974,7 +974,17 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
 		{
 			case "check out the barracks":
-				Barracks();
+				if (Stuff.HasEmeraldSword == false && Stuff.HasLuckyGauntlet == false)
+				{
+					Stuff.TypeLine("You don't feel ready to go to the barracks.");
+					Stuff.TypeLine("You are missing... something.");
+					Stuff.TypeLine("You head to the bazar instead.");
+					RoulletteShop();
+				}
+				else
+				{
+					Barracks();
+				}
 				break;
 			case "roam the bazar":
 				RoulletteShop();
