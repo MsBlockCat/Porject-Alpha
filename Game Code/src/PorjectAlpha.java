@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("0.5.0a (6/8/2020)");
+		Stuff.TypeLine(" Pretty much finished story!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.4.0a (6/7/2020)");
 		Stuff.TypeLine(" Tons more story and some more bug fixes!");
 		Stuff.Divider();

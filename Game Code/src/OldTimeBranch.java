@@ -139,7 +139,7 @@ public class OldTimeBranch
 				switch (Stuff.RandomInt(1, 6))
 				{
 					case 5:
-						Stuff.TypeLine("\"Aren't you lucky! Well a deal is a deal. You best be on your way now, I hear you are chasing down the assassin.\"");
+						Stuff.TypeLine("\"Aren't you lucky! Well a deal is a deal, here's your gauntlet. You best be on your way now, I hear you are chasing down the assassin.\"");
 						Stuff.TypeLine("He wishes you good luck and you go on your way.");
 						Stuff.HasLuckyGauntlet = true;
 						Bazar();
@@ -336,7 +336,7 @@ public class OldTimeBranch
 						Stuff.HitEnter(2);
 						Stuff.TypeLine("You see a cartographer making maps. Which makes sense but the one he is making looks similar.");
 						Stuff.Wait(100);
-						Stuff.TypeLine("But with an addition");
+						Stuff.TypeLine("But with an addition.");
 						Stuff.TypeLine("You ask him what he is adding and he says something about runes, in the middle of the kingdom at that.");
 						Stuff.TypeLine("\"Hey show me your map and I'll add it for you.\"");
 						Stuff.TypeLine("He makes a quick sketch and boom, a new location has been added in your search. What joy.");
@@ -434,7 +434,7 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 6;
 		
-		Stuff.TypeLine("You follow the map to the place the cartophapher added and believe it or not, there is indeed a large ruins that resemble a pyramid.");
+		Stuff.TypeLine("You follow the map to the place the cartophapher added and believe it or not, there are indeed large ruins that resemble a pyramid.");
 		Stuff.TypeLine("There are also two crumbling pillars on either side of the massive entrance.");
 		Stuff.TypeLine("When you enter there is a fork in the long sandy hallway.");
 		Stuff.TypeLine("Do you want to go left or right?");
@@ -929,7 +929,7 @@ public class OldTimeBranch
 			Stuff.TypeLine("Some knights come out to check on the tiger and they leave one of the entrance doors open.");
 			Stuff.TypeLine("You and the criminals run out through that door and lock it behind you.");
 			Stuff.TypeLine("It also seems like the tiger is starting to regain consiousness.");
-			Stuff.TypeLine("Welp now its the knights problem and not yours.");
+			Stuff.TypeLine("Welp now it's the knights problem and not yours.");
 			Stuff.TypeLine("You keep on running to the castle exit and you finally make it out.");
 			Stuff.TypeLine("You have to find some other place to go now.");
 			ChoiceRoom2();
