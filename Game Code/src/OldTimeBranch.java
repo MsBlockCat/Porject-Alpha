@@ -203,7 +203,14 @@ public class OldTimeBranch
 				Barracks();
 				break;
 			case "castle":
-				Castle();
+				if (Stuff.Criminal = true)
+				{
+					Castle2();
+				}
+				else
+				{
+					Castle();
+				}
 				break;
 		}
 	}
@@ -810,8 +817,6 @@ public class OldTimeBranch
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				ASCII.Chicken();
-				Stuff.HitEnter(2);
 				Stuff.TypeLine("Baked was also there.");
 				Stuff.HasChicken = true;
 				break;
@@ -823,13 +828,14 @@ public class OldTimeBranch
 				Stuff.HitEnter(2);
 				Stuff.TypeLine("Grilled with spices. You choose this one.");
 				Stuff.HitEnter(2);
-				ASCII.Chicken();
-				Stuff.HitEnter(2);
 				Stuff.TypeLine("Baked was there, too.");
 				Stuff.HasChicken = true;
 				break;
 		}
 		Stuff.TypeLine("You eat half of the chicken and save the rest for later in your pocket.");
+		Stuff.HitEnter(2);
+		ASCII.Chicken();
+		Stuff.HitEnter(2);
 		Stuff.TypeLine("You are now full and ready to look for this assassin person, until some hooded figure comes and asks for your help.");
 		Stuff.TypeLine("You feel obligated to help for no reason.");
 		Stuff.TypeLine("\"Come with me.\"");
@@ -1000,10 +1006,9 @@ public class OldTimeBranch
 		Stuff.CurrentLocationNumber = 15;
 		
 		Stuff.TypeLine("This is a bad place to start.");
-		Stuff.TypeLine("You shouldn't start here.");
-		Stuff.TypeLine("Choose a different place to start.");
 		Stuff.TypeLine("You don't feel ready to go to the barracks.");
 		Stuff.TypeLine("You are missing... something.");
+		Stuff.TypeLine("Who needs the barracks anyway, probably boring.");
 		switch (Stuff.PlayerChoice("bazar", "castle"))
 		{
 			case "bazar":
