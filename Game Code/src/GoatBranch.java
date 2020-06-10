@@ -101,7 +101,7 @@ public class GoatBranch
 				EllipseOffice2();
 				break;
 			default:
-				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("[Enter] Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
 		}
 	}
