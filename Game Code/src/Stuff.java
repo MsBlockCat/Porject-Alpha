@@ -1095,9 +1095,10 @@ public class Stuff
 				Type(", or " + Choice4);
 			}
 			
-			System.out.println(".");
+			TypeLine(".");
 			if (CurrentBranchNumber == 1 && CurrentLocationNumber == 1)
 			{
+				TypeLine("You can type one of the choices above and hit enter to choose it.");
 				TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
 			}
 			else
