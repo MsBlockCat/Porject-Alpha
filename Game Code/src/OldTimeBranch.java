@@ -100,17 +100,17 @@ public class OldTimeBranch
 		Stuff.HitEnter(2);
 		Stuff.Wait(2000);
 		Stuff.TypeLine("\"Where will you begin your search?\" You hear a passerby ask.");
-		switch (Stuff.PlayerChoice("explore the bazar", "check out the barracks", "search the castle"))
+		switch (Stuff.PlayerChoice("bazar", "barracks", "castle"))
 		{
-			case "explore the bazar":
+			case "bazar":
 				Stuff.StoryBeginning = false;
 				RouletteShop();
 				break;
-			case "check out the barracks":
+			case "barracks":
 				Stuff.StoryBeginning = false;
 				Barracks2();
 				break;
-			case "search the castle":
+			case "castle":
 				Stuff.StoryBeginning = false;
 				Castle();
 				break;
@@ -131,7 +131,7 @@ public class OldTimeBranch
 		Stuff.TypeLine(" but I found it right outside my farm a couple o' years ago, no clue how long it's been there.\"");
 		Stuff.TypeLine("\"Care to play a little roulette? I spin this wheel, it has 1 through 6, and if the arrow lands on, what say you, the number 5,");
 		Stuff.TypeLine(" you get the \"Lucky Gauntlet\", sound fair? Well it doesn't matter because I make the rules!\"");
-		switch (Stuff.PlayerChoice("spin", "don't spin"))
+		switch (Stuff.PlayerChoice("spin", "don't"))
 		{
 			case "spin":
 				Stuff.RouletteSpin = true;
@@ -171,7 +171,7 @@ public class OldTimeBranch
 				}
 				break;
 				
-			case "don't spin":
+			case "don't":
 				Stuff.TypeLine("\"Well then, here take this sword, it's made of emeralds and will help you on your journey.");
 				Stuff.TypeLine("Most people around here know about it and boy are we thankful. Our king is a good one so I don't know why anyone would attempt to murder him.");
 				Stuff.TypeLine("Good luck traveler.\" With these words you leave the shop and continue your search.");
@@ -197,12 +197,12 @@ public class OldTimeBranch
 			ASCII.OldTimeMapBazarR();
 		}
 		Stuff.HitEnter(2);
-		switch (Stuff.PlayerChoice("check out barracks", "search the castle"))
+		switch (Stuff.PlayerChoice("barracks", "castle"))
 		{
-			case "check out barracks":
+			case "barracks":
 				Barracks();
 				break;
-			case "search the castle":
+			case "castle":
 				Castle();
 				break;
 		}
@@ -231,7 +231,7 @@ public class OldTimeBranch
 		Stuff.Wait(200);
 		Stuff.TypeLine("Yuck.");
 		Stuff.TypeLine("\"Hey you want to spar with us?\" One of the knights asked.");
-		switch (Stuff.PlayerChoice("spar", "don't spar"))
+		switch (Stuff.PlayerChoice("spar", "don't"))
 		{
 			case "spar":
 				if (Stuff.HasEmeraldSword == true)
@@ -348,7 +348,7 @@ public class OldTimeBranch
 					}
 				}
 				break;
-			case "don't spar":
+			case "don't":
 				Stuff.TypeLine("\"You don't want to spar?\" It seems like you took them by surprise. Maybe sparring is normal around here.");
 				Stuff.TypeLine("\"Hey who are you anyway? You don't look like you are from around here.\"");
 				Stuff.TypeLine("Another knight pipes in \"Hey you look like that assassin. All of us were warned about him!\"");
@@ -422,12 +422,12 @@ public class OldTimeBranch
 			ASCII.OldTimeMapBarracksR();
 		}
 		Stuff.HitEnter(2);
-		switch (Stuff.PlayerChoice("go to the castle", "go to the ruins"))
+		switch (Stuff.PlayerChoice("castle", "ruins"))
 		{
-			case "go to the castle":
+			case "castle":
 				Castle2();
 				break;
-			case "go to the ruins":
+			case "ruins":
 				Ruins();
 				break;
 		}
@@ -528,9 +528,10 @@ public class OldTimeBranch
 		Stuff.TypeLine("Ok finally someone is at the other end of the drawbridge.");
 		Stuff.TypeLine("But they aren't bringing it up.");
 		Stuff.TypeLine("It looks like you don't have many more options left.");
-		switch (Stuff.PlayerChoice("sit and wait", "give up"))
+		Stuff.TypeLine("In fact, all you can do now is sit and wait, or give up and leave.");
+		switch (Stuff.PlayerChoice("sit", "leave"))
 		{
-			case "sit and wait":
+			case "sit":
 				if(Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("You sit.");
@@ -571,7 +572,7 @@ public class OldTimeBranch
 					Stuff.StoryEnding();
 				}
 				break;
-			case "give up":
+			case "leave":
 				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("Luckily all is not lost.");
@@ -662,7 +663,7 @@ public class OldTimeBranch
 			Stuff.TypeLine("You and Harold corner him in an alley and call out for reinforcements.");
 			Stuff.TypeLine("The assassin whips out its sword and goes on the attack.");
 			Stuff.TypeLine("Luckily a flower pot lands on his head and knocks him out.");
-			switch (Stuff.PlayerChoice("look up", "don't look up"))
+			switch (Stuff.PlayerChoice("look up", "don't"))
 			{
 				case "look up":
 					if (Stuff.Criminal == true)
@@ -718,7 +719,7 @@ public class OldTimeBranch
 						Stuff.StoryEnding();
 					}
 					break;
-				case "don't look up":
+				case "don't":
 					if (Stuff.Criminal == true)
 					{
 						Stuff.TypeLine("To you it doesn't really matter how that hit him, just that you got the assassin.");
@@ -843,7 +844,7 @@ public class OldTimeBranch
 		
 		Stuff.TypeLine("The knight starts to chase after you calling for reinforcements.");
 		Stuff.Criminal = true;
-		switch (Stuff.PlayerChoice("run", "don't run"))
+		switch (Stuff.PlayerChoice("run", "don't"))
 		{
 			case "run":
 				Stuff.TypeLine("You sprint in a direction, thinking to yourself how dumb you were to trust a hooded man.");
@@ -856,7 +857,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("\"Into the tiger cage you go.\"");
 				TigerCage();
 				break;
-			case "don't run":
+			case "don't":
 				Stuff.TypeLine("Why you don't run, even you are not sure.");
 				Stuff.TypeLine("The knight grabs a hold of your arm and drags you into a prison cart.");
 				Stuff.TypeLine("\"Into the tiger cage you go.\"");
@@ -876,9 +877,9 @@ public class OldTimeBranch
 		Stuff.TypeLine("You stand in a line with other criminals although you yourself are not one.");
 		Stuff.TypeLine("Your complaints to the guards don't work either.");
 		Stuff.TypeLine("Since the mood is grim you come up with some ideas to try and stay positive.");
-		switch (Stuff.PlayerChoice("make a joke", "blah blah blah", "revolt"))
+		switch (Stuff.PlayerChoice("joke", "mock", "revolt"))
 		{
-			case "make a joke":
+			case "joke":
 				Stuff.TypeLine("You lean up nice and close to one of the big burly men next to you and tell him a joke.");
 				Stuff.TypeLine("He did not find it amusing.");
 				Stuff.TypeLine("In fact he swung at your head but you dodged right in time.");
@@ -888,7 +889,7 @@ public class OldTimeBranch
 				Stuff.TypeLine("Who doesn't like a knock knock joke?");
 				TigerEvent();
 				break;
-			case "blah blah blah":
+			case "mock":
 				Stuff.TypeLine("Blah blah blah. You start mocking one of the knights.");
 				Stuff.TypeLine("He did not like that. He actually walked over and said that you would be the first one fed to the tiger if you kept it up.");
 				Stuff.TypeLine("Seems like a good time to stop mocking him.");
@@ -979,15 +980,15 @@ public class OldTimeBranch
 		else
 		{
 			Stuff.TypeLine("There are two more places to check out.");
-			switch (Stuff.PlayerChoice("check out the barracks", "roam the bazar"))
+			switch (Stuff.PlayerChoice("barracks", "bazar"))
 			{
-				case "check out the barracks":
+				case "barracks":
 					Stuff.TypeLine("You don't feel ready to go to the barracks.");
 					Stuff.TypeLine("You are missing... something.");
 					Stuff.TypeLine("You head to the bazar instead.");
 					RouletteShop();
 					break;
-				case "roam the bazar":
+				case "bazar":
 					RouletteShop();
 					break;
 			}
@@ -1003,13 +1004,13 @@ public class OldTimeBranch
 		Stuff.TypeLine("Choose a different place to start.");
 		Stuff.TypeLine("You don't feel ready to go to the barracks.");
 		Stuff.TypeLine("You are missing... something.");
-		switch (Stuff.PlayerChoice("explore the bazar", "search the castle"))
+		switch (Stuff.PlayerChoice("bazar", "castle"))
 		{
-			case "explore the bazar":
+			case "bazar":
 				Stuff.StoryBeginning = false;
 				RouletteShop();
 				break;
-			case "search the castle":
+			case "castle":
 				Stuff.StoryBeginning = false;
 				Castle();
 				break;
