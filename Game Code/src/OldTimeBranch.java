@@ -853,9 +853,9 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("run", "don't"))
 		{
 			case "run":
-				Stuff.TypeLine("You sprint in a direction, thinking to yourself how dumb you were to trust a hooded man.");
+				Stuff.TypeLine("You sprint in a direction, thinking to yourself how dumb you were to trust a mysterious hooded person.");
 				Stuff.TypeLine("Everywhere you look there are knights emerging from their posts, running after you.");
-				Stuff.TypeLine("Even the vegetarian food shop lady is chasing you with some celery in her hand, complaining that you don't \"appreciate fine cuisine\"");
+				Stuff.TypeLine("Even the vegetarian food shop lady is chasing you with some celery in her hand, complaining that you don't \"appreciate fine cuisine.\"");
 				Stuff.TypeLine("She gets tackled and imprisoned due to her lies.");
 				Stuff.TypeLine("It seems that people really don't like vegetarian food.");
 				Stuff.TypeLine("Either way you keep running until you trip.");
