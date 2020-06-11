@@ -167,7 +167,6 @@ public class OldTimeBranch
 						Stuff.TypeLine("As you marvel at the sword, you walk away to start your search of the assassin.");
 						Stuff.HasEmeraldSword = true;
 						Bazar();
-						break;
 				}
 				break;
 				
@@ -677,7 +676,7 @@ public class OldTimeBranch
 					if (Stuff.Criminal == true)
 					{
 						Stuff.TypeLine("You look up and see a grumpy old lady.");
-						Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+						Stuff.TypeLine("\"QUIET DOWN!! I'M TRYING TO PLANT MY PETUNIAS!!\"");
 						Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
 						Stuff.TypeLine("The reinforcements you called just arrived.");
 						Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled them away.");
@@ -708,7 +707,7 @@ public class OldTimeBranch
 					else
 					{
 						Stuff.TypeLine("You look up and see a grumpy old lady.");
-						Stuff.TypeLine("\"QUIET DOWN!! IM TRYING TO PLANT MY PETUNIAS!!\"");
+						Stuff.TypeLine("\"QUIET DOWN!! I'M TRYING TO PLANT MY PETUNIAS!!\"");
 						Stuff.TypeLine("Harold gives you a surprised look and you give one back.");
 						Stuff.TypeLine("The reinforcements you called just arrived.");
 						Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled them away.");
