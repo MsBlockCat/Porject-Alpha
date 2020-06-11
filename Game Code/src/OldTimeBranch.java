@@ -939,7 +939,7 @@ public class OldTimeBranch
 			Stuff.TypeLine("Some knights come out to check on the tiger and they leave one of the entrance doors open.");
 			Stuff.TypeLine("You and the criminals run out through that door and lock it behind you.");
 			Stuff.TypeLine("It also seems like the tiger is starting to regain consiousness.");
-			Stuff.TypeLine("Welp now it's the knights problem and not yours.");
+			Stuff.TypeLine("Welp now it's the knights' problem and not yours.");
 			Stuff.TypeLine("You keep on running to the castle exit and you finally make it out.");
 			Stuff.TypeLine("You have to find some other place to go now.");
 			ChoiceRoom2();
