@@ -667,7 +667,7 @@ public class OldTimeBranch
 			Stuff.TypeLine("\"Well I'll help you search. Let us split up to cover more ground.\"");
 			Stuff.TypeLine("After about 15 minutes of searching, you hear yelling. It sounds like Harold.");
 			Stuff.TypeLine("You run after the sound and find him chasing the hooded assassin.");
-			Stuff.TypeLine("You and Harold corner him in an alley and call out for reinforcements.");
+			Stuff.TypeLine("You and Harold corner them in an alley and call out for reinforcements.");
 			Stuff.TypeLine("The assassin whips out their sword and goes on the attack.");
 			Stuff.TypeLine("Luckily a flower pot lands on their head and knocks them out.");
 			switch (Stuff.PlayerChoice("look up", "don't"))
@@ -689,7 +689,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("The assassin says that they were the hooded figure.");
 						Stuff.TypeLine("The one that falsely exposed you as being the assassin.");
 						Stuff.TypeLine("And getting you into that whole tiger mess.");
-						Stuff.TypeLine("Before you can ask him a question he is rolled away, never to be seen again.");
+						Stuff.TypeLine("Before you can ask them a question they are rolled away, never to be seen again.");
 						Stuff.TypeLine("The two of you are escorted to the main hall where you meet the King.");
 						Stuff.TypeLine("Harold gets a new sword. It is so shiny that it reflects some of the incoming light and scorches the royal rug.");
 						Stuff.TypeLine("You on the other hand get some Porject Alpha.");
