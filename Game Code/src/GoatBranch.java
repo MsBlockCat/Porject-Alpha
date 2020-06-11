@@ -687,7 +687,7 @@ public class GoatBranch
 		Stuff.typeln("\"Hey,\" you inquire, \"Can I have some of the stuff you use to power those?\"");
 		Stuff.typeln("\"Sure, you can have some gasoline.\" Dr. Doofenshmirtz hands you a gas can.");
 		Stuff.Wait(1000);
-		Stuff.typeln("Very odd, you think, since his new ones are powered by Porject Alpha...");
+		Stuff.typeln("You guess these old machines aren't quite as environmentally friendly as the modern ones.");
 		Stuff.Wait(500);
 		Stuff.typeln("\"Anything else I can do for ya?\" he asks.");
 		switch (Stuff.PlayerChoice("say no", "use machine", "break future"))
