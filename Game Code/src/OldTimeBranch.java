@@ -790,7 +790,7 @@ public class OldTimeBranch
 		Stuff.HitEnter(2);
 		Stuff.TypeLine("You keep on walking and finally you make it to the castle gate.");
 		Stuff.TypeLine("The drawbridge is down so that was convenient.");
-		Stuff.TypeLine("As you enter you take one last look at the wanted poster with the map on it to remember the man you are hunting for.");
+		Stuff.TypeLine("As you enter you take one last look at the wanted poster with the map on it to remember the person you are hunting for.");
 		Stuff.TypeLine("You think they look familiar.");
 		Stuff.TypeLine("Either way you want to capture them because of the reward.");
 		Stuff.TypeLine("You start to get hungry and want to go to a food shop.");
