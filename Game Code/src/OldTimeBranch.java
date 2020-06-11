@@ -591,7 +591,8 @@ public class OldTimeBranch
 				else
 				{
 					Stuff.TypeLine("Looks like there is nothing else you can do.");
-					Stuff.TypeLine("You start to walk in a direction. None of any importance because no matter where you are, the Timeinator will take you back to the same place.");
+					Stuff.TypeLine("You start to walk in a direction. Not one of any importance because no matter where you are, the Timeinator will");
+					Stuff.TypeLine(" take you back to the same place.");
 					Stuff.TypeLine("In the distance you see a crowd.");
 					Stuff.TypeLine("And even further you see a little town. Looks like. THE BAZAR!");
 					Stuff.TypeLine("You start running because the Timeinator is beeping faster now.");
