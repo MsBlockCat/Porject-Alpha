@@ -222,7 +222,7 @@ public class PorjectAlpha
 					{
 						if (Stuff.LoadSaveFile() == true)
 						{
-							Stuff.TypeLine("(Enter) Successfully loaded!");
+							Stuff.TypeLine("[Enter] Successfully loaded!");
 							Stuff.HitEnter(1);
 							Stuff.AwesomeScanner.nextLine();
 							switch (Stuff.CurrentBranchNumber)

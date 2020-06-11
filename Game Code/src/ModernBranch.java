@@ -18,7 +18,7 @@ public class ModernBranch
 				Lab3();
 				break;
 			default:
-				System.out.println("(Enter) Error 1: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("[Enter] Error 1: The starting area of the modern day branch of the story, method GoToModernBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
 		}
 	}

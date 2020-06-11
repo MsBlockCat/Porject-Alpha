@@ -46,7 +46,7 @@ public class SpaceBranch
 				Launchpad2();
 				break;
 			default:
-				System.out.println("(Enter) Error 2: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("[Enter] Error 2: The starting area of the space branch of the story, method GoToSpaceBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
 		}
 	}
@@ -60,7 +60,7 @@ public class SpaceBranch
 			Stuff.TypeLine("You travel to the year 2030.");
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
 			
-			if (((Stuff.RandomInt() < 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() < 9) && Stuff.HasLuckyGauntlet == true))
+			if (((Stuff.RandomInt() > 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() > 8) && Stuff.HasLuckyGauntlet == true))
 			{
 				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
 				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");

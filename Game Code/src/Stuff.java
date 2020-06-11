@@ -33,7 +33,7 @@ public class Stuff
 	public static boolean FoundTrapdoor = false;
 	public static boolean ApuNerfedYou = false;
 	public static boolean RuinsOnMap = false;
-	public static boolean RoulletteSpin = false;
+	public static boolean RouletteSpin = false;
 	public static boolean HasEmeraldSword = false;
 	public static boolean NedLoreAcquired = false;
 	public static boolean HelpingHand = false;
@@ -96,19 +96,20 @@ public class Stuff
 		System.out.println("                                                   | Cen  |");
 		System.out.println("                                                   |  ter |");
 		System.out.println("                                                   --------");
-		HitEnter(6);
+		HitEnter(5);
 		if (GameBeginning == true)
 		{
 			System.out.println("When options on the left in () are on screen, you can type them and hit enter to choose them.");
+			System.out.println("When [Enter] is an option, that means just hit enter to choose it, don't type \"Enter\" and hit enter.");
 			System.out.println("   |");
 			System.out.println("   |");
 			System.out.println("  \\./");
 		}
 		else
 		{
-			HitEnter(4);
+			HitEnter(5);
 		}
-		TypeLine("(Enter) Go to the main menu of Porject Alpha");
+		TypeLine("[Enter] Go to the main menu of Porject Alpha");
 		HitEnter(6);
 		System.out.print("--------------------------------------------------------------------------------------------------------------");
 		AwesomeScanner.nextLine();
@@ -176,7 +177,7 @@ public class Stuff
 				TempInstantText = false;
 			}
 			
-			TypeLine("(Enter) Leave the settings menu.");
+			TypeLine("[Enter] Leave the settings menu.");
 			HitEnter(1);
 			
 			Input = AwesomeScanner.nextLine().toLowerCase();
@@ -186,13 +187,13 @@ public class Stuff
 			{
 				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3'))
 				{
-					TypeLine("(Enter) Text Speed can be set to 0, 1, 2, or 3.");
+					TypeLine("[Enter] Text Speed can be set to 0, 1, 2, or 3.");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
 				else
 				{
-					Type("(Enter) Your Text Speed went from " + FancyTypingSpeed);
+					Type("[Enter] Your Text Speed went from " + FancyTypingSpeed);
 					FancyTypingSpeed = StringToInt(Input.charAt(11) + "");
 					TypeLine(" to " + FancyTypingSpeed + ".");
 					HitEnter(1);
@@ -207,7 +208,7 @@ public class Stuff
 				{
 					if (Input.charAt(13) == 'f' && Input.charAt(14) != 'f')
 					{
-						TypeLine("(Enter) Quick Menus can be set to on or off.");
+						TypeLine("[Enter] Quick Menus can be set to on or off.");
 						HitEnter(1);
 						AwesomeScanner.nextLine();
 					}
@@ -215,11 +216,11 @@ public class Stuff
 					{
 						if (QuickMenus == false)
 						{
-							Type("(Enter) Quick Menus went from off");
+							Type("[Enter] Quick Menus went from off");
 						}
 						else
 						{
-							Type("(Enter) Quick Menus went from on");
+							Type("[Enter] Quick Menus went from on");
 						}
 						if (Input.charAt(13) == 'n')
 						{
@@ -244,7 +245,7 @@ public class Stuff
 				}
 				else
 				{
-					TypeLine("(Enter) Quick Menus can be set to on or off.");
+					TypeLine("[Enter] Quick Menus can be set to on or off.");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
@@ -265,7 +266,7 @@ public class Stuff
 		}
 		catch (FileNotFoundException NoFileException)
 		{
-			System.out.println("(Enter) Error 5: Looks like the \"Porject-Alpha/Game Code/Credits.txt\" file isn't in the game code, but it should be! Please make sure your runtime looks at the main Porject-Alpha folder.");
+			System.out.println("[Enter] Error 5: Looks like the \"Porject-Alpha/Game Code/Credits.txt\" file isn't in the game code, but it should be! Please make sure your runtime looks at the main Porject-Alpha folder.");
 			NoFileException.printStackTrace();
 			AwesomeScanner.nextLine();
 		}
@@ -280,7 +281,7 @@ public class Stuff
 		Wait(2000);
 		HitEnter(1);
 		Divider();
-		TypeLine("(Enter) Leave the credits.");
+		TypeLine("[Enter] Leave the credits.");
 		HitEnter(1);
 		AwesomeScanner.nextLine();
 	}
@@ -334,7 +335,7 @@ public class Stuff
 				TempInstantText = false;
 			}
 			
-			TypeLine("(Enter) Leave the about menu");
+			TypeLine("[Enter] Leave the about menu");
 			HitEnter(1);
 			Input = AwesomeScanner.nextLine().toLowerCase();
 			
@@ -347,7 +348,7 @@ public class Stuff
 					PorjectAlpha.Changelog();
 					HitEnter(1);
 					Divider();
-					TypeLine("(Enter) Leave the changelog");
+					TypeLine("[Enter] Leave the changelog");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
@@ -364,7 +365,7 @@ public class Stuff
 					TypeLine("Current Branch Number: " + CurrentBranchNumber);
 					TypeLine("Current Location Number: " + CurrentLocationNumber);
 					HitEnter(1);
-					TypeLine("(Enter) Leave the secret hackery stuff menu");
+					TypeLine("[Enter] Leave the secret hackery stuff menu");
 					
 					if (QuickMenus == true)
 					{
@@ -603,7 +604,7 @@ public class Stuff
 					Wait(1000);
 					TypeLine("You're welcome");
 					HitEnter(1);
-					TypeLine("(Enter) Leave the super secret easter egg");
+					TypeLine("[Enter] Leave the super secret easter egg");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 					break;
@@ -668,7 +669,7 @@ public class Stuff
 			/* Line 16 */ SaveFileWriter.write(BooleanToInt(FoundTrapdoor) + "\n");
 			/* Line 17 */ SaveFileWriter.write(BooleanToInt(ApuNerfedYou) + "\n");
 			/* Line 18 */ SaveFileWriter.write(BooleanToInt(RuinsOnMap) + "\n");
-			/* Line 19 */ SaveFileWriter.write(BooleanToInt(RoulletteSpin) + "\n");
+			/* Line 19 */ SaveFileWriter.write(BooleanToInt(RouletteSpin) + "\n");
 			/* Line 20 */ SaveFileWriter.write(BooleanToInt(HasEmeraldSword) + "\n");
 			/* Line 21 */ SaveFileWriter.write(BooleanToInt(NedLoreAcquired) + "\n");
 			/* Line 22 */ SaveFileWriter.write(BooleanToInt(HelpingHand) + "\n");
@@ -687,7 +688,7 @@ public class Stuff
 			SaveFileWriter.close();
 			if (BeKindaQuiet == false)
 			{
-				TypeLine("(Enter) Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
+				TypeLine("[Enter] Save successful! Hit enter and we'll open the folder for you to copy your save file if you'd like.");
 				HitEnter(1);
 				AwesomeScanner.nextLine();
 				
@@ -700,14 +701,14 @@ public class Stuff
 				}
 				catch (IllegalArgumentException IAE)
 				{
-					System.out.println("(Enter) Error 7: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
+					System.out.println("[Enter] Error 7: The save file's folder (at \"Porject-Alpha/Saves\") wasn't found and couldn't be made!");
 					AwesomeScanner.nextLine();
 				}
 			}
 		}
 		catch (IOException IOException)
 		{
-			System.out.println("(Enter) Error 6: There was an IOException when saving your game. Please make sure your runtime looks at the main Porject-Alpha folder.");
+			System.out.println("[Enter] Error 6: There was an IOException when saving your game. Please make sure your runtime looks at the main Porject-Alpha folder.");
 			IOException.printStackTrace();
 			AwesomeScanner.nextLine();
 		}
@@ -764,13 +765,13 @@ public class Stuff
 			}
 			catch (FileNotFoundException NoDefaultSaveFileException)
 			{
-				TypeLine("(Enter) Error 8: Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
+				TypeLine("[Enter] Error 8: Something went wrong: There's no default save file (at \"Porject-Alpha/Game Code/Default Save.txt\") to load!");
 				AwesomeScanner.nextLine();
 			}
 		}
 		catch (IOException NoSaveFileException)
 		{
-			TypeLine("(Enter) Error 9: Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
+			TypeLine("[Enter] Error 9: Sorry, but there's no save file (at \"Porject-Alpha/Saves/Save.txt\") to reset and one couldn't be made!");
 			AwesomeScanner.nextLine();
 		}
 	}
@@ -796,7 +797,7 @@ public class Stuff
 				{
 					if (BeQuiet == false)
 					{
-						TypeLine("(Enter) Error 10: Sorry, either that's not a save file at \"Saves/Save.txt\" or it got corrupted!");
+						TypeLine("[Enter] Error 10: Sorry, either that's not a save file at \"Saves/Save.txt\" or it got corrupted!");
 						AwesomeScanner.nextLine();
 					}
 					AwesomeFile.close();
@@ -808,7 +809,7 @@ public class Stuff
 					{
 						if (BeQuiet == false)
 						{
-							TypeLine("(Enter) Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
+							TypeLine("[Enter] Sorry, this save file uses version " + FileSaveVersion + ", while we can load at the newest version " + SaveVersion + ". Please update your game!");
 							HitEnter(1);
 							AwesomeScanner.nextLine();
 						}
@@ -818,7 +819,7 @@ public class Stuff
 					else
 					{
 						//These lines replace the variables in game with the values in Save.txt
-						//Left is save versions 5 and below, right is 6 and above
+						//More left is older save versions, more right is newer save versions
 						/* File Line 2                 */ DebugMode = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 						if (FileSaveVersion >= 6)
 						{
@@ -882,7 +883,7 @@ public class Stuff
 						if (FileSaveVersion >= 8)
 						{
 							/* File Line          | 18 */ RuinsOnMap = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
-							/* File Line          | 19 */ RoulletteSpin = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
+							/* File Line          | 19 */ RouletteSpin = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 20 */ HasEmeraldSword = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 21 */ NedLoreAcquired = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
 							/* File Line          | 22 */ HelpingHand = IntToBoolean(StringToInt(AwesomeFile.nextLine()));
@@ -894,7 +895,7 @@ public class Stuff
 						else
 						{
 							RuinsOnMap = false;
-							RoulletteSpin = false;
+							RouletteSpin = false;
 							HasEmeraldSword = false;
 							NedLoreAcquired = false;
 							HelpingHand = false;
@@ -932,7 +933,7 @@ public class Stuff
 						
 						if ((SaveVersion > FileSaveVersion) && (BeQuiet == false))
 						{
-							TypeLine("(Enter) Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
+							TypeLine("[Enter] Just so you know, your save file was from an older version of this game, so some stuff was added or may have been reset.");
 							HitEnter(1);
 							AwesomeScanner.nextLine();
 						}
@@ -946,7 +947,7 @@ public class Stuff
 			{
 				if (BeQuiet == false)
 				{
-					System.out.println("(Enter) Error 11: Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has missing lines!");
+					System.out.println("[Enter] Error 11: Woah there! You seem to have a save file at \"Porject-Alpha/Saves/Save.txt\", but it has missing lines!");
 					AwesomeScanner.nextLine();
 				}
 				return false;
@@ -956,7 +957,7 @@ public class Stuff
 		{
 			if (BeQuiet == false)
 			{
-				TypeLine("(Enter) You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
+				TypeLine("[Enter] You tried to load a save, but there's no save file (at \"Game Code/Saves/Save.txt\") to load!)");
 				HitEnter(1);
 				AwesomeScanner.nextLine();
 			}
@@ -983,7 +984,7 @@ public class Stuff
 		{
 			if (!(Character.isDigit(Number.charAt(Cursor)) || ((Cursor == 0) && (Number.charAt(Cursor) == '-'))))
 			{
-				System.out.println("(Enter) Error 12: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
+				System.out.println("[Enter] Error 12: Sorry, something went wrong, StringToInt was given " + Number + ", while the accepted values are integers in the String variable type.");
 				AwesomeScanner.nextLine();
 				return 0;
 			}
@@ -1039,7 +1040,7 @@ public class Stuff
 		if (Choice1 == null)
 		{
 			TempInstantText = false;
-			System.out.println("(Enter) Error 13: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
+			System.out.println("[Enter] Error 13: Sorry, something went wrong, we almost just tried to give you a choice with no options!");
 			AwesomeScanner.nextLine();
 			return null;
 		}
@@ -1094,9 +1095,10 @@ public class Stuff
 				Type(", or " + Choice4);
 			}
 			
-			System.out.println(".");
+			TypeLine(".");
 			if (CurrentBranchNumber == 1 && CurrentLocationNumber == 1)
 			{
+				TypeLine("You can type one of the choices above and hit enter to choose it.");
 				TypeLine("(Menu) Also, you can always go to the main menu. You can save your progress there.");
 			}
 			else
@@ -1218,7 +1220,7 @@ public class Stuff
 		Wait(1250);
 		HitEnter(1);
 		Divider();
-		Type("(Enter) ");
+		Type("[Enter] ");
 		switch (RandomInt(1, 3))
 		{
 			case 1:
@@ -1344,7 +1346,7 @@ public class Stuff
 			}
 			catch (InterruptedException Exception)
 			{
-				System.out.println("(Enter) Error 14: Everything was by design supposed to stop for " + Milliseconds + " milliseconds here. We don't know what happened.");
+				System.out.println("[Enter] Error 14: Everything was by design supposed to stop for " + Milliseconds + " milliseconds here. We don't know what happened.");
 				Exception.printStackTrace();
 				AwesomeScanner.nextLine();
 			}

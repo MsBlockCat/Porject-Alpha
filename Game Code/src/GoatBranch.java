@@ -101,7 +101,7 @@ public class GoatBranch
 				EllipseOffice2();
 				break;
 			default:
-				System.out.println("(Enter) Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
+				System.out.println("[Enter] Error 3: The starting area of the goat branch of the story, method GoToGoatBranch, was told to go to " + StartingPosition + ", which isn't a place!");
 				Stuff.AwesomeScanner.nextLine();
 		}
 	}
@@ -1074,7 +1074,7 @@ public class GoatBranch
 			Stuff.typeln("\"Ned Flanders!\" you say. \"You're leading a nation?!");
 			Stuff.typeln("You're such a goofy and wacky guy!\"");
 			Stuff.Wait(1000);
-			Stuff.typeln("Ned looks at you. He doesn't look upset, per say. Just disappointed.");
+			Stuff.typeln("Ned looks at you. He doesn't look upset, per se. Just disappointed.");
 			Stuff.typeln("\"Goofy and wacky. Glad to see that's how I'm seen.\"");
 			Stuff.typeln("The leader sits down at his desk and sighs heavily.");
 			Stuff.typeln("\"I'm not exactly sure what to do with you,\" he says solemnly.");
@@ -1209,9 +1209,9 @@ public class GoatBranch
 		Stuff.typeln("\"But you need to trust us.\"");
 		Stuff.typeln("It seems like you either trust them or die here.");
 		Stuff.typeln("Still, it is a choice.");
-		switch (Stuff.PlayerChoice("trust them", "don't"))
+		switch (Stuff.PlayerChoice("trust", "don't"))
 		{
-		case "trust them":
+		case "trust":
 			Stuff.typeln("You give them a nod and they approach the grate.");
 			Stuff.typeln("The man picks up a screwdriver and begins to remove the grate.");
 			Stuff.Wait(1000);
