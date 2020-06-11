@@ -282,7 +282,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("One of the other knights starts to count down.");
 						Stuff.TypeLine("Five.");
 						Stuff.Wait(650);
-						Stuff.TypeLine("Some of the other knights join in");
+						Stuff.TypeLine("Some of the other knights join in.");
 						Stuff.TypeLine("Four.");
 						Stuff.Wait(650);
 						Stuff.TypeLine("even more");
@@ -319,7 +319,7 @@ public class OldTimeBranch
 						Stuff.TypeLine("Five.");
 						Stuff.Wait(650);
 						Stuff.TypeLine("Since you don't have a sword to combat Harold, you look around for something to use.");
-						Stuff.TypeLine("Some of the other knights join in");
+						Stuff.TypeLine("Some of the other knights join in.");
 						Stuff.TypeLine("Four.");
 						Stuff.Wait(650);
 						Stuff.TypeLine("even more");
