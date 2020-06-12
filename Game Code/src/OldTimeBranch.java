@@ -617,7 +617,10 @@ public class OldTimeBranch
 					if (Stuff.HasEmeraldSword == true)
 					{
 						Stuff.TypeLine("You run up to him and return the emerald sword.");
-						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						if (Stuff.MetHarold == true)
+						{
+							Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						}
 						Stuff.TypeLine("You run in the opposite direction so as to not attract attention. You hear a faint thank you.");
 						Stuff.TypeLine("Must have been the roulette man.");
 						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
@@ -634,7 +637,10 @@ public class OldTimeBranch
 					else
 					{
 						Stuff.TypeLine("You run up to him and shake his hand, thanking him for helping you start your adventure.");
-						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						if (Stuff.MetHarold == true)
+						{
+							Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						}
 						Stuff.TypeLine("You run in the opposite direction so as to not attract attention. You hear a faint thank you.");
 						Stuff.TypeLine("Must have been the roulette man.");
 						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
