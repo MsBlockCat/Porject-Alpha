@@ -618,7 +618,8 @@ public class OldTimeBranch
 					{
 						Stuff.TypeLine("You run up to him and return the emerald sword.");
 						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
-						Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
+						Stuff.TypeLine("You run in the opposite direction so as to not attract attention. You hear a faint thank you.");
+						Stuff.TypeLine("Must have been the roulette man.");
 						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
 						Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
 						Stuff.TypeLine("In an instant, you are back in the lab.");
@@ -634,7 +635,8 @@ public class OldTimeBranch
 					{
 						Stuff.TypeLine("You run up to him and shake his hand, thanking him for helping you start your adventure.");
 						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
-						Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
+						Stuff.TypeLine("You run in the opposite direction so as to not attract attention. You hear a faint thank you.");
+						Stuff.TypeLine("Must have been the roulette man.");
 						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
 						Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
 						Stuff.TypeLine("In an instant, you are back in the lab.");
@@ -795,12 +797,12 @@ public class OldTimeBranch
 				Stuff.TypeLine("Waiting inside is the entire castle guard.");
 				Stuff.TypeLine("The drawbridge is closed behind you.");
 				Stuff.TypeLine("One of the knights walks up to you and takes all of your gear.");
-				Stuff.TypeLine("This sucks doesnt it.");
-				Stuff.TypeLine("They drag you to the prison");
+				Stuff.TypeLine("This sucks doesn't it.");
+				Stuff.TypeLine("They drag you to the prison.");
 				Stuff.TypeLine("They say you have a prison sentence.");
 				Stuff.TypeLine("That was obvious.");
 				Stuff.TypeLine("For how long, they don't tell you.");
-				Stuff.TypeLine("You cant even try to leave because thet took the Timeinator.");
+				Stuff.TypeLine("You can't even try to leave because they took the Timeinator.");
 				Stuff.TypeLine("Some old guy is also in your cell.");
 				Stuff.TypeLine("He stinks.");
 				Stuff.Wait(1000);
@@ -815,9 +817,9 @@ public class OldTimeBranch
 				Stuff.TypeLine("Your search of the assassin took you here and you don't have much more time to find them.");
 				Stuff.TypeLine("After about 15 minutes of searching, you hear yelling. It sounds like some old lady.");
 				Stuff.TypeLine("You run after the sound and find the hooded assassin.");
-				Stuff.TypeLine("You them in an alley and call out for reinforcements.");
+				Stuff.TypeLine("You meet them in an alley and call out for reinforcements.");
 				Stuff.TypeLine("The assassin whips out their sword and goes on the attack.");
-				Stuff.TypeLine("You pick up a rock and prepair to throw it at them.");
+				Stuff.TypeLine("You pick up a rock and prepare to throw it at them.");
 				Stuff.TypeLine("Before you can, a flower pot falls on their head.");
 				Stuff.TypeLine("You look up and see a old lady.");
 				Stuff.TypeLine("\"QUIET DOWN!! I'M TRYING TO PLANT MY PETUNIAS!!\"");
@@ -835,9 +837,6 @@ public class OldTimeBranch
 				Stuff.Wait(500);
 				Stuff.HitEnter(5);
 				Stuff.StoryEnding();
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
-				Stuff.TypeLine("");
 			}
 		}
 	}
