@@ -37,7 +37,7 @@ public class PorjectAlpha
 		}
 		
 		Stuff.TypeLine("1.0.0 (6/12/2020)");
-		Stuff.TypeLine(" Oh so many bugfixes, and even some more story!");
+		Stuff.TypeLine(" Oh so many bugfixes, way better Fancy Typing Speed settings, and even some more story!");
 		Stuff.Divider();
 		Stuff.TypeLine("0.6.0b (6/9/2020)");
 		Stuff.TypeLine(" Lots and lots of bugfixes!");
