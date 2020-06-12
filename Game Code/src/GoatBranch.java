@@ -236,7 +236,7 @@ public class GoatBranch
 		Stuff.Wait(3000);
 		Stuff.typeln("So, what do you ask Apu?");
 		if (Stuff.TalkedToTree == true) {
-			switch (Stuff.PlayerChoice("ask about Ned", "ask anything literally", "ask to leave"))
+			switch (Stuff.PlayerChoice("ask about Ned", "pester him", "ask to leave"))
 			{
 			case "ask about ned":
 				Stuff.typeln("\"Who is Ned?\" you ask politely.");
@@ -252,7 +252,7 @@ public class GoatBranch
 				Stuff.Wait(2000);
 				Crossroads();
 				break;
-			case "ask anything literally":
+			case "pester him":
 				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
@@ -271,15 +271,15 @@ public class GoatBranch
 			}
 		}
 		else {
-			switch (Stuff.PlayerChoice("ask anything literally", "ask to leave"))
+			switch (Stuff.PlayerChoice("pester him", "ask to leave"))
 			{
-			case "ask anything literally":
+			case "pester him":
 				Stuff.typeln("\"Anything,\" you say with a smirk.");
 				Stuff.typeln ("\"Wow, a funny guy, eh.\" Apu draws a gun (NERF of course. NERF or nothing :0), and shoots you in the head.");
 				Stuff.typeln("Everything fades to black...");
 				Stuff.ApuNerfedYou = true;
 				Stuff.Wait(1500);
-				ModernBranch.GoToModernBranch("Lab2");
+				ApuRevenge();
 				break;
 			case "ask to leave":
 				Stuff.typeln("\"Mr. Apu, sir?\" you ask.\"");
@@ -356,8 +356,8 @@ public class GoatBranch
 	public static void ApuRevenge() {
 		Stuff.CurrentLocationNumber = 7;
 		
+		Stuff.Wait(2000);
 		Stuff.typeln("You wake up again...");
-		Stuff.typeln("And you are, once again, a goat...");
 		Stuff.typeln("And standing above you is Apu.");
 		Stuff.typeln("\"Have you learned your lesson, now?\" Apu asks you smugly. You note that he is still twirling the NERF gun (NERF or nothing)");
 		switch (Stuff.PlayerChoice("yes", "no way"))
@@ -372,9 +372,9 @@ public class GoatBranch
 			Stuff.typeln ("\"You're gone, pal.\" Apu takes out the NERF (NERF is a registered trademark of Hasbro) gun and...");
 			Stuff.typeln("Pew, bang, boom, etc.");
 			Stuff.typeln("Everything fades to black...");
-			Stuff.ApuNerfedYou = true;
+			Stuff.ApuNerfedYou = false;
 			Stuff.Wait(1500);
-			ModernBranch.GoToModernBranch("Lab2");
+			Crossroads();
 			break;
 		}
 	}
