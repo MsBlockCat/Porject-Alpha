@@ -1366,7 +1366,7 @@ public class GoatBranch
 		Stuff.typeln("\"Hey, this is Ned,\" he says. \"I need a helicopter outside my office. Quickly.");
 		Stuff.Wait(700);
 		Stuff.typeln("..Yeah, a goat took out the door, my office isn't safe anymore.\"");
-		Stuff.typeln("He the turns around and dashes out the door, leaving you to die.");
+		Stuff.typeln("He then turns around and dashes out the door, leaving you to die.");
 		Stuff.typeln("Or does he? You notice what looks like a closet in one of the walls.");
 		Stuff.typeln("You walk over and open the door, which luckily isn't locked, and find a few machines inside!");
 		Stuff.typeln("Based on their labelling (they say \"Time Machine\") you figure that they must be time machines.");
