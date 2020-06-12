@@ -777,7 +777,56 @@ public class OldTimeBranch
 		}
 		else
 		{
-			Stuff.TypeLine("");
+			Stuff.TypeLine("Some random knight opens the gate and lets you in.");
+			if (Stuff.Criminal == true)
+			{
+				Stuff.TypeLine("Waiting inside is the entire castle guard.");
+				Stuff.TypeLine("The drawbridge is closed behind you.");
+				Stuff.TypeLine("One of the knights walks up to you and takes all of your gear.");
+				Stuff.TypeLine("This sucks doesnt it.");
+				Stuff.TypeLine("They drag you to the prison");
+				Stuff.TypeLine("They say you have a prison sentence.");
+				Stuff.TypeLine("That was obvious.");
+				Stuff.TypeLine("For how long, they don't tell you.");
+				Stuff.TypeLine("You cant even try to leave because thet took the Timeinator.");
+				Stuff.TypeLine("Some old guy is also in your cell.");
+				Stuff.TypeLine("He stinks.");
+				Stuff.Wait(1000);
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("The Stinky Ending");
+				Stuff.Wait(500);
+				Stuff.HitEnter(5);
+				Stuff.StoryEnding();
+			}
+			else
+			{
+				Stuff.TypeLine("Your search of the assassin took you here and you don't have much more time to find them.");
+				Stuff.TypeLine("After about 15 minutes of searching, you hear yelling. It sounds like some old lady.");
+				Stuff.TypeLine("You run after the sound and find the hooded assassin.");
+				Stuff.TypeLine("You them in an alley and call out for reinforcements.");
+				Stuff.TypeLine("The assassin whips out their sword and goes on the attack.");
+				Stuff.TypeLine("You pick up a rock and prepair to throw it at them.");
+				Stuff.TypeLine("Before you can, a flower pot falls on their head.");
+				Stuff.TypeLine("You look up and see a old lady.");
+				Stuff.TypeLine("\"QUIET DOWN!! I'M TRYING TO PLANT MY PETUNIAS!!\"");
+				Stuff.TypeLine("The reinforcements you called just arrived.");
+				Stuff.TypeLine("Without hesitation, they roughly pushed the assassin into a prison cart and promptly rolled them away.");
+				Stuff.TypeLine("You are led to the king to get your reward.");
+				Stuff.TypeLine("You get some Porject Alpha.");
+				Stuff.TypeLine("You take a break in the \"royal restroom\" and activate the Timeinator.");
+				Stuff.TypeLine("As a purple glow emerges from the device, you feel a gust of wind and your body starts to swirl.");
+				Stuff.TypeLine("In an instant, you make it back to the lab.");
+				Stuff.TypeLine("You caught the assassin and even acquired the Porject Alpha that Doof wanted.");
+				Stuff.Wait(1000);
+				Stuff.HitEnter(2);
+				Stuff.TypeLine("The Lonely Ending");
+				Stuff.Wait(500);
+				Stuff.HitEnter(5);
+				Stuff.StoryEnding();
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+				Stuff.TypeLine("");
+			}
 		}
 	}
 	
