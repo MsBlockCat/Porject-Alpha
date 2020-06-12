@@ -483,7 +483,7 @@ public class OldTimeBranch
 				}
 				else
 				{
-					if(Stuff.HasEmeraldSword == true)
+					if (Stuff.HasEmeraldSword == true)
 					{
 						Stuff.TypeLine("It takes you a while to understand it but you finally get it.");
 						Stuff.TypeLine("You think.");
@@ -539,7 +539,7 @@ public class OldTimeBranch
 		switch (Stuff.PlayerChoice("sit", "leave"))
 		{
 			case "sit":
-				if(Stuff.HasLuckyGauntlet == true)
+				if (Stuff.HasLuckyGauntlet == true)
 				{
 					Stuff.TypeLine("You sit.");
 					Stuff.Wait(200);

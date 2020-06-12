@@ -11,12 +11,12 @@ public class Stuff
 	public static Scanner AwesomeScanner = new Scanner(System.in);
 	
 	//Variables
-	public static final String GameVersion = "0.6.0b";
+	public static final String GameVersion = "1.0.0";
 	public static final int CopyrightYear = 2020;
 	public static final int SaveVersion = 10;
 	public static boolean DebugMode = false;
 	public static boolean QuickMenus = false;
-	public static int FancyTypingSpeed = 1;
+	public static int FancyTypingSpeed = 3;
 	public static int LastRandomInt = 0;
 	/* Doesn't need to be saved to save file */ public static boolean TempInstantText = false;
 	public static int TurnCount = 0;
@@ -44,10 +44,10 @@ public class Stuff
 	public static boolean HasChicken = false;
 	public static boolean WentInTreeHatch = false;
 	public static boolean TrustsElon = true;
-	/* Add to SaveVersion 10 */ public static boolean Criminal = false;
-	/* Add to SaveVersion 10 */ public static boolean WentInWater = false;
-	/* Add to SaveVersion 10 */ public static boolean DoneRocketLaunch = false;
-	/* Add to SaveVersion 10 */ public static boolean WentInMountainHatch = false;
+	public static boolean Criminal = false;
+	public static boolean WentInWater = false;
+	public static boolean DoneRocketLaunch = false;
+	public static boolean WentInMountainHatch = false;
 	
 	//Miscellaneous weirdness
 	Desktop AwesomeDesktop = Desktop.getDesktop();
@@ -76,9 +76,11 @@ public class Stuff
 			HitEnter(1);
 			TypeLine("GameVersion: " + GameVersion);
 			TypeLine("HasLuckyGauntlet: " + HasLuckyGauntlet);
+			TypeLine("LastRandomInt: " + LastRandomInt);
 			TypeLine("TurnCount: " + TurnCount);
 			TypeLine("CurrentBranchNumber: " + CurrentBranchNumber);
 			TypeLine("CurrentLocationNumber: " + CurrentLocationNumber);
+			HitEnter(1);
 		}
 	}
 	
@@ -159,18 +161,18 @@ public class Stuff
 			Divider();
 			HitEnter(1);
 			//FancyTypingSpeed
-			TypeLine("Text Speed: 0, 1, 2, or 3 (Currently " + FancyTypingSpeed + ")");
-			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 3 is slowest.");
+			TypeLine("Text Speed: 0, 1, 2, 3, 4, or 5 (Currently " + FancyTypingSpeed + ", Default 3)");
+			TypeLine(" This is how fast text shows up on screen. 0 makes it instant, 5 is slowest.");
 			//QuickMenus
 			if (QuickMenus == false)
 			{
-				TypeLine("Quick Menus: On or off (Currently off)");
+				TypeLine("Quick Menus: On or off (Currently off, Default off)");
 			}
 			else
 			{
-				TypeLine("Quick Menus: On or off (Currently on)");
+				TypeLine("Quick Menus: On or off (Currently on, Default off)");
 			}
-			TypeLine(" This makes menus show up much faster. On is instant, off uses overall Text Speed.");
+			TypeLine(" This makes menus show up much faster. On is instant, off uses overall Text Speed and more animations.");
 
 			if (QuickMenus == true)
 			{
@@ -185,9 +187,9 @@ public class Stuff
 			//FancyTypingSpeed
 			if (Input.length() == 12 && Input.startsWith("text speed "))
 			{
-				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3'))
+				if (!(Input.charAt(11) == '0' || Input.charAt(11) == '1' || Input.charAt(11) == '2' || Input.charAt(11) == '3' || Input.charAt(11) == '4' || Input.charAt(11) == '5'))
 				{
-					TypeLine("[Enter] Text Speed can be set to 0, 1, 2, or 3.");
+					TypeLine("[Enter] Text Speed can be set to 0, 1, 2, 3, 4, or 5.");
 					HitEnter(1);
 					AwesomeScanner.nextLine();
 				}
@@ -457,7 +459,7 @@ public class Stuff
 						boolean RandomIntFailed = false;
 						for (int Counter = 1; Counter <= 10; Counter ++)
 						{
-							if (RandomInt(1, 1) != 1)
+							if (RandomInt(1, 1, false) != 1)
 							{
 								RandomIntFailed = true;
 								break;
@@ -476,7 +478,7 @@ public class Stuff
 						int RandomNumber = 0;
 						for (int Counter = 1; Counter <= 100; Counter ++)
 						{
-							RandomNumber = RandomInt(-10, -1);
+							RandomNumber = RandomInt(-10, -1, false);
 							if ((-10 > RandomNumber) || (RandomNumber > -1))
 							{
 								RandomIntFailed = true;
@@ -496,7 +498,7 @@ public class Stuff
 						RandomNumber = 0;
 						for (int Counter = 1; Counter <= 100; Counter ++)
 						{
-							RandomNumber = RandomInt(-10, 3);
+							RandomNumber = RandomInt(-10, 3, false);
 							if ((-10 > RandomNumber) || (RandomNumber > 3))
 							{
 								RandomIntFailed = true;
@@ -518,7 +520,7 @@ public class Stuff
 						int FailingNumber = 0;
 						for (int Counter = 1; Counter <= 100; Counter ++)
 						{
-							IntArray[(RandomInt(-2, 2) + 2)] ++;
+							IntArray[(RandomInt(-2, 2, false) + 2)] ++;
 						}
 						if (IntArray[0] == 0)
 						{
@@ -573,7 +575,7 @@ public class Stuff
 						RandomNumber = 0;
 						for (int Counter = 1; Counter <= 100; Counter ++)
 						{
-							RandomNumber = RandomInt();
+							RandomNumber = RandomInt(1, 10, false);
 							if ((1 > RandomNumber) || (RandomNumber > 10))
 							{
 								RandomIntFailed = true;
@@ -1046,7 +1048,7 @@ public class Stuff
 		}
 		else
 		{
-			switch (RandomInt(1, 3))
+			switch (RandomInt(1, 3, false))
 			{
 				case 1:
 					Type("You can choose ");
@@ -1105,7 +1107,7 @@ public class Stuff
 			{
 				Type("(Menu) You may also go to the main menu. ");
 				
-				switch (RandomInt(1,4))
+				switch (RandomInt(1, 4, false))
 				{
 					case 1:
 						TypeLine("You can save your progress there.");
@@ -1192,7 +1194,7 @@ public class Stuff
 					CapitalChoice = Choice;
 				}
 				
-				switch (RandomInt(1, 3))
+				switch (RandomInt(1, 3, false))
 				{
 					case 1:
 						TypeLine(CapitalChoice + " it is.");
@@ -1221,7 +1223,7 @@ public class Stuff
 		HitEnter(1);
 		Divider();
 		Type("[Enter] ");
-		switch (RandomInt(1, 3))
+		switch (RandomInt(1, 3, false))
 		{
 			case 1:
 				Type("That's all, folks!");
@@ -1303,16 +1305,16 @@ public class Stuff
 					
 					if (!(Gloss))
 					{
-						Wait(95 + (FancyTypingSpeed * 60));
+						Wait(50 + (FancyTypingSpeed * 35));
 					}
 				}
 				
 				if (Phrase.charAt(Counter) == ',')
 				{
-					Wait(30 + (FancyTypingSpeed * 30));
+					Wait(30 + (FancyTypingSpeed * 10));
 				}
 				
-				Wait(5 + (FancyTypingSpeed * 15));
+				Wait(5 + (FancyTypingSpeed * 5));
 			}
 		}
 		else
@@ -1323,17 +1325,31 @@ public class Stuff
 	
 	public static int RandomInt()
 	{
-		return RandomInt(1, 10);
+		return RandomInt(1, 10, true);
 	}
 	
 	public static int RandomInt(int MinimumInt, int MaximumInt)
 	{
-		if (TempInstantText == false)
-		{
-			LastRandomInt = (((int) (Math.random() * ((MaximumInt - MinimumInt) + 1))) + MinimumInt);
-		}
+		return RandomInt(MinimumInt, MaximumInt, true);
+	}
+	
+	public static int RandomInt(int MinimumInt, int MaximumInt, boolean IsStory)
+	{
+		int TheRandomInt = (((int) (Math.random() * ((MaximumInt - MinimumInt) + 1))) + MinimumInt);
 		
-		return LastRandomInt;
+		if (IsStory == true)
+		{
+			if (TempInstantText == false)
+			{
+				LastRandomInt = TheRandomInt;
+			}
+			
+			return LastRandomInt;
+		}
+		else
+		{
+			return TheRandomInt;
+		}
 	}
 	
 	public static void Wait(int Milliseconds)

@@ -539,7 +539,7 @@ public class GoatBranch
 		case "go back in":
 			Stuff.TalkedToTree = true;
 			Stuff.typeln("You decide that you just need to know what all this is about.");
-			Stuff.typeln("Re-enting the store, you approach the checkout counter.");
+			Stuff.typeln("Re-entering the store, you approach the checkout counter.");
 			Stuff.typeln("\"Who is Ned?\" you ask politely.");
 			Stuff.typeln("Apu looks up, startled, and gives you a horrified look.");
 			Stuff.typeln("\"Look, Mr. Goat,\" he says, \"There are things to joke about and Ned is not one of them.");

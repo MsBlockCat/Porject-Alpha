@@ -60,7 +60,9 @@ public class SpaceBranch
 			Stuff.TypeLine("You travel to the year 2030.");
 			Stuff.TypeLine("Moving rapidly through time and space, you are blinded by light and feel as though you're being stretched out!");
 			
-			if (((Stuff.RandomInt() > 6) && Stuff.HasLuckyGauntlet == false) || ((Stuff.RandomInt() > 8) && Stuff.HasLuckyGauntlet == true))
+			int ARandomInteger = Stuff.RandomInt();
+			
+			if (((ARandomInteger > 6) && (Stuff.HasLuckyGauntlet == false)) || (((ARandomInteger > 8) && (Stuff.HasLuckyGauntlet == true))))
 			{
 				Stuff.TypeLine("As time slows back to normal, you notice a little smoke come out of your time machine.");
 				Stuff.TypeLine("The smoke stops as soon as it started, but the screen on it seems broken now.");

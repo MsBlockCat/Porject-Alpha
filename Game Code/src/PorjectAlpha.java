@@ -36,6 +36,9 @@ public class PorjectAlpha
 			Stuff.TempInstantText = true;
 		}
 		
+		Stuff.TypeLine("1.0.0 (6/12/2020)");
+		Stuff.TypeLine(" Oh so many bugfixes, and even some more story!");
+		Stuff.Divider();
 		Stuff.TypeLine("0.6.0b (6/9/2020)");
 		Stuff.TypeLine(" Lots and lots of bugfixes!");
 		Stuff.Divider();
@@ -133,7 +136,10 @@ public class PorjectAlpha
 			Stuff.TypeLine("(New) Start a new game!");
 			Stuff.TypeLine("(Save) Makes a save file you can copy and load later!");
 			Stuff.TypeLine("(Load) Load from a save file!");
-			Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
+			if (Stuff.DebugMode == true)
+			{
+				Stuff.TypeLine("(Debug) Start a new game with the Debug Menu enabled");
+			}
 			Stuff.TypeLine("(Calibrate) Shows the window calibration screen");
 			Stuff.TypeLine("(Settings) Lets you change stuff like typing speed");
 			Stuff.TypeLine("(About) Shows Porject Alpha's version number, credits, and more");
@@ -180,7 +186,7 @@ public class PorjectAlpha
 					{
 						Stuff.TypeLine("Are you sure you want to start a new game? All unsaved progress in your current one'll be lost!");
 						Stuff.TypeLine("(Yes) Delete unsaved progress and make a new game. This is caps sensitive!");
-						Stuff.TypeLine("(Anything else) Keep your progress, don't make a new game, and go back to the main menu");
+						Stuff.TypeLine("{Anything else} Keep your progress, don't make a new game, and go back to the main menu");
 						Stuff.HitEnter(1);
 						if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 						{
@@ -216,7 +222,7 @@ public class PorjectAlpha
 				case "load":
 					Stuff.TypeLine("Are you sure you wanna load a save file? This'll erase any current unsaved progress!");
 					Stuff.TypeLine("(Yes) Delete any currently unsaved progress and load a save file. This is caps sensitive!");
-					Stuff.TypeLine("(Anything else) Keep your progress, don't load a code, and go back to the main menu");
+					Stuff.TypeLine("{Anything else} Keep your progress, don't load a code, and go back to the main menu");
 					Stuff.HitEnter(1);
 					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
 					{
@@ -254,9 +260,25 @@ public class PorjectAlpha
 					}
 					break;
 				case "debug":
-					Stuff.DebugMode = true;
-					StayOnTitleScreen = false;
-					ModernBranch.GoToModernBranch("Lab1");
+					if (Stuff.DebugMode == false)
+					{
+						Stuff.TypeLine("[Secret Debug Option]");
+					}
+					else
+					{
+						Stuff.TypeLine("[No Longer Secret Debug Option]");
+					}
+					Stuff.TypeLine("Are you sure you wanna start a new game with the Debug Menu? All unsaved progress in your current game'll be lost!");
+					Stuff.TypeLine("(Yes) Delete unsaved progress and make a new debug game. This is caps sensitive!");
+					Stuff.TypeLine("{Anything else} Keep your progress, don't make a new debug game, and go back to the main menu");
+					Stuff.HitEnter(1);
+					if (Stuff.AwesomeScanner.nextLine().equals("Yes"))
+					{
+						Stuff.ResetSave();
+						Stuff.DebugMode = true;
+						StayOnTitleScreen = false;
+						ModernBranch.GoToModernBranch("Lab1");
+					}
 					break;
 				case "calibrate":
 					Stuff.ScreenSizeRecommendation();
