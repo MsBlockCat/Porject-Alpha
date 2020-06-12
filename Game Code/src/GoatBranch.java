@@ -372,7 +372,7 @@ public class GoatBranch
 			Stuff.typeln ("\"You're gone, pal.\" Apu takes out the NERF (NERF is a registered trademark of Hasbro) gun and...");
 			Stuff.typeln("Pew, bang, boom, etc.");
 			Stuff.typeln("Everything fades to black...");
-			Stuff.ApuNerfedYou = false;
+			Stuff.ApuNerfedYou = true;
 			Stuff.Wait(1500);
 			Crossroads();
 			break;
