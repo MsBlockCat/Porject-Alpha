@@ -109,7 +109,6 @@ public class ModernBranch
 		}
 		else
 		{
-			//Up to y'all what you do with this, but for now just going to Lab2
 			Lab2();
 		}
 	}
