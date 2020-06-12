@@ -608,27 +608,44 @@ public class OldTimeBranch
 	{
 		Stuff.CurrentLocationNumber = 8;
 		
-		if (Stuff.HasEmeraldSword == true)
-		{
 			Stuff.TypeLine("As you run down the crowded aisles of the bazar, you notice one very packed shop.");
 			switch (Stuff.PlayerChoice("go to it", "don't"))
 			{
 				case "go to it":
 					Stuff.TypeLine("You push through the people and right in front of you is the roulette man.");
 					Stuff.TypeLine("The one that helped you on the start of your mission.");
-					Stuff.TypeLine("You run up to him and return the emerald sword.");
-					Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
-					Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
-					Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
-					Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
-					Stuff.TypeLine("In an instant, you are back in the lab.");
-					Stuff.TypeLine("No Porject Alpha, no caught assassin, but you are still happy.");
-					Stuff.Wait(1000);
-					Stuff.HitEnter(2);
-					Stuff.TypeLine("The Happy Ending");
-					Stuff.Wait(500);
-					Stuff.HitEnter(5);
-					Stuff.StoryEnding();
+					if (Stuff.HasEmeraldSword == true)
+					{
+						Stuff.TypeLine("You run up to him and return the emerald sword.");
+						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
+						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
+						Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
+						Stuff.TypeLine("In an instant, you are back in the lab.");
+						Stuff.TypeLine("No Porject Alpha, no caught assassin, but you are still happy.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The Happy Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
+					else
+					{
+						Stuff.TypeLine("You run up to him and shake his hand, thanking him for helping you start your adventure.");
+						Stuff.TypeLine("You recognize some of the knights, they were at the barracks when you sparred with Harold.");
+						Stuff.TypeLine("You run in the opposite direction as to not attract attention. You hear a faint thank you. Must have been the roulette man.");
+						Stuff.TypeLine("You hide in an alley and a purple glow starts to emerge from the watch.");
+						Stuff.TypeLine("Your body starts to swirl and disappear from this world.");
+						Stuff.TypeLine("In an instant, you are back in the lab.");
+						Stuff.TypeLine("No Porject Alpha, no caught assassin, but you are still happy.");
+						Stuff.Wait(1000);
+						Stuff.HitEnter(2);
+						Stuff.TypeLine("The Happier Ending");
+						Stuff.Wait(500);
+						Stuff.HitEnter(5);
+						Stuff.StoryEnding();
+					}
 					break;
 				case "don't":
 					Stuff.TypeLine("You don't think there is enough time.");
@@ -647,11 +664,6 @@ public class OldTimeBranch
 					Stuff.StoryEnding();
 					break;
 			}
-		}
-		else
-		{
-			Stuff.TypeLine("");
-		}
 	}
 	
 	public static void Castle3()
