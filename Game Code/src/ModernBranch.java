@@ -36,7 +36,8 @@ public class ModernBranch
 		Stuff.TypeLine("A rat was tested with it and mostly survived.");
 		Stuff.TypeLine("As Dr. Doofenshmirtz's assistant, you get to be the first human to test the time machine.");
 		Stuff.TypeLine("He would also appreciate it if you could find him some more Porject Alpha on your journey, but");
-		Stuff.TypeLine(" never bothered explaining what that meant.");
+		Stuff.TypeLine(" never bothered explaining what that actually meant.");
+		Stuff.TypeLine("You're pretty sure Dr. Doofenshmirtz can't spell, but you never dared question his genius.");
 		Stuff.TypeLine("You pick up the surprisingly small device. It has \"The Timeinator\" engraved on the bottom of it.");
 		Stuff.TypeLine("You put the time machine on your left wrist, noting its similarities in appearance to a smartwatch.");
 		Stuff.TypeLine("After rambling for 20 minutes straight about his backstory, the legendary Doof gives you a few choices.");
